@@ -664,81 +664,90 @@ a.PAdevenir-poto:hover {
 transform: scale(1.08) !important;
 filter: brightness(1.15) !important;
 }
-/* Bloc Équipe Staff agrandi */
+/* Bloc Équipe Staff agrandi et parfaitement proportionné */
 #PAstaff {
-flex-grow: 1 !important;
-display: flex !important;
-justify-content: flex-end !important;
-gap: 12px !important;
-position: relative !important;
-height: 135px !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 14px !important;
+    position: relative !important;
+    height: 140px !important;
 }
+
 #PAstaff > div {
-width: 155px !important;
-height: 135px !important;
-position: relative !important;
+    width: 175px !important;
+    height: 140px !important;
+    position: relative !important;
 }
-/* Portraits du Staff */
+
+/* Portraits du Staff agrandis (86px) sans mordre sur le texte */
 #PAstaff > div > img {
-width: 72px !important;
-height: 130px !important;
-object-fit: cover !important;
-position: absolute !important;
-bottom: 0 !important;
-left: 0 !important;
-z-index: 2 !important;
-border-radius: 0 12px !important;
-border: 1px solid #f4efe6 !important;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.65) !important;
-transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    width: 86px !important;
+    height: 136px !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 2 !important;
+    border-radius: 0 14px !important;
+    border: 1px solid #f4efe6 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.65) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
+
 #PAstaff > div:hover > img {
-transform: translateY(-3px) !important;
-border-color: #d89b3c !important;
-box-shadow: 0 5px 12px rgba(216, 155, 60, 0.55) !important;
+    transform: translateY(-3px) !important;
+    border-color: #d89b3c !important;
+    box-shadow: 0 5px 12px rgba(216, 155, 60, 0.55) !important;
 }
-/* Cartouches beiges du Staff élargies */
+
+/* Cartouches beiges ajustées à la nouvelle largeur du portrait */
 #PAstaff > div > div {
-background: #d8d2c7 !important;
-color: #1e1e20 !important;
-border: 1px solid #f4efe6 !important;
-border-radius: 0 27px !important;
-width: 135px !important;
-height: 88px !important;
-position: absolute !important;
-bottom: 0 !important;
-right: 0 !important;
-display: flex !important;
-align-items: center !important;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    background: #d8d2c7 !important;
+    color: #1e1e20 !important;
+    border: 1px solid #f4efe6 !important;
+    border-radius: 0 27px !important;
+    width: 155px !important;
+    height: 92px !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
 }
+
 #PAstaff > div > div span {
-display: flex !important;
-flex-direction: column !important;
-text-align: center !important;
-padding-left: 52px !important;
-padding-right: 8px !important;
-width: 100% !important;
-font-size: 12px !important;
-line-height: 1.4 !important;
-color: #1e1e20 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding-left: 72px !important;
+    padding-right: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    color: #1e1e20 !important;
 }
+
 #PAstaff > div > div span a:nth-child(1) {
-background: linear-gradient(90deg, #9d2b6b, #d89b3c) !important;
-color: #ffffff !important;
-font-weight: bold !important;
-border-radius: 5px 0 !important;
-padding: 2px 6px !important;
-margin-bottom: 4px !important;
-text-decoration: none !important;
-font-size: 11.5px !important;
+    background: linear-gradient(90deg, #9d2b6b, #d89b3c) !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border-radius: 5px 0 !important;
+    padding: 2px 6px !important;
+    margin-bottom: 4px !important;
+    text-decoration: none !important;
+    font-size: 11.5px !important;
 }
+
 #PAstaff > div > div span a:nth-child(2) {
-color: #9d2b6b !important;
-font-weight: bold !important;
-text-decoration: none !important;
-font-size: 11.5px !important;
+    color: #9d2b6b !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    font-size: 11.5px !important;
 }
+
 /* Chat cosmique centré au milieu de la PA */
 #PAchat {
 position: absolute !important;
