@@ -755,26 +755,39 @@ form[name="form_login"] .user_login_form {
 }
 
 /* ==========================================================================
-   8. CATÉGORIES EN GRILLE MODERNE & AVATAR HEXAGONAL DU DERNIER POSTEUR
+   8. CATÉGORIES EN GRILLE MODERNE & RIDEAU D'IMAGE COULISSANT AU SURVOL
    ========================================================================== */
 .forabg.starlight-cat {
     background: transparent !important;
     border: none !important;
     width: 950px !important;
     max-width: 100% !important;
-    margin: 28px auto !important;
+    margin: 34px auto !important;
 }
 
+/* En-tête de catégorie avec liseré dégradé & espace pour tes futurs renders */
 .forabg.starlight-cat .header {
     position: relative !important;
     background: transparent !important;
     border: none !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 18px !important;
     text-align: center !important;
+    padding-bottom: 8px !important;
+}
+
+.forabg.starlight-cat .header::after {
+    content: "" !important;
+    display: block !important;
+    width: 260px !important;
+    height: 3px !important;
+    margin: 6px auto 0 !important;
+    background: linear-gradient(90deg, transparent, #9d2b6b, #d89b3c, transparent) !important;
+    border-radius: 2px !important;
 }
 
 div.table-title h2,
 #h1-category {
+    position: relative !important;
     display: inline-block !important;
     font-family: var(--titres) !important;
     font-size: 56px !important;
@@ -787,29 +800,13 @@ div.table-title h2,
     margin: 0 !important;
 }
 
-/* Grille 2 colonnes + 3e élément pleine largeur (comme sur ton exemple !) */
+/* Grille 2 colonnes verrouillée (zéro étirement !) */
 .starlight-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 18px !important;
     width: 100% !important;
     box-sizing: border-box !important;
-}
-
-.sc-forum-wrapper,
-.sc-forum-card {
-    min-width: 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Empêche toute image mise dans la description de déformer la carte */
-.sc-forum-desc img {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 8px 0 !important;
-    display: block !important;
-    margin: 4px auto !important;
 }
 
 .starlight-grid > .sc-forum-wrapper:nth-child(3),
@@ -821,14 +818,15 @@ div.table-title h2,
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
 }
 
-/* Carte principale du forum */
+/* Carte principale agrandie (255px) pour mettre en valeur l'image */
 .sc-forum-card {
     position: relative !important;
-    height: 225px !important;
+    height: 255px !important;
     background-color: #141416 !important;
-    background-image: radial-gradient(circle at 50% 40%, #2b242c 0%, #141416 85%) !important;
     border: 1.5px solid var(--border-grey) !important;
     border-radius: 27px 0 !important;
     overflow: hidden !important;
@@ -841,31 +839,16 @@ div.table-title h2,
 
 .sc-forum-card:hover {
     border-color: var(--gold) !important;
-    box-shadow: 0 6px 22px rgba(216, 155, 60, 0.4) !important;
+    box-shadow: 0 6px 22px rgba(216, 155, 60, 0.45) !important;
 }
 
-/* Image de fond du forum (si configurée dans le panneau admin du forum) */
-.sc-forum-bg {
-    position: absolute !important;
-    inset: 0 !important;
-    background-size: cover !important;
-    background-position: center !important;
-    opacity: 0.45 !important;
-    transition: transform 0.5s ease, opacity 0.4s ease !important;
-    z-index: 1 !important;
-}
-
-.sc-forum-card:hover .sc-forum-bg {
-    transform: scale(1.04) !important;
-    opacity: 0.3 !important;
-}
-
-/* En-tête de la carte avec le titre centré */
+/* En-tête de la carte avec le titre centré au-dessus du rideau */
 .sc-forum-header {
     position: relative !important;
-    z-index: 3 !important;
+    z-index: 6 !important;
     text-align: center !important;
-    padding: 12px 16px 4px !important;
+    padding: 10px 16px 6px !important;
+    background: linear-gradient(180deg, rgba(20, 20, 22, 0.92) 0%, rgba(20, 20, 22, 0.55) 75%, transparent 100%) !important;
 }
 
 .sc-forum-header h2,
@@ -891,33 +874,67 @@ a.forumtitle:hover {
     text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark) !important;
 }
 
-/* Zone centrale : Description lisibilité optimale */
+/* Zone centrale : Description dessous + Rideau d'image au premier plan */
+.sc-forum-body {
+    position: relative !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Rideau d'image fixe au premier plan (zéro overflow !) */
+.sc-forum-curtain {
+    position: absolute !important;
+    inset: -45px 0 0 0 !important; /* Remonte sous le titre pour couvrir tout le haut */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    z-index: 4 !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease !important;
+}
+
+/* Au survol de la carte : le rideau d'image glisse vers le bas comme un sas spatial ! */
+.sc-forum-card:hover .sc-forum-curtain {
+    transform: translateY(105%) !important;
+    opacity: 0 !important;
+}
+
+/* Description dévoilée quand le rideau descend */
 .sc-forum-desc {
     position: relative !important;
-    z-index: 3 !important;
+    z-index: 2 !important;
+    width: 100% !important;
     margin: 0 18px !important;
-    padding: 6px 12px !important;
-    max-height: 76px !important;
+    padding: 8px 14px !important;
+    max-height: 110px !important;
     overflow-y: auto !important;
-    background: rgba(20, 20, 22, 0.72) !important;
-    backdrop-filter: blur(4px) !important;
-    border-left: 2px solid var(--gold) !important;
-    border-radius: 0 12px !important;
+    background: rgba(20, 20, 22, 0.85) !important;
+    border-left: 3px solid var(--gold) !important;
+    border-radius: 0 14px !important;
     color: var(--border-cream) !important;
     font-family: var(--textes) !important;
-    font-size: 12px !important;
-    line-height: 1.45 !important;
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
     text-align: justify !important;
     scrollbar-width: thin !important;
 }
 
-/* Bandeau inférieur translucide (style de ton image) */
+/* Masque toute image mise en dur dans la description pour éviter les scrollbars */
+.sc-forum-desc img {
+    display: none !important;
+}
+
+/* Bandeau inférieur translucide */
 .sc-forum-footer {
     position: relative !important;
-    z-index: 3 !important;
+    z-index: 6 !important;
     height: 66px !important;
     padding: 0 14px !important;
-    background: rgba(30, 30, 32, 0.86) !important;
+    background: rgba(20, 20, 22, 0.92) !important;
     backdrop-filter: blur(6px) !important;
     border-top: 1px solid rgba(158, 152, 142, 0.45) !important;
     display: flex !important;
@@ -954,7 +971,6 @@ a.forumtitle:hover {
     display: block !important;
 }
 
-/* Infos dernier message au centre du bandeau bas */
 .sc-last-info {
     flex-grow: 1 !important;
     min-width: 0 !important;
@@ -978,12 +994,9 @@ a.sc-last-topic {
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-    transition: color 0.2s ease !important;
 }
 
-a.sc-last-topic:hover {
-    color: var(--border-cream) !important;
-}
+a.sc-last-topic:hover { color: var(--border-cream) !important; }
 
 .sc-last-meta {
     font-family: var(--font) !important;
@@ -1001,11 +1014,6 @@ a.sc-last-topic:hover {
     border-radius: 4px 0 !important;
     font-size: 10px !important;
     text-decoration: none !important;
-    transition: transform 0.2s ease !important;
-}
-
-.sc-last-arrow:hover {
-    transform: translateX(2px) !important;
 }
 
 .sc-last-stats {
@@ -1014,7 +1022,6 @@ a.sc-last-topic:hover {
     text-transform: uppercase !important;
 }
 
-/* Cercle d'icône Nouveau / Pas de nouveau message à droite (comme la bulle de ton exemple) */
 .sc-forum-status {
     width: 42px !important;
     height: 42px !important;
@@ -1025,22 +1032,16 @@ a.sc-last-topic:hover {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    overflow: hidden !important;
 }
 
-.sc-forum-status img {
-    width: 24px !important;
-    height: 24px !important;
-    object-fit: contain !important;
-}
+.sc-forum-status img { width: 24px !important; height: 24px !important; object-fit: contain !important; }
 
-/* Sous-forums en petits badges alignés sous la carte */
 .sc-subforums {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 6px !important;
     padding: 0 4px !important;
-    font-size: 0 !important; /* Masque les virgules par défaut de Forumactif */
+    font-size: 0 !important;
 }
 
 .sc-subforums a {
