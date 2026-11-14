@@ -790,8 +790,26 @@ div.table-title h2,
 /* Grille 2 colonnes + 3e élément pleine largeur (comme sur ton exemple !) */
 .starlight-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 18px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.sc-forum-wrapper,
+.sc-forum-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Empêche toute image mise dans la description de déformer la carte */
+.sc-forum-desc img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px 0 !important;
+    display: block !important;
+    margin: 4px auto !important;
 }
 
 .starlight-grid > .sc-forum-wrapper:nth-child(3),
