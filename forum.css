@@ -599,21 +599,61 @@ text-decoration: none !important; transition: color 0.25s ease !important;
 }
 a.forumtitle:hover { color: var(--gold) !important; text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark) !important; }
 
-.sc-forum-body { position: relative !important; flex-grow: 1 !important; width: 100% !important; overflow: hidden !important; display: flex !important; align-items: center !important; }
-.sc-forum-curtain {
-position: absolute !important; inset: -45px 0 0 0 !important; z-index: 4 !important;
-transform: translateY(0) !important; opacity: 1 !important;
-transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease !important;
+.sc-forum-body {
+    position: relative !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
 }
-.sc-forum-curtain img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
-.sc-forum-card:hover .sc-forum-curtain { transform: translateY(105%) !important; opacity: 0 !important; }
+
 .sc-forum-desc {
-position: relative !important; z-index: 2 !important; width: 100% !important; margin: 0 18px !important; padding: 8px 14px !important;
-max-height: 110px !important; overflow-y: auto !important; background: rgba(20, 20, 22, 0.85) !important;
-border-left: 3px solid var(--gold) !important; border-radius: 0 14px !important; color: var(--border-cream) !important;
-font-family: var(--textes) !important; font-size: 12.5px !important; line-height: 1.5 !important; text-align: justify !important;
+    position: static !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    margin: 0 18px !important;
+    padding: 8px 14px !important;
+    max-height: 110px !important;
+    overflow-y: auto !important;
+    background: rgba(20, 20, 22, 0.85) !important;
+    border-left: 3px solid var(--gold) !important;
+    border-radius: 0 14px !important;
+    color: var(--border-cream) !important;
+    font-family: var(--textes) !important;
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    text-align: justify !important;
 }
-.sc-forum-desc img { display: none !important; }
+
+/* Rideau d'image au premier plan via <img class="hiddenImage"> */
+.sc-forum-desc img.hiddenImage {
+    display: block !important;
+    position: absolute !important;
+    inset: -45px 0 0 0 !important;
+    width: 100% !important;
+    height: calc(100% + 45px) !important;
+    object-fit: cover !important;
+    z-index: 5 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease !important;
+}
+
+.sc-forum-card:hover .sc-forum-desc img.hiddenImage {
+    transform: translateY(105%) !important;
+    opacity: 0 !important;
+}
+
+/* Masque toute autre image dans la description et cache hiddenImage dans les sous-forums */
+.sc-forum-desc img:not(.hiddenImage),
+.panel img.hiddenImage,
+#page-body > .panel img.hiddenImage {
+    display: none !important;
+}
+
 .sc-forum-footer {
 position: relative !important; z-index: 6 !important; height: 66px !important; padding: 0 14px !important;
 background: rgba(20, 20, 22, 0.92) !important; backdrop-filter: blur(6px) !important;
