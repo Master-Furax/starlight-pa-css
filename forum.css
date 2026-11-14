@@ -2023,3 +2023,59 @@ ul.linkbottom li a {
     padding: 7px 15px !important;
     height: auto !important;
 }
+
+/* ==========================================================================
+   13. CORRECTIFS FINAUX : NAVBAR ÉCRAN RÉDUIT, INSULAIRES & CRÉDITS QEEL
+   ========================================================================== */
+
+/* 1. Empêche la barre de navigation de disparaître sur écran réduit */
+@media screen and (max-width: 1150px) {
+    #headerbar-top,
+    .is-sticky#headerbar-top,
+    .is-sticky#headerbar-top.w-toolbar {
+        left: 290px !important;
+        right: 135px !important;
+    }
+    .navbar a,
+    #headerbar-top a,
+    #headerbar-top .wrap ul li a {
+        font-size: 16px !important;
+        padding: 3px 4px !important;
+    }
+}
+
+/* 2. Replace "LES INSULAIRES CONNECTÉS" dans le QEEL (plus sous le cadre !) */
+.content_qeel_arte .qeelcon1,
+.content_qeel_arte .members_online {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 0 !important;
+}
+
+.content_qeel_arte .qeelcon1 {
+    display: block !important;
+    margin: -18px 0 8px 135px !important;
+    font-size: 36px !important;
+    line-height: 1 !important;
+}
+
+.content_qeel_arte .members_online {
+    width: 315px !important;
+    height: 138px !important;
+    margin-left: 135px !important;
+    padding: 12px 12px 10px 28px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    line-height: 1.4 !important;
+    word-spacing: normal !important;
+}
+
+/* 3. Décompresse le texte de crédits dans le bloc de droite du QEEL */
+.block_lastvisit > div,
+.block_lastvisit p,
+.block_lastvisit span {
+    line-height: 1.45 !important;
+    word-spacing: normal !important;
+    letter-spacing: 0.4px !important;
+}
