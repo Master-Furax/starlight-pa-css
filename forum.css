@@ -570,16 +570,6 @@ width: auto !important;
     box-shadow: none !important;
 }
 
-/* Redonne sa hauteur normale au bouton "DEVENIR POTO ?" */
-#PA a[href*="partenariat"],
-#PA .btn-poto,
-#PA .poto-btn {
-    line-height: 1.4 !important;
-    padding: 4px 14px !important;
-    height: auto !important;
-    display: inline-block !important;
-}
-
 /* --------------------------------------------------------------------------
 7. CATÉGORIES EN GRILLE MODERNE & RIDEAU D'IMAGE COULISSANT
 -------------------------------------------------------------------------- */
