@@ -56,24 +56,36 @@ a#logo img {
     width: 100% !important;
     display: block !important;
 }
-/* Bannière pleine largeur (100% de l'écran) + Liseré dégradé en dessous */
-banniere,
-#parallax,
-#parallax a,
-#parallax img,
-a#logo,
-a#logo img {
-    display: block !important;
+/* Bannière pleine largeur + Liseré dégradé collé juste en dessous */
+div#page-header {
     width: 100% !important;
-    max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    line-height: 0 !important; /* Supprime tout espace vide sous l'image */
+}
+
+banniere,
+#parallax,
+#parallax a {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    overflow: hidden !important;
 }
 
 #parallax img {
+    display: block !important;
     width: 100% !important;
     height: auto !important;
+    max-height: 480px !important;
     object-fit: cover !important;
+}
+
+/* Masque le logo par défaut de Forumactif s'il est vide ou en doublon */
+.headerbar,
+a#logo {
+    display: none !important;
 }
 
 div#page-header::after {
@@ -85,12 +97,6 @@ div#page-header::after {
     border-top: 1px solid #f4efe6 !important;
     border-bottom: 1px solid #f4efe6 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.65) !important;
-}
-
-
-div#site-desc p,
-div#site-title {
-    display: none !important;
 }
 
 /* Scrollbar personnalisée unique (prune -> doré) */
