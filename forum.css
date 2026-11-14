@@ -1066,3 +1066,290 @@ a.sc-last-topic:hover {
     transform: translateY(-1px) !important;
 }
 
+/* ==========================================================================
+   9. LISTING DES RP & SUJETS (topics_list_box) + BAS DE FORUM
+   ========================================================================== */
+
+/* Conteneur général de la page d'un forum (viewforum) */
+#page-body > .panel,
+.panel.bg1,
+.panel.bg2,
+.panel.bg3,
+div.panel {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 14px auto !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+    background: var(--bg-dark) !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 20px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Titre du forum tout en haut + Fil d'Ariane + Bouton Nouveau Sujet */
+h1.page-title,
+.page-header h1 {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 20px auto 6px !important;
+    font-family: var(--titres) !important;
+    font-size: 46px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: var(--bg-dark) !important;
+    text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream) !important;
+}
+
+p.crumbs,
+ul.linklist.navlinks {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 0 auto 14px !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--border-grey) !important;
+}
+
+p.crumbs a,
+ul.linklist.navlinks a {
+    color: var(--gold) !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+}
+
+.topic-actions {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 12px auto !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Boutons d'action (Poster un nouveau sujet, Répondre, Forum verrouillé) */
+.buttons div a,
+a.button1,
+a.button2,
+.topic-actions .buttons a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--border-cream) !important;
+    border-radius: 10px 0 !important;
+    padding: 6px 16px !important;
+    font-family: var(--titres) !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55) !important;
+    transition: transform 0.2s ease, filter 0.2s ease !important;
+}
+
+.buttons div a:hover,
+a.button1:hover,
+a.button2:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(1.12) !important;
+}
+
+/* --- STYLE DES CARTES DE SUJETS / RP (.SBJ de ton template topics_list_box) --- */
+table.forumline {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 15px auto !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+table.forumline td {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+fieldset.SBJ {
+    position: relative !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin: 16px 0 !important;
+    padding: 18px 20px 14px !important;
+    background: var(--bg-dark) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 24px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6) !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+fieldset.SBJ:hover {
+    border-color: var(--gold) !important;
+    box-shadow: 0 6px 20px rgba(216, 155, 60, 0.35) !important;
+}
+
+/* Étiquette "Rédigé par [Auteur]" posée sur la bordure du haut */
+legend.nameSBJ {
+    padding: 2px 12px !important;
+    margin-left: 10px !important;
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    color: var(--border-cream) !important;
+    font-family: var(--font) !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+}
+
+legend.nameSBJ strong {
+    color: var(--gold) !important;
+}
+
+/* Titre du RP + Description à gauche */
+.tleSBJ {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+    font-family: var(--titres) !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    color: var(--gold) !important;
+}
+
+.tleSBJ a {
+    color: var(--border-cream) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.tleSBJ a:hover {
+    color: var(--gold) !important;
+}
+
+.descSBJ {
+    margin-top: 4px !important;
+    font-family: var(--textes) !important;
+    font-size: 12.5px !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    color: #b8b2a6 !important;
+}
+
+.gotoSBJ a {
+    display: inline-block !important;
+    margin-top: 6px !important;
+    padding: 1px 7px !important;
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-radius: 5px 0 !important;
+    font-size: 12px !important;
+}
+
+/* Bloc droit du sujet : Icône statut + Compteurs Vues/Réponses + Dernier post */
+.boxSBJ {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-shrink: 0 !important;
+}
+
+img.imgSBJ {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+}
+
+.vuesSBJ,
+.repSBJ {
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 10px !important;
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: var(--gold) !important;
+    text-align: center !important;
+    min-width: 48px !important;
+}
+
+.lmsgSBJ {
+    background: rgba(20, 20, 22, 0.85) !important;
+    border-left: 2px solid var(--gold) !important;
+    border-radius: 0 10px !important;
+    padding: 6px 12px !important;
+    font-family: var(--font) !important;
+    font-size: 12px !important;
+    color: var(--border-cream) !important;
+    text-align: right !important;
+    line-height: 1.35 !important;
+}
+
+.lmsgSBJ a {
+    color: var(--gold) !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+/* --- MODÉRATEURS, PERMISSIONS & LÉGENDE EN BAS DE FORUM (Fini les boîtes blanches !) --- */
+.forumbg,
+.forumbg .inner,
+ul.topiclist.topics,
+ul.topiclist.topics li.row,
+.panel .inner {
+    background: var(--bg-dark) !important;
+    color: var(--border-cream) !important;
+    border-color: var(--border-grey) !important;
+}
+
+ul.topiclist.topics li.row {
+    border-radius: 16px 0 !important;
+    border: 1px solid var(--border-grey) !important;
+    margin: 10px 0 !important;
+    padding: 10px 14px !important;
+}
+
+ul.topiclist.topics li.row a.topictitle {
+    font-family: var(--titres) !important;
+    font-size: 24px !important;
+    color: var(--border-cream) !important;
+    text-transform: uppercase !important;
+}
+
+ul.topiclist.topics li.row a.topictitle:hover {
+    color: var(--gold) !important;
+}
+
+/* Boîtes Modérateur & Permissions */
+.panel h3,
+.panel .h3 {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-radius: 8px 0 !important;
+    padding: 4px 12px !important;
+    margin-bottom: 8px !important;
+    font-family: var(--titres) !important;
+    font-size: 18px !important;
+    letter-spacing: 1px !important;
+    border: none !important;
+}
+
+/* Légende des icônes en bas de page */
+#page-body > p,
+.icon-legend,
+ul.linklist.bottom {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+    color: var(--border-cream) !important;
+}
