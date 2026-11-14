@@ -529,3 +529,156 @@ font-size: 19px !important;
 padding: 4px 5px !important;
 }
 }
+
+
+/* ==========================================================================
+   5. SWITCHEROO HEXAGONAL HARMONISÉ
+   ========================================================================== */
+:root {
+  --color-text: #f4efe6;
+  --color-bg: #1e1e20;
+  --color-delete: #9d2b6b;
+  --color-tooltip: #1e1e20;
+  --color-squircle: #28282b;
+  --color-accent: #d89b3c;
+  --color-button: #d89b3c;
+  --color-pill: #f4efe6;
+  --gap-size: 10px;
+  --ease: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+}
+
+.switcheroo { color: var(--color-text); font-size: 15px; font-family: var(--font); }
+.switcheroo[position="static"] { position: relative; }
+.switcheroo[position="top"] { position: fixed; top: 0; left: 0; z-index: 950; }
+.switcheroo[position="bottom"] { position: fixed; bottom: 0; left: 0; z-index: 950; }
+.switcheroo[direction="horizontal"] { width: 100%; }
+.switcheroo[direction="vertical"] { height: auto; }
+
+.switcheroo__squircles { display: flex; margin: 0; padding: var(--gap-size); gap: var(--gap-size); list-style: none; }
+.switcheroo[direction="horizontal"] .switcheroo__squircles { flex-direction: row; }
+.switcheroo[direction="vertical"] .switcheroo__squircles { flex-direction: column; margin-top: 155px !important; margin-left: 14px !important; }
+
+.switcheroo[theme="discord"] .switcheroo__squircle {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 62px !important; height: 54px !important; background: transparent !important;
+  cursor: pointer; transition: transform 0.25s ease, filter 0.25s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.75));
+}
+
+.switcheroo[theme="discord"] .switcheroo__squircle:hover {
+  transform: translateX(3px) scale(1.06);
+  filter: drop-shadow(0 4px 12px rgba(216, 155, 60, 0.8));
+}
+
+.switcheroo[theme="discord"] .switcheroo__squircle::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(135deg, #4e386a, #ee5574, #ffb01f);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  z-index: 1; transition: filter 0.25s ease;
+}
+
+.switcheroo[theme="discord"] .switcheroo__squircle.active::before {
+  background: linear-gradient(135deg, #f4efe6, #d89b3c);
+}
+
+.switcheroo[theme="discord"] .switcheroo__avatar {
+  position: relative; width: calc(100% - 4px) !important; height: calc(100% - 4px) !important;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: #1e1e20; overflow: hidden; z-index: 2;
+}
+
+.switcheroo[theme="discord"] .switcheroo__avatar img {
+  width: 100%; height: 100%; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+
+.switcheroo[theme="discord"] .switcheroo__squircle--button::after {
+  content: "+" !important; position: absolute !important; inset: 2px !important;
+  background: linear-gradient(135deg, #9d2b6b, #d89b3c) !important;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  color: #ffffff !important; font-family: var(--font) !important; font-size: 24px !important; font-weight: bold !important; z-index: 4 !important;
+}
+
+.switcheroo[theme="discord"] .switcheroo__delete {
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  position: absolute !important; width: 16px !important; height: 16px !important; top: -2px !important; right: 2px !important;
+  background: linear-gradient(90deg, #9d2b6b, #d89b3c) !important; color: #ffffff !important;
+  border: 1px solid #f4efe6 !important; border-radius: 4px 0 !important; font-size: 11px !important; font-weight: bold !important;
+  z-index: 10 !important; transform: scale(0); opacity: 0; transition: transform 0.2s ease, opacity 0.2s ease; cursor: pointer;
+}
+
+.switcheroo[theme="discord"] .switcheroo__squircle:hover .switcheroo__delete { opacity: 1 !important; transform: scale(1) !important; }
+
+.switcheroo__popper {
+  background: #1e1e20 !important; border: 1px solid #9e988e !important; border-left: 3px solid #d89b3c !important;
+  border-radius: 0 12px !important; padding: 6px 14px !important; position: absolute; width: max-content; z-index: 999 !important;
+  opacity: 0; transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none;
+  color: #f4efe6 !important; font-family: var(--titres) !important; font-size: 18px !important;
+  letter-spacing: 0.8px !important; text-transform: uppercase !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.75) !important;
+}
+
+.switcheroo[direction="vertical"] .switcheroo__popper { left: 125% !important; top: 50% !important; transform: translateY(-50%) scale(0.95); }
+.switcheroo[direction="vertical"] .switcheroo__squircle:hover .switcheroo__popper { opacity: 1 !important; transform: translateY(-50%) scale(1) !important; }
+
+.monomer-overlay { position: fixed; z-index: 9998; inset: 0; opacity: 0; transition: 0.2s opacity ease; background: rgba(0, 0, 0, 0.75); }
+.monomer-modal {
+  position: fixed; z-index: 9999; top: 50%; left: 50%; opacity: 0; width: 90%; max-width: 400px; padding: 24px;
+  transition: 0.2s opacity ease; transform: translate(-50%, -50%); border-radius: 27px 0 !important;
+  border: 1px solid #9e988e !important; background: #1e1e20 !important; color: #f4efe6 !important;
+}
+.monomer-modal.monomer-open, .monomer-overlay.monomer-open { opacity: 1; }
+.switcheroo__form-row { display: flex; flex-direction: column; margin-bottom: 14px; }
+.switcheroo__form-label { margin-bottom: 6px; font-size: 13px; text-transform: uppercase; color: #d89b3c !important; }
+.switcheroo__form-input { padding: 8px !important; border: 1px solid #9e988e !important; border-radius: 8px 0 !important; background-color: #141416 !important; color: #f4efe6 !important; }
+.switcheroo__form-button, .monomer-close { background: linear-gradient(90deg, #9d2b6b, #d89b3c) !important; color: #ffffff !important; border: 1px solid #f4efe6 !important; border-radius: 6px 0 !important; font-weight: bold !important; cursor: pointer; }
+.switcheroo__form-button { padding: 8px 16px; text-transform: uppercase; float: right; }
+.monomer-close { position: absolute; top: 10px; right: 10px; width: 24px; height: 24px; line-height: 22px; text-align: center; }
+
+/* ==========================================================================
+   6. QEEL ARTEMIS & PIED DE PAGE (FOOTER)
+   ========================================================================== */
+.content_qeel_arte {
+    width: 950px; height: 475px; background-color: #19191a; margin: auto; padding: 10px;
+    font-family: var(--titres); font-size: 13px; word-spacing: 6px;
+    border-radius: 27px 0px 0 27px; position: relative; display: flex !important;
+}
+.content_qeel_arte a { text-decoration: none !important; }
+.statistics_forum { width: 464px; height: 88px; text-align: justify; color: #011c31; line-height: 15px; font-size: 11px; margin: 17px -34px 1px 1px; }
+.block_lastvisit { width: 450px; height: 330px; left: -2em; box-sizing: border-box; padding: 45px 10px 10px; text-align: justify; position: relative; background: #28282b; border: 4px solid #dbd5c7; border-radius: 27px 0; }
+.qeelcon1 { display: inline-flex; margin-left: 8.3em; font-size: 3em; margin-top: -17px; position: absolute; }
+.content_qeel_arte .row1 { background: transparent; }
+.content_qeel_arte h3, .content_qeel_arte h4 {
+    margin: 0; position: absolute; top: 0; font-family: var(--titres) !important; left: 27px; font-weight: bolder;
+    color: #1e1e20 !important; text-shadow: -1.5px -1.5px 0 #f4efe6, 1.5px -1.5px 0 #f4efe6, -1.5px 1.5px 0 #f4efe6, 1.5px 1.5px 0 #f4efe6, 0 4px 8px rgba(0, 0, 0, 0.5) !important;
+    text-transform: uppercase; font-size: 34px !important; text-align: left; height: 20px;
+}
+.qeel_bloc2 { display: inline-block; width: 500px; text-align: center; color: white; margin-top: 9.7em; }
+.content_qeel_arte h4 { margin-top: 0.2em; margin-left: -1em; width: 450px; height: 85px; padding: 5px 10px 15px 15px; line-height: 27px; text-align: center; }
+.content_qeel_arte h4 span { display: block; width: auto; text-align: center; font-size: 20px; font-weight: 900; }
+.content_qeel_arte h4 span, .content_qeel_arte h4 span a { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95) !important; letter-spacing: 1px !important; }
+.messandmember { background: linear-gradient(274deg, #706083, #bb768a, #f9d08b); margin-bottom: 1em; padding: 12px 22px; width: auto; display: inline-block; text-align: center; }
+.blocks_qeel_right { width: 405px; height: 120px; position: absolute; top: 5.27em; right: 5px; background: #dbd5c7; padding: 10px; overflow: auto; border-bottom: 1px solid #fff; color: #000; margin: 1em; border-radius: 27px 0; }
+.members_online { width: 328px; height: 144px; color: #000; background: #dbd5c7; text-align: justify; padding: 10px 5px 5px 35px; margin-left: 8.3em; border-radius: 0 27px; }
+.crew_color { width: 55px !important; height: 55px !important; margin-left: 6px !important; border-radius: 50% !important; position: static !important; transform: none !important; filter: none !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75) !important; cursor: pointer !important; transition: box-shadow 0.25s ease !important; }
+.crew_color:hover { box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important; }
+.crew_color:hover div { visibility: visible !important; opacity: 1 !important; z-index: 15 !important; }
+.active_crew { visibility: inherit !important; }
+.crew_color div { width: 260px; background: #28282b; height: 180px; position: absolute; top: 0px; left: 0; z-index: 3; padding: 15px; color: #fff; text-align: justify; line-height: 12px; font-size: 15px; visibility: hidden; border-radius: 0 27px; border: solid 4px #dbd5c7; }
+.avaposition { border: none; height: auto; overflow: hidden; width: auto; border-radius: 0 7px; z-index: 5; display: inline-block; margin-left: 2.6em; margin-top: 10.8em; }
+.avaposition > img { max-width: 90px !important; align-items: center; display: flex; }
+.crew_color h5 { width: 227px; height: 27px; margin: auto; background: -webkit-linear-gradient(left, #4e386a, #ee5574, #ffb01f); border-radius: 0 7px; font-family: var(--titres); text-transform: uppercase; text-align: center; font-size: 16px; color: #fff; margin-bottom: 7px; padding-top: 9px; }
+#copy_arte { position: absolute; bottom: 0; right: 0; font-size: 10px; }
+/* Pied de page (Footer) */
+#page-footer {
+background: #1e1e20 !important; border: 1px solid #9e988e !important; border-radius: 27px 0 !important;
+box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important; width: 1000px !important; max-width: 100% !important;
+margin: 20px auto 10px !important; padding: 14px 20px !important; box-sizing: border-box !important;
+}
+#page-footer .wrap { width: 100% !important; max-width: 100% !important; background: transparent !important; border: none !important; padding: 0 !important; margin: 0 !important; }
+#page-footer ul.linklist { border: none !important; padding: 6px 0 0 !important; margin: 0 !important; display: flex !important; flex-wrap: wrap !important; justify-content: space-between !important; align-items: center !important; }
+#page-footer a, #page-footer .copyright, #page-footer .copyright a { color: #d8d2c7 !important; font-family: var(--font) !important; font-size: 12px !important; text-transform: uppercase !important; letter-spacing: 0.8px !important; transition: color 0.25s ease !important; }
+#page-footer a:hover, #page-footer .copyright a:hover { color: #d89b3c !important; }
+.footer-partenaires { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; align-items: center !important; gap: 10px !important; padding-bottom: 12px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(158, 152, 142, 0.35) !important; }
+.footer-partenaires a img { width: 88px !important; height: 31px !important; object-fit: cover !important; border-radius: 6px 0 !important; border: 1px solid #9e988e !important; opacity: 0.85 !important; transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.25s ease !important; }
+.footer-partenaires a img:hover { transform: translateY(-2px) !important; border-color: #d89b3c !important; opacity: 1 !important; }
