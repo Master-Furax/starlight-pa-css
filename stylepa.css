@@ -752,12 +752,12 @@ filter: brightness(1.15) !important;
 /* Chat cosmique centré au milieu de la PA */
 #PAchat {
     position: absolute !important;
-    top: 56% !important;
+    top: 55% !important;
     left: 52.5% !important;
     bottom: auto !important;
     right: auto !important;
     transform: translate(-50%, -50%) !important;
-    width: 1805px !important;
+    width: 180px !important;
     height: auto !important;
     z-index: 20 !important;
     pointer-events: none !important;
