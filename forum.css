@@ -1889,3 +1889,130 @@ div.panel:has(#PA) {
     box-shadow: none !important;
     padding: 0 !important;
 }
+/* ==========================================================================
+   12. CORRECTIFS PA, SOUS-FORUMS, QEEL & DÉGRADÉS PAR GROUPE
+   ========================================================================== */
+
+/* 1. Retire tout fond .panel à l'intérieur de la Page d'Accueil (#PA) */
+#PA div.panel,
+#PA .panel,
+#PA .panel.bg1,
+#PA .panel.bg2,
+#PA .panel.bg3 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+/* 2. Redonne leur belle hauteur aux pilules de sous-forums */
+.sc-subforums {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 2px 4px !important;
+    line-height: normal !important;
+}
+
+.sc-subforums a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    min-height: 24px !important;
+    line-height: 1.2 !important;
+    padding: 4px 11px !important;
+    font-size: 14px !important;
+}
+
+/* 3. Répare les liens Supprimer les cookies / Nouveaux messages (.linkbottom) */
+ul.linkbottom {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 18px auto 26px !important;
+    padding: 8px 14px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+    list-style: none !important;
+    line-height: normal !important;
+}
+
+ul.linkbottom li {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: normal !important;
+}
+
+ul.linkbottom li a {
+    font-family: var(--font) !important;
+    font-size: 12px !important;
+    letter-spacing: 0.6px !important;
+    white-space: nowrap !important;
+}
+
+/* 4. Répare le crédit en bas du QEEL (plus de texte superposé !) */
+.content_qeel_arte #copy_arte,
+.content_qeel_arte .qeel_bloc2 > div:last-child,
+#copy_arte {
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 16px !important;
+    width: auto !important;
+    font-family: var(--font) !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    word-spacing: normal !important;
+    letter-spacing: 0.5px !important;
+    color: var(--border-grey) !important;
+    text-align: right !important;
+}
+
+/* 5. DÉGRADÉS PERSONNALISÉS POUR LES 7 GROUPES DU QEEL */
+.crew_color h5 {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+}
+
+/* Groupe 1 : Cercle Tiamat (Doré / Ambre) */
+.crew_color:nth-of-type(1) h5 {
+    background: linear-gradient(90deg, #9c6b19, #f5b942) !important;
+}
+
+/* Groupe 2 : Violet Cosmique */
+.crew_color:nth-of-type(2) h5 {
+    background: linear-gradient(90deg, #4b1d78, #a855f7) !important;
+}
+
+/* Groupe 3 : Rose Magenta */
+.crew_color:nth-of-type(3) h5 {
+    background: linear-gradient(90deg, #8a154b, #ec4899) !important;
+}
+
+/* Groupe 4 : Orange Solaire */
+.crew_color:nth-of-type(4) h5 {
+    background: linear-gradient(90deg, #9a3412, #f97316) !important;
+}
+
+/* Groupe 5 : Rouge Rubis */
+.crew_color:nth-of-type(5) h5 {
+    background: linear-gradient(90deg, #7f1d1d, #ef4444) !important;
+}
+
+/* Groupe 6 : Insulaires (Vert Émeraude) */
+.crew_color:nth-of-type(6) h5 {
+    background: linear-gradient(90deg, #14532d, #22c55e) !important;
+}
+
+/* Groupe 7 : Bleu Cyan / Azur */
+.crew_color:nth-of-type(7) h5 {
+    background: linear-gradient(90deg, #164e63, #06b6d4) !important;
+}
