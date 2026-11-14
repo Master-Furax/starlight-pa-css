@@ -682,3 +682,285 @@ margin: 20px auto 10px !important; padding: 14px 20px !important; box-sizing: bo
 .footer-partenaires { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; align-items: center !important; gap: 10px !important; padding-bottom: 12px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(158, 152, 142, 0.35) !important; }
 .footer-partenaires a img { width: 88px !important; height: 31px !important; object-fit: cover !important; border-radius: 6px 0 !important; border: 1px solid #9e988e !important; opacity: 0.85 !important; transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.25s ease !important; }
 .footer-partenaires a img:hover { transform: translateY(-2px) !important; border-color: #d89b3c !important; opacity: 1 !important; }
+
+/* ==========================================================================
+   7. MASQUAGE DES LIENS INUTILES DE LA NAVBAR & FORMULAIRE RAPIDE
+   ========================================================================== */
+a.mainmenu[href*="/calendar"],
+a.mainmenu[href*="/faq"],
+a.mainmenu[href*="/portal"],
+a.mainmenu[href*="/images"],
+a.mainmenu[href*="/discover"],
+a.mainmenu[href*="/login"],
+a.mainmenu[href*="/register"],
+li:has(> a.mainmenu[href*="/calendar"]),
+li:has(> a.mainmenu[href*="/faq"]),
+li:has(> a.mainmenu[href*="/portal"]),
+li:has(> a.mainmenu[href*="/images"]),
+li:has(> a.mainmenu[href*="/discover"]),
+li:has(> a.mainmenu[href*="/login"]),
+li:has(> a.mainmenu[href*="/register"]),
+a.mainmenu img,
+span#fa_left,
+span#fa_share,
+div.social_btn,
+form[name="form_login"] .user_login_form {
+    display: none !important;
+}
+
+/* Liens entre Catégories et QEEL (.linkbottom) */
+.linkbottom {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 15px auto 24px !important;
+    padding: 0 !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    list-style: none !important;
+    font-size: 14px !important;
+}
+
+.linkbottom li a {
+    color: var(--gold) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease, letter-spacing 0.2s ease !important;
+}
+
+.linkbottom li a:hover {
+    color: var(--border-cream) !important;
+    letter-spacing: 1.2px !important;
+}
+
+/* Flèches de défilement bas droite */
+#fleches {
+    position: fixed !important;
+    bottom: 10% !important;
+    right: 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    z-index: 940 !important;
+}
+
+#fleches img {
+    width: 28px !important;
+    transition: transform 0.2s ease !important;
+}
+
+#fleches img:hover {
+    transform: scale(1.1) !important;
+}
+
+/* ==========================================================================
+   8. CATÉGORIES & SOUS-FORUMS HARMONISÉS STYLE PA / QEEL
+   ========================================================================== */
+.forabg,
+.forumbg {
+    background: transparent !important;
+    border: none !important;
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 25px auto !important;
+}
+
+.forabg .header {
+    position: relative !important;
+    background: transparent !important;
+    border: none !important;
+    margin-bottom: -14px !important;
+    z-index: 5 !important;
+}
+
+div.table-title {
+    display: block !important;
+    text-align: center !important;
+}
+
+div.table-title h2,
+#h1-category {
+    display: inline-block !important;
+    font-family: var(--titres) !important;
+    font-size: 62px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: var(--bg-dark) !important;
+    text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream), 0 4px 10px rgba(0, 0, 0, 0.7) !important;
+    line-height: 0.85 !important;
+    margin: 0 !important;
+}
+
+ul.topiclist {
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+ul.topiclist.forums {
+    background: var(--bg-dark) !important;
+    border: 2px solid var(--border-grey) !important;
+    border-radius: 27px 0 !important;
+    padding: 18px 14px 14px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Carte d'un forum */
+div.cats.row {
+    display: flex !important;
+    align-items: stretch !important;
+    height: 155px !important;
+    margin: 0 0 14px 0 !important;
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 20px 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+div.cats.row:last-child {
+    margin-bottom: 0 !important;
+}
+
+div.cats.row:hover {
+    border-color: var(--gold) !important;
+    box-shadow: 0 4px 14px rgba(216, 155, 60, 0.35) !important;
+}
+
+/* Image Nouveaux / Pas de nouveaux messages à gauche */
+div.cats.row > img {
+    width: 55px !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-right: 1px solid var(--border-grey) !important;
+    flex-shrink: 0 !important;
+}
+
+div.catflex {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    flex-grow: 1 !important;
+    padding: 10px 14px !important;
+    gap: 14px !important;
+}
+
+div.catGauche {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+}
+
+div.catGauche h2.hierarchy,
+div.catGauche h3.hierarchy {
+    margin: 0 0 4px 0 !important;
+    line-height: 1 !important;
+}
+
+a.forumtitle {
+    color: var(--border-cream) !important;
+    text-decoration: none !important;
+    font-family: var(--titres) !important;
+    text-transform: uppercase !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    transition: color 0.2s ease !important;
+}
+
+a.forumtitle:hover {
+    color: var(--gold) !important;
+}
+
+/* Description beige style cartouche PA / QEEL */
+div.catdesc {
+    height: 72px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    background: #d8d2c7 !important;
+    color: var(--bg-dark) !important;
+    border: 1px solid var(--border-cream) !important;
+    border-radius: 0 14px !important;
+    font-family: var(--textes) !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    padding: 6px 10px !important;
+    text-align: justify !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--plum) #d8d2c7 !important;
+}
+
+/* Dernier message en bas à gauche */
+div.catlast {
+    margin-top: 5px !important;
+    font-size: 12px !important;
+    color: var(--border-grey) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+div.catlast .catposts {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    padding: 1px 8px !important;
+    border-radius: 5px 0 !important;
+    font-weight: bold !important;
+    margin-right: 6px !important;
+}
+
+div.catlast > a {
+    color: var(--gold) !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+a.last-post-icon img,
+.catlast img {
+    height: 13px !important;
+    width: auto !important;
+    vertical-align: middle !important;
+    margin-left: 4px !important;
+}
+
+/* Colonne des sous-forums à droite */
+div.ssfos {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    width: 175px !important;
+    flex-shrink: 0 !important;
+    overflow-y: auto !important;
+    font-family: var(--titres) !important;
+    font-size: 0 !important;
+    scrollbar-width: thin !important;
+}
+
+div.ssfos a {
+    display: block !important;
+    font-size: 15px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    text-align: center !important;
+    background: #28282b !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    padding: 3px 8px !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
+}
+
+div.ssfos a:hover {
+    background: var(--grad-btn) !important;
+    border-color: var(--border-cream) !important;
+    color: #ffffff !important;
+    transform: translateX(-2px) !important;
+}
