@@ -1353,3 +1353,488 @@ ul.linklist.bottom {
     margin: 10px auto !important;
     color: var(--border-cream) !important;
 }
+
+/* ==========================================================================
+   10. INTÉRIEUR DES SUJETS & RP (viewtopic_body - Template Artemis)
+   ========================================================================== */
+:root {
+  --police-texte-template-post: 'Oswald', sans-serif;
+  --police-message-template-post: 'Roboto', sans-serif;
+  --couleur-principale-template-post: #d89b3c;
+  --couleur-secondaire-template-post: #9d2b6b;
+  --couleur-fond-template: #1e1e20;
+  --couleur-fond-date: #141416;
+  --largeur-avatar: 200px;
+  --hauteur-avatar: 320px;
+}
+
+.titre-sujet-arte {
+  width: 950px;
+  max-width: 100%;
+  margin: 20px auto 10px;
+  font-family: var(--titres);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h2.titre-sujet-arte a {
+  color: var(--border-cream);
+  text-decoration: none;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+.titre-sujet-arte::before,
+.nouveau-repondre-arte .pagination-arte ~ div::after {
+  content: "★";
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.titre-sujet-arte::after {
+  content: "";
+  width: 5%;
+  height: calc(100% - 5px);
+  border-left: 1.5px solid var(--gold);
+  border-bottom: 1.5px solid var(--gold);
+  border-radius: 0 0 0 10px;
+  position: absolute;
+  z-index: 10;
+  bottom: -16px;
+  left: 9px;
+}
+
+.fil-ariane-arte {
+  width: 950px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1% 0 6%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 9;
+}
+
+.fil-ariane-arte span a,
+.nouveau-repondre-arte .pagination-arte ~ div a,
+.pagination-arte > span {
+  display: inline-block;
+  background: var(--bg-dark);
+  color: var(--border-cream);
+  padding: 5px 12px;
+  border-radius: 10px 0;
+  font-family: var(--titres);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  border: 1px solid var(--border-grey);
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.fil-ariane-arte > span a {
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+.nouveau-repondre-arte .pagination-arte ~ div a:hover,
+.date-et-options li:hover,
+.fil-ariane-arte span a:hover {
+  background: var(--grad-btn);
+  border-color: var(--border-cream);
+  color: #ffffff;
+}
+
+.pagination-arte strong {
+  background: var(--grad-btn);
+  border: 1px solid var(--border-cream);
+  border-radius: 6px 0;
+  padding: 2px 8px;
+  color: #ffffff;
+}
+
+.nouveau-repondre-arte {
+  width: 950px;
+  max-width: 100%;
+  margin: 14px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 1%;
+}
+
+.nouveau-repondre-arte .pagination-arte ~ div a {
+  margin: 0 5px;
+}
+
+/* Carte complète d'un message RP */
+.un-message-artemis {
+  width: 950px;
+  max-width: 100%;
+  margin: 20px auto;
+  background: var(--bg-dark);
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 27px 0;
+  border: 1.5px solid var(--border-grey);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.un-message-artemis * {
+  box-sizing: border-box;
+}
+
+/* Barre supérieure : Date & Boutons Citer / Éditer / Supprimer */
+.date-et-options {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  background: #141416;
+  border-bottom: 1px solid var(--border-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+}
+
+.date-et-options > a {
+  color: var(--border-cream);
+  font-family: var(--font);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+}
+
+.date-et-options ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 8px;
+}
+
+.date-et-options ul li {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-grey);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px 0;
+  display: grid;
+  place-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.date-et-options ul li a i {
+  color: var(--jscouleur, var(--gold));
+  font-size: 14px;
+}
+
+.date-et-options ul li:hover a i {
+  color: #ffffff;
+}
+
+.date-et-options ul li:has(a[href=""]) {
+  display: none;
+}
+
+/* Corps du message : Avatar à gauche + Texte RP à droite */
+.corps-message-artemis {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: var(--largeur-avatar) 1fr;
+  gap: 18px;
+  padding: 18px;
+  background-color: #1e1e20;
+}
+
+.avatar-du-membre-post {
+  grid-column: 1 / 2;
+  height: var(--hauteur-avatar);
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px 0;
+  border: 2px solid var(--jscouleur, var(--gold));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.avatar-du-membre-post img {
+  width: var(--largeur-avatar);
+  height: var(--hauteur-avatar);
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Panneau d'infos qui glisse au survol de l'avatar */
+.infos-hover-arte {
+  position: absolute;
+  inset: 0;
+  top: 100%;
+  background: rgba(20, 20, 22, 0.88);
+  backdrop-filter: blur(6px);
+  transition: top 0.45s ease;
+  overflow-y: auto;
+  padding: 12px;
+  color: var(--border-cream);
+}
+
+.avatar-du-membre-post:hover .infos-hover-arte {
+  top: 0;
+}
+
+.avatar-du-membre-post:hover img {
+  transform: scale(1.06);
+}
+
+.infos-hover-arte div {
+  color: var(--border-cream);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.infos-hover-arte div .gen:nth-of-type(odd) {
+  background: var(--grad-btn);
+  color: #ffffff !important;
+  text-transform: uppercase;
+  border-radius: 5px 0;
+  padding: 2px 8px;
+  font-family: var(--titres);
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  margin: 6px 0 2px;
+}
+
+.infos-hover-arte div .gen:nth-of-type(even) {
+  display: block;
+}
+
+/* Zone de lecture du RP (Fond sombre doux reposant pour les yeux) */
+.message-contenu-arte {
+  grid-column: 2 / 3;
+  background-color: #141416;
+  color: #e8e2d5;
+  font-family: var(--textes);
+  font-size: 14px;
+  line-height: 1.65;
+  border-radius: 20px 0;
+  border: 1px solid var(--border-grey);
+  border-left: 3px solid var(--jscouleur, var(--gold));
+  padding: 18px 22px;
+  margin: 0;
+  text-align: justify;
+}
+
+.signature_div {
+  border-top: 1px solid rgba(158, 152, 142, 0.3);
+  margin-top: 20px;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--border-grey);
+}
+
+/* Bandeau inférieur du posteur : Champs de profil + Pseudo & Rang */
+.infos-membre-arte {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  background: linear-gradient(90deg, #141416 0%, color-mix(in srgb, var(--jscouleur, #9d2b6b) 35%, #1e1e20) 100%);
+  border-top: 1.5px solid var(--jscouleur, var(--border-grey));
+  color: var(--border-cream);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  position: relative;
+}
+
+.infos-membre-arte > div:nth-of-type(1) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: 68%;
+  align-items: center;
+}
+
+.infos-membre-arte .label {
+  font-size: 0;
+}
+
+.infos-membre-arte .label span {
+  background: var(--bg-dark);
+  border: 1px solid var(--jscouleur, var(--gold));
+  border-radius: 6px 0;
+  padding: 3px 8px;
+  font-family: var(--titres);
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--border-cream) !important;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.infos-membre-arte .label + img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px 0;
+  border: 1.5px solid var(--border-cream);
+}
+
+.pseudo-et-rang {
+  text-align: right;
+}
+
+.pseudo-et-rang div:first-child {
+  font-family: var(--titres);
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pseudo-et-rang div:first-child a,
+.pseudo-et-rang div:first-child strong {
+  color: var(--jscouleur, var(--gold)) !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.pseudo-et-rang div:last-child {
+  display: inline-block;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-grey);
+  border-radius: 8px 0;
+  padding: 2px 10px;
+  font-family: var(--font);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--border-cream);
+  margin-top: 4px;
+}
+
+.pseudo-et-rang div:last-child:empty {
+  display: none;
+}
+
+/* Réponse rapide & Boîtes d'outils en bas de sujet */
+.reponse-rapide-artemis,
+fieldset.jumpbox,
+fieldset.quickmod {
+  width: 950px;
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 14px 18px;
+  box-sizing: border-box;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-grey);
+  border-radius: 20px 0;
+  color: var(--border-cream);
+}
+
+.reponse-rapide-artemis .h3 {
+  font-family: var(--titres);
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(158, 152, 142, 0.3);
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   11. LISTE DES MEMBRES (memberlist_body - Style Ashling harmonisé)
+   ========================================================================== */
+.lmback {
+  width: 950px;
+  max-width: 100%;
+  margin: 20px auto 15px;
+  text-align: center;
+  font-family: var(--titres);
+  text-transform: uppercase;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--bg-dark);
+  text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream), 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.lmfond {
+  width: 172px;
+  padding: 8px;
+  margin: 8px;
+  float: left;
+  background: var(--bg-dark);
+  border: 1.5px solid var(--border-grey);
+  border-radius: 20px 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.65);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.lmfond:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.lmava {
+  width: 170px;
+  height: 260px;
+  border-radius: 14px 0;
+  overflow: hidden;
+  border: 1px solid var(--border-cream);
+}
+
+.lmava img {
+  width: 170px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.lmimg {
+transition: margin-top 0.5s ease;
+}
+.lmava:hover .lmimg {
+margin-top: -92px;
+}
+.lmdet {
+width: 160px;
+height: 82px;
+background: #141416;
+padding: 5px;
+border-top: 3px solid var(--gold);
+}
+.lmdetin {
+font-weight: 600;
+margin-top: 4px;
+width: 160px;
+border-bottom: 1px solid rgba(158, 152, 142, 0.25);
+text-transform: uppercase;
+font-size: 10px;
+font-family: var(--font);
+color: var(--border-cream);
+padding: 3px 0 2px;
+}
+.lmnom {
+background: #141416;
+border: 1px solid var(--border-grey);
+border-radius: 10px 0;
+margin-top: 6px;
+padding: 5px;
+width: 160px;
+text-align: center;
+}
+.lmnom a {
+font-family: var(--titres);
+text-transform: uppercase;
+letter-spacing: 0.8px;
+font-size: 20px;
+font-weight: 700;
+text-decoration: none;
+}
