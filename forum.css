@@ -555,7 +555,9 @@ margin: 0 auto !important;
 width: auto !important;
 }
 
-/* Supprime tout fond parasite à l'intérieur de #PA (Intrigue #1, etc.) */
+/* Supprime tout fond parasite à l'intérieur de #PA (y compris le dégradé sur EN COURS...) */
+#PA h3,
+#PA .h3,
 #PA .row1,
 #PA .row2,
 #PA .row3,
@@ -566,6 +568,7 @@ width: auto !important;
     border: none !important;
     box-shadow: none !important;
 }
+
 
 /* --------------------------------------------------------------------------
 7. CATÉGORIES EN GRILLE MODERNE & RIDEAU D'IMAGE COULISSANT
