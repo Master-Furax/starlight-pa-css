@@ -755,27 +755,21 @@ form[name="form_login"] .user_login_form {
 }
 
 /* ==========================================================================
-   8. CATÉGORIES & SOUS-FORUMS HARMONISÉS STYLE PA / QEEL
+   8. CATÉGORIES EN GRILLE MODERNE & AVATAR HEXAGONAL DU DERNIER POSTEUR
    ========================================================================== */
-.forabg,
-.forumbg {
+.forabg.starlight-cat {
     background: transparent !important;
     border: none !important;
     width: 950px !important;
     max-width: 100% !important;
-    margin: 25px auto !important;
+    margin: 28px auto !important;
 }
 
-.forabg .header {
+.forabg.starlight-cat .header {
     position: relative !important;
     background: transparent !important;
     border: none !important;
-    margin-bottom: -14px !important;
-    z-index: 5 !important;
-}
-
-div.table-title {
-    display: block !important;
+    margin-bottom: 14px !important;
     text-align: center !important;
 }
 
@@ -783,184 +777,274 @@ div.table-title h2,
 #h1-category {
     display: inline-block !important;
     font-family: var(--titres) !important;
-    font-size: 62px !important;
+    font-size: 56px !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
     color: var(--bg-dark) !important;
     text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream), 0 4px 10px rgba(0, 0, 0, 0.7) !important;
-    line-height: 0.85 !important;
+    line-height: 0.9 !important;
     margin: 0 !important;
 }
 
-ul.topiclist {
-    list-style-type: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+/* Grille 2 colonnes + 3e élément pleine largeur (comme sur ton exemple !) */
+.starlight-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
 }
 
-ul.topiclist.forums {
-    background: var(--bg-dark) !important;
-    border: 2px solid var(--border-grey) !important;
-    border-radius: 27px 0 !important;
-    padding: 18px 14px 14px !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65) !important;
+.starlight-grid > .sc-forum-wrapper:nth-child(3),
+.starlight-grid > .sc-forum-wrapper:only-child {
+    grid-column: 1 / -1 !important;
 }
 
-/* Carte d'un forum */
-div.cats.row {
+.sc-forum-wrapper {
     display: flex !important;
-    align-items: stretch !important;
-    height: 155px !important;
-    margin: 0 0 14px 0 !important;
-    background: #141416 !important;
-    border: 1px solid var(--border-grey) !important;
-    border-radius: 20px 0 !important;
-    overflow: hidden !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+/* Carte principale du forum */
+.sc-forum-card {
     position: relative !important;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
-}
-
-div.cats.row:last-child {
-    margin-bottom: 0 !important;
-}
-
-div.cats.row:hover {
-    border-color: var(--gold) !important;
-    box-shadow: 0 4px 14px rgba(216, 155, 60, 0.35) !important;
-}
-
-/* Image Nouveaux / Pas de nouveaux messages à gauche */
-div.cats.row > img {
-    width: 55px !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-right: 1px solid var(--border-grey) !important;
-    flex-shrink: 0 !important;
-}
-
-div.catflex {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: stretch !important;
-    flex-grow: 1 !important;
-    padding: 10px 14px !important;
-    gap: 14px !important;
-}
-
-div.catGauche {
+    height: 225px !important;
+    background-color: #141416 !important;
+    background-image: radial-gradient(circle at 50% 40%, #2b242c 0%, #141416 85%) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 27px 0 !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.65) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    flex-grow: 1 !important;
-    min-width: 0 !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-div.catGauche h2.hierarchy,
-div.catGauche h3.hierarchy {
-    margin: 0 0 4px 0 !important;
+.sc-forum-card:hover {
+    border-color: var(--gold) !important;
+    box-shadow: 0 6px 22px rgba(216, 155, 60, 0.4) !important;
+}
+
+/* Image de fond du forum (si configurée dans le panneau admin du forum) */
+.sc-forum-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0.45 !important;
+    transition: transform 0.5s ease, opacity 0.4s ease !important;
+    z-index: 1 !important;
+}
+
+.sc-forum-card:hover .sc-forum-bg {
+    transform: scale(1.04) !important;
+    opacity: 0.3 !important;
+}
+
+/* En-tête de la carte avec le titre centré */
+.sc-forum-header {
+    position: relative !important;
+    z-index: 3 !important;
+    text-align: center !important;
+    padding: 12px 16px 4px !important;
+}
+
+.sc-forum-header h2,
+.sc-forum-header h3 {
+    margin: 0 !important;
     line-height: 1 !important;
 }
 
 a.forumtitle {
-    color: var(--border-cream) !important;
-    text-decoration: none !important;
     font-family: var(--titres) !important;
-    text-transform: uppercase !important;
-    font-size: 30px !important;
+    font-size: 32px !important;
     font-weight: 700 !important;
-    letter-spacing: 1px !important;
-    transition: color 0.2s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    color: var(--bg-dark) !important;
+    text-shadow: -1px -1px 0 var(--border-cream), 1px -1px 0 var(--border-cream), -1px 1px 0 var(--border-cream), 1px 1px 0 var(--border-cream), 0 3px 8px rgba(0, 0, 0, 0.85) !important;
+    text-decoration: none !important;
+    transition: color 0.25s ease !important;
 }
 
 a.forumtitle:hover {
     color: var(--gold) !important;
+    text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark) !important;
 }
 
-/* Description beige style cartouche PA / QEEL */
-div.catdesc {
-    height: 72px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+/* Zone centrale : Description lisibilité optimale */
+.sc-forum-desc {
+    position: relative !important;
+    z-index: 3 !important;
+    margin: 0 18px !important;
+    padding: 6px 12px !important;
+    max-height: 76px !important;
     overflow-y: auto !important;
-    background: #d8d2c7 !important;
-    color: var(--bg-dark) !important;
-    border: 1px solid var(--border-cream) !important;
-    border-radius: 0 14px !important;
+    background: rgba(20, 20, 22, 0.72) !important;
+    backdrop-filter: blur(4px) !important;
+    border-left: 2px solid var(--gold) !important;
+    border-radius: 0 12px !important;
+    color: var(--border-cream) !important;
     font-family: var(--textes) !important;
     font-size: 12px !important;
     line-height: 1.45 !important;
-    padding: 6px 10px !important;
     text-align: justify !important;
     scrollbar-width: thin !important;
-    scrollbar-color: var(--plum) #d8d2c7 !important;
 }
 
-/* Dernier message en bas à gauche */
-div.catlast {
-    margin-top: 5px !important;
-    font-size: 12px !important;
-    color: var(--border-grey) !important;
+/* Bandeau inférieur translucide (style de ton image) */
+.sc-forum-footer {
+    position: relative !important;
+    z-index: 3 !important;
+    height: 66px !important;
+    padding: 0 14px !important;
+    background: rgba(30, 30, 32, 0.86) !important;
+    backdrop-filter: blur(6px) !important;
+    border-top: 1px solid rgba(158, 152, 142, 0.45) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+}
+
+/* Avatar Hexagonal du dernier posteur */
+.sc-last-avatar {
+    position: relative !important;
+    width: 54px !important;
+    height: 47px !important;
+    flex-shrink: 0 !important;
+    background: linear-gradient(135deg, #4e386a, #ee5574, #ffb01f) !important;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.sc-last-avatar-inner {
+    width: 50px !important;
+    height: 43px !important;
+    background: #141416 !important;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+    overflow: hidden !important;
+}
+
+.sc-last-avatar-inner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* Infos dernier message au centre du bandeau bas */
+.sc-last-info {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.25 !important;
+}
+
+a.sc-last-topic {
+    font-family: var(--titres) !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+    color: var(--gold) !important;
+    text-decoration: none !important;
+    max-width: 100% !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+    transition: color 0.2s ease !important;
 }
 
-div.catlast .catposts {
+a.sc-last-topic:hover {
+    color: var(--border-cream) !important;
+}
+
+.sc-last-meta {
+    font-family: var(--font) !important;
+    font-size: 11.5px !important;
+    color: var(--border-cream) !important;
+    text-transform: uppercase !important;
+}
+
+.sc-last-arrow {
+    display: inline-block !important;
+    margin-left: 5px !important;
+    padding: 0 5px !important;
     background: var(--grad-btn) !important;
     color: #ffffff !important;
-    padding: 1px 8px !important;
-    border-radius: 5px 0 !important;
-    font-weight: bold !important;
-    margin-right: 6px !important;
-}
-
-div.catlast > a {
-    color: var(--gold) !important;
-    font-weight: bold !important;
+    border-radius: 4px 0 !important;
+    font-size: 10px !important;
     text-decoration: none !important;
+    transition: transform 0.2s ease !important;
 }
 
-a.last-post-icon img,
-.catlast img {
-    height: 13px !important;
-    width: auto !important;
-    vertical-align: middle !important;
-    margin-left: 4px !important;
+.sc-last-arrow:hover {
+    transform: translateX(2px) !important;
 }
 
-/* Colonne des sous-forums à droite */
-div.ssfos {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    gap: 5px !important;
-    width: 175px !important;
-    flex-shrink: 0 !important;
-    overflow-y: auto !important;
-    font-family: var(--titres) !important;
-    font-size: 0 !important;
-    scrollbar-width: thin !important;
-}
-
-div.ssfos a {
-    display: block !important;
-    font-size: 15px !important;
+.sc-last-stats {
+    font-size: 10px !important;
+    color: var(--border-grey) !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.8px !important;
-    text-align: center !important;
-    background: #28282b !important;
+}
+
+/* Cercle d'icône Nouveau / Pas de nouveau message à droite (comme la bulle de ton exemple) */
+.sc-forum-status {
+    width: 42px !important;
+    height: 42px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(20, 20, 22, 0.85) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.sc-forum-status img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain !important;
+}
+
+/* Sous-forums en petits badges alignés sous la carte */
+.sc-subforums {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    padding: 0 4px !important;
+    font-size: 0 !important; /* Masque les virgules par défaut de Forumactif */
+}
+
+.sc-subforums a {
+    display: inline-block !important;
+    background: var(--bg-dark) !important;
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 8px 0 !important;
-    padding: 3px 8px !important;
+    padding: 3px 10px !important;
+    font-family: var(--titres) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
     text-decoration: none !important;
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
 }
 
-div.ssfos a:hover {
+.sc-subforums a:hover {
     background: var(--grad-btn) !important;
     border-color: var(--border-cream) !important;
     color: #ffffff !important;
-    transform: translateX(-2px) !important;
+    transform: translateY(-1px) !important;
 }
+
