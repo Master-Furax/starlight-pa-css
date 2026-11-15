@@ -545,11 +545,11 @@ html body#modernbb #headerbar-top ul.navbar-nav {
     html body#modernbb #headerbar-top,
     html body#modernbb .is-sticky#headerbar-top,
     html body#modernbb .is-sticky#headerbar-top.w-toolbar {
-        padding: 0 130px 0 275px !important;
+        padding: 0 115px 0 330px !important;
     }
     .navbar a, #headerbar-top a, #headerbar-top .wrap ul li a {
-        font-size: 15px !important;
-        padding: 3px 4px !important;
+        font-size: 19px !important;
+        padding: 4px 6px !important;
     }
 }
 
