@@ -1951,14 +1951,22 @@ html body#modernbb .panel a.sceditor-button.active {
     padding: 10px !important;
 }
 
+/* Remet le bloc d'écriture et la boîte des smileys côte à côte sans débordement */
+html body#modernbb #message-box {
+    width: calc(100% - 205px) !important;
+    float: left !important;
+    box-sizing: border-box !important;
+}
+
 #smiley-box {
     background: #1e1e20 !important;
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 14px 0 !important;
-    padding: 10px !important;
-    width: 215px !important;
-    min-width: 215px !important;
+    padding: 8px !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    float: right !important;
     box-sizing: border-box !important;
 }
 
