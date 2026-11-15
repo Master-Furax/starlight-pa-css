@@ -1655,8 +1655,10 @@ h2.titre-sujet-arte a {
    display: grid; 
    grid-template-columns: var(--largeur-avatar) 1fr; 
    gap: 18px; 
-   padding: 18px; 
-   background-color: #1e1e20; }
+   padding: 22px !important; 
+   box-sizing: border-box !important;
+   background-color: #1e1e20; 
+}
 
 .avatar-du-membre-post { grid-column: 1 / 2; height: var(--hauteur-avatar); overflow: hidden; position: relative; border-radius: 20px 0; border: 2px solid var(--jscouleur, var(--gold)); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); }
 .avatar-du-membre-post img { width: var(--largeur-avatar); height: var(--hauteur-avatar); object-fit: cover; transition: transform 0.6s ease; }
@@ -1671,9 +1673,11 @@ h2.titre-sujet-arte a {
 /* Bandeau membre en ligne 2 (au-dessus du message), corps du message en ligne 3 */
 .infos-membre-arte {
     grid-column: 1 / 3 !important;
-    grid-row: 3 / 4 !important;
-    padding: 22px !important;
+    grid-row: 2 / 3 !important;
+    min-height: 118px !important;
+    padding: 24px 22px !important;
     box-sizing: border-box !important;
+    background: linear-gradient(90deg, #141416 0%, color-mix(in srgb, var(--jscouleur, #9d2b6b) 35%, #1e1e20) 100%) !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
