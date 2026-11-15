@@ -2678,68 +2678,83 @@ html body#modernbb .lmfond:hover .lmbadge img {
 }
 
 /* =========================================================
-   CORRECTIFS : LISTING DES SUJETS (.SBJ / .tleSBJ) & INFORMATIONS
+   CORRECTIFS : LISTING DES SUJETS (.SBJ) & MESSAGE INFO
    ========================================================= */
 
-/* 1. Tableau et cartes des sujets en pleine largeur */
-html body#modernbb table.forumline,
-html body#modernbb table.forumline tbody,
-html body#modernbb table.forumline tr,
-html body#modernbb table.forumline td {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-    box-sizing: border-box !important;
+/* 1. Titre "INFORMATIONS" uniquement sur la page de confirmation (sans toucher à la PA !) */
+html body#modernbb #message .panel h1,
+html body#modernbb #message .panel h2,
+html body#modernbb #message .panel h3,
+html body#modernbb .panel .inner > h2:first-child:not([class]) {
+    color: var(--gold) !important;
+    -webkit-text-stroke: 0 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
 }
 
+/* 2. Rétablit le tableau des sujets en 950px propre sans chevauchement */
+html body#modernbb table.forumline {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 15px auto !important;
+    border-collapse: separate !important;
+    border-spacing: 0 12px !important;
+    display: table !important;
+}
+
+html body#modernbb table.forumline tbody {
+    display: table-row-group !important;
+}
+
+html body#modernbb table.forumline tr {
+    display: table-row !important;
+}
+
+html body#modernbb table.forumline td {
+    display: table-cell !important;
+    width: 100% !important;
+}
+
+/* 3. Carte de sujet .SBJ : hauteur souple et alignement propre */
 html body#modernbb fieldset.SBJ {
     width: 100% !important;
-    max-width: 100% !important;
+    height: auto !important;
+    min-height: 64px !important;
+    max-height: none !important;
+    overflow: visible !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     gap: 16px !important;
+    padding: 14px 18px !important;
     box-sizing: border-box !important;
+    position: relative !important;
 }
 
-/* 2. Titre du sujet : interligne normal et espace suffisant pour ne plus s'écraser */
+/* 4. Titre du sujet : interligne normal et largeur fluide */
 html body#modernbb .tleSBJ {
     flex: 1 1 auto !important;
-    min-width: 240px !important;
+    min-width: 0 !important;
+    height: auto !important;
     line-height: 1.3 !important;
     white-space: normal !important;
     word-break: break-word !important;
-    padding-right: 10px !important;
 }
 
-html body#modernbb .tleSBJ strong,
 html body#modernbb .tleSBJ a {
+    display: inline-block !important;
+    line-height: 1.25 !important;
+    font-size: 22px !important;
+}
+
+html body#modernbb .descSBJ {
     line-height: 1.3 !important;
-    display: inline !important;
-    -webkit-text-stroke: 0 !important;
-    text-shadow: none !important;
+    margin-top: 3px !important;
 }
 
-html body#modernbb .tleSBJ br {
-    display: none !important;
-}
-
-/* 3. Bloc stats & dernier message à droite : ne compresse plus le titre */
+/* 5. Bloc stats & dernier message à droite */
 html body#modernbb .boxSBJ {
     flex: 0 0 auto !important;
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
-}
-
-/* 4. Titre "INFORMATIONS" net sans contour blanc */
-html body#modernbb .panel h1,
-html body#modernbb .panel h2,
-html body#modernbb .panel h3,
-html body#modernbb .forumline th,
-html body#modernbb .forumline .thHead,
-html body#modernbb .forumline .cattitle {
-    color: var(--gold) !important;
-    -webkit-text-stroke: 0 !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
 }
