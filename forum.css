@@ -22,18 +22,24 @@
     --link-hover: #945dca;
 }
 
+html,
 body#modernbb {
-    margin-top: 85px !important;
-    padding-top: 0 !important;
-    font-family: var(--font);
+    min-height: 100vh !important;
     background-color: #19191c !important;
     background-image:
         radial-gradient(circle at 12% 35%, rgba(157, 43, 107, 0.16) 0%, transparent 32%),
         radial-gradient(circle at 88% 65%, rgba(216, 155, 60, 0.14) 0%, transparent 32%),
         linear-gradient(90deg, #141416 0%, #28282b 22%, #28282b 78%, #141416 100%) !important;
     background-attachment: fixed !important;
+}
+
+body#modernbb {
+    margin-top: 85px !important;
+    padding-top: 0 !important;
+    font-family: var(--font);
     color: var(--border-cream);
 }
+
 
 #wrap {
     background: transparent !important;
