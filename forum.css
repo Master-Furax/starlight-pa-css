@@ -1470,10 +1470,12 @@ h2.titre-sujet-arte a {
     height: auto !important;
 }
 
-/* Les deux étoiles de début et de fin de chaîne */
+/* Les deux étoiles de début et de fin de chaîne (au-dessus du fil) */
 .titre-sujet-arte::before,
 .nouveau-repondre-arte .pagination-arte ~ div::after {
     content: "★" !important;
+    position: relative !important;
+    z-index: 10 !important;
     display: inline-block !important;
     color: var(--gold) !important;
     font-size: 22px !important;
@@ -1481,6 +1483,7 @@ h2.titre-sujet-arte a {
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), text-shadow 0.3s ease, color 0.3s ease !important;
     transform-origin: center center !important;
 }
+
 
 /* Effet rotation + brillance sur les étoiles quand on survole un bouton */
 #page-body:has(.fil-ariane-arte a:hover, .nouveau-repondre-arte a:hover) .titre-sujet-arte::before,
@@ -1522,7 +1525,7 @@ h2.titre-sujet-arte a {
     position: absolute !important;
     top: 50% !important;
     left: 58px !important;
-    right: 22px !important;
+    right: 28px !important;
     height: 1.5px !important;
     background: var(--gold) !important;
     transform: translateY(-50%) !important;
@@ -1530,21 +1533,23 @@ h2.titre-sujet-arte a {
     pointer-events: none !important;
 }
 
-/* Segment 3 : Descente en angle à droite vers la ligne des boutons d'action */
+/* Segment 3 : Descente en angle à droite vers l'étoile 2 */
 .fil-ariane-arte::after {
     content: "" !important;
     position: absolute !important;
-    top: 50% !important;
-    right: 18px !important;
-    width: 14px !important;
-    height: 44px !important;
+    top: calc(50% - 0.75px) !important;
+    right: 20px !important;
+    width: 16px !important;
+    height: 43px !important;
     border-top: 1.5px solid var(--gold) !important;
     border-right: 1.5px solid var(--gold) !important;
     border-bottom: 1.5px solid var(--gold) !important;
     border-radius: 0 10px 10px 0 !important;
+    box-sizing: border-box !important;
     z-index: 1 !important;
     pointer-events: none !important;
 }
+
 
 .fil-ariane-arte > span {
     position: relative !important;
@@ -1623,9 +1628,9 @@ h2.titre-sujet-arte a {
     content: "" !important;
     position: absolute !important;
     top: 50% !important;
-    right: 34px !important;
+    right: 24px !important;
     width: 470px !important;
-    max-width: calc(100% - 60px) !important;
+    max-width: calc(100% - 50px) !important;
     height: 1.5px !important;
     background: var(--gold) !important;
     transform: translateY(-50%) !important;
