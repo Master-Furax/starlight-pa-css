@@ -1708,7 +1708,7 @@ h2.titre-sujet-arte a {
     background-position: center 65% !important;
     background-size: cover !important;
     opacity: 0.45 !important;
-    mix-blend-mode: multiply !important;
+    mix-blend-mode: soft-light !important; opacity: 0.55 !important;
     pointer-events: none !important;
     z-index: 1 !important;
 }
