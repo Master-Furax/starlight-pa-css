@@ -468,9 +468,13 @@ display: block !important;
 #PAmusique-info {
     display: flex !important;
     flex-direction: column !important;
-    overflow: visible !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    overflow: hidden !important;
     min-width: 0 !important;
-    padding-bottom: 6px !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+    font-size: 14px !important;
     z-index: 5 !important;
     flex-grow: 1 !important;
 }
@@ -478,12 +482,16 @@ display: block !important;
 .PA-track-title {
     display: block !important;
     font-family: var(--titres, 'Teko', 'Arial Narrow', sans-serif) !important;
-    font-size: 16px !important;
+    font-size: 17px !important;
+    line-height: 1.1 !important;
+    height: auto !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.8px !important;
     color: #f4efe6 !important;
     -webkit-text-fill-color: #f4efe6 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -491,9 +499,14 @@ display: block !important;
 
 .PA-track-sub {
     display: block !important;
-    font-size: 11.5px !important;
+    font-family: var(--font, 'Oswald', sans-serif) !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    height: auto !important;
     color: #d89b3c !important;
     -webkit-text-fill-color: #d89b3c !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     font-weight: 600 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
