@@ -2605,7 +2605,7 @@ html body#modernbb .lmdet * {
 html body#modernbb .lmdet .lmdet-rank {
     font-family: var(--titres) !important;
     font-size: 20px !important;
-    letter-spacing: 1.5px !important;
+    letter-spacing: 2px !important;
     line-height: 1.2 !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
