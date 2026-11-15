@@ -1794,6 +1794,188 @@ h2.titre-sujet-arte a {
 .reponse-rapide-artemis, fieldset.jumpbox, fieldset.quickmod { width: 950px; max-width: 100%; margin: 16px auto; padding: 14px 18px; box-sizing: border-box; background: var(--bg-dark); border: 1px solid var(--border-grey); border-radius: 20px 0; color: var(--border-cream); }
 .reponse-rapide-artemis .h3 { font-family: var(--titres); font-size: 22px; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid rgba(158, 152, 142, 0.3); margin-bottom: 10px; }
 
+/* Boîte de lecture du message : fond crème semi-sombre (#d8d2c7) + texte foncé lisible */
+.message-contenu-arte {
+    grid-column: 2 / 3 !important;
+    background-color: #d8d2c7 !important;
+    color: #19191c !important;
+    font-family: var(--textes) !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    border-radius: 20px 0 !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-left: 4px solid var(--jscouleur, var(--gold)) !important;
+    padding: 20px 24px !important;
+    margin: 0 !important;
+    text-align: justify !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+.message-contenu-arte a {
+    color: #8a2059 !important;
+    font-weight: 600 !important;
+}
+
+.message-contenu-arte a:hover {
+    color: #b57718 !important;
+}
+
+.signature_div {
+    border-top: 1px solid rgba(25, 25, 28, 0.25) !important;
+    margin-top: 20px !important;
+    padding-top: 12px !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    color: #3a3a40 !important;
+}
+
+/* Spoilers, Citations & Balises Code : inversés en sombre (#1e1e20) pour se détacher sur le fond crème */
+.message-contenu-arte .spoiler,
+.message-contenu-arte dl.codebox,
+.message-contenu-arte blockquote,
+.message-contenu-arte .codebox {
+    background-color: #1e1e20 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-left: 3px solid var(--jscouleur, var(--gold)) !important;
+    border-radius: 12px 0 !important;
+    padding: 10px 14px !important;
+    margin: 10px 0 !important;
+}
+
+.message-contenu-arte .spoiler_title,
+.message-contenu-arte dl.codebox dt,
+.message-contenu-arte blockquote cite {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    font-family: var(--titres) !important;
+    font-size: 15px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    padding: 3px 10px !important;
+    border-radius: 6px 0 !important;
+    display: inline-block !important;
+    margin-bottom: 6px !important;
+    cursor: pointer !important;
+}
+
+.message-contenu-arte .spoiler_content,
+.message-contenu-arte dl.codebox dd,
+.message-contenu-arte dl.codebox code,
+.message-contenu-arte blockquote div {
+    background: transparent !important;
+    color: var(--border-cream) !important;
+}
+
+/* ==========================================================================
+   ÉDITEUR UNIFIÉ (Réponse rapide, Répondre, Éditer, Nouveau sujet, MP)
+   ========================================================================== */
+.sceditor-container {
+    background: #141416 !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 18px 0 !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Barre d'outils sombre */
+div.sceditor-toolbar {
+    background: #141416 !important;
+    border-bottom: 1.5px solid var(--gold) !important;
+    padding: 6px 8px !important;
+}
+
+div.sceditor-group {
+    background: #1e1e20 !important;
+    border: 1px solid rgba(158, 152, 142, 0.4) !important;
+    border-radius: 6px 0 !important;
+    margin: 2px 4px 2px 0 !important;
+    padding: 1px !important;
+}
+
+/* Rétablit les icônes sur Répondre & Éditer (annule le position:static des .panel) */
+html body#modernbb a.sceditor-button,
+html body#modernbb .panel a.sceditor-button {
+    position: relative !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 3px !important;
+    border-radius: 4px 0 !important;
+    background-color: transparent !important;
+}
+
+html body#modernbb a.sceditor-button div {
+    position: relative !important;
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    filter: brightness(1.45) contrast(1.15) !important;
+}
+
+html body#modernbb a.sceditor-button:hover,
+html body#modernbb a.sceditor-button.active {
+    background: var(--grad-btn) !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+html body#modernbb a.sceditor-button:hover div,
+html body#modernbb a.sceditor-button.active div {
+    filter: brightness(2) !important;
+}
+
+/* Zone de texte crème (#d8d2c7) + écriture sombre (#19191c) en mode Source & WYSIWYG */
+.sceditor-container textarea,
+.sceditor-container iframe {
+    background-color: #d8d2c7 !important;
+    color: #19191c !important;
+    font-family: var(--textes) !important;
+    font-size: 14px !important;
+    color-scheme: light !important;
+}
+
+/* Panneau des smileys sur Répondre / Éditer */
+#smiley-box,
+.sceditor-dropdown {
+    background: #1e1e20 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 14px 0 !important;
+}
+
+.sceditor-dropdown input,
+.sceditor-dropdown textarea {
+    background: #141416 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+}
+
+/* Corrige l'onglet "Options" qui dépassait en bas à gauche sur Répondre / Éditer */
+#tabs,
+ul#tabs {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 10px auto 0 !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    gap: 8px !important;
+    list-style: none !important;
+}
+
+#tabs li a {
+    display: inline-block !important;
+    background: var(--bg-dark) !important;
+    color: var(--gold) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 14px !important;
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+}
+
+
 /* --------------------------------------------------------------------------
 11. PIED DE PAGE (FOOTER) & FLÈCHES DE DÉFILEMENT
 -------------------------------------------------------------------------- */
