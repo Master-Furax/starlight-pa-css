@@ -2538,10 +2538,11 @@ html body#modernbb .lmfond:hover {
 }
 
 /* Avatar */
+/* Avatar : remplit 100% de la largeur sans être bloqué par max-width: 200px */
 html body#modernbb .lmava {
     position: relative !important;
     width: 100% !important;
-    height: 300px !important;
+    height: 340px !important;
     overflow: hidden !important;
 }
 
@@ -2555,7 +2556,10 @@ html body#modernbb .lmimg a {
 html body#modernbb .lmimg img {
     width: 100% !important;
     height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
     object-fit: cover !important;
+    object-position: center top !important;
     display: block !important;
     transition: transform 0.4s ease !important;
 }
@@ -2564,7 +2568,7 @@ html body#modernbb .lmfond:hover .lmimg img {
     transform: scale(1.04) !important;
 }
 
-/* Cadre crème translucide au survol (comme les images de catégories) */
+/* Cadre crème translucide au survol */
 html body#modernbb .lmdet {
     position: absolute !important;
     inset: 10px !important;
@@ -2612,7 +2616,7 @@ html body#modernbb .lmdetin span {
     font-weight: 700 !important;
 }
 
-/* Pied de carte : Nom à gauche + Encart badge de groupe à droite */
+/* Pied de carte agrandi : Nom à gauche + Badge agrandi à droite */
 html body#modernbb .lmnom {
     background: #141416 !important;
     border-top: 1.5px solid var(--gold) !important;
@@ -2620,8 +2624,9 @@ html body#modernbb .lmnom {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 8px !important;
-    min-height: 44px !important;
+    gap: 10px !important;
+    min-height: 58px !important;
+    box-sizing: border-box !important;
 }
 
 html body#modernbb .lmnom a.gen {
@@ -2631,7 +2636,7 @@ html body#modernbb .lmnom a.gen {
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     text-decoration: none !important;
-    white-space: nowrap !important;
+    line-height: 1.2 !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
@@ -2642,17 +2647,17 @@ html body#modernbb .lmbadge {
     justify-content: center !important;
     background: #1e1e20 !important;
     border: 1px solid var(--border-grey) !important;
-    border-radius: 8px 0 !important;
-    padding: 3px !important;
-    width: 28px !important;
-    height: 28px !important;
+    border-radius: 10px 0 !important;
+    padding: 4px !important;
+    width: 38px !important;
+    height: 38px !important;
     flex-shrink: 0 !important;
+    box-sizing: border-box !important;
 }
 
 html body#modernbb .lmbadge img {
-    width: 22px !important;
-    height: 22px !important;
+    width: 28px !important;
+    height: 28px !important;
     object-fit: contain !important;
     display: block !important;
 }
-
