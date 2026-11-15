@@ -2389,25 +2389,54 @@ html body#modernbb #cp-main table.table1 thead th {
     padding: 12px 14px !important;
 }
 
-/* Lignes alternées sombres (remplace le blanc et le bleu pétrole) */
+/* Lignes unifiées sombres séparées par une fine ligne dorée */
+html body#modernbb #cp-main table.table1 tbody tr,
 html body#modernbb #cp-main table.table1 tbody tr.bg1,
-html body#modernbb #cp-main table.table1 tbody tr.bg1 td {
-    background: #18181b !important;
-    background-color: #18181b !important;
-    color: var(--border-cream) !important;
-    border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
-}
-
 html body#modernbb #cp-main table.table1 tbody tr.bg2,
-html body#modernbb #cp-main table.table1 tbody tr.bg2 td {
-    background: #121214 !important;
-    background-color: #121214 !important;
+html body#modernbb #cp-main table.table1 tbody tr.row1,
+html body#modernbb #cp-main table.table1 tbody tr.row2,
+html body#modernbb #cp-main table.table1 tbody tr:nth-child(odd),
+html body#modernbb #cp-main table.table1 tbody tr:nth-child(even),
+html body#modernbb #cp-main table.table1 tbody tr td,
+html body#modernbb #cp-main table.table1 tbody tr th {
+    background: #141416 !important;
+    background-color: #141416 !important;
     color: var(--border-cream) !important;
-    border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
+    border-bottom: 1px solid rgba(216, 155, 60, 0.35) !important;
 }
 
+/* Effet de survol léger prune/doré sur la ligne */
+html body#modernbb #cp-main table.table1 tbody tr:hover,
 html body#modernbb #cp-main table.table1 tbody tr:hover td {
-    background: rgba(157, 43, 107, 0.16) !important;
+    background: #1e1a20 !important;
+    background-color: #1e1a20 !important;
+}
+
+html body#modernbb #cp-main table.table1 tbody td {
+    padding: 10px 14px !important;
+    vertical-align: middle !important;
+}
+
+html body#modernbb #cp-main table.table1 tbody td a.topictitle {
+    color: var(--gold) !important;
+    font-weight: 600 !important;
+}
+
+/* 5. Liens "Tout sélectionner :: Tout désélectionner" bien dégagés de la bordure */
+html body#modernbb #cp-main fieldset.display-actions {
+    position: relative !important;
+    z-index: 2 !important;
+    margin: 14px 0 22px !important;
+    padding: 8px 12px !important;
+    background: #141416 !important;
+    border-radius: 8px !important;
+    text-align: right !important;
+    clear: both !important;
+}
+
+html body#modernbb #cp-main fieldset.display-actions a {
+    color: var(--gold) !important;
+    font-weight: 600 !important;
 }
 
 html body#modernbb #cp-main table.table1 tbody td {
