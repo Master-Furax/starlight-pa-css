@@ -214,11 +214,21 @@ div#fa_menu {
     pointer-events: auto !important;
 }
 
-a#fa_welcome,
-a#fa_welcome span {
+a#fa_welcome {
     pointer-events: auto !important;
     cursor: pointer !important;
     user-select: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    min-width: 180px !important;
+    min-height: 44px !important;
+}
+
+/* Le clic traverse les spans pour frapper directement #fa_welcome partout ! */
+a#fa_welcome span {
+    pointer-events: none !important;
 }
 
 /* Empêche les conteneurs voisins d'intercepter les clics sur le pseudo */
