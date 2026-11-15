@@ -355,24 +355,28 @@ text-decoration: none !important;
 /* --------------------------------------------------------------------------
 4. MENU DE NAVIGATION CENTRÉ & SOUS-MENU "NAVIGATION"
 -------------------------------------------------------------------------- */
-#headerbar-top, .is-sticky#headerbar-top, .is-sticky#headerbar-top.w-toolbar {
-position: fixed !important;
-top: 26px !important;
-left: 380px !important;
-right: 185px !important;
-width: auto !important;
-max-width: none !important;
-margin: 0 !important;
-padding: 0 !important;
-display: flex !important;
-justify-content: center !important;
-align-items: center !important;
-background: transparent !important;
-border: none !important;
-box-shadow: none !important;
-z-index: 950 !important;
-pointer-events: auto !important;
+#headerbar-top,
+.is-sticky#headerbar-top,
+.is-sticky#headerbar-top.w-toolbar {
+    position: fixed !important;
+    top: 26px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 160px 0 340px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 950 !important;
+    pointer-events: none !important;
 }
+
 #headerbar-top .wrap, #headerbar-top .wrap > ul, #headerbar-top ul.navbar-nav {
 display: inline-flex !important;
 flex-direction: row !important;
@@ -460,25 +464,24 @@ border-radius: 8px 0 !important;
 #headerbar-top .wrap ul li:last-child ul li:last-child a { border-bottom: none !important; }
 #headerbar-top .wrap ul li:last-child ul li a:hover { background: var(--grad-btn) !important; color: #ffffff !important; text-shadow: none !important; }
 
-/* Empêche ModernBB de cacher le menu en mode fenêtre réduite */
-#headerbar-top,
-#headerbar-top .wrap,
-#headerbar-top .wrap > ul,
-#headerbar-top ul.navbar-nav {
+/* Force l'affichage même quand ModernBB passe en mode mobile (< 992px) */
+html body#modernbb #headerbar-top .wrap,
+html body#modernbb #headerbar-top .wrap > ul,
+html body#modernbb #headerbar-top ul.navbar-nav {
     display: inline-flex !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
 }
 
 @media screen and (max-width: 1280px) {
     div#fa_menu { left: 165px !important; }
-    a#fa_welcome { font-size: 19px !important; }
+    a#fa_welcome { font-size: 18px !important; }
     #headerbar-top, .is-sticky#headerbar-top, .is-sticky#headerbar-top.w-toolbar {
-        left: 295px !important;
-        right: 135px !important;
+        padding: 0 130px 0 280px !important;
     }
     .navbar a, #headerbar-top a, #headerbar-top .wrap ul li a {
-        font-size: 16px !important;
+        font-size: 15px !important;
         padding: 3px 4px !important;
     }
 }
