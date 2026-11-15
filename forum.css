@@ -610,6 +610,10 @@ transition: opacity 0.2s ease, transform 0.2s ease;
 /* --------------------------------------------------------------------------
 6. PROTECTION DE LA PAGE D'ACCUEIL (#PA) CONTRE LES CADRES .panel
 -------------------------------------------------------------------------- */
+div.panel.introduction .mes-txt > br:first-child {
+    display: none !important;
+}
+
 div.panel:has(#PA),
 #PA div.panel,
 #PA .panel,
@@ -1058,16 +1062,16 @@ ul.linklist.navlinks a:hover,
     color: var(--border-cream) !important;
 }
 
-/* 2. Suppression totale des boîtes blanches .block (#page-desc, Modérateur, Permissions) */
+/* 2. Suppression totale des boîtes blanches .block (en excluant la PA #PA) */
 html body#modernbb .block,
 html body#modernbb #page-desc.block,
 html body#modernbb #info_open .block,
-html body#modernbb .panel,
-html body#modernbb .panel.bg1,
-html body#modernbb .panel.bg2,
-html body#modernbb .panel.bg3,
-html body#modernbb div.panel,
-html body#modernbb .forumbg {
+html body#modernbb .panel:not(:has(#PA)),
+html body#modernbb .panel.bg1:not(:has(#PA)),
+html body#modernbb .panel.bg2:not(:has(#PA)),
+html body#modernbb .panel.bg3:not(:has(#PA)),
+html body#modernbb div.panel:not(:has(#PA)),
+html body#modernbb .forumbg:not(.starlight-cat) {
     width: 950px !important;
     max-width: 100% !important;
     margin: 14px auto !important;
@@ -1085,10 +1089,10 @@ html body#modernbb .forumbg {
     overflow: visible !important;
 }
 
-/* Empêche le chevauchement vertical de texte dans #page-desc et .block */
+/* Empêche le chevauchement vertical de texte sans toucher à #PA */
 html body#modernbb .block *,
 html body#modernbb #page-desc-content *,
-html body#modernbb .panel * {
+html body#modernbb .panel:not(:has(#PA)) * {
     position: static !important;
     color: var(--border-cream) !important;
     line-height: 1.55 !important;
@@ -1097,15 +1101,15 @@ html body#modernbb .panel * {
 }
 
 html body#modernbb .block a,
-html body#modernbb .panel a {
+html body#modernbb .panel:not(:has(#PA)) a {
     color: var(--gold) !important;
     text-decoration: none !important;
 }
 
 html body#modernbb .block .h3,
 html body#modernbb .block h3,
-html body#modernbb .panel .h3,
-html body#modernbb .panel h3 {
+html body#modernbb .panel:not(:has(#PA)) .h3,
+html body#modernbb .panel:not(:has(#PA)) h3 {
     background: var(--grad-btn) !important;
     color: #ffffff !important;
     border-radius: 8px 0 !important;
@@ -1117,6 +1121,7 @@ html body#modernbb .panel h3 {
     text-transform: uppercase !important;
     border: 1px solid var(--border-cream) !important;
 }
+
 
 /* Aligne "MARQUER TOUS LES SUJETS COMME LUS" et "PLUS !" sur la même ligne */
 html body#modernbb .topic-actions-buttons {
