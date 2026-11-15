@@ -165,7 +165,7 @@ div#avatarco div img { width: 133px !important; height: 115px !important; object
 
 div#fa_menu {
     position: fixed !important;
-    top: 30px !important;
+    top: 16px !important;
     left: 175px !important;
     z-index: 999 !important;
     pointer-events: auto !important;
@@ -180,22 +180,32 @@ div#fa_menu {
 }
 
 a#fa_welcome {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
     font-family: var(--titres) !important;
-    font-size: 24px !important;
+    font-size: 21px !important;
+    line-height: 1.05 !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.8px !important;
     color: var(--bg-dark) !important;
     text-shadow: -1px -1px 0 var(--border-cream), 1px -1px 0 var(--border-cream), -1px 1px 0 var(--border-cream), 1px 1px 0 var(--border-cream) !important;
     text-decoration: none !important;
-    max-width: none !important;
+    max-width: 240px !important;
+    white-space: normal !important;
     overflow: visible !important;
-    text-overflow: clip !important;
 }
 
-#fa_menu:hover a#fa_welcome, #fa_menu.fa_clicked a#fa_welcome {
-    color: var(--gold) !important;
-    text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark), 0 0 8px rgba(216, 155, 60, 0.85) !important;
+a#fa_welcome .fa-welcome-label {
+    font-size: 15px !important;
+    letter-spacing: 1.5px !important;
+    opacity: 0.9 !important;
+}
+
+a#fa_welcome .fa-welcome-name {
+    font-size: 22px !important;
 }
 
 ul#fa_menulist {
