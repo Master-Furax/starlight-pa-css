@@ -1932,19 +1932,21 @@ html body#modernbb .panel a.sceditor-button.active {
     box-shadow: none !important;
 }
 
-/* Zone de texte crème (#d8d2c7) + écriture sombre (#19191c) */
-html body .sceditor-container,
-html body .sceditor-container textarea,
-html body .sceditor-container iframe {
+/* 1. Zone de texte crème (#d8d2c7) + écriture sombre (#19191c) prioritaire sur .panel */
+html body#modernbb .sceditor-container,
+html body#modernbb .sceditor-container textarea,
+html body#modernbb #message-box textarea,
+html body#modernbb .sceditor-container iframe {
     background: #d8d2c7 !important;
     background-color: #d8d2c7 !important;
     color: #19191c !important;
+    -webkit-text-fill-color: #19191c !important;
     font-family: var(--textes) !important;
     font-size: 14px !important;
     color-scheme: light !important;
 }
 
-/* Panneau des smileys (élargi sans overflow) et menus déroulants de l'éditeur */
+/* Panneau des smileys et menus déroulants de l'éditeur */
 .sceditor-dropdown {
     background: #1e1e20 !important;
     color: var(--border-cream) !important;
@@ -1953,7 +1955,7 @@ html body .sceditor-container iframe {
     padding: 10px !important;
 }
 
-/* Alignement côte à côte propre de l'éditeur (#message-box) et des smileys (#smiley-box) */
+/* 2. Alignement côte à côte propre de l'éditeur (#message-box) et des smileys (#smiley-box) */
 html body#modernbb #postingbox fieldset.fields1 {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -1976,11 +1978,9 @@ html body#modernbb #message-box {
     box-sizing: border-box !important;
 }
 
-#smiley-box {
-    margin-top: 38px !important; /* Descend le bloc pour l'aligner avec l'éditeur (à ajuster selon besoin) */
-    background-color: transparent !important; /* Supprime le fond blanc qui se coupe */
-    border: none !important; 
+html body#modernbb #smiley-box {
     background: #1e1e20 !important;
+    background-color: #1e1e20 !important;
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 14px 0 !important;
@@ -1990,16 +1990,18 @@ html body#modernbb #message-box {
     flex: 0 0 192px !important;
     clear: none !important;
     float: none !important;
-    margin: 0 !important;
+    margin: 34px 0 0 0 !important; /* Aligne le bloc avec l'éditeur */
     box-sizing: border-box !important;
 }
 
-#smiley-box iframe,
-#smilies_box {
+/* 3. Corrige la hauteur coupée de l'iframe des smileys */
+html body#modernbb #smiley-box iframe,
+html body#modernbb #smilies_box {
     background-color: #d8d2c7 !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 10px 0 !important;
     width: 100% !important;
+    height: 250px !important; /* Rétablit une hauteur complète pour éviter la coupure */
     box-sizing: border-box !important;
     overflow-x: hidden !important;
 }
