@@ -922,54 +922,407 @@ text-transform: uppercase; font-size: 34px !important; text-align: left; height:
 .crew_color:nth-of-type(7) h5 { background: linear-gradient(90deg, #164e63, #06b6d4) !important; }
 #copy_arte { position: absolute !important; bottom: 6px !important; right: 14px !important; font-size: 10px !important; word-spacing: normal !important; line-height: 1.2 !important; }
 
-/* --------------------------------------------------------------------------
-9. LISTING DES RP & SUJETS (topics_list_box) + BAS DE FORUM
--------------------------------------------------------------------------- */
-#page-body > .panel, .panel.bg1, .panel.bg2, .panel.bg3, div.panel {
-width: 950px !important; max-width: 100% !important; margin: 14px auto !important; padding: 14px 18px !important;
-box-sizing: border-box !important; background: var(--bg-dark) !important; color: var(--border-cream) !important;
-border: 1px solid var(--border-grey) !important; border-radius: 20px 0 !important; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55) !important;
-}
-h1.page-title, .page-header h1 {
-width: 950px !important; max-width: 100% !important; margin: 20px auto 6px !important; font-family: var(--titres) !important;
-font-size: 46px !important; font-weight: 800 !important; text-transform: uppercase !important; letter-spacing: 1.5px !important;
-color: var(--bg-dark) !important; text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream) !important;
-}
-p.crumbs, ul.linklist.navlinks { width: 950px !important; max-width: 100% !important; margin: 0 auto 14px !important; background: transparent !important; border: none !important; color: var(--border-grey) !important; }
-p.crumbs a, ul.linklist.navlinks a { color: var(--gold) !important; text-decoration: none !important; text-transform: uppercase !important; font-size: 13px !important; }
-.topic-actions { width: 950px !important; max-width: 100% !important; margin: 12px auto !important; display: flex !important; justify-content: space-between !important; align-items: center !important; }
-.buttons div a, a.button1, a.button2, .topic-actions .buttons a {
-display: inline-flex !important; align-items: center !important; gap: 6px !important; background: var(--grad-btn) !important;
-color: #ffffff !important; border: 1px solid var(--border-cream) !important; border-radius: 10px 0 !important; padding: 6px 16px !important;
-font-family: var(--titres) !important; font-size: 17px !important; font-weight: 700 !important; text-transform: uppercase !important; text-decoration: none !important;
-}
-table.forumline { width: 950px !important; max-width: 100% !important; margin: 15px auto !important; background: transparent !important; border: none !important; }
-table.forumline td { background: transparent !important; border: none !important; padding: 0 !important; }
-fieldset.SBJ {
-position: relative !important; display: flex !important; justify-content: space-between !important; align-items: center !important;
-gap: 16px !important; margin: 16px 0 !important; padding: 18px 20px 14px !important; background: var(--bg-dark) !important;
-border: 1.5px solid var(--border-grey) !important; border-radius: 24px 0 !important; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6) !important;
-transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
-}
-fieldset.SBJ:hover { border-color: var(--gold) !important; box-shadow: 0 6px 20px rgba(216, 155, 60, 0.35) !important; }
-legend.nameSBJ { padding: 2px 12px !important; margin-left: 10px !important; background: #141416 !important; border: 1px solid var(--border-grey) !important; border-radius: 8px 0 !important; color: var(--border-cream) !important; font-family: var(--font) !important; font-size: 12px !important; text-transform: uppercase !important; }
-legend.nameSBJ strong { color: var(--gold) !important; }
-.tleSBJ { flex-grow: 1 !important; min-width: 0 !important; font-family: var(--titres) !important; font-size: 26px !important; font-weight: 700 !important; text-transform: uppercase !important; color: var(--gold) !important; }
-.tleSBJ a { color: var(--border-cream) !important; text-decoration: none !important; }
-.tleSBJ a:hover { color: var(--gold) !important; }
-.descSBJ { margin-top: 4px !important; font-family: var(--textes) !important; font-size: 12.5px !important; font-weight: 400 !important; text-transform: none !important; color: #b8b2a6 !important; }
-.gotoSBJ a { display: inline-block !important; margin-top: 6px !important; padding: 1px 7px !important; background: var(--grad-btn) !important; color: #ffffff !important; border-radius: 5px 0 !important; font-size: 12px !important; }
-.boxSBJ { display: flex !important; align-items: center !important; gap: 12px !important; flex-shrink: 0 !important; }
-img.imgSBJ { width: 34px !important; height: 34px !important; object-fit: contain !important; }
-.vuesSBJ, .repSBJ { background: #141416 !important; border: 1px solid var(--border-grey) !important; border-radius: 8px 0 !important; padding: 5px 10px !important; font-family: var(--titres) !important; font-size: 16px !important; font-weight: 700 !important; color: var(--gold) !important; text-align: center !important; min-width: 48px !important; }
-.lmsgSBJ { background: rgba(20, 20, 22, 0.85) !important; border-left: 2px solid var(--gold) !important; border-radius: 0 10px !important; padding: 6px 12px !important; font-family: var(--font) !important; font-size: 12px !important; color: var(--border-cream) !important; text-align: right !important; line-height: 1.35 !important; }
-.lmsgSBJ a { color: var(--gold) !important; font-weight: bold !important; text-decoration: none !important; }
-.forumbg, .forumbg .inner, ul.topiclist.topics, ul.topiclist.topics li.row, .panel .inner { background: var(--bg-dark) !important; color: var(--border-cream) !important; border-color: var(--border-grey) !important; }
-ul.topiclist.topics li.row { border-radius: 16px 0 !important; border: 1px solid var(--border-grey) !important; margin: 10px 0 !important; padding: 10px 14px !important; }
-ul.topiclist.topics li.row a.topictitle { font-family: var(--titres) !important; font-size: 24px !important; color: var(--border-cream) !important; text-transform: uppercase !important; }
-ul.topiclist.topics li.row a.topictitle:hover { color: var(--gold) !important; }
-.panel h3, .panel .h3 { background: var(--grad-btn) !important; color: #ffffff !important; border-radius: 8px 0 !important; padding: 4px 12px !important; margin-bottom: 8px !important; font-family: var(--titres) !important; font-size: 18px !important; border: none !important; }
+/* ==========================================================================
+   9. INTÉRIEUR DES FORUMS, LISTING DES RP & BAS DE PAGE HARMONISÉS
+   ========================================================================== */
 
+/* 1. Titre du forum + Fil d'Ariane sans aucun chevauchement */
+.page-header,
+#page-body > .page-header {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 22px auto 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+h1.page-title,
+.page-header h1 {
+    position: static !important;
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 18px auto 6px !important;
+    line-height: 1.1 !important;
+    font-family: var(--titres) !important;
+    font-size: 46px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: var(--bg-dark) !important;
+    text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream) !important;
+}
+
+p.crumbs,
+ul.linklist.navlinks,
+.breadcrumbs {
+    position: static !important;
+    display: block !important;
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 4px auto 14px !important;
+    padding: 6px 14px !important;
+    box-sizing: border-box !important;
+    background: rgba(20, 20, 22, 0.75) !important;
+    border: 1px solid rgba(158, 152, 142, 0.35) !important;
+    border-radius: 10px 0 !important;
+    color: var(--border-cream) !important;
+    line-height: 1.4 !important;
+}
+
+p.crumbs a,
+ul.linklist.navlinks a,
+.breadcrumbs a {
+    color: var(--gold) !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    transition: color 0.2s ease !important;
+}
+
+p.crumbs a:hover,
+ul.linklist.navlinks a:hover,
+.breadcrumbs a:hover {
+    color: var(--border-cream) !important;
+}
+
+/* 2. Suppression totale des boîtes blanches (Description forum, Modérateurs, Permissions) */
+#page-body > .panel,
+#page-body .panel,
+.panel.bg1,
+.panel.bg2,
+.panel.bg3,
+div.panel,
+.panel .inner,
+.forumbg,
+.forumbg .inner {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 14px auto !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+    background: var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 20px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55) !important;
+}
+
+.panel .inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.panel p,
+.panel span,
+.panel strong,
+.panel b,
+.panel div {
+    color: var(--border-cream) !important;
+}
+
+.panel a {
+    color: var(--gold) !important;
+    text-decoration: none !important;
+}
+
+.panel a:hover {
+    color: var(--border-cream) !important;
+}
+
+.panel h3,
+.panel .h3 {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 14px !important;
+    margin: 0 0 10px 0 !important;
+    font-family: var(--titres) !important;
+    font-size: 19px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    border: 1px solid var(--border-cream) !important;
+}
+
+/* 3. Barre d'actions & Tous les boutons (Noir/Or au repos -> Dégradé Prune/Or au survol) */
+.topic-actions {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 14px auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--border-cream) !important;
+}
+
+.topic-actions a,
+.topic-actions label,
+.topic-actions span {
+    color: var(--border-cream) !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+}
+
+.topic-actions a:hover {
+    color: var(--gold) !important;
+}
+
+/* Style uniforme pour TOUS les boutons : Nouveau Sujet, Répondre, Envoyer, Prévisualisation, Aller */
+.buttons div a,
+.topic-actions .buttons a,
+a.button1,
+a.button2,
+input.button1,
+input.button2,
+button.button1,
+button.button2,
+fieldset.submit-buttons input,
+#quick_reply input[type="submit"],
+.reponse-rapide-artemis input[type="submit"],
+form input[type="submit"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    background: #141416 !important;
+    background-image: none !important;
+    color: var(--gold) !important;
+    -webkit-text-fill-color: var(--gold) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 10px 0 !important;
+    padding: 6px 18px !important;
+    font-family: var(--titres) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55) !important;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease !important;
+}
+
+.buttons div a:hover,
+.topic-actions .buttons a:hover,
+a.button1:hover,
+a.button2:hover,
+input.button1:hover,
+input.button2:hover,
+button.button1:hover,
+button.button2:hover,
+fieldset.submit-buttons input:hover,
+#quick_reply input[type="submit"]:hover,
+.reponse-rapide-artemis input[type="submit"]:hover,
+form input[type="submit"]:hover {
+    background: var(--grad-btn) !important;
+    background-image: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: var(--border-cream) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Menus déroulants (Sauter vers, Outils de modération) & Champs texte */
+select,
+input.inputbox,
+textarea.inputbox {
+    background-color: #141416 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 10px !important;
+    font-family: var(--font) !important;
+    font-size: 13px !important;
+}
+
+select:focus,
+input.inputbox:focus,
+textarea.inputbox:focus {
+    border-color: var(--gold) !important;
+    outline: none !important;
+}
+
+/* Textes labels en bas de forum & Légende des icônes (plus de texte noir invisible !) */
+#page-body > p,
+#page-body > form,
+fieldset.display-options,
+.icon-legend,
+ul.linklist.bottom,
+#page-body > p label,
+#page-body > form label {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 12px auto !important;
+    color: var(--border-cream) !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+.icon-legend img {
+    vertical-align: middle !important;
+    margin-right: 4px !important;
+}
+
+/* 4. Cartes de Sujets / RP (.SBJ de topics_list_box) */
+table.forumline {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 15px auto !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+table.forumline td {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+fieldset.SBJ {
+    position: relative !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin: 16px 0 !important;
+    padding: 18px 20px 14px !important;
+    background: var(--bg-dark) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 24px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6) !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+fieldset.SBJ:hover {
+    border-color: var(--gold) !important;
+    box-shadow: 0 6px 20px rgba(216, 155, 60, 0.35) !important;
+}
+
+legend.nameSBJ {
+    padding: 2px 12px !important;
+    margin-left: 10px !important;
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    color: var(--border-cream) !important;
+    font-family: var(--font) !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+}
+
+legend.nameSBJ strong {
+    color: var(--gold) !important;
+}
+
+.tleSBJ {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+    font-family: var(--titres) !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: var(--gold) !important;
+}
+
+.tleSBJ a {
+    color: var(--border-cream) !important;
+    text-decoration: none !important;
+}
+
+.tleSBJ a:hover {
+    color: var(--gold) !important;
+}
+
+.descSBJ {
+    margin-top: 4px !important;
+    font-family: var(--textes) !important;
+    font-size: 12.5px !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    color: #b8b2a6 !important;
+}
+
+.gotoSBJ a {
+    display: inline-block !important;
+    margin-top: 6px !important;
+    padding: 1px 7px !important;
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-radius: 5px 0 !important;
+    font-size: 12px !important;
+}
+
+.boxSBJ {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-shrink: 0 !important;
+}
+
+img.imgSBJ {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+}
+
+.vuesSBJ,
+.repSBJ {
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 10px !important;
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+   font-weight: 700 !important;
+   color: var(--gold) !important;
+   text-align: center !important;
+   min-width: 48px !important;
+}
+.lmsgSBJ {
+background: rgba(20, 20, 22, 0.85) !important;
+border-left: 2px solid var(--gold) !important;
+border-radius: 0 10px !important;
+padding: 6px 12px !important;
+font-family: var(--font) !important;
+font-size: 12px !important;
+color: var(--border-cream) !important;
+text-align: right !important;
+line-height: 1.35 !important;
+}
+.lmsgSBJ a {
+color: var(--gold) !important;
+font-weight: bold !important;
+text-decoration: none !important;
+}
+ul.topiclist.topics,
+ul.topiclist.topics li.row {
+background: var(--bg-dark) !important;
+color: var(--border-cream) !important;
+border-color: var(--border-grey) !important;
+}
+ul.topiclist.topics li.row {
+border-radius: 16px 0 !important;
+border: 1px solid var(--border-grey) !important;
+margin: 10px 0 !important;
+padding: 10px 14px !important;
+}
+ul.topiclist.topics li.row a.topictitle {
+font-family: var(--titres) !important;
+font-size: 24px !important;
+color: var(--border-cream) !important;
+text-transform: uppercase !important;
+}
+ul.topiclist.topics li.row a.topictitle:hover {
+color: var(--gold) !important;
+}
+   
 /* --------------------------------------------------------------------------
 10. INTÉRIEUR DES SUJETS & RP (viewtopic_body - Template Artemis)
 -------------------------------------------------------------------------- */
