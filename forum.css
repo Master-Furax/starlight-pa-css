@@ -1868,7 +1868,7 @@ h2.titre-sujet-arte a {
 }
 
 /* ==========================================================================
-   ÉDITEUR UNIFIÉ (Réponse rapide, Répondre, Éditer, Nouveau sujet, MP)
+   ÉDITEUR UNIFIÉ, PRÉVISUALISATION & REVUE DU SUJET
    ========================================================================== */
 .sceditor-container {
     background: #141416 !important;
@@ -1878,7 +1878,7 @@ h2.titre-sujet-arte a {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Barre d'outils sombre */
+/* Barre d'outils sombre avec groupes gris ardoise clair pour une lisibilité parfaite des icônes */
 div.sceditor-toolbar {
     background: #141416 !important;
     border-bottom: 1.5px solid var(--gold) !important;
@@ -1886,46 +1886,53 @@ div.sceditor-toolbar {
 }
 
 div.sceditor-group {
-    background: #1e1e20 !important;
-    border: 1px solid rgba(158, 152, 142, 0.4) !important;
+    background: #42424a !important;
+    border: 1px solid rgba(244, 239, 230, 0.35) !important;
     border-radius: 6px 0 !important;
     margin: 2px 4px 2px 0 !important;
-    padding: 1px !important;
+    padding: 2px !important;
 }
 
-/* Rétablit les icônes sur Répondre & Éditer (annule le position:static des .panel) */
+/* Rétablit la taille et la position des icônes sur Répondre, Éditer et Réponse rapide */
 html body#modernbb a.sceditor-button,
-html body#modernbb .panel a.sceditor-button {
+html body#modernbb .panel a.sceditor-button,
+html body#modernbb #postingbox a.sceditor-button {
     position: relative !important;
     display: inline-block !important;
     width: 24px !important;
     height: 24px !important;
-    padding: 3px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    padding: 4px !important;
+    box-sizing: border-box !important;
     border-radius: 4px 0 !important;
     background-color: transparent !important;
+    border: none !important;
 }
 
-html body#modernbb a.sceditor-button div {
+html body#modernbb a.sceditor-button div,
+html body#modernbb .panel a.sceditor-button div,
+html body#modernbb #postingbox a.sceditor-button div {
     position: relative !important;
     display: block !important;
     width: 16px !important;
     height: 16px !important;
-    filter: brightness(1.45) contrast(1.15) !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    filter: contrast(1.2) !important;
 }
 
 html body#modernbb a.sceditor-button:hover,
-html body#modernbb a.sceditor-button.active {
+html body#modernbb a.sceditor-button.active,
+html body#modernbb .panel a.sceditor-button:hover,
+html body#modernbb .panel a.sceditor-button.active {
     background: var(--grad-btn) !important;
     box-shadow: none !important;
-    border-color: transparent !important;
 }
 
-html body#modernbb a.sceditor-button:hover div,
-html body#modernbb a.sceditor-button.active div {
-    filter: brightness(2) !important;
-}
-
-/* Zone de texte crème (#d8d2c7) + écriture sombre (#19191c) en mode Source & WYSIWYG */
+/* Zone de texte crème (#d8d2c7) + écriture sombre (#19191c) */
 .sceditor-container textarea,
 .sceditor-container iframe {
     background-color: #d8d2c7 !important;
@@ -1935,13 +1942,21 @@ html body#modernbb a.sceditor-button.active div {
     color-scheme: light !important;
 }
 
-/* Panneau des smileys sur Répondre / Éditer */
+/* Panneau des smileys (cadre sombre + intérieur crème #d8d2c7) et menus déroulants */
 #smiley-box,
 .sceditor-dropdown {
     background: #1e1e20 !important;
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 14px 0 !important;
+    padding: 10px !important;
+}
+
+#smiley-box iframe,
+#smilies_box {
+    background-color: #d8d2c7 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 10px 0 !important;
 }
 
 .sceditor-dropdown input,
@@ -1951,29 +1966,124 @@ html body#modernbb a.sceditor-button.active div {
     border: 1px solid var(--border-grey) !important;
 }
 
-/* Corrige l'onglet "Options" qui dépassait en bas à gauche sur Répondre / Éditer */
-#tabs,
-ul#tabs {
+/* Boîte "Prévisualisation" (.post / #preview) */
+html body#modernbb #preview,
+html body#modernbb .post.row1,
+html body#modernbb .post.row2,
+html body#modernbb .post.row3 {
     width: 950px !important;
     max-width: 100% !important;
-    margin: 10px auto 0 !important;
-    padding: 0 10px !important;
-    display: flex !important;
-    gap: 8px !important;
-    list-style: none !important;
+    margin: 16px auto !important;
+    padding: 18px 22px !important;
+    box-sizing: border-box !important;
+    background: var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
+    background-image: none !important;
+    color: var(--border-cream) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 20px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65) !important;
 }
 
-#tabs li a {
-    display: inline-block !important;
+html body#modernbb #preview h3,
+html body#modernbb .post h3 {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--border-cream) !important;
+    border-radius: 8px 0 !important;
+    padding: 6px 14px !important;
+    margin: 0 0 12px 0 !important;
+    font-family: var(--titres) !important;
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+
+html body#modernbb #preview .postbody,
+html body#modernbb .post .postbody {
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    padding: 16px 20px !important;
+    border-radius: 14px 0 !important;
+    border-left: 4px solid var(--gold) !important;
+    line-height: 1.6 !important;
+}
+
+/* Onglets "Options" & "Sondage" sur la page Répondre / Éditer */
+html body#modernbb #tabs,
+html body#modernbb ul#tabs {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 12px auto 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    list-style: none !important;
+    border: none !important;
+}
+
+html body#modernbb #tabs li a {
+    display: inline-flex !important;
+    align-items: center !important;
     background: var(--bg-dark) !important;
     color: var(--gold) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 8px 0 !important;
-    padding: 5px 14px !important;
+    padding: 6px 16px !important;
     font-family: var(--titres) !important;
     font-size: 16px !important;
+    font-weight: 700 !important;
     text-transform: uppercase !important;
+    text-decoration: none !important;
 }
+
+html body#modernbb #tabs li.activetab a,
+html body#modernbb #tabs li a:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-color: var(--border-cream) !important;
+}
+
+/* Bloc "Revue du sujet" en bas de la page Répondre / Éditer */
+html body#modernbb #topicreview,
+html body#modernbb .topicreview {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 14px auto !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+    background: var(--bg-dark) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 20px 0 !important;
+    color: var(--border-cream) !important;
+}
+
+html body#modernbb #topicreview .postbody,
+html body#modernbb .topicreview .postbody {
+    background: #141416 !important;
+    color: var(--border-cream) !important;
+    padding: 14px 18px !important;
+    margin: 10px 0 !important;
+    border-radius: 14px 0 !important;
+    border: 1px solid rgba(158, 152, 142, 0.35) !important;
+    border-left: 3px solid var(--gold) !important;
+}
+
+html body#modernbb #topicreview .postbody *,
+html body#modernbb .topicreview .postbody * {
+    color: var(--border-cream) !important;
+}
+
+html body#modernbb #topicreview .author,
+html body#modernbb .topicreview .author {
+    color: var(--gold) !important;
+    font-size: 12px !important;
+    margin-bottom: 6px !important;
+}
+
 
 
 /* --------------------------------------------------------------------------
