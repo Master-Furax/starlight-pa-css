@@ -2217,22 +2217,14 @@ html body#modernbb .sceditor-container.sourceMode textarea {
     caret-color: #19191c !important;
 }
 
-/* 2. Onglets accordéons "Options", "Calendrier", "Ajouter un sondage", "Outils SEO" & "Revue du sujet" */
-html body#modernbb #postingbox ~ h2,
-html body#modernbb #postingbox ~ h3,
-html body#modernbb form#postform > h2,
-html body#modernbb form#postform > h3,
-html body#modernbb .posting-block > h2,
-html body#modernbb .posting-block > h3,
-html body#modernbb div[id$="-panel"] > h2,
-html body#modernbb div[id$="-panel"] > h3,
-html body#modernbb h2.posting-title,
-html body#modernbb h3.posting-title,
-html body#modernbb .panel > h2:first-child {
+/* Accordéons Options, Calendrier, Ajouter un sondage, Outils SEO & Revue du sujet */
+html body#modernbb div.h3.forum-hideable,
+html body#modernbb form > div.h3.forum-hideable {
+    position: relative !important;
     width: 950px !important;
     max-width: 100% !important;
     margin: 10px auto !important;
-    padding: 10px 18px !important;
+    padding: 10px 44px 10px 18px !important;
     box-sizing: border-box !important;
     background: var(--bg-dark) !important;
     color: var(--gold) !important;
@@ -2245,14 +2237,30 @@ html body#modernbb .panel > h2:first-child {
     border-left: 4px solid var(--plum) !important;
     border-radius: 14px 0 !important;
     cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease !important;
 }
 
-/* Panneaux dépliables sous chaque onglet (Options, Sondage, etc.) */
-html body#modernbb #options-panel,
-html body#modernbb #poll-panel,
-html body#modernbb #attach-panel,
-html body#modernbb #seo-panel {
+html body#modernbb div.h3.forum-hideable:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-color: var(--border-cream) !important;
+}
+
+/* Flèche d'ouverture/fermeture à droite de l'onglet */
+html body#modernbb div.h3.forum-hideable .forum-hide {
+    position: absolute !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    filter: invert(1) brightness(1.8) !important;
+}
+
+/* Panneaux dépliables sous chaque onglet (Options, Calendrier, Sondage, SEO) */
+html body#modernbb div.h3.forum-hideable + div.panel.row3 {
     width: 950px !important;
     max-width: 100% !important;
     margin: -6px auto 14px !important;
@@ -2264,5 +2272,6 @@ html body#modernbb #seo-panel {
     border-top: none !important;
     border-radius: 0 0 16px 0 !important;
 }
+
 
 
