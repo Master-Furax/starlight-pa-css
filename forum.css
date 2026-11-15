@@ -3130,3 +3130,60 @@ html body#modernbb .sc-profile-admin-bar {
    text-align: right !important;
 }
 
+/* =========================================================
+   FINITIONS D'HARMONIE DU PROFIL PUBLIC
+   ========================================================= */
+
+/* 1. Boutons icônes (MP, E-mail, Site) assortis aux boutons MESSAGES / SUJETS */
+html body#modernbb .sc-profile-contact-icons a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 34px !important;
+    height: 34px !important;
+    background: #141416 !important;
+    border: 1.5px solid var(--gold) !important;
+    border-radius: 8px 0 !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
+}
+
+html body#modernbb .sc-profile-contact-icons a:hover {
+    background: var(--grad-btn) !important;
+    border-color: var(--border-cream) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Transforme les icônes blanches par défaut en pictogrammes dorés/crème intégrés */
+html body#modernbb .sc-profile-contact-icons img {
+    width: 18px !important;
+    height: 18px !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    mix-blend-mode: screen !important;
+    filter: sepia(1) saturate(3) hue-rotate(5deg) brightness(1.15) !important;
+}
+
+html body#modernbb .sc-profile-contact-icons a:hover img {
+    filter: brightness(2) !important;
+}
+
+/* 2. Rappel de la teinte claire du groupe sur les bordures de gauche */
+html body#modernbb .sc-profile-avatar-box,
+html body#modernbb .sc-profile-group-box {
+    border-color: color-mix(in srgb, var(--grp-color, var(--gold)) 65%, #ffffff) !important;
+}
+
+/* 3. Typographie fine et nette pour les valeurs des 4 tuiles de stats */
+html body#modernbb .sc-stat-tile {
+    border-color: rgba(216, 155, 60, 0.45) !important;
+}
+
+html body#modernbb .sc-stat-val {
+    font-family: sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    color: var(--border-cream) !important;
+}
