@@ -2151,3 +2151,54 @@ margin: 20px auto 10px !important; padding: 14px 20px !important; box-sizing: bo
 #fleches { position: fixed !important; bottom: 10% !important; right: 6px !important; display: flex !important; flex-direction: column !important; gap: 4px !important; z-index: 940 !important; }
 #fleches img { width: 28px !important; transition: transform 0.2s ease !important; }
 #fleches img:hover { transform: scale(1.1) !important; }
+
+/* 1. Surlignement global & sélection prune/or dans les menus déroulants */
+::selection {
+    background: #9d2b6b !important;
+    color: #f4efe6 !important;
+}
+
+select {
+    accent-color: #9d2b6b !important;
+}
+
+select option:checked,
+select option:focus,
+select option:hover {
+    background: #9d2b6b linear-gradient(90deg, #9d2b6b, #d89b3c) !important;
+    background-color: #9d2b6b !important;
+    color: #ffffff !important;
+}
+
+/* 2. Titres "Options" et "Revue du sujet" lisibles + suppression des lignes parasites */
+html body#modernbb #options-panel h3,
+html body#modernbb #options-panel h2,
+html body#modernbb #topicreview h3,
+html body#modernbb #topicreview h2,
+html body#modernbb .panel h3:not(.h3) {
+    color: var(--gold) !important;
+    font-family: var(--titres) !important;
+    font-size: 22px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border-bottom: none !important;
+    margin: 0 0 10px 0 !important;
+}
+
+/* 3. Empêche "Sauter vers / ALLER" de chevaucher la flèche de "Revue du sujet" */
+html body#modernbb fieldset.jumpbox {
+    clear: both !important;
+    float: none !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 14px auto !important;
+}
+
+html body#modernbb #topicreview {
+    clear: both !important;
+    position: relative !important;
+}
+
+
