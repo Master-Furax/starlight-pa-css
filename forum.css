@@ -1936,15 +1936,20 @@ html body#modernbb .panel a.sceditor-button.active {
 html body#modernbb .sceditor-container,
 html body#modernbb .sceditor-container textarea,
 html body#modernbb #message-box textarea,
-html body#modernbb .sceditor-container iframe {
+html body#modernbb .sceditor-container iframe,
+html body#modernbb .panel:not(:has(#PA)) .sceditor-container textarea,
+html body#modernbb .panel:not(:has(#PA)) #message-box textarea,
+html body#modernbb .sceditor-container.sourceMode textarea {
     background: #d8d2c7 !important;
     background-color: #d8d2c7 !important;
     color: #19191c !important;
     -webkit-text-fill-color: #19191c !important;
+    caret-color: #19191c !important;
     font-family: var(--textes) !important;
     font-size: 14px !important;
     color-scheme: light !important;
 }
+
 
 /* Panneau des smileys et menus déroulants de l'éditeur */
 .sceditor-dropdown {
@@ -2201,13 +2206,29 @@ html body#modernbb #topicreview {
     position: relative !important;
 }
 
-/* Accordéons Options, Calendrier, Ajouter un sondage, Outils SEO */
-html body#modernbb form#postform > h3,
-html body#modernbb form#postform .h3,
+/* 1. Bat la spécificité de .panel:not(:has(#PA)) * pour le texte sombre du textarea et de l'éditeur */
+html body#modernbb .panel:not(:has(#PA)) .sceditor-container textarea,
+html body#modernbb .panel:not(:has(#PA)) #message-box textarea,
+html body#modernbb .sceditor-container.sourceMode textarea {
+    background: #d8d2c7 !important;
+    background-color: #d8d2c7 !important;
+    color: #19191c !important;
+    -webkit-text-fill-color: #19191c !important;
+    caret-color: #19191c !important;
+}
+
+/* 2. Onglets accordéons "Options", "Calendrier", "Ajouter un sondage", "Outils SEO" & "Revue du sujet" */
+html body#modernbb #postingbox ~ h2,
 html body#modernbb #postingbox ~ h3,
-html body#modernbb #postingbox ~ .panel h3,
-html body#modernbb .posting-options h3,
-html body#modernbb h3.posting-title {
+html body#modernbb form#postform > h2,
+html body#modernbb form#postform > h3,
+html body#modernbb .posting-block > h2,
+html body#modernbb .posting-block > h3,
+html body#modernbb div[id$="-panel"] > h2,
+html body#modernbb div[id$="-panel"] > h3,
+html body#modernbb h2.posting-title,
+html body#modernbb h3.posting-title,
+html body#modernbb .panel > h2:first-child {
     width: 950px !important;
     max-width: 100% !important;
     margin: 10px auto !important;
@@ -2224,19 +2245,7 @@ html body#modernbb h3.posting-title {
     border-left: 4px solid var(--plum) !important;
     border-radius: 14px 0 !important;
     cursor: pointer !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
-    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease !important;
-}
-
-html body#modernbb form#postform > h3:hover,
-html body#modernbb form#postform .h3:hover,
-html body#modernbb #postingbox ~ h3:hover {
-    background: var(--grad-btn) !important;
-    color: #ffffff !important;
-    border-color: var(--border-cream) !important;
 }
 
 /* Panneaux dépliables sous chaque onglet (Options, Sondage, etc.) */
