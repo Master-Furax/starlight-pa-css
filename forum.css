@@ -76,12 +76,22 @@ banniere,
     object-fit: cover !important;
 }
 
-.headerbar,
+.headerbar {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
 a#logo,
 div#site-desc p,
 div#site-title {
     display: none !important;
 }
+
 
 div#page-header::after {
     content: "" !important;
@@ -470,7 +480,15 @@ border-radius: 8px 0 !important;
 #headerbar-top .wrap ul li:last-child ul li:last-child a { border-bottom: none !important; }
 #headerbar-top .wrap ul li:last-child ul li a:hover { background: var(--grad-btn) !important; color: #ffffff !important; text-shadow: none !important; }
 
-/* Force l'affichage même quand ModernBB passe en mode mobile (< 992px) */
+/* Force l'affichage de la barre de navigation sur TOUTES les largeurs d'écran */
+html body#modernbb #headerbar-top,
+html body#modernbb .is-sticky#headerbar-top,
+html body#modernbb .is-sticky#headerbar-top.w-toolbar {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 html body#modernbb #headerbar-top .wrap,
 html body#modernbb #headerbar-top .wrap > ul,
 html body#modernbb #headerbar-top ul.navbar-nav {
@@ -483,15 +501,16 @@ html body#modernbb #headerbar-top ul.navbar-nav {
 @media screen and (max-width: 1280px) {
     div#fa_menu { left: 165px !important; }
     a#fa_welcome { font-size: 18px !important; }
-    #headerbar-top, .is-sticky#headerbar-top, .is-sticky#headerbar-top.w-toolbar {
-        padding: 0 130px 0 280px !important;
+    html body#modernbb #headerbar-top,
+    html body#modernbb .is-sticky#headerbar-top,
+    html body#modernbb .is-sticky#headerbar-top.w-toolbar {
+        padding: 0 130px 0 275px !important;
     }
     .navbar a, #headerbar-top a, #headerbar-top .wrap ul li a {
         font-size: 15px !important;
         padding: 3px 4px !important;
     }
 }
-
 
 /* --------------------------------------------------------------------------
 5. SWITCHEROO HEXAGONAL
