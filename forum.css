@@ -1448,7 +1448,7 @@ ul.topiclist.topics li.row a.topictitle:hover { color: var(--gold) !important; }
 .titre-sujet-arte {
     width: 950px !important;
     max-width: 100% !important;
-    margin: 24px auto 18px !important;
+    margin: 24px auto 14px !important;
     font-family: var(--titres) !important;
     color: var(--gold) !important;
     display: flex !important;
@@ -1460,6 +1460,7 @@ ul.topiclist.topics li.row a.topictitle:hover { color: var(--gold) !important; }
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
     position: relative !important;
+    z-index: 10 !important;
 }
 
 h2.titre-sujet-arte a {
@@ -1469,24 +1470,37 @@ h2.titre-sujet-arte a {
     height: auto !important;
 }
 
+/* Les deux étoiles de début et de fin de chaîne */
 .titre-sujet-arte::before,
 .nouveau-repondre-arte .pagination-arte ~ div::after {
     content: "★" !important;
+    display: inline-block !important;
     color: var(--gold) !important;
     font-size: 22px !important;
     line-height: 1 !important;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), text-shadow 0.3s ease, color 0.3s ease !important;
+    transform-origin: center center !important;
 }
 
+/* Effet rotation + brillance sur les étoiles quand on survole un bouton */
+#page-body:has(.fil-ariane-arte a:hover, .nouveau-repondre-arte a:hover) .titre-sujet-arte::before,
+#page-body:has(.fil-ariane-arte a:hover, .nouveau-repondre-arte a:hover) .nouveau-repondre-arte .pagination-arte ~ div::after {
+    transform: rotate(180deg) scale(1.25) !important;
+    color: #fff3c4 !important;
+    text-shadow: 0 0 8px #ffb01f, 0 0 16px #ee5574, 0 0 22px #ffffff !important;
+}
+
+/* Segment 1 : Angle supérieur gauche (Étoile 1 -> 1er bouton du fil d'Ariane) */
 .titre-sujet-arte::after {
     content: "" !important;
-    width: 42px !important;
+    width: 48px !important;
     height: 22px !important;
     border-left: 1.5px solid var(--gold) !important;
     border-bottom: 1.5px solid var(--gold) !important;
     border-radius: 0 0 0 10px !important;
     position: absolute !important;
-    z-index: 10 !important;
-    bottom: -18px !important;
+    z-index: 1 !important;
+    bottom: -22px !important;
     left: 10px !important;
     pointer-events: none !important;
 }
@@ -1494,25 +1508,59 @@ h2.titre-sujet-arte a {
 .fil-ariane-arte {
     width: 950px !important;
     max-width: 100% !important;
-    margin: 8px auto 12px !important;
-    padding: 0 10px 0 58px !important;
+    margin: 8px auto 14px !important;
+    padding: 0 54px 0 58px !important;
     box-sizing: border-box !important;
     position: relative !important;
     z-index: 9 !important;
     line-height: normal !important;
 }
 
+/* Segment 2 : Ligne horizontale continue derrière les boutons du fil d'Ariane */
+.fil-ariane-arte::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 58px !important;
+    right: 22px !important;
+    height: 1.5px !important;
+    background: var(--gold) !important;
+    transform: translateY(-50%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+/* Segment 3 : Descente en angle à droite vers la ligne des boutons d'action */
+.fil-ariane-arte::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 18px !important;
+    width: 14px !important;
+    height: 44px !important;
+    border-top: 1.5px solid var(--gold) !important;
+    border-right: 1.5px solid var(--gold) !important;
+    border-bottom: 1.5px solid var(--gold) !important;
+    border-radius: 0 10px 10px 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
 .fil-ariane-arte > span {
+    position: relative !important;
+    z-index: 3 !important;
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-    gap: 8px !important;
-    font-size: 0 !important; /* Masque les espaces &nbsp; en trop entre les boutons */
+    gap: 12px !important;
+    font-size: 0 !important;
 }
 
 .fil-ariane-arte span a,
 .nouveau-repondre-arte .pagination-arte ~ div a,
 .pagination-arte > span {
+    position: relative !important;
+    z-index: 3 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1531,7 +1579,7 @@ h2.titre-sujet-arte a {
     border: 1px solid var(--border-grey) !important;
     text-decoration: none !important;
     box-sizing: border-box !important;
-    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease !important;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease !important;
 }
 
 .fil-ariane-arte > span a:first-child {
@@ -1544,6 +1592,7 @@ h2.titre-sujet-arte a {
     background: var(--grad-btn) !important;
     border-color: var(--border-cream) !important;
     color: #ffffff !important;
+    box-shadow: 0 0 12px rgba(216, 155, 60, 0.55) !important;
 }
 
 .pagination-arte strong {
@@ -1569,16 +1618,34 @@ h2.titre-sujet-arte a {
     padding: 0 10px !important;
 }
 
+/* Segment 4 : Ligne horizontale continue derrière les boutons d'action jusqu'à l'étoile 2 */
+.nouveau-repondre-arte::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 34px !important;
+    width: 470px !important;
+    max-width: calc(100% - 60px) !important;
+    height: 1.5px !important;
+    background: var(--gold) !important;
+    transform: translateY(-50%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
 .nouveau-repondre-arte .pagination-arte ~ div {
+    position: relative !important;
+    z-index: 3 !important;
     display: inline-flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 12px !important;
 }
 
 .nouveau-repondre-arte .pagination-arte ~ div a {
     margin: 0 !important;
 }
+
 
 .date-et-options { grid-row: 1 / 2; grid-column: 1 / 3; background: #141416; border-bottom: 1px solid var(--border-grey); display: flex; justify-content: space-between; align-items: center; padding: 10px 18px; }
 .date-et-options > a { color: var(--border-cream); font-family: var(--font); font-size: 13px; text-transform: uppercase; text-decoration: none; }
