@@ -2601,7 +2601,7 @@ html body#modernbb .lmdet * {
     line-height: 1.4 !important;
 }
 
-/* Rang net et contrasté sur le fond crème au survol (sans halo blanc) */
+/* Rang : lettres fines et nettes avec ombre portée en relief (sans contour lourd) */
 html body#modernbb .lmdet .lmdet-rank {
     font-family: var(--titres) !important;
     font-size: 20px !important;
@@ -2609,8 +2609,8 @@ html body#modernbb .lmdet .lmdet-rank {
     line-height: 1.2 !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    color: var(--grp-color, var(--plum)) !important;
-    text-shadow: -1px -1px 0 #141416, 1px -1px 0 #141416, -1px 1px 0 #141416, 1px 1px 0 #141416 !important;
+    color: color-mix(in srgb, var(--grp-color, var(--plum)) 85%, #000000) !important;
+    text-shadow: 1px 1px 0 rgba(20, 20, 22, 0.85), 2px 3px 5px rgba(0, 0, 0, 0.35) !important;
     border-bottom: 1px solid rgba(25, 25, 28, 0.25) !important;
     padding-bottom: 6px !important;
     margin-bottom: 6px !important;
