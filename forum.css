@@ -2607,8 +2607,8 @@ html body#modernbb .lmdet .lmdet-rank {
     font-size: 16px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    color: color-mix(in srgb, var(--grp-color, var(--plum)) 55%, #141416) !important;
-    text-shadow: none !important;
+    color: var(--grp-color, var(--plum)) !important;
+    text-shadow: -1px -1px 0 #141416, 1px -1px 0 #141416, -1px 1px 0 #141416, 1px 1px 0 #141416 !important;
     border-bottom: 1px solid rgba(25, 25, 28, 0.25) !important;
     padding-bottom: 4px !important;
     margin-bottom: 4px !important;
