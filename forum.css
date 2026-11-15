@@ -592,7 +592,9 @@ text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cr
 line-height: 0.9 !important; margin: 0 !important;
 }
 .starlight-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 18px !important; width: 100% !important; box-sizing: border-box !important; }
-.starlight-grid > .sc-forum-wrapper:nth-child(3), .starlight-grid > .sc-forum-wrapper:only-child { grid-column: 1 / -1 !important; }
+.starlight-grid > .sc-forum-wrapper:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+}
 .sc-forum-wrapper { display: flex !important; flex-direction: column !important; gap: 8px !important; min-width: 0 !important; max-width: 100% !important; }
 .sc-forum-card {
 position: relative !important; height: 255px !important; background-color: #141416 !important;
