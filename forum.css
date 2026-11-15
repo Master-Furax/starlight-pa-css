@@ -1698,6 +1698,23 @@ h2.titre-sujet-arte a {
     border-bottom: 1.5px solid var(--jscouleur, var(--gold)) !important;
 }
 
+/* Le dragon en filigrane intégré dans la couleur de groupe du bandeau membre */
+.infos-membre-arte::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: url("https://zupimages.net/up/26/45/5cp4.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center 65% !important;
+    background-size: cover !important;
+    opacity: 0.45 !important;
+    mix-blend-mode: multiply !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+
+
 .infos-membre-arte > div:nth-of-type(1) { display: flex; flex-wrap: wrap; gap: 14px; width: 68%; align-items: center; }
 .infos-membre-arte .label { font-size: 0; }
 .infos-membre-arte .label span { background: var(--bg-dark); border: 1px solid var(--jscouleur, var(--gold)); border-radius: 6px 0; padding: 3px 8px; font-family: var(--titres); font-size: 14px; text-transform: uppercase; color: var(--border-cream) !important; font-weight: 700; margin-right: 6px; }
