@@ -926,48 +926,59 @@ text-transform: uppercase; font-size: 34px !important; text-align: left; height:
    9. INTÉRIEUR DES FORUMS, LISTING DES RP & BAS DE PAGE HARMONISÉS
    ========================================================================== */
 
-/* 1. Titre du forum + Fil d'Ariane sans aucun chevauchement */
+/* 1. Titre du forum (34px équilibré) + Fil d'Ariane sans chevauchement */
 .page-header,
-#page-body > .page-header {
+#page-body > .page-header,
+.sub-header {
     width: 950px !important;
     max-width: 100% !important;
     margin: 22px auto 12px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
+    line-height: 1.4 !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 h1.page-title,
-.page-header h1 {
+.page-header h1,
+.sub-header h1 {
     position: static !important;
     width: 950px !important;
     max-width: 100% !important;
-    margin: 18px auto 6px !important;
-    line-height: 1.1 !important;
+    margin: 18px auto 8px !important;
+    line-height: 1.15 !important;
     font-family: var(--titres) !important;
-    font-size: 46px !important;
+    font-size: 34px !important;
     font-weight: 800 !important;
     text-transform: uppercase !important;
     letter-spacing: 1.5px !important;
     color: var(--bg-dark) !important;
-    text-shadow: -1.5px -1.5px 0 var(--border-cream), 1.5px -1.5px 0 var(--border-cream), -1.5px 1.5px 0 var(--border-cream), 1.5px 1.5px 0 var(--border-cream) !important;
+    text-shadow: -1.2px -1.2px 0 var(--border-cream), 1.2px -1.2px 0 var(--border-cream), -1.2px 1.2px 0 var(--border-cream), 1.2px 1.2px 0 var(--border-cream) !important;
 }
 
 p.crumbs,
 ul.linklist.navlinks,
-.breadcrumbs {
+.breadcrumbs,
+.sub-header .breadcrumbs {
     position: static !important;
     display: block !important;
+    clear: both !important;
     width: 950px !important;
     max-width: 100% !important;
-    margin: 4px auto 14px !important;
-    padding: 6px 14px !important;
+    margin: 6px auto 14px !important;
+    padding: 8px 14px !important;
     box-sizing: border-box !important;
-    background: rgba(20, 20, 22, 0.75) !important;
-    border: 1px solid rgba(158, 152, 142, 0.35) !important;
+    background: rgba(20, 20, 22, 0.85) !important;
+    background-image: none !important;
+    border: 1px solid rgba(158, 152, 142, 0.45) !important;
     border-radius: 10px 0 !important;
     color: var(--border-cream) !important;
-    line-height: 1.4 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
 }
 
 p.crumbs a,
@@ -987,16 +998,18 @@ ul.linklist.navlinks a:hover,
     color: var(--border-cream) !important;
 }
 
-/* 2. Suppression totale des boîtes blanches (Description forum, Modérateurs, Permissions) */
+/* 2. Suppression totale des boîtes blanches (Description, Modérateur, Permissions) */
 #page-body > .panel,
 #page-body .panel,
+.panel,
 .panel.bg1,
 .panel.bg2,
 .panel.bg3,
 div.panel,
 .panel .inner,
 .forumbg,
-.forumbg .inner {
+.forumbg .inner,
+#main-content > .panel {
     width: 950px !important;
     max-width: 100% !important;
     margin: 14px auto !important;
@@ -1004,10 +1017,12 @@ div.panel,
     box-sizing: border-box !important;
     background: var(--bg-dark) !important;
     background-color: var(--bg-dark) !important;
+    background-image: none !important;
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 20px 0 !important;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55) !important;
+    line-height: 1.5 !important;
 }
 
 .panel .inner {
@@ -1018,12 +1033,16 @@ div.panel,
     box-shadow: none !important;
 }
 
+/* Empêche tout chevauchement vertical de texte dans les panneaux */
 .panel p,
 .panel span,
 .panel strong,
 .panel b,
-.panel div {
+.panel div,
+.sub-header p {
     color: var(--border-cream) !important;
+    line-height: 1.55 !important;
+    margin: 4px 0 !important;
 }
 
 .panel a {
@@ -1044,12 +1063,13 @@ div.panel,
     margin: 0 0 10px 0 !important;
     font-family: var(--titres) !important;
     font-size: 19px !important;
+    line-height: 1.2 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
     border: 1px solid var(--border-cream) !important;
 }
 
-/* 3. Barre d'actions & Tous les boutons (Noir/Or au repos -> Dégradé Prune/Or au survol) */
+/* 3. Barre d'actions & Boutons (Noir/Or au repos -> Dégradé Prune/Or au survol) */
 .topic-actions {
     width: 950px !important;
     max-width: 100% !important;
@@ -1074,7 +1094,6 @@ div.panel,
     color: var(--gold) !important;
 }
 
-/* Style uniforme pour TOUS les boutons : Nouveau Sujet, Répondre, Envoyer, Prévisualisation, Aller */
 .buttons div a,
 .topic-actions .buttons a,
 a.button1,
@@ -1129,7 +1148,7 @@ form input[type="submit"]:hover {
     transform: translateY(-2px) !important;
 }
 
-/* Menus déroulants (Sauter vers, Outils de modération) & Champs texte */
+/* Menus déroulants sombres (plus de fond blanc ni bleu natif Windows !) */
 select,
 input.inputbox,
 textarea.inputbox {
@@ -1137,9 +1156,16 @@ textarea.inputbox {
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 8px 0 !important;
-    padding: 5px 10px !important;
+    padding: 6px 12px !important;
     font-family: var(--font) !important;
     font-size: 13px !important;
+    color-scheme: dark !important;
+}
+
+select option {
+    background-color: #1e1e20 !important;
+    color: var(--border-cream) !important;
+    padding: 6px 10px !important;
 }
 
 select:focus,
@@ -1149,179 +1175,90 @@ textarea.inputbox:focus {
     outline: none !important;
 }
 
-/* Textes labels en bas de forum & Légende des icônes (plus de texte noir invisible !) */
+/* Labels "Sauter vers", "Outils de modération" & Légende des icônes harmonisée */
 #page-body > p,
 #page-body > form,
 fieldset.display-options,
-.icon-legend,
-ul.linklist.bottom,
-#page-body > p label,
-#page-body > form label {
-    width: 950px !important;
-    max-width: 100% !important;
-    margin: 12px auto !important;
+fieldset.jumpbox,
+fieldset.quickmod,
+label {
     color: var(--border-cream) !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
 }
 
-.icon-legend img {
-    vertical-align: middle !important;
-    margin-right: 4px !important;
-}
-
-/* 4. Cartes de Sujets / RP (.SBJ de topics_list_box) */
-table.forumline {
+/* Cartouche élégant pour la légende des icônes en bas de forum */
+.icon-legend,
+ul.linklist.bottom,
+#main-content > ul.linklist {
     width: 950px !important;
     max-width: 100% !important;
-    margin: 15px auto !important;
-    background: transparent !important;
-    border: none !important;
-}
-
-table.forumline td {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-}
-
-fieldset.SBJ {
-    position: relative !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 16px !important;
-    margin: 16px 0 !important;
-    padding: 18px 20px 14px !important;
+    margin: 14px auto !important;
+    padding: 12px 18px !important;
+    box-sizing: border-box !important;
     background: var(--bg-dark) !important;
-    border: 1.5px solid var(--border-grey) !important;
-    border-radius: 24px 0 !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6) !important;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
-}
-
-fieldset.SBJ:hover {
-    border-color: var(--gold) !important;
-    box-shadow: 0 6px 20px rgba(216, 155, 60, 0.35) !important;
-}
-
-legend.nameSBJ {
-    padding: 2px 12px !important;
-    margin-left: 10px !important;
-    background: #141416 !important;
     border: 1px solid var(--border-grey) !important;
-    border-radius: 8px 0 !important;
+    border-radius: 20px 0 !important;
+    color: var(--border-cream) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    list-style: none !important;
+}
+
+.icon-legend li,
+ul.linklist.bottom li {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
     color: var(--border-cream) !important;
     font-family: var(--font) !important;
     font-size: 12px !important;
     text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
 }
 
-legend.nameSBJ strong {
-    color: var(--gold) !important;
-}
-
-.tleSBJ {
-    flex-grow: 1 !important;
-    min-width: 0 !important;
-    font-family: var(--titres) !important;
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    color: var(--gold) !important;
-}
-
-.tleSBJ a {
-    color: var(--border-cream) !important;
-    text-decoration: none !important;
-}
-
-.tleSBJ a:hover {
-    color: var(--gold) !important;
-}
-
-.descSBJ {
-    margin-top: 4px !important;
-    font-family: var(--textes) !important;
-    font-size: 12.5px !important;
-    font-weight: 400 !important;
-    text-transform: none !important;
-    color: #b8b2a6 !important;
-}
-
-.gotoSBJ a {
-    display: inline-block !important;
-    margin-top: 6px !important;
-    padding: 1px 7px !important;
-    background: var(--grad-btn) !important;
-    color: #ffffff !important;
-    border-radius: 5px 0 !important;
-    font-size: 12px !important;
-}
-
-.boxSBJ {
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-    flex-shrink: 0 !important;
-}
-
-img.imgSBJ {
-    width: 34px !important;
-    height: 34px !important;
+.icon-legend img,
+ul.linklist.bottom img {
+    width: 22px !important;
+    height: 22px !important;
     object-fit: contain !important;
 }
 
-.vuesSBJ,
-.repSBJ {
-    background: #141416 !important;
-    border: 1px solid var(--border-grey) !important;
-    border-radius: 8px 0 !important;
-    padding: 5px 10px !important;
-    font-family: var(--titres) !important;
-    font-size: 16px !important;
-   font-weight: 700 !important;
-   color: var(--gold) !important;
-   text-align: center !important;
-   min-width: 48px !important;
+/* 4. Cartes de Sujets / RP (.SBJ de topics_list_box) */
+table.forumline { width: 950px !important; max-width: 100% !important; margin: 15px auto !important; background: transparent !important; border: none !important; }
+table.forumline td { background: transparent !important; border: none !important; padding: 0 !important; }
+
+fieldset.SBJ {
+    position: relative !important; display: flex !important; justify-content: space-between !important; align-items: center !important;
+    gap: 16px !important; margin: 16px 0 !important; padding: 18px 20px 14px !important; background: var(--bg-dark) !important;
+    border: 1.5px solid var(--border-grey) !important; border-radius: 24px 0 !important; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6) !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
-.lmsgSBJ {
-background: rgba(20, 20, 22, 0.85) !important;
-border-left: 2px solid var(--gold) !important;
-border-radius: 0 10px !important;
-padding: 6px 12px !important;
-font-family: var(--font) !important;
-font-size: 12px !important;
-color: var(--border-cream) !important;
-text-align: right !important;
-line-height: 1.35 !important;
-}
-.lmsgSBJ a {
-color: var(--gold) !important;
-font-weight: bold !important;
-text-decoration: none !important;
-}
-ul.topiclist.topics,
-ul.topiclist.topics li.row {
-background: var(--bg-dark) !important;
-color: var(--border-cream) !important;
-border-color: var(--border-grey) !important;
-}
-ul.topiclist.topics li.row {
-border-radius: 16px 0 !important;
-border: 1px solid var(--border-grey) !important;
-margin: 10px 0 !important;
-padding: 10px 14px !important;
-}
-ul.topiclist.topics li.row a.topictitle {
-font-family: var(--titres) !important;
-font-size: 24px !important;
-color: var(--border-cream) !important;
-text-transform: uppercase !important;
-}
-ul.topiclist.topics li.row a.topictitle:hover {
-color: var(--gold) !important;
-}
+fieldset.SBJ:hover { border-color: var(--gold) !important; box-shadow: 0 6px 20px rgba(216, 155, 60, 0.35) !important; }
+
+legend.nameSBJ { padding: 2px 12px !important; margin-left: 10px !important; background: #141416 !important; border: 1px solid var(--border-grey) !important; border-radius: 8px 0 !important; color: var(--border-cream) !important; font-family: var(--font) !important; font-size: 12px !important; text-transform: uppercase !important; }
+legend.nameSBJ strong { color: var(--gold) !important; }
+
+.tleSBJ { flex-grow: 1 !important; min-width: 0 !important; font-family: var(--titres) !important; font-size: 26px !important; font-weight: 700 !important; text-transform: uppercase !important; color: var(--gold) !important; }
+.tleSBJ a { color: var(--border-cream) !important; text-decoration: none !important; }
+.tleSBJ a:hover { color: var(--gold) !important; }
+.descSBJ { margin-top: 4px !important; font-family: var(--textes) !important; font-size: 12.5px !important; font-weight: 400 !important; text-transform: none !important; color: #b8b2a6 !important; }
+.gotoSBJ a { display: inline-block !important; margin-top: 6px !important; padding: 1px 7px !important; background: var(--grad-btn) !important; color: #ffffff !important; border-radius: 5px 0 !important; font-size: 12px !important; }
+
+.boxSBJ { display: flex !important; align-items: center !important; gap: 12px !important; flex-shrink: 0 !important; }
+img.imgSBJ { width: 34px !important; height: 34px !important; object-fit: contain !important; }
+.vuesSBJ, .repSBJ { background: #141416 !important; border: 1px solid var(--border-grey) !important; border-radius: 8px 0 !important; padding: 5px 10px !important; font-family: var(--titres) !important; font-size: 16px !important; font-weight: 700 !important; color: var(--gold) !important; text-align: center !important; min-width: 48px !important; }
+.lmsgSBJ { background: rgba(20, 20, 22, 0.85) !important; border-left: 2px solid var(--gold) !important; border-radius: 0 10px !important; padding: 6px 12px !important; font-family: var(--font) !important; font-size: 12px !important; color: var(--border-cream) !important; text-align: right !important; line-height: 1.35 !important; }
+.lmsgSBJ a { color: var(--gold) !important; font-weight: bold !important; text-decoration: none !important; }
+
+ul.topiclist.topics, ul.topiclist.topics li.row { background: var(--bg-dark) !important; color: var(--border-cream) !important; border-color: var(--border-grey) !important; }
+ul.topiclist.topics li.row { border-radius: 16px 0 !important; border: 1px solid var(--border-grey) !important; margin: 10px 0 !important; padding: 10px 14px !important; }
+ul.topiclist.topics li.row a.topictitle { font-family: var(--titres) !important; font-size: 24px !important; color: var(--border-cream) !important; text-transform: uppercase !important; }
+ul.topiclist.topics li.row a.topictitle:hover { color: var(--gold) !important; }
+
    
 /* --------------------------------------------------------------------------
 10. INTÉRIEUR DES SUJETS & RP (viewtopic_body - Template Artemis)
