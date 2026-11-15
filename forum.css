@@ -2602,13 +2602,14 @@ html body#modernbb .lmdet * {
 }
 
 /* Rang en haut du cadre crème : prend automatiquement la couleur du groupe */
+/* Assombrit légèrement les teintes claires pour un contraste net sur le volet crème */
 html body#modernbb .lmdet .lmdet-rank {
     font-family: var(--titres) !important;
     font-size: 16px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    color: color-mix(in srgb, var(--grp-color, var(--plum)) 78%, #000000) !important;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+    color: color-mix(in srgb, var(--grp-color, var(--plum)) 68%, #141416) !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) !important;
     border-bottom: 1px solid rgba(25, 25, 28, 0.25) !important;
     padding-bottom: 4px !important;
     margin-bottom: 4px !important;
