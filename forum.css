@@ -1058,7 +1058,17 @@ html body#modernbb .panel h3 {
     border: 1px solid var(--border-cream) !important;
 }
 
-/* Menu déroulant "Plus !" (#plus_menu) harmonisé avec le menu Bienvenue & Navigation */
+/* Aligne "MARQUER TOUS LES SUJETS COMME LUS" et "PLUS !" sur la même ligne */
+html body#modernbb .topic-actions-buttons,
+html body#modernbb .forum-actions,
+html body#modernbb .topic-actions > div {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    vertical-align: middle !important;
+}
+
+/* Menu déroulant "Plus !" (#plus_menu) : supprime le rectangle blanc du titre */
 html body#modernbb #plus_menu,
 html body#modernbb div#plus_menu,
 html body#modernbb .dropdown-box,
@@ -1073,13 +1083,17 @@ html body#modernbb ul.dropdown-contents {
     color: var(--border-cream) !important;
 }
 
+/* Écrase définitivement le fond blanc du titre "Plus !" */
+html body#modernbb #plus_menu > div:first-child,
+html body#modernbb #plus_menu > p:first-child,
 html body#modernbb #plus_menu .title,
 html body#modernbb #plus_menu h3,
-html body#modernbb #plus_menu > div:first-child,
+html body#modernbb #plus_menu strong,
 html body#modernbb .dropdown-box .title,
 html body#modernbb .dropdown-header {
     background: var(--grad-btn) !important;
-    background-color: transparent !important;
+    background-color: #9d2b6b !important;
+    background-image: var(--grad-btn) !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     font-family: var(--titres) !important;
@@ -1091,6 +1105,7 @@ html body#modernbb .dropdown-header {
     border-radius: 8px 0 !important;
     padding: 4px 10px !important;
     margin: 0 0 8px 0 !important;
+    display: block !important;
 }
 
 html body#modernbb #plus_menu a,
@@ -1098,6 +1113,7 @@ html body#modernbb .dropdown-box li a,
 html body#modernbb ul.dropdown-contents li a {
     display: block !important;
     background: transparent !important;
+    background-color: transparent !important;
     color: var(--border-cream) !important;
     -webkit-text-fill-color: var(--border-cream) !important;
     padding: 5px 10px !important;
@@ -1113,11 +1129,11 @@ html body#modernbb #plus_menu a:hover,
 html body#modernbb .dropdown-box li a:hover,
 html body#modernbb ul.dropdown-contents li a:hover {
     background: var(--grad-btn) !important;
+    background-color: #9d2b6b !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     padding-left: 14px !important;
 }
-
 
 /* Légende des icônes en bas de forum (ul#picture_legend) */
 html body#modernbb ul#picture_legend {
