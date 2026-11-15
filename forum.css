@@ -2783,7 +2783,7 @@ html body#modernbb .boxSBJ {
 }
 
 /* =========================================================
-   PROFIL PUBLIC (#starlight-profile) - HARMONIE PRUNE & OR
+   PROFIL PUBLIC (#starlight-profile) - STYLE ÉPURÉ SOMBRE & OR
    ========================================================= */
 
 html body#modernbb .sc-profile-wrapper {
@@ -2799,42 +2799,38 @@ html body#modernbb .sc-profile-main-title {
     letter-spacing: 2px !important;
     line-height: 1.2 !important;
     text-align: center !important;
-    color: var(--gold) !important;
-    text-shadow: 0 2px 10px rgba(157, 43, 107, 0.7), 0 3px 6px rgba(0, 0, 0, 0.9) !important;
+    color: var(--border-cream) !important;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.85) !important;
     margin-bottom: 16px !important;
 }
 
-/* Carte principale : halo prune & or lumineux façon PA / QEEL */
+/* Base sombre épurée fidèle au thème Starlight */
 html body#modernbb .sc-profile-card {
-    background:
-        radial-gradient(circle at 15% 20%, rgba(157, 43, 107, 0.42) 0%, transparent 52%),
-        radial-gradient(circle at 88% 82%, rgba(216, 155, 60, 0.28) 0%, transparent 55%),
-        linear-gradient(135deg, #2b1d28 0%, #221d24 50%, #2a221b 100%) !important;
-    border: 1.5px solid var(--gold) !important;
+    background: var(--bg-dark, #19191c) !important;
+    border: 1.5px solid var(--border-grey, #3a3a40) !important;
     border-radius: 22px 0 !important;
     padding: 20px !important;
     display: grid !important;
-    grid-template-columns: 230px 1fr !important;
+    grid-template-columns: 240px 1fr !important;
     align-items: stretch !important;
     gap: 20px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), inset 0 0 25px rgba(157, 43, 107, 0.18) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8) !important;
     position: relative !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
 }
 
-/* --- COLONNE GAUCHE : Avatar + Médaillon Groupe --- */
+/* --- COLONNE GAUCHE : Avatar + Groupe + 4 Tuiles --- */
 html body#modernbb .sc-profile-left {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-    gap: 14px !important;
+    gap: 12px !important;
 }
 
 html body#modernbb .sc-profile-avatar-box {
     position: relative !important;
     padding: 8px !important;
-    background: rgba(25, 19, 24, 0.85) !important;
+    background: #141416 !important;
     border: 1.5px solid var(--gold) !important;
     border-radius: 16px 0 !important;
     overflow: hidden !important;
@@ -2845,10 +2841,10 @@ html body#modernbb .sc-profile-diag {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    height: 165px !important;
-    background: var(--grp-color, var(--plum)) !important;
+    height: 160px !important;
+    background: var(--grp-color, #2a2a30) !important;
     clip-path: polygon(0 0, 100% 0, 0 100%) !important;
-    opacity: 0.9 !important;
+    opacity: 0.85 !important;
     z-index: 1 !important;
 }
 
@@ -2859,7 +2855,7 @@ html body#modernbb .sc-profile-avatar {
     height: 330px !important;
     border-radius: 10px 0 !important;
     overflow: hidden !important;
-    border: 1px solid rgba(244, 239, 230, 0.5) !important;
+    border: 1px solid rgba(244, 239, 230, 0.35) !important;
 }
 
 html body#modernbb .sc-profile-avatar img {
@@ -2872,30 +2868,29 @@ html body#modernbb .sc-profile-avatar img {
     display: block !important;
 }
 
-/* Encart Groupe + Rang + Médaillon doré */
+/* Encart Groupe & Rang sous l'avatar */
 html body#modernbb .sc-profile-group-box {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, var(--plum)) 62%, #241822), rgba(32, 22, 30, 0.95) 92%) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, #252528) 45%, #141416), #141416 90%) !important;
     border: 1.5px solid var(--gold) !important;
     border-radius: 14px 0 !important;
-    padding: 12px !important;
+    padding: 10px 12px !important;
     display: flex !important;
     align-items: center !important;
     gap: 12px !important;
-    flex: 1 1 auto !important;
 }
 
 html body#modernbb .sc-profile-medal {
-    width: 52px !important;
-    height: 52px !important;
+    width: 48px !important;
+    height: 48px !important;
     flex-shrink: 0 !important;
 }
 
 html body#modernbb .sc-profile-medal img {
-    width: 52px !important;
-    height: 52px !important;
+    width: 48px !important;
+    height: 48px !important;
     border-radius: 50% !important;
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 12px rgba(216, 155, 60, 0.65), 0 4px 10px rgba(0, 0, 0, 0.85) !important;
+    box-shadow: 0 0 10px rgba(216, 155, 60, 0.55), 0 4px 10px rgba(0, 0, 0, 0.85) !important;
     object-fit: cover !important;
     display: block !important;
 }
@@ -2904,14 +2899,14 @@ html body#modernbb .sc-profile-group-info {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    gap: 4px !important;
+    gap: 3px !important;
     min-width: 0 !important;
 }
 
 html body#modernbb .sc-profile-group-name {
     display: block !important;
     font-family: var(--titres) !important;
-    font-size: 18px !important;
+    font-size: 17px !important;
     line-height: 1.15 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
@@ -2928,7 +2923,51 @@ html body#modernbb .sc-profile-rank {
     text-transform: uppercase !important;
 }
 
-/* --- COLONNE DROITE : En-tête, Stats, Feuille --- */
+/* Grille 2x2 des 4 tuiles sous le groupe (empilage vertical propre sans superposition) */
+html body#modernbb .sc-profile-stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb .sc-stat-tile {
+    background: #141416 !important;
+    border: 1px solid var(--border-grey, #3a3a40) !important;
+    border-radius: 10px 0 !important;
+    padding: 8px 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb .sc-stat-label {
+    display: block !important;
+    font-family: var(--titres) !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    color: var(--gold) !important;
+}
+
+html body#modernbb .sc-stat-val {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+    color: var(--border-cream) !important;
+    font-weight: 600 !important;
+    word-break: break-word !important;
+}
+
+/* --- COLONNE DROITE : Nom + Boutons centrés + Feuille --- */
 html body#modernbb .sc-profile-right {
     display: flex !important;
     flex-direction: column !important;
@@ -2937,17 +2976,16 @@ html body#modernbb .sc-profile-right {
     width: 100% !important;
 }
 
-/* En-tête Nom + Boutons */
+/* Bandeau du Nom sobre */
 html body#modernbb .sc-profile-header {
-    background: linear-gradient(110deg, color-mix(in srgb, var(--grp-color, var(--plum)) 68%, #2a1826) 0%, rgba(44, 26, 40, 0.92) 78%) !important;
-    border: 1px solid rgba(216, 155, 60, 0.55) !important;
-    border-left: 4px solid var(--gold) !important;
+    background: linear-gradient(110deg, color-mix(in srgb, var(--grp-color, #252528) 55%, #141416) 0%, #141416 78%) !important;
+    border: 1px solid var(--border-grey, #3a3a40) !important;
+    border-left: 4px solid var(--grp-color, var(--gold)) !important;
     border-radius: 14px 0 !important;
-    padding: 12px 18px !important;
+    padding: 14px 20px !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
-    gap: 14px !important;
+    justify-content: flex-start !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
@@ -2959,90 +2997,61 @@ html body#modernbb .sc-profile-username span {
     letter-spacing: 1.5px !important;
     text-transform: uppercase !important;
     color: var(--border-cream) !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
     margin: 0 !important;
     line-height: 1.15 !important;
 }
 
-html body#modernbb .sc-profile-actions {
+/* Barre d'actions centrée entre l'avatar/nom et la feuille de personnage */
+html body#modernbb .sc-profile-actions-bar {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    flex-shrink: 0 !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    padding: 4px 0 !important;
+    width: 100% !important;
 }
 
 html body#modernbb .sc-profile-contact-icons {
     display: flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 8px !important;
 }
 
 html body#modernbb .sc-profile-search-links {
     display: flex !important;
-    gap: 6px !important;
+    align-items: center !important;
+    gap: 10px !important;
 }
 
+/* Boutons MESSAGES / SUJETS agrandis façon PRÉVISUALISATION / ENVOYER */
 html body#modernbb a.sc-prof-btn {
-    background: linear-gradient(135deg, rgba(157, 43, 107, 0.75), rgba(35, 22, 32, 0.95)) !important;
-    border: 1px solid var(--gold) !important;
-    border-radius: 6px 0 !important;
-    padding: 5px 12px !important;
+    background: #141416 !important;
+    border: 1.5px solid var(--gold) !important;
+    border-radius: 8px 0 !important;
+    padding: 8px 22px !important;
     font-family: var(--titres) !important;
-    font-size: 13px !important;
+    font-size: 16px !important;
     line-height: 1.2 !important;
-    letter-spacing: 0.8px !important;
+    letter-spacing: 1.2px !important;
     text-transform: uppercase !important;
     color: var(--border-cream) !important;
     text-decoration: none !important;
-    transition: all 0.2s ease !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.25s ease !important;
 }
 
 html body#modernbb a.sc-prof-btn:hover {
-    background: var(--gold) !important;
-    color: #141416 !important;
+    background: var(--grad-btn) !important;
+    background-image: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: var(--border-cream) !important;
+    transform: translateY(-2px) !important;
 }
 
-/* Grille des 4 tuiles de stats (teinte prune-or lumineuse) */
-html body#modernbb .sc-profile-stats-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-html body#modernbb .sc-stat-tile {
-    background: linear-gradient(120deg, rgba(62, 33, 53, 0.78), rgba(33, 24, 30, 0.88)) !important;
-    border: 1px solid rgba(216, 155, 60, 0.45) !important;
-    border-radius: 10px 0 !important;
-    padding: 9px 14px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 12px !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-}
-
-html body#modernbb .sc-stat-label {
-    font-family: var(--titres) !important;
-    font-size: 14px !important;
-    line-height: 1.25 !important;
-    letter-spacing: 0.8px !important;
-    text-transform: uppercase !important;
-    color: var(--gold) !important;
-    white-space: nowrap !important;
-}
-
-html body#modernbb .sc-stat-val {
-    font-size: 13px !important;
-    line-height: 1.3 !important;
-    color: var(--border-cream) !important;
-    font-weight: 600 !important;
-    text-align: right !important;
-}
-
-/* Feuille de personnage crème */
+/* Feuille de personnage crème remontée directement sous les boutons */
 html body#modernbb .sc-profile-sheet {
     background: rgba(244, 239, 230, 0.96) !important;
     border: 1.5px solid var(--gold) !important;
@@ -3056,7 +3065,7 @@ html body#modernbb .sc-profile-sheet {
 }
 
 html body#modernbb .sc-sheet-banner {
-    background: linear-gradient(90deg, #2d1828 0%, #3d2134 50%, #2d1828 100%) !important;
+    background: #141416 !important;
     color: var(--border-cream) !important;
     font-family: var(--titres) !important;
     font-size: 17px !important;
@@ -3074,7 +3083,7 @@ html body#modernbb .sc-sheet-banner .sc-sheet-name span {
 }
 
 html body#modernbb .sc-sheet-fields {
-    padding: 14px 16px !important;
+    padding: 14px 18px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
@@ -3085,32 +3094,36 @@ html body#modernbb .sc-sheet-row {
     display: flex !important;
     align-items: baseline !important;
     gap: 8px !important;
-    border-bottom: 1px dashed rgba(157, 43, 107, 0.25) !important;
-    padding-bottom: 6px !important;
-    font-size: 13px !important;
-    line-height: 1.35 !important;
+    border-bottom: 1px dashed rgba(25, 25, 28, 0.22) !important;
+   padding-bottom: 6px !important;
+   font-size: 13px !important;
+   line-height: 1.35 !important;
 }
 
 html body#modernbb .sc-sheet-row:last-child {
-border-bottom: none !important;
-padding-bottom: 0 !important;
+   border-bottom: none !important;
+   padding-bottom: 0 !important;
 }
+
 html body#modernbb .sc-sheet-label {
-font-family: var(--titres) !important;
-font-size: 14px !important;
-line-height: 1.3 !important;
-letter-spacing: 0.5px !important;
-text-transform: uppercase !important;
-color: #4a1936 !important;
-font-weight: 700 !important;
-flex-shrink: 0 !important;
+   font-family: var(--titres) !important;
+   font-size: 14px !important;
+   line-height: 1.3 !important;
+   letter-spacing: 0.5px !important;
+   text-transform: uppercase !important;
+   color: #141416 !important;
+   font-weight: 700 !important;
+   flex-shrink: 0 !important;
 }
+
 html body#modernbb .sc-sheet-value {
-color: #242429 !important;
-line-height: 1.35 !important;
-word-break: break-word !important;
+   color: #242429 !important;
+   line-height: 1.35 !important;
+   word-break: break-word !important;
 }
+
 html body#modernbb .sc-profile-admin-bar {
-margin-top: 12px !important;
-text-align: right !important;
+   margin-top: 12px !important;
+   text-align: right !important;
 }
+
