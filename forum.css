@@ -1715,7 +1715,14 @@ h2.titre-sujet-arte a {
 
 
 
-.infos-membre-arte > div:nth-of-type(1) { display: flex; flex-wrap: wrap; gap: 14px; width: 68%; align-items: center; }
+.infos-membre-arte > div:nth-of-type(1) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    width: auto !important;
+    max-width: 52% !important;
+    align-items: center !important;
+}
 .infos-membre-arte .label { font-size: 0; }
 .infos-membre-arte .label span { background: var(--bg-dark); border: 1px solid var(--jscouleur, var(--gold)); border-radius: 6px 0; padding: 3px 8px; font-family: var(--titres); font-size: 14px; text-transform: uppercase; color: var(--border-cream) !important; font-weight: 700; margin-right: 6px; }
 .infos-membre-arte .label + img { width: 56px; height: 56px; object-fit: cover; border-radius: 12px 0; border: 1.5px solid var(--border-cream); }
@@ -1735,18 +1742,19 @@ h2.titre-sujet-arte a {
 .infos-membre-arte .pseudo-et-rang > div:first-child strong {
     color: var(--jscouleur, var(--gold)) !important;
     font-family: var(--titres) !important;
-    font-size: 28px !important;
+    font-size: 26px !important;
     font-weight: 700 !important;
     line-height: 1.1 !important;
     text-transform: uppercase !important;
-    letter-spacing: 1px !important;
+    letter-spacing: 0.8px !important;
+    white-space: nowrap !important;
     text-decoration: none !important;
     text-shadow:
-        -1px -1px 0 var(--border-cream),
-         1px -1px 0 var(--border-cream),
-        -1px  1px 0 var(--border-cream),
-         1px  1px 0 var(--border-cream),
-         0 3px 8px rgba(0, 0, 0, 0.9) !important;
+        -1px -1px 0 #141416,
+         1px -1px 0 #141416,
+        -1px  1px 0 #141416,
+         1px  1px 0 #141416,
+         0 0 10px rgba(0, 0, 0, 0.95) !important;
 }
 
 .infos-membre-arte .pseudo-et-rang > div:last-child:empty {
