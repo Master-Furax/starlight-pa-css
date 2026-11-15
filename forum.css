@@ -2696,12 +2696,17 @@ html body#modernbb .panel .inner > h2:first-child:not([class]) {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
 }
 
-/* 3. Étend les cartes de sujets (.SBJ) sur 100% de la largeur jusqu'au bord droit */
+/* 3. Étend les cartes de sujets (.SBJ) sur 100% de la largeur ET libère la hauteur du tableau */
 html body#modernbb table.forumline {
     width: 950px !important;
     max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: relative !important;
     margin: 15px auto !important;
     display: block !important;
+    overflow: visible !important;
 }
 
 html body#modernbb table.forumline tbody,
@@ -2710,8 +2715,13 @@ html body#modernbb table.forumline td {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: relative !important;
     box-sizing: border-box !important;
 }
+
 
 /* Masque la ligne d'en-tête parasite "Sujets / Réponses / Auteur / Vues / Derniers Messages" */
 html body#modernbb table.forumline tr:has(th),
