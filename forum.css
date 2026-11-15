@@ -2458,23 +2458,44 @@ html body#modernbb #cp-main table.table1 tbody td a.topictitle {
    LISTE DES MEMBRES (GRILLE DE CARTES .lmfond)
    ========================================================= */
 
-/* Conteneur principal en grille de 4 colonnes (adaptatif) */
-html body#modernbb form[action="/memberlist"] {
+/* Barre de recherche & tri */
+html body#modernbb .lm-filter-form {
     width: 950px !important;
     max-width: 100% !important;
-    margin: 20px auto !important;
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 18px !important;
-    box-sizing: border-box !important;
+    margin: 20px auto 12px !important;
 }
 
-/* Barre de tri et titre prennent toute la largeur de la grille */
-html body#modernbb form[action="/memberlist"] > .lmback,
-html body#modernbb form[action="/memberlist"] > fieldset,
-html body#modernbb form[action="/memberlist"] > .panel,
-html body#modernbb form[action="/memberlist"] > div:not(.lmfond) {
-    grid-column: 1 / -1 !important;
+html body#modernbb .lm-filter-bar {
+    background: var(--bg-dark) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 14px 0 !important;
+    padding: 12px 18px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    color: var(--border-cream) !important;
+}
+
+html body#modernbb .lm-filter-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+html body#modernbb .lm-filter-group label {
+    color: var(--gold) !important;
+    font-family: var(--titres) !important;
+    font-size: 15px !important;
+    text-transform: uppercase !important;
+}
+
+/* Conteneur principal & titre */
+html body#modernbb .lm-wrapper {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 0 auto 24px !important;
 }
 
 html body#modernbb .lmback {
@@ -2488,10 +2509,17 @@ html body#modernbb .lmback {
     border: 1px solid var(--border-grey) !important;
     border-left: 4px solid var(--plum) !important;
     border-radius: 14px 0 !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 18px !important;
 }
 
-/* Carte individuelle d'un membre */
+/* Grille de 4 cartes */
+html body#modernbb .lm-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+}
+
+/* Carte membre */
 html body#modernbb .lmfond {
     position: relative !important;
     background: var(--bg-dark) !important;
@@ -2509,13 +2537,19 @@ html body#modernbb .lmfond:hover {
     border-color: var(--gold) !important;
 }
 
-/* Zone avatar (format portrait 200x320 comme sur votre modèle) */
-html body#modernbb .lmava,
-html body#modernbb .lmimg {
+/* Avatar */
+html body#modernbb .lmava {
     position: relative !important;
     width: 100% !important;
     height: 300px !important;
     overflow: hidden !important;
+}
+
+html body#modernbb .lmimg,
+html body#modernbb .lmimg a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 html body#modernbb .lmimg img {
@@ -2530,31 +2564,94 @@ html body#modernbb .lmfond:hover .lmimg img {
     transform: scale(1.04) !important;
 }
 
-/* Panneau d'informations : bandeau fixe en bas + déploiement crème translucide au survol */
+/* Cadre crème translucide au survol (comme les images de catégories) */
 html body#modernbb .lmdet {
     position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: rgba(20, 20, 22, 0.94) !important;
-    color: var(--border-cream) !important;
-    padding: 10px 12px !important;
-    border-top: 1.5px solid var(--gold) !important;
-    max-height: 46px !important;
-    overflow: hidden !important;
-    transition: all 0.35s ease !important;
+    inset: 10px !important;
+    background: rgba(216, 210, 199, 0.90) !important;
+    backdrop-filter: blur(5px) !important;
+    border: 1px solid #19191c !important;
+    border-radius: 12px 0 !important;
+    padding: 12px !important;
+    color: #19191c !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(8px) !important;
+    transition: all 0.3s ease !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
     z-index: 3 !important;
 }
 
-/* Survol : cadre crème translucide mettant en avant les données et le badge */
 html body#modernbb .lmfond:hover .lmdet {
-    max-height: 85% !important;
-    background: rgba(216, 210, 199, 0.92) !important;
-    backdrop-filter: blur(5px) !important;
-    color: #19191c !important;
-    overflow-y: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
 }
 
-html body#modernbb .lmfond:hover .lmdet * {
+html body#modernbb .lmdet * {
     color: #19191c !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+html body#modernbb .lmdet-rank {
+    font-family: var(--titres) !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: var(--plum) !important;
+    border-bottom: 1px solid rgba(25, 25, 28, 0.25) !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 2px !important;
+}
+
+html body#modernbb .lmdetin span {
+    font-weight: 700 !important;
+}
+
+/* Pied de carte : Nom à gauche + Encart badge de groupe à droite */
+html body#modernbb .lmnom {
+    background: #141416 !important;
+    border-top: 1.5px solid var(--gold) !important;
+    padding: 10px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    min-height: 44px !important;
+}
+
+html body#modernbb .lmnom a.gen {
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+html body#modernbb .lmbadge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #1e1e20 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 6px 0 !important;
+    padding: 3px 6px !important;
+    flex-shrink: 0 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+html body#modernbb .lmbadge img {
+    max-height: 18px !important;
+    width: auto !important;
+    display: block !important;
 }
