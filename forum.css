@@ -2601,63 +2601,77 @@ html body#modernbb .lmdet * {
     line-height: 1.4 !important;
 }
 
-html body#modernbb .lmdet-rank {
+/* Rang en haut du cadre crème : prend automatiquement la couleur du groupe */
+html body#modernbb .lmdet .lmdet-rank {
     font-family: var(--titres) !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    color: var(--plum) !important;
+    color: var(--grp-color, var(--plum)) !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65), 0 1px 3px rgba(0, 0, 0, 0.25) !important;
     border-bottom: 1px solid rgba(25, 25, 28, 0.25) !important;
     padding-bottom: 4px !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 4px !important;
 }
 
 html body#modernbb .lmdetin span {
     font-weight: 700 !important;
 }
 
-/* Pied de carte agrandi : Nom à gauche + Badge agrandi à droite */
+/* Pied de carte teinté par la couleur du groupe + pseudo neutre crème */
 html body#modernbb .lmnom {
-    background: #141416 !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, #1e1e20) 52%, #141416), #141416 88%) !important;
     border-top: 1.5px solid var(--gold) !important;
-    padding: 10px 12px !important;
+    padding: 8px 12px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     gap: 10px !important;
-    min-height: 58px !important;
+    min-height: 66px !important;
     box-sizing: border-box !important;
 }
 
-html body#modernbb .lmnom a.gen {
+html body#modernbb .lmnom a.gen,
+html body#modernbb .lmnom a.gen span {
+    color: var(--border-cream) !important;
     font-family: var(--titres) !important;
     font-size: 16px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
+    letter-spacing: 0.6px !important;
     text-decoration: none !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
     line-height: 1.2 !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
 
+/* Médaillon badge 48x48 sans cadre carré, avec contour doré et ombre portée façon PA */
 html body#modernbb .lmbadge {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: #1e1e20 !important;
-    border: 1px solid var(--border-grey) !important;
-    border-radius: 10px 0 !important;
-    padding: 4px !important;
-    width: 38px !important;
-    height: 38px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    width: 48px !important;
+    height: 48px !important;
     flex-shrink: 0 !important;
-    box-sizing: border-box !important;
 }
 
 html body#modernbb .lmbadge img {
-    width: 28px !important;
-    height: 28px !important;
-    object-fit: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 10px rgba(216, 155, 60, 0.55), 0 4px 10px rgba(0, 0, 0, 0.85) !important;
+    object-fit: cover !important;
     display: block !important;
+    box-sizing: border-box !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+html body#modernbb .lmfond:hover .lmbadge img {
+    transform: scale(1.06) !important;
+    box-shadow: 0 0 14px rgba(216, 155, 60, 0.8), 0 5px 12px rgba(0, 0, 0, 0.9) !important;
 }
