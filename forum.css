@@ -2783,7 +2783,7 @@ html body#modernbb .boxSBJ {
 }
 
 /* =========================================================
-   PROFIL PUBLIC (#starlight-profile)
+   PROFIL PUBLIC (#starlight-profile) - VERSION CORRIGÉE
    ========================================================= */
 
 html body#modernbb .sc-profile-wrapper {
@@ -2797,6 +2797,7 @@ html body#modernbb .sc-profile-main-title {
     font-family: var(--titres) !important;
     font-size: 32px !important;
     letter-spacing: 2px !important;
+    line-height: 1.2 !important;
     text-align: center !important;
     color: var(--border-cream) !important;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.85) !important;
@@ -2809,11 +2810,12 @@ html body#modernbb .sc-profile-card {
     border-radius: 22px 0 !important;
     padding: 20px !important;
     display: grid !important;
-    grid-template-columns: 240px 1fr !important;
+    grid-template-columns: 230px 1fr !important;
     gap: 22px !important;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75) !important;
     position: relative !important;
     overflow: hidden !important;
+    box-sizing: border-box !important;
 }
 
 /* --- COLONNE GAUCHE : Avatar + Médaillon Groupe --- */
@@ -2832,16 +2834,16 @@ html body#modernbb .sc-profile-avatar-box {
     overflow: hidden !important;
 }
 
-/* Triangle décoratif aux couleurs du groupe derrière l'avatar (inspiré image 1) */
+/* Triangle décoratif aux couleurs du groupe derrière l'avatar */
 html body#modernbb .sc-profile-diag {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    height: 150px !important;
+    height: 165px !important;
     background: var(--grp-color, var(--plum)) !important;
     clip-path: polygon(0 0, 100% 0, 0 100%) !important;
-    opacity: 0.75 !important;
+    opacity: 0.88 !important;
     z-index: 1 !important;
 }
 
@@ -2849,10 +2851,10 @@ html body#modernbb .sc-profile-avatar {
     position: relative !important;
     z-index: 2 !important;
     width: 100% !important;
-    height: 340px !important;
+    height: 330px !important;
     border-radius: 10px 0 !important;
     overflow: hidden !important;
-    border: 1px solid rgba(244, 239, 230, 0.35) !important;
+    border: 1px solid rgba(244, 239, 230, 0.45) !important;
 }
 
 html body#modernbb .sc-profile-avatar img {
@@ -2867,7 +2869,7 @@ html body#modernbb .sc-profile-avatar img {
 
 /* Encart Groupe + Rang + Médaillon doré sous l'avatar */
 html body#modernbb .sc-profile-group-box {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, #252528) 45%, #141416), #141416 90%) !important;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, #252528) 55%, #141416), #141416 90%) !important;
     border: 1.5px solid var(--gold) !important;
     border-radius: 14px 0 !important;
     padding: 12px !important;
@@ -2877,14 +2879,14 @@ html body#modernbb .sc-profile-group-box {
 }
 
 html body#modernbb .sc-profile-medal {
-    width: 52px !important;
-    height: 52px !important;
+    width: 50px !important;
+    height: 50px !important;
     flex-shrink: 0 !important;
 }
 
 html body#modernbb .sc-profile-medal img {
-    width: 52px !important;
-    height: 52px !important;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 50% !important;
     border: 2px solid var(--gold) !important;
     box-shadow: 0 0 12px rgba(216, 155, 60, 0.6), 0 4px 10px rgba(0, 0, 0, 0.85) !important;
@@ -2895,13 +2897,16 @@ html body#modernbb .sc-profile-medal img {
 html body#modernbb .sc-profile-group-info {
     display: flex !important;
     flex-direction: column !important;
-    gap: 3px !important;
+    justify-content: center !important;
+    gap: 4px !important;
     min-width: 0 !important;
 }
 
 html body#modernbb .sc-profile-group-name {
+    display: block !important;
     font-family: var(--titres) !important;
     font-size: 18px !important;
+    line-height: 1.15 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
     color: var(--border-cream) !important;
@@ -2909,8 +2914,10 @@ html body#modernbb .sc-profile-group-name {
 }
 
 html body#modernbb .sc-profile-rank {
-    font-size: 12px !important;
-    font-weight: 600 !important;
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
     color: var(--gold) !important;
     text-transform: uppercase !important;
 }
@@ -2921,11 +2928,12 @@ html body#modernbb .sc-profile-right {
     flex-direction: column !important;
     gap: 16px !important;
     min-width: 0 !important;
+    width: 100% !important;
 }
 
 /* En-tête Nom + Boutons */
 html body#modernbb .sc-profile-header {
-    background: linear-gradient(110deg, color-mix(in srgb, var(--grp-color, var(--plum)) 60%, #141416) 0%, #141416 75%) !important;
+    background: linear-gradient(110deg, color-mix(in srgb, var(--grp-color, var(--plum)) 68%, #141416) 0%, #141416 78%) !important;
     border: 1px solid var(--border-grey) !important;
     border-left: 4px solid var(--grp-color, var(--gold)) !important;
     border-radius: 14px 0 !important;
@@ -2934,6 +2942,8 @@ html body#modernbb .sc-profile-header {
     align-items: center !important;
     justify-content: space-between !important;
     gap: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-profile-username,
@@ -2945,7 +2955,7 @@ html body#modernbb .sc-profile-username span {
     color: var(--border-cream) !important;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
     margin: 0 !important;
-    line-height: 1.1 !important;
+    line-height: 1.15 !important;
 }
 
 html body#modernbb .sc-profile-actions {
@@ -2953,6 +2963,7 @@ html body#modernbb .sc-profile-actions {
     flex-direction: column !important;
     align-items: flex-end !important;
     gap: 8px !important;
+    flex-shrink: 0 !important;
 }
 
 html body#modernbb .sc-profile-contact-icons {
@@ -2970,9 +2981,10 @@ html body#modernbb a.sc-prof-btn {
     background: #1f1f23 !important;
     border: 1px solid var(--gold) !important;
     border-radius: 6px 0 !important;
-    padding: 4px 10px !important;
+    padding: 5px 12px !important;
     font-family: var(--titres) !important;
     font-size: 13px !important;
+    line-height: 1.2 !important;
     letter-spacing: 0.8px !important;
     text-transform: uppercase !important;
     color: var(--border-cream) !important;
@@ -2985,11 +2997,13 @@ html body#modernbb a.sc-prof-btn:hover {
     color: #141416 !important;
 }
 
-/* Grille des 4 tuiles de stats */
+/* Grille des 4 tuiles de stats (pleine largeur de la colonne droite) */
 html body#modernbb .sc-profile-stats-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-stat-tile {
@@ -3000,30 +3014,37 @@ html body#modernbb .sc-stat-tile {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 10px !important;
+    gap: 12px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-stat-label {
     font-family: var(--titres) !important;
     font-size: 14px !important;
+    line-height: 1.25 !important;
     letter-spacing: 0.8px !important;
     text-transform: uppercase !important;
     color: var(--gold) !important;
+    white-space: nowrap !important;
 }
 
 html body#modernbb .sc-stat-val {
     font-size: 13px !important;
+    line-height: 1.3 !important;
     color: var(--border-cream) !important;
     font-weight: 600 !important;
+    text-align: right !important;
 }
 
-/* Feuille de personnage */
+/* Feuille de personnage (pleine largeur sous les stats) */
 html body#modernbb .sc-profile-sheet {
     background: rgba(244, 239, 230, 0.94) !important;
     border: 1.5px solid var(--gold) !important;
     border-radius: 14px 0 !important;
     overflow: hidden !important;
-    flex: 1 1 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
 }
@@ -3033,9 +3054,10 @@ html body#modernbb .sc-sheet-banner {
     color: var(--border-cream) !important;
     font-family: var(--titres) !important;
     font-size: 17px !important;
+    line-height: 1.25 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
-    padding: 9px 14px !important;
+    padding: 10px 14px !important;
     border-bottom: 1.5px solid var(--gold) !important;
     text-align: center !important;
 }
@@ -3060,6 +3082,7 @@ html body#modernbb .sc-sheet-row {
     border-bottom: 1px dashed rgba(25, 25, 28, 0.2) !important;
     padding-bottom: 6px !important;
     font-size: 13px !important;
+    line-height: 1.35 !important;
 }
 
 html body#modernbb .sc-sheet-row:last-child {
@@ -3070,6 +3093,7 @@ html body#modernbb .sc-sheet-row:last-child {
 html body#modernbb .sc-sheet-label {
     font-family: var(--titres) !important;
     font-size: 14px !important;
+    line-height: 1.3 !important;
     letter-spacing: 0.5px !important;
     text-transform: uppercase !important;
     color: #141416 !important;
@@ -3078,13 +3102,12 @@ html body#modernbb .sc-sheet-label {
 }
 
 html body#modernbb .sc-sheet-value {
-    color: #242429 !important;
-    word-break: break-word !important;
+color: #242429 !important;
+line-height: 1.35 !important;
+word-break: break-word !important;
 }
-
 /* Barre admin en bas */
 html body#modernbb .sc-profile-admin-bar {
-    margin-top: 12px !important;
-    text-align: right !important;
+margin-top: 12px !important;
+text-align: right !important;
 }
-
