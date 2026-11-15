@@ -2454,3 +2454,107 @@ html body#modernbb #cp-main table.table1 tbody td a.topictitle {
     font-weight: 600 !important;
 }
 
+/* =========================================================
+   LISTE DES MEMBRES (GRILLE DE CARTES .lmfond)
+   ========================================================= */
+
+/* Conteneur principal en grille de 4 colonnes (adaptatif) */
+html body#modernbb form[action="/memberlist"] {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 20px auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+    box-sizing: border-box !important;
+}
+
+/* Barre de tri et titre prennent toute la largeur de la grille */
+html body#modernbb form[action="/memberlist"] > .lmback,
+html body#modernbb form[action="/memberlist"] > fieldset,
+html body#modernbb form[action="/memberlist"] > .panel,
+html body#modernbb form[action="/memberlist"] > div:not(.lmfond) {
+    grid-column: 1 / -1 !important;
+}
+
+html body#modernbb .lmback {
+    background: var(--bg-dark) !important;
+    color: var(--gold) !important;
+    font-family: var(--titres) !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 12px 18px !important;
+    border: 1px solid var(--border-grey) !important;
+    border-left: 4px solid var(--plum) !important;
+    border-radius: 14px 0 !important;
+    margin-bottom: 6px !important;
+}
+
+/* Carte individuelle d'un membre */
+html body#modernbb .lmfond {
+    position: relative !important;
+    background: var(--bg-dark) !important;
+    border: 1.5px solid var(--border-grey) !important;
+    border-radius: 18px 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease !important;
+}
+
+html body#modernbb .lmfond:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--gold) !important;
+}
+
+/* Zone avatar (format portrait 200x320 comme sur votre modèle) */
+html body#modernbb .lmava,
+html body#modernbb .lmimg {
+    position: relative !important;
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+}
+
+html body#modernbb .lmimg img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.4s ease !important;
+}
+
+html body#modernbb .lmfond:hover .lmimg img {
+    transform: scale(1.04) !important;
+}
+
+/* Panneau d'informations : bandeau fixe en bas + déploiement crème translucide au survol */
+html body#modernbb .lmdet {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(20, 20, 22, 0.94) !important;
+    color: var(--border-cream) !important;
+    padding: 10px 12px !important;
+    border-top: 1.5px solid var(--gold) !important;
+    max-height: 46px !important;
+    overflow: hidden !important;
+    transition: all 0.35s ease !important;
+    z-index: 3 !important;
+}
+
+/* Survol : cadre crème translucide mettant en avant les données et le badge */
+html body#modernbb .lmfond:hover .lmdet {
+    max-height: 85% !important;
+    background: rgba(216, 210, 199, 0.92) !important;
+    backdrop-filter: blur(5px) !important;
+    color: #19191c !important;
+    overflow-y: auto !important;
+}
+
+html body#modernbb .lmfond:hover .lmdet * {
+    color: #19191c !important;
+}
