@@ -1951,10 +1951,26 @@ html body#modernbb .panel a.sceditor-button.active {
     padding: 10px !important;
 }
 
-/* Remet le bloc d'écriture et la boîte des smileys côte à côte sans débordement */
+/* Alignement côte à côte propre de l'éditeur (#message-box) et des smileys (#smiley-box) */
+html body#modernbb #postingbox fieldset.fields1 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+}
+
+html body#modernbb #postingbox fieldset.fields1 > dl {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+}
+
 html body#modernbb #message-box {
-    width: calc(100% - 205px) !important;
-    float: left !important;
+    width: calc(100% - 210px) !important;
+    flex: 1 1 calc(100% - 210px) !important;
+    clear: none !important;
+    float: none !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
 }
 
@@ -1964,9 +1980,12 @@ html body#modernbb #message-box {
     border: 1px solid var(--border-grey) !important;
     border-radius: 14px 0 !important;
     padding: 8px !important;
-    width: 190px !important;
-    min-width: 190px !important;
-    float: right !important;
+    width: 192px !important;
+    min-width: 192px !important;
+    flex: 0 0 192px !important;
+    clear: none !important;
+    float: none !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
 }
 
