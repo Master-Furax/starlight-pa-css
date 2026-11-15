@@ -2423,8 +2423,10 @@ html body#modernbb #cp-main table.table1 tbody td a.topictitle {
 }
 
 /* 5. Supprime les double/triple cadres imbriqués dans le profil & dégage "Tout sélectionner" */
-html body#modernbb #cp-main .panel {
+html body#modernbb #cp-main div.panel:not(:has(#PA)),
+html body#modernbb #cp-main .panel:not(:has(#PA)) {
     background: transparent !important;
+    background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
