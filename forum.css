@@ -1493,18 +1493,18 @@ h2.titre-sujet-arte a {
     text-shadow: 0 0 8px #ffb01f, 0 0 16px #ee5574, 0 0 22px #ffffff !important;
 }
 
-/* Segment 1 : Angle supérieur gauche (Étoile 1 -> milieu du 1er bouton) */
+/* Segment 1 : Angle supérieur gauche aligné au centre exact du 1er bouton */
 .titre-sujet-arte::after {
     content: "" !important;
     width: 48px !important;
-    height: 28px !important;
+    height: 34px !important;
     border-left: 1.5px solid var(--gold) !important;
     border-bottom: 1.5px solid var(--gold) !important;
     border-radius: 0 0 0 10px !important;
     box-sizing: border-box !important;
     position: absolute !important;
     z-index: 1 !important;
-    bottom: -22px !important;
+    bottom: -28px !important;
     left: 10px !important;
     pointer-events: none !important;
 }
@@ -1534,14 +1534,14 @@ h2.titre-sujet-arte a {
     pointer-events: none !important;
 }
 
-/* Segment 3 : Descente en angle à droite vers l'étoile 2 */
+/* Segment 3 : Descente en angle à droite alignée au centre exact des boutons d'action */
 .fil-ariane-arte::after {
     content: "" !important;
     position: absolute !important;
     top: calc(50% - 0.75px) !important;
     right: 20px !important;
     width: 12px !important;
-    height: 44px !important;
+    height: 46px !important;
     border-top: 1.5px solid var(--gold) !important;
     border-right: 1.5px solid var(--gold) !important;
     border-bottom: 1.5px solid var(--gold) !important;
