@@ -2678,10 +2678,15 @@ html body#modernbb .lmfond:hover .lmbadge img {
 }
 
 /* =========================================================
-   CORRECTIFS : LISTING DES SUJETS (.SBJ) & MESSAGE INFO
+   CORRECTIFS : PA (#PAintrigue), LISTING SUJETS (.SBJ) & INFO
    ========================================================= */
 
-/* 1. Titre "INFORMATIONS" uniquement sur la page de confirmation (sans toucher à la PA !) */
+/* 1. Rétablit la couleur crème du titre "INTRIGUE #1" dans la PA */
+html body#modernbb #PA #PAintrigue h3:first-of-type {
+    color: var(--border-cream) !important;
+}
+
+/* 2. Titre "INFORMATIONS" net sans contour blanc */
 html body#modernbb #message .panel h1,
 html body#modernbb #message .panel h2,
 html body#modernbb #message .panel h3,
@@ -2691,35 +2696,37 @@ html body#modernbb .panel .inner > h2:first-child:not([class]) {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
 }
 
-/* 2. Rétablit le tableau des sujets en 950px propre sans chevauchement */
+/* 3. Étend les cartes de sujets (.SBJ) sur 100% de la largeur jusqu'au bord droit */
 html body#modernbb table.forumline {
     width: 950px !important;
     max-width: 100% !important;
     margin: 15px auto !important;
-    border-collapse: separate !important;
-    border-spacing: 0 12px !important;
-    display: table !important;
+    display: block !important;
 }
 
-html body#modernbb table.forumline tbody {
-    display: table-row-group !important;
-}
-
-html body#modernbb table.forumline tr {
-    display: table-row !important;
-}
-
+html body#modernbb table.forumline tbody,
+html body#modernbb table.forumline tr,
 html body#modernbb table.forumline td {
-    display: table-cell !important;
+    display: block !important;
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* 3. Carte de sujet .SBJ : hauteur souple et alignement propre */
+/* Masque la ligne d'en-tête parasite "Sujets / Réponses / Auteur / Vues / Derniers Messages" */
+html body#modernbb table.forumline tr:has(th),
+html body#modernbb table.forumline th {
+    display: none !important;
+}
+
+/* Carte de sujet .SBJ pleine largeur et hauteur souple */
 html body#modernbb fieldset.SBJ {
     width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
     min-height: 64px !important;
     max-height: none !important;
+    margin: 0 0 14px 0 !important;
     overflow: visible !important;
     display: flex !important;
     align-items: center !important;
@@ -2727,10 +2734,9 @@ html body#modernbb fieldset.SBJ {
     gap: 16px !important;
     padding: 14px 18px !important;
     box-sizing: border-box !important;
-    position: relative !important;
 }
 
-/* 4. Titre du sujet : interligne normal et largeur fluide */
+/* Titre du sujet : interligne normal et largeur fluide */
 html body#modernbb .tleSBJ {
     flex: 1 1 auto !important;
     min-width: 0 !important;
@@ -2751,7 +2757,7 @@ html body#modernbb .descSBJ {
     margin-top: 3px !important;
 }
 
-/* 5. Bloc stats & dernier message à droite */
+/* Bloc stats & dernier message calé tout à droite */
 html body#modernbb .boxSBJ {
     flex: 0 0 auto !important;
     display: flex !important;
