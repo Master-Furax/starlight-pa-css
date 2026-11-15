@@ -2683,7 +2683,7 @@ html body#modernbb .lmfond:hover .lmbadge img {
 
 /* 1. Rétablit la couleur crème du titre "INTRIGUE #1" dans la PA */
 html body#modernbb #PA #PAintrigue h3:first-of-type {
-    color: var(--border-cream) !important;
+     color: #141416 !important;
 }
 
 /* 2. Titre "INFORMATIONS" net sans contour blanc */
@@ -2719,20 +2719,25 @@ html body#modernbb table.forumline th {
     display: none !important;
 }
 
-/* Carte de sujet .SBJ pleine largeur et hauteur souple */
+/* Carte de sujet .SBJ : position relative pour sortir de l'empilement absolute et prendre 100% des 950px */
 html body#modernbb fieldset.SBJ {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
     min-height: 64px !important;
     max-height: none !important;
-    margin: 0 0 14px 0 !important;
+    margin: 18px 0 14px 0 !important;
     overflow: visible !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     gap: 16px !important;
-    padding: 14px 18px !important;
+    padding: 16px 18px !important;
     box-sizing: border-box !important;
 }
 
