@@ -1735,13 +1735,18 @@ h2.titre-sujet-arte a {
 .infos-membre-arte .pseudo-et-rang > div:first-child strong {
     color: var(--jscouleur, var(--gold)) !important;
     font-family: var(--titres) !important;
-    font-size: 26px !important;
+    font-size: 28px !important;
     font-weight: 700 !important;
     line-height: 1.1 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.8px !important;
+    letter-spacing: 1px !important;
     text-decoration: none !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+    text-shadow:
+        -1px -1px 0 var(--border-cream),
+         1px -1px 0 var(--border-cream),
+        -1px  1px 0 var(--border-cream),
+         1px  1px 0 var(--border-cream),
+         0 3px 8px rgba(0, 0, 0, 0.9) !important;
 }
 
 .infos-membre-arte .pseudo-et-rang > div:last-child:empty {
