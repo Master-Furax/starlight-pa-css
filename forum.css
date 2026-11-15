@@ -1636,16 +1636,12 @@ h2.titre-sujet-arte a {
     margin: 0 !important;
 }
 
-/* Masque le faux message "Contenu sponsorisé" (notamment quand la pub est bloquée ou vide) */
-.un-message-artemis:has(.infos-membre-arte:empty),
-.un-message-artemis:has(.avatar-du-membre-post:empty),
-.un-message-artemis:has(.message-contenu-arte:empty),
-.un-message-artemis:has(iframe[src*="ad"]),
-.un-message-artemis:has(div[id*="google_ads"]),
-.un-message-artemis:has(div[id*="taboola"]),
-.un-message-artemis:has(ins.adsbygoogle) {
+/* Masque automatiquement le faux message "Contenu sponsorisé" (qui n'a pas d'avatar <img> ni de date) */
+.un-message-artemis:not(:has(.avatar-du-membre-post > img)),
+.un-message-artemis:has(.date-et-options > a:empty) {
     display: none !important;
 }
+
 
 .date-et-options { grid-row: 1 / 2; grid-column: 1 / 3; background: #141416; border-bottom: 1px solid var(--border-grey); display: flex; justify-content: space-between; align-items: center; padding: 10px 18px; }
 .date-et-options > a { color: var(--border-cream); font-family: var(--font); font-size: 13px; text-transform: uppercase; text-decoration: none; }
