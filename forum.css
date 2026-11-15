@@ -2676,3 +2676,53 @@ html body#modernbb .lmfond:hover .lmbadge img {
     transform: scale(1.06) !important;
     box-shadow: 0 0 14px rgba(216, 155, 60, 0.8), 0 5px 12px rgba(0, 0, 0, 0.9) !important;
 }
+
+/* =========================================================
+   CORRECTIFS : TITRE INFORMATIONS & LISTING DES SUJETS
+   ========================================================= */
+
+/* 1. Titre "INFORMATIONS" net en doré sans contour blanc */
+html body#modernbb .panel h1,
+html body#modernbb .panel h2,
+html body#modernbb .panel h3,
+html body#modernbb #message h2,
+html body#modernbb .panel .inner > h2:first-child {
+    color: var(--gold) !important;
+    -webkit-text-stroke: 0 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
+    font-family: var(--titres) !important;
+    letter-spacing: 1px !important;
+}
+
+/* 2. Listing des sujets (viewforum) : pleine largeur & titres non écrasés */
+html body#modernbb .forumbg,
+html body#modernbb .forumbg .inner,
+html body#modernbb ul.topiclist,
+html body#modernbb ul.topiclist li.row,
+html body#modernbb ul.topiclist li.row dl {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Masque les en-têtes parasites "Sujets / Réponses" qui flottent entre les cartes */
+html body#modernbb ul.topiclist.topics li.header {
+    display: none !important;
+}
+
+/* Donne toute la place nécessaire au titre du sujet et corrige l'interligne */
+html body#modernbb ul.topiclist.topics li.row dl dt {
+    width: auto !important;
+    flex: 1 1 auto !important;
+    min-width: 260px !important;
+    padding-right: 14px !important;
+}
+
+html body#modernbb ul.topiclist.topics a.topictitle {
+    display: inline-block !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    -webkit-text-stroke: 0 !important;
+    text-shadow: none !important;
+}
