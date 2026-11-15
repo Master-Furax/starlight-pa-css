@@ -1544,7 +1544,6 @@ h2.titre-sujet-arte a {
     height: 46px !important;
     border-top: 1.5px solid var(--gold) !important;
     border-right: 1.5px solid var(--gold) !important;
-    border-bottom: 1.5px solid var(--gold) !important;
     border-radius: 0 10px 10px 0 !important;
     box-sizing: border-box !important;
     z-index: 1 !important;
