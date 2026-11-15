@@ -621,13 +621,14 @@ a.forumtitle:hover { color: var(--gold) !important; text-shadow: -1px -1px 0 var
 
 .sc-forum-desc {
     position: relative !important;
-    z-index: 2 !important;
+    z-index: 3 !important;
     width: 100% !important;
     margin: 0 18px !important;
-    padding: 8px 14px !important;
-    max-height: 110px !important;
+    padding: 10px 14px !important;
+    max-height: 115px !important;
     overflow-y: auto !important;
-    background: rgba(20, 20, 22, 0.85) !important;
+    background: rgba(20, 20, 22, 0.88) !important;
+    backdrop-filter: blur(5px) !important;
     border-left: 3px solid var(--gold) !important;
     border-radius: 0 14px !important;
     color: var(--border-cream) !important;
@@ -635,32 +636,18 @@ a.forumtitle:hover { color: var(--gold) !important; text-shadow: -1px -1px 0 var
     font-size: 12.5px !important;
     line-height: 1.5 !important;
     text-align: justify !important;
-}
-
-/* L'image couvre toute la carte .sc-forum-card proprement et glisse vers le bas au survol */
-.sc-forum-desc img.hiddenImage {
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: calc(100% - 66px) !important; /* S'arrête juste au-dessus du bandeau du bas ! */
-    object-fit: cover !important;
-    z-index: 4 !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
-    transform: translateY(0) !important;
-    opacity: 1 !important;
-    transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease !important;
-}
-
-.sc-forum-card:hover .sc-forum-desc img.hiddenImage {
-    transform: translateY(105%) !important;
+    /* Cachée au repos pour admirer l'image de fond, remonte au survol ! */
     opacity: 0 !important;
+    transform: translateY(18px) !important;
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-.sc-forum-desc img:not(.hiddenImage),
-.panel img.hiddenImage,
-#page-body > .panel img.hiddenImage {
+.sc-forum-card:hover .sc-forum-desc {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.hiddenImage {
     display: none !important;
 }
 
