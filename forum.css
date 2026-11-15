@@ -606,16 +606,15 @@ text-decoration: none !important; transition: color 0.25s ease !important;
 a.forumtitle:hover { color: var(--gold) !important; text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark) !important; }
 
 .sc-forum-body {
-    position: relative !important;
+    position: static !important;
     flex-grow: 1 !important;
     width: 100% !important;
-    overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
 }
 
 .sc-forum-desc {
-    position: static !important;
+    position: relative !important;
     z-index: 2 !important;
     width: 100% !important;
     margin: 0 18px !important;
@@ -632,15 +631,15 @@ a.forumtitle:hover { color: var(--gold) !important; text-shadow: -1px -1px 0 var
     text-align: justify !important;
 }
 
-/* Rideau d'image au premier plan via <img class="hiddenImage"> */
+/* L'image couvre toute la carte .sc-forum-card proprement et glisse vers le bas au survol */
 .sc-forum-desc img.hiddenImage {
     display: block !important;
     position: absolute !important;
-    inset: -45px 0 0 0 !important;
+    inset: 0 !important;
     width: 100% !important;
-    height: calc(100% + 45px) !important;
+    height: calc(100% - 66px) !important; /* S'arrête juste au-dessus du bandeau du bas ! */
     object-fit: cover !important;
-    z-index: 5 !important;
+    z-index: 4 !important;
     margin: 0 !important;
     border-radius: 0 !important;
     transform: translateY(0) !important;
@@ -653,7 +652,6 @@ a.forumtitle:hover { color: var(--gold) !important; text-shadow: -1px -1px 0 var
     opacity: 0 !important;
 }
 
-/* Masque toute autre image dans la description et cache hiddenImage dans les sous-forums */
 .sc-forum-desc img:not(.hiddenImage),
 .panel img.hiddenImage,
 #page-body > .panel img.hiddenImage {
@@ -831,7 +829,9 @@ text-transform: uppercase; font-size: 34px !important; text-align: left; height:
     background: #1e1e20 !important;
     color: var(--gold) !important;
     border-radius: 0 7px !important;
+    margin-left: 24px !important;
 }
+
 .blocks_qeel_right { width: 405px; height: 120px; position: absolute; top: 5.27em; right: 5px; background: #dbd5c7; padding: 10px; overflow: auto; border-bottom: 1px solid #fff; color: #000; margin: 1em; border-radius: 27px 0; line-height: 1.4 !important; word-spacing: normal !important; }
 .crew_color { width: 55px !important; height: 55px !important; margin-left: 6px !important; border-radius: 50% !important; position: static !important; transform: none !important; filter: none !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75) !important; cursor: pointer !important; transition: box-shadow 0.25s ease !important; }
 .crew_color:hover { box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important; }
