@@ -208,6 +208,27 @@ a#fa_welcome .fa-welcome-name {
     font-size: 22px !important;
 }
 
+/* Rend toute la surface de BIENVENUE + Pseudo complet 100% cliquable de bout en bout */
+div#fa_menu {
+    z-index: 1002 !important;
+    pointer-events: auto !important;
+}
+
+a#fa_welcome,
+a#fa_welcome span {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    user-select: none !important;
+}
+
+/* Empêche les conteneurs voisins d'intercepter les clics sur le pseudo */
+div#avatarco,
+div#avatarco div,
+#headerbar-top {
+    pointer-events: none !important;
+}
+
+
 ul#fa_menulist {
     position: absolute !important;
     top: 38px !important;
