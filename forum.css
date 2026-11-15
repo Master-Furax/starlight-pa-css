@@ -1534,21 +1534,22 @@ h2.titre-sujet-arte a {
     pointer-events: none !important;
 }
 
-/* Segment 3 : Descente en angle à droite alignée au centre exact des boutons d'action */
+/* Segment 3 : Virage en haut à droite qui descend directement jusqu'à l'étoile 2 */
 .fil-ariane-arte::after {
     content: "" !important;
     position: absolute !important;
     top: calc(50% - 0.75px) !important;
     right: 20px !important;
     width: 12px !important;
-    height: 46px !important;
+    height: 36px !important;
     border-top: 1.5px solid var(--gold) !important;
     border-right: 1.5px solid var(--gold) !important;
-    border-radius: 0 10px 10px 0 !important;
+    border-radius: 0 10px 0 0 !important;
     box-sizing: border-box !important;
     z-index: 1 !important;
     pointer-events: none !important;
 }
+
 
 .fil-ariane-arte > span {
     position: relative !important;
@@ -1620,21 +1621,6 @@ h2.titre-sujet-arte a {
     gap: 10px !important;
     box-sizing: border-box !important;
     padding: 0 10px !important;
-}
-
-/* Segment 4 : Ligne horizontale continue derrière les boutons d'action jusqu'à l'étoile 2 */
-.nouveau-repondre-arte::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 50% !important;
-    right: 26px !important;
-    width: 468px !important;
-    max-width: calc(100% - 50px) !important;
-    height: 0 !important;
-    border-top: 1.5px solid var(--gold) !important;
-    transform: translateY(-50%) !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
 }
 
 .nouveau-repondre-arte .pagination-arte ~ div {
