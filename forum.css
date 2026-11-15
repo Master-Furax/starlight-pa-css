@@ -826,11 +826,12 @@ text-transform: uppercase; font-size: 34px !important; text-align: left; height:
 
 .statistics_forum .messandmember:first-child,
 .qeel_bloc2 .messandmember:first-child {
-    background: #1e1e20 !important;
-    color: var(--gold) !important;
+    background: linear-gradient(90deg, #9d2b6b 0%, #d89b3c 100%) !important;
+    color: #ffffff !important;
     border-radius: 0 7px !important;
     margin-left: 24px !important;
 }
+
 
 .blocks_qeel_right { width: 405px; height: 120px; position: absolute; top: 5.27em; right: 5px; background: #dbd5c7; padding: 10px; overflow: auto; border-bottom: 1px solid #fff; color: #000; margin: 1em; border-radius: 27px 0; line-height: 1.4 !important; word-spacing: normal !important; }
 .crew_color { width: 55px !important; height: 55px !important; margin-left: 6px !important; border-radius: 50% !important; position: static !important; transform: none !important; filter: none !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75) !important; cursor: pointer !important; transition: box-shadow 0.25s ease !important; }
