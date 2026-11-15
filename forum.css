@@ -2335,5 +2335,102 @@ html body#modernbb #cp-main .panel h3 {
     margin-bottom: 16px !important;
 }
 
+/* 3. Bouton "Choisir un fichier" (onglet Avatar) */
+html body#modernbb input[type="file"] {
+    color: var(--border-cream) !important;
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 10px 0 !important;
+    padding: 6px 10px !important;
+    cursor: pointer !important;
+}
+
+html body#modernbb input[type="file"]::file-selector-button {
+    background: var(--bg-dark) !important;
+    color: var(--gold) !important;
+    font-family: var(--titres) !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 8px 0 !important;
+    padding: 6px 14px !important;
+    margin-right: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+}
+
+html body#modernbb input[type="file"]::file-selector-button:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-color: var(--border-cream) !important;
+}
+
+/* 4. Tableaux du profil (Notifications, Sujets surveillés, Favoris, Brouillons) */
+html body#modernbb #cp-main table.table1 {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #141416 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 14px 0 !important;
+    overflow: hidden !important;
+    margin-bottom: 14px !important;
+}
+
+html body#modernbb #cp-main table.table1 thead th {
+    background: var(--bg-dark) !important;
+    color: var(--gold) !important;
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    border-bottom: 1px solid var(--border-grey) !important;
+    padding: 12px 14px !important;
+}
+
+/* Lignes alternées sombres (remplace le blanc et le bleu pétrole) */
+html body#modernbb #cp-main table.table1 tbody tr.bg1,
+html body#modernbb #cp-main table.table1 tbody tr.bg1 td {
+    background: #18181b !important;
+    background-color: #18181b !important;
+    color: var(--border-cream) !important;
+    border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
+}
+
+html body#modernbb #cp-main table.table1 tbody tr.bg2,
+html body#modernbb #cp-main table.table1 tbody tr.bg2 td {
+    background: #121214 !important;
+    background-color: #121214 !important;
+    color: var(--border-cream) !important;
+    border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
+}
+
+html body#modernbb #cp-main table.table1 tbody tr:hover td {
+    background: rgba(157, 43, 107, 0.16) !important;
+}
+
+html body#modernbb #cp-main table.table1 tbody td {
+    padding: 10px 14px !important;
+    vertical-align: middle !important;
+}
+
+html body#modernbb #cp-main table.table1 tbody td a.topictitle {
+    color: var(--gold) !important;
+    font-weight: 600 !important;
+}
+
+/* 5. Liens "Tout sélectionner :: Tout désélectionner" bien dégagés de la bordure */
+html body#modernbb #cp-main fieldset.display-actions {
+    margin: 12px 0 18px !important;
+    padding: 6px 4px !important;
+    text-align: right !important;
+    clear: both !important;
+}
+
+html body#modernbb #cp-main fieldset.display-actions a {
+    color: var(--gold) !important;
+    font-weight: 600 !important;
+}
 
 
