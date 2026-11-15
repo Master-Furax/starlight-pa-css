@@ -2201,4 +2201,59 @@ html body#modernbb #topicreview {
     position: relative !important;
 }
 
+/* Accordéons Options, Calendrier, Ajouter un sondage, Outils SEO */
+html body#modernbb form#postform > h3,
+html body#modernbb form#postform .h3,
+html body#modernbb #postingbox ~ h3,
+html body#modernbb #postingbox ~ .panel h3,
+html body#modernbb .posting-options h3,
+html body#modernbb h3.posting-title {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+    padding: 10px 18px !important;
+    box-sizing: border-box !important;
+    background: var(--bg-dark) !important;
+    color: var(--gold) !important;
+    font-family: var(--titres) !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border: 1px solid var(--border-grey) !important;
+    border-left: 4px solid var(--plum) !important;
+    border-radius: 14px 0 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease !important;
+}
+
+html body#modernbb form#postform > h3:hover,
+html body#modernbb form#postform .h3:hover,
+html body#modernbb #postingbox ~ h3:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-color: var(--border-cream) !important;
+}
+
+/* Panneaux dépliables sous chaque onglet (Options, Sondage, etc.) */
+html body#modernbb #options-panel,
+html body#modernbb #poll-panel,
+html body#modernbb #attach-panel,
+html body#modernbb #seo-panel {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: -6px auto 14px !important;
+    padding: 16px 20px !important;
+    box-sizing: border-box !important;
+    background: #141416 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-top: none !important;
+    border-radius: 0 0 16px 0 !important;
+}
+
 
