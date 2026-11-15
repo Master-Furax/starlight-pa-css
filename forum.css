@@ -2219,7 +2219,10 @@ html body#modernbb .sceditor-container.sourceMode textarea {
 
 /* Accordéons Options, Calendrier, Ajouter un sondage, Outils SEO & Revue du sujet */
 html body#modernbb div.h3.forum-hideable,
-html body#modernbb form > div.h3.forum-hideable {
+html body#modernbb form > div.h3.forum-hideable,
+html body#modernbb #topicreview > h3:first-child,
+html body#modernbb h3:has(+ #topicreview),
+html body#modernbb div.h3:has(+ #topicreview) {
     position: relative !important;
     width: 950px !important;
     max-width: 100% !important;
@@ -2243,6 +2246,7 @@ html body#modernbb form > div.h3.forum-hideable {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
     transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease !important;
 }
+
 
 html body#modernbb div.h3.forum-hideable:hover {
     background: var(--grad-btn) !important;
@@ -2278,26 +2282,8 @@ html body#modernbb div.h3.forum-hideable + div.panel.row3 {
    ========================================================= */
 
 /* 1. Onglets du profil (Informations, Préférences, Avatar, etc.) */
-html body#modernbb #tabs {
-    width: 950px !important;
-    max-width: 100% !important;
-    margin: 20px auto 12px !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-}
-
-html body#modernbb #tabs ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-}
-
-html body#modernbb #tabs li a,
-html body#modernbb #tabs li a span {
+/* Liens des onglets du profil (sans double bordure sur le span interne) */
+html body#modernbb #tabs li a {
     background: var(--bg-dark) !important;
     color: var(--border-cream) !important;
     font-family: var(--titres) !important;
@@ -2306,16 +2292,26 @@ html body#modernbb #tabs li a span {
     text-transform: uppercase !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 12px 0 !important;
-    padding: 8px 14px !important;
+    padding: 8px 16px !important;
     display: inline-block !important;
     text-shadow: none !important;
     transition: all 0.25s ease !important;
 }
 
+html body#modernbb #tabs li a span {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    text-shadow: none !important;
+}
+
 /* Survol & Onglet actif du profil */
 html body#modernbb #tabs li a:hover,
-html body#modernbb #tabs li.activetab a,
-html body#modernbb #tabs li.activetab a span {
+html body#modernbb #tabs li.activetab a {
     background: var(--grad-btn) !important;
     color: #ffffff !important;
     border-color: var(--border-cream) !important;
