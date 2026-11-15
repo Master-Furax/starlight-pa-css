@@ -1083,12 +1083,9 @@ html body#modernbb ul.dropdown-contents {
     color: var(--border-cream) !important;
 }
 
-/* Écrase définitivement le fond blanc du titre "Plus !" */
-html body#modernbb #plus_menu > div:first-child,
-html body#modernbb #plus_menu > p:first-child,
+/* Écrase UNIQUEMENT le fond blanc du titre "Plus !" (laisse les listes de liens transparentes) */
 html body#modernbb #plus_menu .title,
 html body#modernbb #plus_menu h3,
-html body#modernbb #plus_menu strong,
 html body#modernbb .dropdown-box .title,
 html body#modernbb .dropdown-header {
     background: var(--grad-btn) !important;
@@ -1108,32 +1105,14 @@ html body#modernbb .dropdown-header {
     display: block !important;
 }
 
-html body#modernbb #plus_menu a,
-html body#modernbb .dropdown-box li a,
-html body#modernbb ul.dropdown-contents li a {
-    display: block !important;
+html body#modernbb #plus_menu ul,
+html body#modernbb #plus_menu li {
     background: transparent !important;
     background-color: transparent !important;
-    color: var(--border-cream) !important;
-    -webkit-text-fill-color: var(--border-cream) !important;
-    padding: 5px 10px !important;
-    border-radius: 6px 0 !important;
-    font-family: var(--font) !important;
-    font-size: 12.5px !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    transition: background 0.2s ease, padding-left 0.2s ease !important;
+    background-image: none !important;
+    border: none !important;
 }
 
-html body#modernbb #plus_menu a:hover,
-html body#modernbb .dropdown-box li a:hover,
-html body#modernbb ul.dropdown-contents li a:hover {
-    background: var(--grad-btn) !important;
-    background-color: #9d2b6b !important;
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-    padding-left: 14px !important;
-}
 
 /* Légende des icônes en bas de forum (ul#picture_legend) */
 html body#modernbb ul#picture_legend {
