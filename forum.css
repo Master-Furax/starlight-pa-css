@@ -2422,44 +2422,33 @@ html body#modernbb #cp-main table.table1 tbody td a.topictitle {
     font-weight: 600 !important;
 }
 
-/* 5. Liens "Tout sélectionner :: Tout désélectionner" bien dégagés de la bordure */
+/* 5. Supprime les double/triple cadres imbriqués dans le profil & dégage "Tout sélectionner" */
+html body#modernbb #cp-main .panel {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 14px !important;
+}
+
+html body#modernbb #cp-main p.right-box,
 html body#modernbb #cp-main fieldset.display-actions {
-    position: relative !important;
-    z-index: 2 !important;
-    margin: 14px 0 22px !important;
-    padding: 8px 12px !important;
-    background: #141416 !important;
-    border-radius: 8px !important;
+    float: none !important;
+    display: block !important;
     text-align: right !important;
+    margin: 10px 0 16px !important;
+    padding: 4px 0 !important;
     clear: both !important;
 }
 
+html body#modernbb #cp-main p.right-box a,
 html body#modernbb #cp-main fieldset.display-actions a {
     color: var(--gold) !important;
     font-weight: 600 !important;
-}
-
-html body#modernbb #cp-main table.table1 tbody td {
-    padding: 10px 14px !important;
-    vertical-align: middle !important;
 }
 
 html body#modernbb #cp-main table.table1 tbody td a.topictitle {
     color: var(--gold) !important;
     font-weight: 600 !important;
 }
-
-/* 5. Liens "Tout sélectionner :: Tout désélectionner" bien dégagés de la bordure */
-html body#modernbb #cp-main fieldset.display-actions {
-    margin: 12px 0 18px !important;
-    padding: 6px 4px !important;
-    text-align: right !important;
-    clear: both !important;
-}
-
-html body#modernbb #cp-main fieldset.display-actions a {
-    color: var(--gold) !important;
-    font-weight: 600 !important;
-}
-
 
