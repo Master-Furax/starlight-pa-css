@@ -1059,35 +1059,39 @@ html body#modernbb .panel h3 {
 }
 
 /* Aligne "MARQUER TOUS LES SUJETS COMME LUS" et "PLUS !" sur la même ligne */
-html body#modernbb .topic-actions-buttons,
-html body#modernbb .forum-actions,
-html body#modernbb .topic-actions > div {
+html body#modernbb .topic-actions-buttons {
+    position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
     gap: 14px !important;
-    vertical-align: middle !important;
 }
 
-/* Menu déroulant "Plus !" (#plus_menu) : supprime le rectangle blanc du titre */
+html body#modernbb .topic-actions-buttons > br {
+    display: none !important;
+}
+
+/* Menu déroulant "Plus !" (#plus_menu) placé juste sous le bouton */
 html body#modernbb #plus_menu,
-html body#modernbb div#plus_menu,
-html body#modernbb .dropdown-box,
-html body#modernbb ul.dropdown-contents {
+html body#modernbb div#plus_menu.overview {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    margin-top: 6px !important;
     background: var(--bg-dark) !important;
     background-color: var(--bg-dark) !important;
     border: 1px solid var(--border-grey) !important;
     border-top: 3px solid var(--gold) !important;
     border-radius: 18px 0 !important;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.85) !important;
-    padding: 10px 12px !important;
+    padding: 12px !important;
     color: var(--border-cream) !important;
+    z-index: 999 !important;
 }
 
-/* Écrase UNIQUEMENT le fond blanc du titre "Plus !" (laisse les listes de liens transparentes) */
-html body#modernbb #plus_menu .title,
-html body#modernbb #plus_menu h3,
-html body#modernbb .dropdown-box .title,
-html body#modernbb .dropdown-header {
+/* Cible UNIQUEMENT <p class="title-overview row2"> pour le titre dégradé */
+html body#modernbb #plus_menu p.title-overview,
+html body#modernbb #plus_menu .row2 {
     background: var(--grad-btn) !important;
     background-color: #9d2b6b !important;
     background-image: var(--grad-btn) !important;
@@ -1105,14 +1109,35 @@ html body#modernbb .dropdown-header {
     display: block !important;
 }
 
-html body#modernbb #plus_menu ul,
-html body#modernbb #plus_menu li {
+/* Garde les conteneurs de liens transparents */
+html body#modernbb #plus_menu p.left-overview {
     background: transparent !important;
     background-color: transparent !important;
-    background-image: none !important;
     border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+html body#modernbb #plus_menu a {
+    display: block !important;
+    background: transparent !important;
+    color: var(--border-cream) !important;
+    -webkit-text-fill-color: var(--border-cream) !important;
+    padding: 6px 10px !important;
+    border-radius: 6px 0 !important;
+    font-family: var(--font) !important;
+    font-size: 12.5px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, padding-left 0.2s ease !important;
+}
+
+html body#modernbb #plus_menu a:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    padding-left: 14px !important;
+}
 
 /* Légende des icônes en bas de forum (ul#picture_legend) */
 html body#modernbb ul#picture_legend {
