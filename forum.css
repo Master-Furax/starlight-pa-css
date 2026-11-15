@@ -998,20 +998,16 @@ ul.linklist.navlinks a:hover,
     color: var(--border-cream) !important;
 }
 
-/* 2. Suppression totale des boîtes blanches ModernBB (Description, Modérateur, Permissions) */
-html body#modernbb #page-body > .panel,
-html body#modernbb #page-body .panel,
+/* 2. Suppression totale des boîtes blanches .block (#page-desc, Modérateur, Permissions) */
+html body#modernbb .block,
+html body#modernbb #page-desc.block,
+html body#modernbb #info_open .block,
 html body#modernbb .panel,
 html body#modernbb .panel.bg1,
 html body#modernbb .panel.bg2,
 html body#modernbb .panel.bg3,
 html body#modernbb div.panel,
-html body#modernbb .forum-description,
-html body#modernbb .mod-list,
-html body#modernbb .forum-permissions,
-html body#modernbb .online-users,
-html body#modernbb .forumbg,
-html body#modernbb #main-content > .panel {
+html body#modernbb .forumbg {
     width: 950px !important;
     max-width: 100% !important;
     margin: 14px auto !important;
@@ -1029,13 +1025,10 @@ html body#modernbb #main-content > .panel {
     overflow: visible !important;
 }
 
-/* Empêche tout texte de se superposer dans la description ou les permissions */
-html body#modernbb .forum-description *,
-html body#modernbb .mod-list *,
-html body#modernbb .forum-permissions *,
-html body#modernbb .panel p,
-html body#modernbb .panel span,
-html body#modernbb .panel div {
+/* Empêche le chevauchement vertical de texte dans #page-desc et .block */
+html body#modernbb .block *,
+html body#modernbb #page-desc-content *,
+html body#modernbb .panel * {
     position: static !important;
     color: var(--border-cream) !important;
     line-height: 1.55 !important;
@@ -1043,79 +1036,40 @@ html body#modernbb .panel div {
     white-space: normal !important;
 }
 
-html body#modernbb .panel a,
-html body#modernbb .mod-list a {
+html body#modernbb .block a,
+html body#modernbb .panel a {
     color: var(--gold) !important;
     text-decoration: none !important;
 }
 
-/* Barre "Marquer tous les sujets comme lus" + Menu déroulant "Plus !" harmonisé */
-html body#modernbb .forum-actions,
-html body#modernbb .topic-actions {
-    width: 950px !important;
-    max-width: 100% !important;
-    margin: 12px auto !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 10px !important;
-}
-
-html body#modernbb .dropdown-container {
-    position: relative !important;
-    display: inline-flex !important;
-    align-items: center !important;
-}
-
-html body#modernbb .dropdown-trigger,
-html body#modernbb a.dropdown-toggle {
-    display: inline-flex !important;
-    align-items: center !important;
-    background: #141416 !important;
-    color: var(--gold) !important;
-    border: 1px solid var(--border-grey) !important;
-    border-radius: 8px 0 !important;
-    padding: 4px 12px !important;
-    font-family: var(--titres) !important;
-    font-size: 16px !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-}
-
-html body#modernbb .dropdown-box,
-html body#modernbb ul.dropdown-contents {
-    background: var(--bg-dark) !important;
-    border: 1px solid var(--border-grey) !important;
-    border-top: 3px solid var(--gold) !important;
-    border-radius: 18px 0 !important;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.85) !important;
-    padding: 8px !important;
-    color: var(--border-cream) !important;
-}
-
-html body#modernbb .dropdown-box li a,
-html body#modernbb ul.dropdown-contents li a {
-    display: block !important;
-    color: var(--border-cream) !important;
-    background: transparent !important;
-    padding: 5px 10px !important;
-    border-radius: 6px 0 !important;
-    font-size: 12.5px !important;
-    text-transform: uppercase !important;
-}
-
-html body#modernbb .dropdown-box li a:hover,
-html body#modernbb ul.dropdown-contents li a:hover {
+html body#modernbb .block .h3,
+html body#modernbb .block h3,
+html body#modernbb .panel .h3,
+html body#modernbb .panel h3 {
     background: var(--grad-btn) !important;
     color: #ffffff !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 14px !important;
+    margin: 0 0 10px 0 !important;
+    font-family: var(--titres) !important;
+    font-size: 19px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    border: 1px solid var(--border-cream) !important;
 }
 
-/* Légende des icônes en bas de forum (Fini le texte noir sur fond sombre !) */
-html body#modernbb .forum-legend,
-html body#modernbb ul.forum-legend,
-html body#modernbb .icon-legend,
-html body#modernbb ul.linklist.bottom {
+/* En-tête blanc du menu déroulant "Plus !" */
+html body#modernbb .dropdown-box .title,
+html body#modernbb .dropdown-header {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 10px !important;
+    margin-bottom: 6px !important;
+}
+
+/* Légende des icônes en bas de forum (ul#picture_legend) */
+html body#modernbb ul#picture_legend {
     width: 950px !important;
     max-width: 100% !important;
     margin: 16px auto !important;
@@ -1124,25 +1078,40 @@ html body#modernbb ul.linklist.bottom {
     background: var(--bg-dark) !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 20px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55) !important;
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 14px 22px !important;
     list-style: none !important;
     color: var(--border-cream) !important;
 }
 
-html body#modernbb .forum-legend li,
-html body#modernbb .forum-legend span,
-html body#modernbb .forum-legend td,
-html body#modernbb .icon-legend li {
+html body#modernbb ul#picture_legend li {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
     color: var(--border-cream) !important;
     font-family: var(--font) !important;
     font-size: 12px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.6px !important;
 }
+
+html body#modernbb ul#picture_legend li.spacer {
+    width: 100% !important;
+    height: 1px !important;
+    background: rgba(158, 152, 142, 0.25) !important;
+    margin: 2px 0 !important;
+}
+
+html body#modernbb ul#picture_legend img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain !important;
+}
+
 
 /* 3. Barre d'actions & Boutons (Noir/Or au repos -> Dégradé Prune/Or au survol) */
 .topic-actions {
