@@ -1886,8 +1886,8 @@ div.sceditor-toolbar {
 }
 
 div.sceditor-group {
-    background: #42424a !important;
-    border: 1px solid rgba(244, 239, 230, 0.35) !important;
+    background: #d8d2c7 !important;
+    border: 1px solid var(--border-grey) !important;
     border-radius: 6px 0 !important;
     margin: 2px 4px 2px 0 !important;
     padding: 2px !important;
@@ -1942,8 +1942,7 @@ html body#modernbb .panel a.sceditor-button.active {
     color-scheme: light !important;
 }
 
-/* Panneau des smileys (cadre sombre + intérieur crème #d8d2c7) et menus déroulants */
-#smiley-box,
+/* Panneau des smileys (élargi sans overflow) et menus déroulants de l'éditeur */
 .sceditor-dropdown {
     background: #1e1e20 !important;
     color: var(--border-cream) !important;
@@ -1952,11 +1951,25 @@ html body#modernbb .panel a.sceditor-button.active {
     padding: 10px !important;
 }
 
+#smiley-box {
+    background: #1e1e20 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 14px 0 !important;
+    padding: 10px !important;
+    width: 215px !important;
+    min-width: 215px !important;
+    box-sizing: border-box !important;
+}
+
 #smiley-box iframe,
 #smilies_box {
     background-color: #d8d2c7 !important;
     border: 1px solid var(--border-grey) !important;
     border-radius: 10px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
 }
 
 .sceditor-dropdown input,
