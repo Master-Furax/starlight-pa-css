@@ -2601,19 +2601,19 @@ html body#modernbb .lmdet * {
     line-height: 1.4 !important;
 }
 
-/* Rang en haut du cadre crème : prend automatiquement la couleur du groupe */
-/* Assombrit légèrement les teintes claires pour un contraste net sur le volet crème */
+/* Rang net et contrasté sur le fond crème au survol (sans halo blanc) */
 html body#modernbb .lmdet .lmdet-rank {
     font-family: var(--titres) !important;
     font-size: 16px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    color: color-mix(in srgb, var(--grp-color, var(--plum)) 68%, #141416) !important;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+    color: color-mix(in srgb, var(--grp-color, var(--plum)) 55%, #141416) !important;
+    text-shadow: none !important;
     border-bottom: 1px solid rgba(25, 25, 28, 0.25) !important;
     padding-bottom: 4px !important;
     margin-bottom: 4px !important;
 }
+
 
 html body#modernbb .lmdetin span {
     font-weight: 700 !important;
