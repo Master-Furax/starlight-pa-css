@@ -2836,14 +2836,14 @@ html body#modernbb .sc-profile-avatar-box {
     overflow: hidden !important;
 }
 
-/* 1. Triangle lumineux derrière l'avatar (inspiré des dégradés clairs du QEEL) */
+/* 1. Triangle derrière l'avatar : couleur exacte du groupe vers sa version claire */
 html body#modernbb .sc-profile-diag {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
     height: 165px !important;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, var(--gold)) 55%, #fff5dc) 0%, var(--grp-color, var(--gold)) 90%) !important;
+    background: linear-gradient(135deg, var(--grp-color, var(--gold)) 0%, color-mix(in srgb, var(--grp-color, var(--gold)) 65%, #ffffff) 100%) !important;
     clip-path: polygon(0 0, 100% 0, 0 100%) !important;
     opacity: 0.95 !important;
     z-index: 1 !important;
@@ -2869,9 +2869,9 @@ html body#modernbb .sc-profile-avatar img {
     display: block !important;
 }
 
-/* 2. Encart Groupe & Médaillon : dégradé lumineux du groupe vers le clair */
+/* 2. Encart Groupe & Médaillon : couleur exacte du groupe vers sa version claire */
 html body#modernbb .sc-profile-group-box {
-    background: linear-gradient(110deg, var(--grp-color, #252528) 0%, color-mix(in srgb, var(--grp-color, #3a3a40) 58%, #fff2d6) 100%) !important;
+    background: linear-gradient(110deg, var(--grp-color, #252528) 0%, color-mix(in srgb, var(--grp-color, #3a3a40) 68%, #ffffff) 100%) !important;
     border: 1.5px solid var(--gold) !important;
     border-radius: 14px 0 !important;
     padding: 10px 12px !important;
@@ -2978,11 +2978,11 @@ html body#modernbb .sc-profile-right {
     width: 100% !important;
 }
 
-/* 3. Bandeau du Nom en haut : dégradé lumineux façon bannière QEEL */
+/* 3. Bandeau du Nom : dégradé 100% couleur exacte du groupe -> clair (sans fondu sombre à droite) */
 html body#modernbb .sc-profile-header {
-    background: linear-gradient(90deg, var(--grp-color, #252528) 0%, color-mix(in srgb, var(--grp-color, #3a3a40) 62%, #fff3d6) 65%, #1e1e22 100%) !important;
-    border: 1px solid var(--gold) !important;
-    border-left: 4px solid color-mix(in srgb, var(--grp-color, var(--gold)) 50%, #ffffff) !important;
+    background: linear-gradient(90deg, var(--grp-color, #252528) 0%, color-mix(in srgb, var(--grp-color, #3a3a40) 65%, #ffffff) 100%) !important;
+    border: 1.5px solid var(--gold) !important;
+    border-left: 5px solid color-mix(in srgb, var(--grp-color, var(--gold)) 45%, #ffffff) !important;
     border-radius: 14px 0 !important;
     padding: 14px 20px !important;
     display: flex !important;
@@ -2992,14 +2992,15 @@ html body#modernbb .sc-profile-header {
     box-sizing: border-box !important;
 }
 
+/* Ombre portée nette pour garder le nom ultra-lisible sur tout le dégradé clair */
 html body#modernbb .sc-profile-username,
 html body#modernbb .sc-profile-username span {
     font-family: var(--titres) !important;
     font-size: 28px !important;
     letter-spacing: 1.5px !important;
     text-transform: uppercase !important;
-    color: var(--border-cream) !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 0 rgba(20, 20, 22, 0.9), 0 2px 6px rgba(0, 0, 0, 0.75) !important;
     margin: 0 !important;
     line-height: 1.15 !important;
 }
