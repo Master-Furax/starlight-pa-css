@@ -1933,8 +1933,10 @@ html body#modernbb .panel a.sceditor-button.active {
 }
 
 /* Zone de texte crème (#d8d2c7) + écriture sombre (#19191c) */
-.sceditor-container textarea,
-.sceditor-container iframe {
+html body .sceditor-container,
+html body .sceditor-container textarea,
+html body .sceditor-container iframe {
+    background: #d8d2c7 !important;
     background-color: #d8d2c7 !important;
     color: #19191c !important;
     font-family: var(--textes) !important;
@@ -1975,6 +1977,9 @@ html body#modernbb #message-box {
 }
 
 #smiley-box {
+    margin-top: 38px !important; /* Descend le bloc pour l'aligner avec l'éditeur (à ajuster selon besoin) */
+    background-color: transparent !important; /* Supprime le fond blanc qui se coupe */
+    border: none !important; 
     background: #1e1e20 !important;
     color: var(--border-cream) !important;
     border: 1px solid var(--border-grey) !important;
