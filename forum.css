@@ -2523,7 +2523,7 @@ html body#modernbb .lm-grid {
 html body#modernbb .lmfond {
     position: relative !important;
     background: var(--bg-dark) !important;
-    border: 1.5px solid var(--border-grey) !important;
+    border: 1.5px solid #e4c38c !important;
     border-radius: 18px 0 !important;
     overflow: hidden !important;
     display: flex !important;
@@ -2625,7 +2625,7 @@ html body#modernbb .lmdetin span {
 /* Pied de carte teinté par la couleur du groupe + pseudo neutre crème */
 html body#modernbb .lmnom {
     background: linear-gradient(135deg, color-mix(in srgb, var(--grp-color, #1e1e20) 52%, #141416), #141416 88%) !important;
-    border-top: 1.5px solid var(--gold) !important;
+    border-top: 1.5px solid #f3ca8b !important;
     padding: 8px 12px !important;
     display: flex !important;
     align-items: center !important;
@@ -2667,7 +2667,7 @@ html body#modernbb .lmbadge img {
     width: 48px !important;
     height: 48px !important;
     border-radius: 50% !important;
-    border: 2px solid var(--gold) !important;
+    border: 0px solid var(--gold) !important;
     box-shadow: 0 0px 0px rgba(216, 155, 60, 0.85), 0 0 0 0px #f4efe6 !important;
     object-fit: cover !important;
     display: block !important;
