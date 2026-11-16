@@ -2667,7 +2667,7 @@ html body#modernbb .lmbadge img {
     height: 48px !important;
     border-radius: 50% !important;
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 10px rgba(216, 155, 60, 0.55), 0 4px 10px rgba(0, 0, 0, 0.85) !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
     object-fit: cover !important;
     display: block !important;
     box-sizing: border-box !important;
@@ -2676,7 +2676,7 @@ html body#modernbb .lmbadge img {
 
 html body#modernbb .lmfond:hover .lmbadge img {
     transform: scale(1.06) !important;
-    box-shadow: 0 0 14px rgba(216, 155, 60, 0.8), 0 5px 12px rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
 }
 
 /* =========================================================
