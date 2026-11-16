@@ -2891,11 +2891,11 @@ html body#modernbb .sc-profile-medal img {
     width: 48px !important;
     height: 48px !important;
     border-radius: 50% !important;
-    border: 2px solid var(--gold) !important;
+    border: 2px solid #e7c287 !important;
     box-shadow: 0 0 10px rgba(216, 155, 60, 0.55), 0 4px 10px rgba(0, 0, 0, 0.85) !important;
     object-fit: cover !important;
     display: block !important;
-   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease !important;
 }
 
 html body#modernbb .sc-profile-group-box:hover .sc-profile-medal img {
