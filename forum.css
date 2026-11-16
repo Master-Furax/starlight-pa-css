@@ -2681,6 +2681,61 @@ html body#modernbb .lmfond:hover .lmbadge img {
 }
 
 /* =========================================================
+   LISTE DES MEMBRES GROUPÉE PAR RANG / FACTION (8 GROUPES)
+   ========================================================= */
+
+html body#modernbb #starlight-memberlist.sc-ml-grouped-mode {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 20px auto !important;
+}
+
+html body#modernbb .sc-ml-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+}
+
+/* Barre d'en-tête biseautée façon PA avec titre aligné à droite */
+html body#modernbb .sc-ml-sec-header {
+    background: linear-gradient(90deg, rgba(20, 20, 23, 0.96) 0%, color-mix(in srgb, var(--sec-color, var(--gold)) 22%, #141416) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-left: 5px solid var(--sec-color, var(--gold)) !important;
+    border-right: 2px solid var(--sec-color, var(--gold)) !important;
+    border-radius: 14px 0 !important;
+    padding: 8px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.65) !important;
+}
+
+html body#modernbb .sc-ml-sec-title {
+    font-family: var(--titres) !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: var(--sec-color, var(--gold)) !important;
+    text-shadow:
+        1px 1px 0 rgba(12, 12, 15, 0.95),
+        0 2px 6px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Grille de 3 cartes par rangée dans chaque section de groupe */
+html body#modernbb .sc-ml-sec-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* =========================================================
    CORRECTIFS : PA (#PAintrigue), LISTING SUJETS (.SBJ) & INFO
    ========================================================= */
 
