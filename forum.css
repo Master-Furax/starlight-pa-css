@@ -782,8 +782,8 @@ a.sc-last-topic:hover { color: var(--border-cream) !important; }
    color: var(--border-grey) !important; 
    text-transform: uppercase !important; }
 .sc-forum-status { 
-   width: 42px !important; 
-   height: 42px !important; 
+   width: 50px !important; 
+   height: 50px !important; 
    flex-shrink: 0 !important; 
    border-radius: 50% !important; 
    background: rgba(20, 20, 22, 0.85) !important; 
@@ -794,8 +794,8 @@ a.sc-last-topic:hover { color: var(--border-cream) !important; }
 }
 
 .sc-forum-status img { 
-   width: 24px !important; 
-   height: 24px !important; 
+   width: 44px !important; 
+   height: 44px !important; 
    object-fit: contain !important; 
 }
 
