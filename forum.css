@@ -2528,13 +2528,13 @@ html body#modernbb .lmfond {
     overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
-    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
+    box-shadow: 0 0px 0px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
     transition: transform 0.25s ease, border-color 0.25s ease !important;
 }
 
 html body#modernbb .lmfond:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 0px #f4efe6 !important;
 }
 
 /* Avatar */
@@ -2668,7 +2668,7 @@ html body#modernbb .lmbadge img {
     height: 48px !important;
     border-radius: 50% !important;
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
+    box-shadow: 0 0px 0px rgba(216, 155, 60, 0.85), 0 0 0 0px #f4efe6 !important;
     object-fit: cover !important;
     display: block !important;
     box-sizing: border-box !important;
