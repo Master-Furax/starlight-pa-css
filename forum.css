@@ -2726,11 +2726,12 @@ html body#modernbb .sc-ml-sec-title {
         0 2px 6px rgba(0, 0, 0, 0.85) !important;
 }
 
-/* Grille de 3 cartes par rangée dans chaque section de groupe */
+/* Grille avec cartes de 250px exactement */
 html body#modernbb .sc-ml-sec-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 20px !important;
+    grid-template-columns: repeat(3, 250px) !important;
+    justify-content: center !important;
+    gap: 24px !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
