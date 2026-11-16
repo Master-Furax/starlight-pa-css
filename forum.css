@@ -3259,3 +3259,55 @@ html body#modernbb .sc-stat-val {
     letter-spacing: 0.3px !important;
     color: var(--border-cream) !important;
 }
+
+/* =========================================================
+   ÉCRANS DE CONFIRMATION / INFORMATIONS (.msgdie-panel)
+   ========================================================= */
+
+html body#modernbb .panel.msgdie-panel {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 24px auto !important;
+    background: var(--bg-dark, #19191c) !important;
+    border: 1.5px solid var(--border-grey, #3a3a40) !important;
+    border-left: 4px solid var(--gold) !important;
+    border-radius: 18px 0 !important;
+    padding: 24px 28px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75) !important;
+    box-sizing: border-box !important;
+}
+
+/* Supprime le halo/contour clair qui épaississait le titre INFORMATIONS */
+html body#modernbb .panel.msgdie-panel h1.page-title,
+html body#modernbb h1.page-title {
+    font-family: var(--titres) !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.8px !important;
+    line-height: 1.2 !important;
+    color: var(--border-cream) !important;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.85) !important;
+    -webkit-text-stroke: 0 !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+html body#modernbb .panel.msgdie-panel p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: var(--border-cream) !important;
+    margin: 8px 0 !important;
+}
+
+html body#modernbb .panel.msgdie-panel a {
+    color: var(--gold) !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+html body#modernbb .panel.msgdie-panel a:hover {
+    color: var(--border-cream) !important;
+    text-decoration: underline !important;
+}
