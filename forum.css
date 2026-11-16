@@ -2528,13 +2528,13 @@ html body#modernbb .lmfond {
     overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65) !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
     transition: transform 0.25s ease, border-color 0.25s ease !important;
 }
 
 html body#modernbb .lmfond:hover {
     transform: translateY(-4px) !important;
-    border-color: var(--gold) !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
 }
 
 /* Avatar */
@@ -2566,6 +2566,7 @@ html body#modernbb .lmimg img {
 
 html body#modernbb .lmfond:hover .lmimg img {
     transform: scale(1.04) !important;
+   box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
 }
 
 /* Cadre crème translucide au survol */
