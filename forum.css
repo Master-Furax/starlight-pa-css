@@ -2900,7 +2900,7 @@ html body#modernbb .sc-profile-medal img {
 
 html body#modernbb .sc-profile-group-box:hover .sc-profile-medal img {
     transform: scale(1.06) !important;
-    box-shadow: 0 0 16px rgba(245, 185, 66, 0.95), 0 0 4px #ffffff !important;
+    box-shadow: 0 0 16px rgba(245, 185, 66, 0.95), 0 0 2px #ffffff !important;
     filter: brightness(1.12) !important;
 }
 
