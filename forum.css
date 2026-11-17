@@ -1089,10 +1089,10 @@ html body#modernbb .forumbg:not(.starlight-cat) {
     overflow: visible !important;
 }
 
-/* Empêche le chevauchement vertical de texte sans toucher à #PA */
-html body#modernbb .block *,
+/* Empêche le chevauchement vertical de texte sans casser #PA ni l'éditeur */
+html body#modernbb .block *:not(.sceditor-container):not(.sceditor-container *),
 html body#modernbb #page-desc-content *,
-html body#modernbb .panel:not(:has(#PA)) * {
+html body#modernbb .panel:not(:has(#PA)) *:not(.sceditor-container):not(.sceditor-container *):not(.sceditor-dropdown):not(.sceditor-dropdown *) {
     position: static !important;
     color: var(--border-cream) !important;
     line-height: 1.55 !important;
@@ -1971,7 +1971,7 @@ html body#modernbb .signature_div {
     background: #141416 !important;
     border: 1.5px solid var(--border-grey) !important;
     border-radius: 18px 0 !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65) !important;
 }
 
@@ -3361,16 +3361,18 @@ html body#modernbb .sc-stat-val {
    ÉCRANS DE CONFIRMATION / INFORMATIONS (.msgdie-panel)
    ========================================================= */
 
+html body#modernbb #message,
 html body#modernbb .panel.msgdie-panel {
     width: 950px !important;
-    max-width: 100% !important;
+    max-width: 95% !important;
     margin: 24px auto !important;
-    background: var(--bg-dark, #19191c) !important;
-    border: 1.5px solid var(--border-grey, #3a3a40) !important;
-    border-left: 4px solid var(--gold) !important;
+    background: var(--bg-dark, #1e1e20) !important;
+    border: 1.5px solid var(--border-grey, #9e988e) !important;
+    border-left: 5px solid var(--gold, #d89b3c) !important;
     border-radius: 18px 0 !important;
     padding: 24px 28px !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75) !important;
+    text-align: center !important;
     box-sizing: border-box !important;
 }
 
@@ -4278,142 +4280,5 @@ html body#modernbb .sceditor-dropdown .button {
     letter-spacing: 0.8px !important;
     cursor: pointer !important;
     margin-top: 4px !important;
-}
-
-/* =========================================================
-   CORRECTIF PALETTE COULEURS MODERNE & EMOJIS (SCEDITOR)
-   ========================================================= */
-
-/* 1. Supprime la barre de défilement horizontale des emojis */
-html body#modernbb .sceditor-dropdown.sceditor-twemojifa {
-    width: 265px !important;
-    max-height: 230px !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-}
-
-/* 2. Rétablit l'affichage de la palette de couleurs moderne */
-html body#modernbb .sceditor-dropdown.sceditor-color-picker {
-    width: auto !important;
-    max-width: 360px !important;
-    max-height: none !important;
-    overflow: visible !important;
-}
-
-html body#modernbb .sceditor-color-picker-modern {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 8px !important;
-}
-
-html body#modernbb .sceditor-color-native-section {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-html body#modernbb .sceditor-color-native-section input[type="color"] {
-    width: 100% !important;
-    height: 30px !important;
-    border: 1px solid var(--border-grey, #9e988e) !important;
-    border-radius: 8px 0 !important;
-    background: #141416 !important;
-    cursor: pointer !important;
-}
-
-html body#modernbb .sceditor-color-grid {
-    display: flex !important;
-    gap: 10px !important;
-}
-
-html body#modernbb .sceditor-color-palette {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 3px !important;
-}
-
-html body#modernbb .sceditor-color-row {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 3px !important;
-}
-
-/* Restaure la taille réelle des pastilles de couleur (écrasée par height: auto) */
-html body#modernbb .panel:not(:has(#PA)) .sceditor-dropdown a.sceditor-color-option,
-html body#modernbb a.sceditor-color-option {
-    display: inline-block !important;
-    width: 16px !important;
-    height: 16px !important;
-    min-width: 16px !important;
-    min-height: 16px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    border-radius: 3px !important;
-    cursor: pointer !important;
-    transition: transform 0.15s ease !important;
-}
-
-html body#modernbb a.sceditor-color-option:hover {
-    transform: scale(1.25) !important;
-    border-color: #ffffff !important;
-    z-index: 2 !important;
-}
-
-/* =========================================================
-   ÉCRAN DE CONFIRMATION APRÈS ENVOI DE MESSAGE (INFORMATION)
-   ========================================================= */
-
-html body#modernbb #message,
-html body#modernbb .panel.msgdie-panel,
-html body#modernbb div#main-content > .panel:only-child {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 950px !important;
-    max-width: 95% !important;
-    margin: 28px auto !important;
-    padding: 24px 28px !important;
-    background: var(--bg-dark, #1e1e20) !important;
-    border: 1.5px solid var(--border-grey, #9e988e) !important;
-    border-left: 5px solid var(--gold, #d89b3c) !important;
-    border-radius: 20px 0 !important;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8) !important;
-    color: var(--border-cream, #f4efe6) !important;
-    text-align: center !important;
-    position: relative !important;
-    z-index: 20 !important;
-}
-
-html body#modernbb #message h1,
-html body#modernbb #message h2,
-html body#modernbb #message .h3,
-html body#modernbb .panel.msgdie-panel h1 {
-    display: block !important;
-    font-family: var(--titres, 'Teko', sans-serif) !important;
-    font-size: 28px !important;
-    font-weight: 400 !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-    color: var(--gold, #d89b3c) !important;
-    border-bottom: 1px solid rgba(244, 239, 230, 0.25) !important;
-    padding-bottom: 10px !important;
-    margin: 0 0 14px 0 !important;
-}
-
-html body#modernbb #message p,
-html body#modernbb .panel.msgdie-panel p {
-    font-family: var(--textes, 'Roboto', sans-serif) !important;
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    color: var(--border-cream, #f4efe6) !important;
-    margin: 8px 0 !important;
-}
-
-html body#modernbb #message a,
-html body#modernbb .panel.msgdie-panel a {
-    color: var(--gold, #d89b3c) !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
 }
 
