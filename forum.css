@@ -983,7 +983,7 @@ text-transform: uppercase; font-size: 34px !important; text-align: left; height:
 .crew_color:nth-of-type(4) h5 { background: linear-gradient(90deg, #9a3412, #f97316) !important; }
 .crew_color:nth-of-type(5) h5 { background: linear-gradient(90deg, #7f1d1d, #ef4444) !important; }
 .crew_color:nth-of-type(6) h5 { background: linear-gradient(90deg, #14532d, #22c55e) !important; }
-.crew_color:nth-of-type(7) h5 { background: linear-gradient(90deg, #0b2158, #06b6d4) !important; }
+.crew_color:nth-of-type(7) h5 { background: linear-gradient(90deg, #112c70, #06b6d4) !important; }
 #copy_arte { position: absolute !important; bottom: 6px !important; right: 14px !important; font-size: 10px !important; word-spacing: normal !important; line-height: 1.2 !important; }
 
 /* ==========================================================================
