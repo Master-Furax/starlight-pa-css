@@ -1538,11 +1538,11 @@ h2.titre-sujet-arte a {
 .fil-ariane-arte::after {
     content: "" !important;
     position: absolute !important;
-    top: calc(52% - 1.6px) !important;
-    right: 20px !important;
+    top: calc(53% - 1.4px) !important;
+    right: 12px !important;
     width: 20px !important;
     height: 30px !important;
-    border-top: 1.5px solid var(--gold) !important;
+    border-top: 1.9px solid var(--gold) !important;
     border-right: 1.5px solid var(--gold) !important;
     border-radius: 0 10px 0 0 !important;
     box-sizing: border-box !important;
