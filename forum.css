@@ -4212,3 +4212,65 @@ html body#modernbb .sceditor-dropdown button {
     margin-top: 6px !important;
 }
 
+/* =========================================================
+   FINITIONS : MENTIONS SCEditor, TITRES PROFIL & CODE TAUPE
+   ========================================================= */
+
+/* 1. Lisibilité du menu déroulant des @mentions */
+html body#modernbb .sceditor-dropdown.sceditor-mention p,
+html body#modernbb .sceditor-mention-user {
+    background: #1e1e20 !important;
+    background-color: #1e1e20 !important;
+    color: var(--border-cream) !important;
+    -webkit-text-fill-color: var(--border-cream) !important;
+    padding: 6px 10px !important;
+    margin: 2px 0 !important;
+    border-radius: 6px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+}
+
+html body#modernbb .sceditor-dropdown.sceditor-mention p:hover,
+html body#modernbb .sceditor-mention-user:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* 2. Centrage des titres de chaque onglet d'édition de profil */
+html body#modernbb #cp-main h1,
+html body#modernbb #cp-main h1.page-title,
+html body#modernbb #cp-main .panel h2,
+html body#modernbb #cp-main .panel h3,
+html body#modernbb #postingbox.panel h2.u,
+html body#modernbb #postingbox.panel .h3 {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* 3. Cadres Code, Spoiler & Citation en taupe (#6d6860) + sélection en 1 clic */
+html body#modernbb .message-contenu-arte .spoiler,
+html body#modernbb .message-contenu-arte dl.codebox,
+html body#modernbb .message-contenu-arte blockquote,
+html body#modernbb .message-contenu-arte .codebox {
+    background: #6d6860 !important;
+    background-color: #6d6860 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid #19191c !important;
+    border-left: 4px solid var(--jscouleur, var(--gold)) !important;
+    border-radius: 12px 0 !important;
+    padding: 12px 16px !important;
+    margin: 12px 0 !important;
+}
+
+html body#modernbb .message-contenu-arte dl.codebox code,
+html body#modernbb .message-contenu-arte .codebox code {
+    display: block !important;
+    user-select: all !important;
+    -webkit-user-select: all !important;
+    cursor: pointer !important;
+    color: #f4efe6 !important;
+}
