@@ -3646,6 +3646,94 @@ html body#modernbb .signature_div img {
     box-sizing: border-box !important;
 }
 
+/* =========================================================
+   VARIANTE SOMBRE (ACTIVÉE PAR LE BOUTON AMBIANCE)
+   ========================================================= */
+
+.sc-fiche-chk:checked + .sc-fiche {
+    background: #141416 !important;
+    color: #f4efe6 !important;
+    border-color: #3a3a42 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.85) !important;
+}
+
+.sc-fiche-chk:checked + .sc-fiche .sc-topbar {
+    background: #0f0f12 !important;
+    border-bottom-color: #2c2c33 !important;
+}
+
+/* Grille identité : fond sombre + alternance doré et couleur de groupe */
+.sc-fiche-chk:checked + .sc-fiche .sc-info-item {
+    background: #1d1d22 !important;
+    color: #f4efe6 !important;
+    border-color: #33333b !important;
+    border-left: 4px solid var(--grp-color) !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-info-item:nth-child(even) {
+    border-left-color: #ffb01f !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-info-item strong {
+    color: #ffb01f !important;
+    border-bottom-color: #ee5574 !important;
+}
+
+/* Encart Glyphe : fond sombre avec liseré rose corail & titre couleur de groupe */
+.sc-fiche-chk:checked + .sc-fiche .sc-glyphe-card {
+    background: #1a1a1f !important;
+    color: #e8e2d7 !important;
+    border: 1px solid #ee5574 !important;
+    border-left: 5px solid var(--grp-color) !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-glyphe-title {
+    color: var(--grp-color) !important;
+}
+
+/* Blocs narratifs (Caractère / Histoire) : fond sombre velouté + texte crème */
+.sc-fiche-chk:checked + .sc-fiche .sc-text-box {
+    background: #1d1d22 !important;
+    color: #f4efe6 !important;
+    border-color: #33333b !important;
+    border-left: 5px solid #ffb01f !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Bloc Joueur (HRP) : fond sombre + tags variés */
+.sc-fiche-chk:checked + .sc-fiche .sc-player-section {
+    background: #1d1d22 !important;
+    color: #f4efe6 !important;
+    border-color: var(--grp-color) !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-player-avatar {
+    border-color: #ffb01f !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-tag {
+    background: #121215 !important;
+    border-color: #ee5574 !important;
+    color: #ffb01f !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-player-notes {
+    background: #121215 !important;
+    color: #e8e2d7 !important;
+    border-color: #33333b !important;
+}
+
+/* Encart Code Répertoire */
+.sc-fiche-chk:checked + .sc-fiche .sc-credit-box {
+    background: #1a1a1f !important;
+    color: #f4efe6 !important;
+    border-color: #ffb01f !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-credit-header {
+    color: #ffb01f !important;
+}
+.sc-fiche-chk:checked + .sc-fiche .sc-credit-code {
+    background: #111114 !important;
+    color: #f4efe6 !important;
+    border-color: #33333b !important;
+    border-left: 5px solid #ee5574 !important;
+}
+
+
 /* --- SÉLECTEUR DE GROUPE DYNAMIQUE (CSS PUR VIA :has) --- */
 .sc-fiche:has(option[value="umbra"]:checked)        { --grp-color: #7C828D; --grp-bg: rgba(124, 130, 141, 0.16); --grp-glow: rgba(124, 130, 141, 0.35); }
 .sc-fiche:has(option[value="tiamat"]:checked)       { --grp-color: #B7890B; --grp-bg: rgba(183, 137, 11, 0.16);  --grp-glow: rgba(183, 137, 11, 0.35); }
