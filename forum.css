@@ -4346,7 +4346,7 @@ html body#modernbb #postingbox fieldset.fields1 {
     align-items: stretch !important;
 }
 
-/* 2. #message-box remplit 100% de la hauteur de sa colonne sans marge parasite */
+/* 2. #message-box et la zone de texte s'agrandissent jusqu'au bas de #smiley-box */
 html body#modernbb #postingbox #message-box,
 html body#modernbb #postingbox #textarea_content,
 html body#modernbb #postingbox .sceditor-container {
@@ -4360,9 +4360,11 @@ html body#modernbb #postingbox .sceditor-container {
 html body#modernbb #postingbox .sceditor-container iframe,
 html body#modernbb #postingbox .sceditor-container textarea {
     flex: 1 1 auto !important;
+    height: 100% !important;
+    min-height: 270px !important;
 }
 
-/* 3. #smiley-box compact : texte HTML/BBCode serré + iframe ajustée */
+/* 3. #smiley-box compact avec liens HTML/BBCode sur une seule ligne */
 html body#modernbb #postingbox #smiley-box,
 html body#modernbb #postingbox fieldset.fields1 > #smiley-box,
 html body#modernbb #postingbox #parent_editor_simple > #smiley-box {
@@ -4372,20 +4374,18 @@ html body#modernbb #postingbox #parent_editor_simple > #smiley-box {
     margin: 0 !important;
     padding: 8px !important;
     font-size: 11px !important;
-    line-height: 1.25 !important;
+    line-height: 1.3 !important;
     box-sizing: border-box !important;
 }
 
-html body#modernbb #postingbox #smiley-box br {
-    display: block !important;
-    content: "" !important;
-    margin: 1px 0 !important;
+html body#modernbb #postingbox #smiley-box a {
+    display: inline !important;
 }
 
 html body#modernbb #postingbox #smiley-box iframe,
 html body#modernbb #postingbox #smilies_box {
     flex: 1 1 auto !important;
     height: auto !important;
-    min-height: 220px !important;
+    min-height: 230px !important;
     margin-bottom: 6px !important;
 }
