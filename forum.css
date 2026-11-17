@@ -4359,3 +4359,65 @@ html body#modernbb a.sceditor-color-option:hover {
     border-color: #ffffff !important;
     z-index: 2 !important;
 }
+
+/* =========================================================
+   ÉCRAN DE CONFIRMATION APRÈS ENVOI DE MESSAGE (INFORMATION)
+   ========================================================= */
+
+html body#modernbb #message,
+html body#modernbb .panel.msgdie-panel,
+html body#modernbb div#main-content > .panel:only-child {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 950px !important;
+    max-width: 95% !important;
+    margin: 28px auto !important;
+    padding: 24px 28px !important;
+    background: var(--bg-dark, #1e1e20) !important;
+    border: 1.5px solid var(--border-grey, #9e988e) !important;
+    border-left: 5px solid var(--gold, #d89b3c) !important;
+    border-radius: 20px 0 !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8) !important;
+    color: var(--border-cream, #f4efe6) !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+
+html body#modernbb #message h1,
+html body#modernbb #message h2,
+html body#modernbb #message .h3,
+html body#modernbb .panel.msgdie-panel h1 {
+    display: block !important;
+    font-family: var(--titres, 'Teko', sans-serif) !important;
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    color: var(--gold, #d89b3c) !important;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.25) !important;
+    padding-bottom: 10px !important;
+    margin: 0 0 14px 0 !important;
+}
+
+html body#modernbb #message p,
+html body#modernbb .panel.msgdie-panel p {
+    font-family: var(--textes, 'Roboto', sans-serif) !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: var(--border-cream, #f4efe6) !important;
+    margin: 8px 0 !important;
+}
+
+html body#modernbb #message a,
+html body#modernbb .panel.msgdie-panel a {
+    color: var(--gold, #d89b3c) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+/* Empêche div#page-header de créer un bloc noir vide sous la bannière */
+html body#modernbb div#page-header > *:not(banniere):not(#parallax):not(.headerbar) {
+    display: none !important;
+}
