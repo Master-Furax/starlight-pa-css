@@ -3619,10 +3619,10 @@ html body#modernbb .signature_div img {
 
 /* --- BASE CLAIRE FAÇON PA (FOND ANTHRACITE + CADRES CRÈME CHAUD) --- */
 .sc-fiche {
-    --f-bg-main: #19191c;
+    --f-bg-main: #28282b;
     --f-bg-card: #d8d2c7;
     --f-bg-inset: #e8e2d7;
-    --f-text-main: #19191c;
+    --f-text-main: #d8d2c7;
     --f-text-light: #f4efe6;
     --f-border: #8e887d;
     --f-gold: #ffb01f;
@@ -3662,7 +3662,7 @@ html body#modernbb .signature_div img {
     justify-content: space-between !important;
     align-items: center !important;
     padding: 12px 20px !important;
-    background: #141417 !important;
+    background: #27272a !important;
     border-bottom: 1px solid #3a3a42 !important;
     gap: 14px !important;
     flex-wrap: wrap !important;
@@ -3969,7 +3969,7 @@ html body#modernbb .signature_div img {
    display: block !important;
    width: 100% !important;
    box-sizing: border-box !important;
-   background: #19191c !important;
+   background: #6d6860  !important;
    color: #f4efe6 !important;
    border: 1px solid var(--grp-color) !important;
    border-left: 5px solid var(--grp-color) !important;
