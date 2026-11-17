@@ -3398,134 +3398,69 @@ html body#modernbb .panel.msgdie-panel a:hover {
 }
 
 /* =========================================================
-   ÉDITION DE SIGNATURE (UCP - #postingbox)
+   CORRECTIF ÉDITION DE SUJET : ALIGNEMENT & TITRE CRÈME
    ========================================================= */
 
-/* Titre EDITER LA SIGNATURE */
-html body#modernbb #postingbox.panel h2.u,
-html body#modernbb #postingbox.panel .h3 {
-    font-family: var(--titres) !important;
-    font-size: 24px !important;
-    font-weight: 400 !important;
+/* 1. Rétablit le titre "EDITER LE SUJET" en blanc crème (et plus en jaune) */
+html body#modernbb #postingbox.panel > .inner > div.h3,
+html body#modernbb #postingbox.panel > .inner > h2.u {
+    color: var(--border-cream) !important;
+    font-size: 26px !important;
     letter-spacing: 1.5px !important;
-    color: var(--gold) !important;
-    border-bottom: 1px solid rgba(216, 155, 60, 0.35) !important;
-    padding-bottom: 10px !important;
-    margin: 0 0 18px 0 !important;
-    text-transform: uppercase !important;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.85) !important;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.35) !important;
 }
 
-/* Mise en page côte à côte : Smileys à gauche, Éditeur à droite */
-html body#modernbb #postingbox #parent_editor_simple {
+/* 2. Aligne #smiley-box (gauche) et #message-box (droite) côte à côte dans fieldset.fields1 */
+html body#modernbb #postingbox fieldset.fields1 {
     display: flex !important;
+    flex-wrap: wrap !important;
     align-items: flex-start !important;
-    gap: 18px !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
-/* Colonne de gauche : Smileys + Statut HTML/BBCode */
-html body#modernbb #postingbox #smiley-box {
-    width: 195px !important;
-    flex-shrink: 0 !important;
-    float: none !important;
-    background: #141416 !important;
-    border: 1px solid var(--border-grey, #3a3a40) !important;
-    border-radius: 12px 0 !important;
-    padding: 12px !important;
-    box-sizing: border-box !important;
-    font-size: 12px !important;
-    line-height: 1.5 !important;
-    color: var(--border-cream) !important;
+/* Garde la ligne "Titre du message" sur toute la largeur en haut */
+html body#modernbb #postingbox fieldset.fields1 > dl {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin-bottom: 6px !important;
 }
 
-/* Colonne de droite : Boîte de message SCEditor contenue dans le cadre */
-html body#modernbb #postingbox #message-box {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    width: auto !important;
+/* Colonne de gauche : Smileys (largeur fixe) */
+html body#modernbb #postingbox fieldset.fields1 > #smiley-box {
+    flex: 0 0 195px !important;
+    width: 195px !important;
     margin: 0 !important;
     float: none !important;
-    box-sizing: border-box !important;
+    clear: none !important;
 }
 
+/* Colonne de droite : Zone de texte (prend tout l'espace restant à droite) */
+html body#modernbb #postingbox fieldset.fields1 > #message-box {
+    flex: 1 1 calc(100% - 215px) !important;
+    width: calc(100% - 215px) !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    clear: none !important;
+    display: block !important;
+}
+
+/* Supprime le décalage du <br> et du div.left-box vide au-dessus de l'éditeur */
+html body#modernbb #postingbox #message-box > .left-box,
+html body#modernbb #postingbox #message-box > br {
+    display: none !important;
+}
+
+/* Force le conteneur de l'éditeur à remplir 100% de la colonne de droite sans déborder */
 html body#modernbb #postingbox #textarea_content,
 html body#modernbb #postingbox .sceditor-container {
     width: 100% !important;
     max-width: 100% !important;
-    background: #141416 !important;
-    border: 1px solid var(--border-grey, #3a3a40) !important;
-    border-radius: 12px 0 !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-}
-
-/* Barre d'outils SCEditor */
-html body#modernbb #postingbox .sceditor-toolbar {
-    background: #1e1e23 !important;
-    border-bottom: 1px solid rgba(216, 155, 60, 0.4) !important;
-    padding: 6px !important;
-}
-
-/* Zone de saisie (iframe et mode source textarea) */
-html body#modernbb #postingbox .sceditor-container iframe,
-html body#modernbb #postingbox .sceditor-container textarea {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 220px !important;
-    background: #141416 !important;
-    color: var(--border-cream) !important;
-    border: none !important;
-    padding: 10px !important;
-    box-sizing: border-box !important;
     margin: 0 !important;
+    box-sizing: border-box !important;
 }
-
-/* Barre de redimensionnement en bas de l'éditeur */
-html body#modernbb #postingbox .sceditor-grip {
-    background-color: #1e1e23 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-/* Centrage des titres de chaque onglet du panneau utilisateur (UCP) */
-html body#modernbb #cp-main.ucp-main h1,
-html body#modernbb #cp-main.ucp-main h1.page-title,
-html body#modernbb #cp-main .panel h2,
-html body#modernbb #cp-main .panel h3,
-html body#modernbb #postingbox.panel h2.u,
-html body#modernbb #postingbox.panel .h3 {
-    text-align: center !important;
-    width: 100% !important;
-    display: block !important;
-}
-
-/* --- ALIGNEMENT ÉDITEUR & BOÎTE DE SMILEYS --- */
-html body#modernbb #postingbox #message-box {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 20px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-html body#modernbb #postingbox #smiley-box {
-  float: none !important;
-  width: 220px !important;
-  flex-shrink: 0 !important;
-  margin: 0 !important;
-}
-
-html body#modernbb #postingbox #textarea_content {
-  float: none !important;
-  width: auto !important;
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-  margin: 0 !important;
-}
-
-html body#modernbb #postingbox .sceditor-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-}
-
