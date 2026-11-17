@@ -1896,7 +1896,7 @@ html body#modernbb .corps-message-artemis {
 /* L'avatar glisse le long du message et s'arrête en bas du bloc du joueur */
 html body#modernbb .avatar-du-membre-post {
     position: sticky !important;
-    top: 20px !important;
+    top: 84px !important;
     align-self: start !important;
     width: 200px !important;
     height: 320px !important;
