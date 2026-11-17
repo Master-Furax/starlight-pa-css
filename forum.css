@@ -3565,7 +3565,7 @@ html {
 }
 
 /* =========================================================
-   CADRE SIGNATURE HARMONISÉ (DANS LE MESSAGE)
+   CADRE SIGNATURE SÉPARÉ (FOND CRÈME + CADRE ANTHRACITE ÉPAIS)
    ========================================================= */
 
 /* Masque la signature si elle est vide */
@@ -3573,28 +3573,36 @@ html body#modernbb .signature_div:empty {
     display: none !important;
 }
 
-/* Style du cadre signature (encart anthracite + liseré groupe) */
-html body#modernbb .signature_div {
-    margin-top: auto !important;
-    padding: 14px 18px !important;
-    background: var(--bg-dark, #19191c) !important;
-    color: var(--border-cream, #f4efe6) !important;
-    border: 1px solid var(--border-grey, #3a3a42) !important;
-    border-left: 4px solid var(--jscouleur, var(--gold)) !important;
-    border-radius: 14px 0 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35) !important;
+/* Aligne la signature sous le message avec 6px d'écart */
+html body#modernbb .corps-message-artemis .signature_div {
+    grid-column: 2 / 3 !important;
+    margin-top: 6px !important;
+    padding: 16px 20px !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    font-family: var(--textes) !important;
+    font-size: 13.5px !important;
+    border: 3px solid var(--bg-dark, #19191c) !important;
+    border-left: 5px solid var(--jscouleur, var(--gold)) !important;
+    border-radius: 20px 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(25, 25, 28, 0.25) !important;
     text-align: center !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
-/* Supprime les tirets / lignes par défaut */
+/* Permet à l'avatar à gauche de couvrir toute la hauteur (message + signature) */
+html body#modernbb .corps-message-artemis > .avatar-du-membre-post {
+    grid-row: 1 / 3 !important;
+}
+
+/* Supprime les lignes horizontales natives ("_____") */
 html body#modernbb .signature_div hr {
     display: none !important;
 }
 
-/* Ajuste les images dans la signature */
+/* Limite la largeur des images dans la signature */
 html body#modernbb .signature_div img {
     max-width: 100% !important;
-    border-radius: 6px !important;
+    border-radius: 8px !important;
 }
