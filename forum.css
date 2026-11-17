@@ -3464,3 +3464,66 @@ html body#modernbb #postingbox .sceditor-container {
     margin: 0 !important;
     box-sizing: border-box !important;
 }
+
+/* =========================================================
+   CORRECTIF BOÎTE DE PRÉVISUALISATION (#preview)
+   ========================================================= */
+
+/* Conteneur principal façon panneau sombre */
+html body#modernbb #preview.post,
+html body#modernbb div#preview {
+    width: 950px !important;
+    max-width: 100% !important;
+    margin: 18px auto !important;
+    padding: 20px 24px !important;
+    box-sizing: border-box !important;
+    background: var(--bg-dark) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 20px 0 !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* On rend .postbody transparent pour qu'il ne colore plus le titre */
+html body#modernbb #preview .postbody {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Titre "PRÉVISUALISATION" identique à "EDITER LE SUJET" */
+html body#modernbb #preview .postbody > div.h3,
+html body#modernbb #preview .postbody > h3 {
+    display: block !important;
+    width: 100% !important;
+    background: transparent !important;
+    color: var(--border-cream) !important;
+    font-family: var(--titres) !important;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.85) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.35) !important;
+    padding: 0 0 10px 0 !important;
+    margin: 0 0 18px 0 !important;
+}
+
+/* Corps du message prévisualisé séparé en dessous sur fond crème */
+html body#modernbb #preview .postbody > div.content {
+    display: block !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    font-family: var(--textes) !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    padding: 18px 22px !important;
+    border-radius: 14px 0 !important;
+    border: 1px solid var(--border-grey) !important;
+    border-left: 4px solid var(--gold) !important;
+    text-align: justify !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+}
