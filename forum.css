@@ -4211,3 +4211,72 @@ html body#modernbb .sceditor-color-option {
     height: 16px !important;
     border: 1px solid #141416 !important;
 }
+
+/* =========================================================
+   LISIBILITÉ & POSITION DES POPUPS DE L'ÉDITEUR (SCEDITOR)
+   ========================================================= */
+
+/* 1. Permet aux popups de dépasser proprement de l'éditeur sans être coupées */
+html body#modernbb .sceditor-container {
+    overflow: visible !important;
+}
+
+/* 2. Rend TOUT le texte des popups (labels, tailles, polices, boutons) bien visible en crème */
+html body#modernbb .sceditor-dropdown,
+html body#modernbb .sceditor-dropdown div,
+html body#modernbb .sceditor-dropdown span,
+html body#modernbb .sceditor-dropdown p,
+html body#modernbb .sceditor-dropdown a,
+html body#modernbb .sceditor-dropdown font,
+html body#modernbb .sceditor-dropdown label {
+    color: var(--border-cream, #f4efe6) !important;
+    -webkit-text-fill-color: var(--border-cream, #f4efe6) !important;
+    font-size: 13px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Labels dorés bien lisibles au-dessus des champs */
+html body#modernbb .sceditor-dropdown label {
+    color: var(--gold, #d89b3c) !important;
+    -webkit-text-fill-color: var(--gold, #d89b3c) !important;
+    font-family: var(--titres, 'Teko', sans-serif) !important;
+    font-size: 16px !important;
+    margin-top: 4px !important;
+}
+
+/* 3. Options de taille de texte (10, 13, 16, 18, 24) & polices */
+html body#modernbb .sceditor-fontsize-option,
+html body#modernbb .sceditor-font-option {
+    display: block !important;
+    padding: 5px 10px !important;
+    border-radius: 6px 0 !important;
+    text-decoration: none !important;
+    background: transparent !important;
+}
+
+html body#modernbb .sceditor-fontsize-option:hover,
+html body#modernbb .sceditor-font-option:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* 4. Bouton "Insérer" dans les popups Lien / Image / Citation / YouTube */
+html body#modernbb .sceditor-dropdown input[type="button"],
+html body#modernbb .sceditor-dropdown button,
+html body#modernbb .sceditor-dropdown .button {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid var(--border-cream, #f4efe6) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 14px !important;
+    font-family: var(--titres, 'Teko', sans-serif) !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    cursor: pointer !important;
+    margin-top: 4px !important;
+}
+
