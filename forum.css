@@ -3628,10 +3628,11 @@ html body#modernbb .signature_div img {
     --f-gold: #ffb01f;
     --f-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
 
-    /* Couleur par défaut (Umbra) */
+    /* Couleur et dégradé par défaut (Umbra) */
     --grp-color: #7C828D;
     --grp-bg: rgba(124, 130, 141, 0.16);
     --grp-glow: rgba(124, 130, 141, 0.35);
+    --grp-grad: linear-gradient(90deg, #3f434a, #7C828D);
 
     max-width: 780px !important;
     margin: 20px auto !important;
@@ -3662,54 +3663,52 @@ html body#modernbb .signature_div img {
     border-bottom-color: #2c2c33 !important;
 }
 
-/* Grille identité : fond sombre + alternance doré et couleur de groupe */
-.sc-fiche-chk:checked + .sc-fiche .sc-info-item {
+/* Grille identité : fond sombre + 100% couleur du groupe (plus de jaune) */
+.sc-fiche-chk:checked + .sc-fiche .sc-info-item,
+.sc-fiche-chk:checked + .sc-fiche .sc-info-item:nth-child(even) {
     background: #1d1d22 !important;
     color: #f4efe6 !important;
     border-color: #33333b !important;
     border-left: 4px solid var(--grp-color) !important;
 }
-.sc-fiche-chk:checked + .sc-fiche .sc-info-item:nth-child(even) {
-    border-left-color: #ffb01f !important;
-}
 .sc-fiche-chk:checked + .sc-fiche .sc-info-item strong {
-    color: #ffb01f !important;
-    border-bottom-color: #ee5574 !important;
+    color: var(--grp-color) !important;
+    border-bottom-color: var(--grp-color) !important;
 }
 
-/* Encart Glyphe : fond sombre avec liseré rose corail & titre couleur de groupe */
+/* Encart Glyphe : fond sombre avec liseré et titre aux couleurs du groupe */
 .sc-fiche-chk:checked + .sc-fiche .sc-glyphe-card {
     background: #1a1a1f !important;
     color: #e8e2d7 !important;
-    border: 1px solid #ee5574 !important;
+    border: 1px solid var(--grp-color) !important;
     border-left: 5px solid var(--grp-color) !important;
 }
 .sc-fiche-chk:checked + .sc-fiche .sc-glyphe-title {
     color: var(--grp-color) !important;
 }
 
-/* Blocs narratifs (Caractère / Histoire) : fond sombre velouté + texte crème */
+/* Blocs narratifs (Caractère / Histoire) : fond sombre velouté + liseré groupe */
 .sc-fiche-chk:checked + .sc-fiche .sc-text-box {
     background: #1d1d22 !important;
     color: #f4efe6 !important;
     border-color: #33333b !important;
-    border-left: 5px solid #ffb01f !important;
+    border-left: 5px solid var(--grp-color) !important;
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* Bloc Joueur (HRP) : fond sombre + tags variés */
+/* Bloc Joueur (HRP) : fond sombre + accents couleur du groupe */
 .sc-fiche-chk:checked + .sc-fiche .sc-player-section {
     background: #1d1d22 !important;
     color: #f4efe6 !important;
     border-color: var(--grp-color) !important;
 }
 .sc-fiche-chk:checked + .sc-fiche .sc-player-avatar {
-    border-color: #ffb01f !important;
+    border-color: var(--grp-color) !important;
 }
 .sc-fiche-chk:checked + .sc-fiche .sc-tag {
     background: #121215 !important;
-    border-color: #ee5574 !important;
-    color: #ffb01f !important;
+    border-color: var(--grp-color) !important;
+    color: var(--grp-color) !important;
 }
 .sc-fiche-chk:checked + .sc-fiche .sc-player-notes {
     background: #121215 !important;
@@ -3721,28 +3720,27 @@ html body#modernbb .signature_div img {
 .sc-fiche-chk:checked + .sc-fiche .sc-credit-box {
     background: #1a1a1f !important;
     color: #f4efe6 !important;
-    border-color: #ffb01f !important;
+    border-color: var(--grp-color) !important;
 }
 .sc-fiche-chk:checked + .sc-fiche .sc-credit-header {
-    color: #ffb01f !important;
+    color: var(--grp-color) !important;
 }
 .sc-fiche-chk:checked + .sc-fiche .sc-credit-code {
     background: #111114 !important;
     color: #f4efe6 !important;
     border-color: #33333b !important;
-    border-left: 5px solid #ee5574 !important;
+    border-left: 5px solid var(--grp-color) !important;
 }
 
-
-/* --- SÉLECTEUR DE GROUPE DYNAMIQUE (CSS PUR VIA :has) --- */
-.sc-fiche:has(option[value="umbra"]:checked)        { --grp-color: #7C828D; --grp-bg: rgba(124, 130, 141, 0.16); --grp-glow: rgba(124, 130, 141, 0.35); }
-.sc-fiche:has(option[value="tiamat"]:checked)       { --grp-color: #B7890B; --grp-bg: rgba(183, 137, 11, 0.16);  --grp-glow: rgba(183, 137, 11, 0.35); }
-.sc-fiche:has(option[value="synchronyste"]:checked) { --grp-color: #8C3ACF; --grp-bg: rgba(140, 58, 207, 0.16);  --grp-glow: rgba(140, 58, 207, 0.35); }
-.sc-fiche:has(option[value="ancre"]:checked)        { --grp-color: #D50156; --grp-bg: rgba(213, 1, 86, 0.16);    --grp-glow: rgba(213, 1, 86, 0.35); }
-.sc-fiche:has(option[value="harmoniseur"]:checked)  { --grp-color: #D76609; --grp-bg: rgba(215, 102, 9, 0.16);   --grp-glow: rgba(215, 102, 9, 0.35); }
-.sc-fiche:has(option[value="asynchrone"]:checked)   { --grp-color: #AB0707; --grp-bg: rgba(171, 7, 7, 0.16);     --grp-glow: rgba(171, 7, 7, 0.35); }
-.sc-fiche:has(option[value="insulaire"]:checked)    { --grp-color: #2A915E; --grp-bg: rgba(42, 145, 94, 0.16);   --grp-glow: rgba(42, 145, 94, 0.35); }
-.sc-fiche:has(option[value="lesteur"]:checked)      { --grp-color: #2D5D8F; --grp-bg: rgba(45, 93, 143, 0.16);   --grp-glow: rgba(45, 93, 143, 0.35); }
+/* --- SÉLECTEUR DE GROUPE DYNAMIQUE (COULEURS + DÉGRADÉS QEEL) --- */
+.sc-fiche:has(option[value="umbra"]:checked)        { --grp-color: #7C828D; --grp-bg: rgba(124, 130, 141, 0.16); --grp-glow: rgba(124, 130, 141, 0.35); --grp-grad: linear-gradient(90deg, #3f434a, #7C828D); }
+.sc-fiche:has(option[value="tiamat"]:checked)       { --grp-color: #B7890B; --grp-bg: rgba(183, 137, 11, 0.16);  --grp-glow: rgba(183, 137, 11, 0.35);  --grp-grad: linear-gradient(90deg, #9c6b19, #f5b942); }
+.sc-fiche:has(option[value="synchronyste"]:checked) { --grp-color: #8C3ACF; --grp-bg: rgba(140, 58, 207, 0.16);  --grp-glow: rgba(140, 58, 207, 0.35);  --grp-grad: linear-gradient(90deg, #4b1d78, #a855f7); }
+.sc-fiche:has(option[value="ancre"]:checked)        { --grp-color: #D50156; --grp-bg: rgba(213, 1, 86, 0.16);    --grp-glow: rgba(213, 1, 86, 0.35);    --grp-grad: linear-gradient(90deg, #8a154b, #ec4899); }
+.sc-fiche:has(option[value="harmoniseur"]:checked)  { --grp-color: #D76609; --grp-bg: rgba(215, 102, 9, 0.16);   --grp-glow: rgba(215, 102, 9, 0.35);   --grp-grad: linear-gradient(90deg, #9a3412, #f97316); }
+.sc-fiche:has(option[value="asynchrone"]:checked)   { --grp-color: #AB0707; --grp-bg: rgba(171, 7, 7, 0.16);     --grp-glow: rgba(171, 7, 7, 0.35);     --grp-grad: linear-gradient(90deg, #7f1d1d, #ef4444); }
+.sc-fiche:has(option[value="insulaire"]:checked)    { --grp-color: #2A915E; --grp-bg: rgba(42, 145, 94, 0.16);   --grp-glow: rgba(42, 145, 94, 0.35);   --grp-grad: linear-gradient(90deg, #14532d, #22c55e); }
+.sc-fiche:has(option[value="lesteur"]:checked)      { --grp-color: #2D5D8F; --grp-bg: rgba(45, 93, 143, 0.16);   --grp-glow: rgba(45, 93, 143, 0.35);   --grp-grad: linear-gradient(90deg, #112c70, #2892ac); }
 
 /* Style du menu déroulant de groupe */
 .sc-group-select {
@@ -3793,8 +3791,8 @@ html body#modernbb .signature_div img {
     transition: 0.2s !important;
 }
 .sc-theme-btn:hover {
-    border-color: var(--f-gold) !important;
-    color: var(--f-gold) !important;
+    border-color: var(--grp-color) !important;
+    color: var(--grp-color) !important;
 }
 
 /* --- LECTEUR MUSICAL COMPACT STYLE PA (BOUTON YOUTUBE ROGNÉ) --- */
@@ -3830,7 +3828,7 @@ html body#modernbb .signature_div img {
     height: 30px !important;
     border-radius: 50% !important;
     overflow: hidden !important;
-    border: 1.5px solid #ffb01f !important;
+    border: 1.5px solid var(--grp-color) !important;
     background: #19191c !important;
     flex-shrink: 0 !important;
 }
@@ -3856,7 +3854,7 @@ html body#modernbb .signature_div img {
 }
 .sc-pa-track-artist {
     font-size: 10px !important;
-    color: #ffb01f !important;
+    color: var(--grp-color) !important;
     font-weight: 600 !important;
 }
 
@@ -3878,78 +3876,73 @@ html body#modernbb .signature_div img {
     display: block !important;
 }
 
-/* --- VOILE UNI SUBTIL SUR LA BANNIÈRE --- */
 .sc-banner::before {
     content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background: var(--grp-color) !important;
-    opacity: 0.22 !important;
-    mix-blend-mode: color !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
+   position: absolute !important;
+   inset: 0 !important;
+   background: var(--grp-color) !important;
+   opacity: 0.22 !important;
+   mix-blend-mode: color !important;
+   pointer-events: none !important;
+   z-index: 1 !important;
 }
 .sc-banner::after {
-    display: none !important;
+   display: none !important;
 }
 
 .sc-banner-overlay {
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 3 !important;
-    padding: 35px 25px 16px !important;
-    background: linear-gradient(to top, rgba(19, 19, 22, 0.96) 15%, transparent 100%) !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: flex-end !important;
-    gap: 15px !important;
+   position: absolute !important;
+   bottom: 0 !important;
+   left: 0 !important;
+   right: 0 !important;
+   z-index: 3 !important;
+   padding: 35px 25px 16px !important;
+   background: linear-gradient(to top, rgba(19, 19, 22, 0.96) 15%, transparent 100%) !important;
+   display: flex !important;
+   justify-content: space-between !important;
+   align-items: flex-end !important;
+   gap: 15px !important;
 }
-
 .sc-char-name {
-    font-family: 'Teko', sans-serif !important;
-    font-size: 42px !important;
-    line-height: 0.95 !important;
-    color: #f4efe6 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1.5px !important;
-    margin: 0 !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 42px !important;
+   line-height: 0.95 !important;
+   color: #f4efe6 !important;
+   text-transform: uppercase !important;
+   letter-spacing: 1.5px !important;
+   margin: 0 !important;
+   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
 }
 /* --- BADGE DYNAMIQUE (MÉDAILLE + NOM DU GROUPE AUTOMATIQUES) --- */
 .sc-group-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-    font-family: 'Teko', sans-serif !important;
-    font-size: 26px !important;
-    line-height: 1 !important;
-    padding: 8px 22px !important;
-    background: rgba(25, 25, 28, 0.94) !important;
-    border: 2px solid var(--grp-color) !important;
-    color: var(--grp-color) !important;
-    border-radius: 18px 0 !important;
-    letter-spacing: 1.2px !important;
-    text-transform: uppercase !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.75), 0 0 12px var(--grp-glow) !important;
+   display: inline-flex !important;
+   align-items: center !important;
+   gap: 12px !important;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 26px !important;
+   line-height: 1 !important;
+   padding: 8px 22px !important;
+   background: rgba(25, 25, 28, 0.94) !important;
+   border: 2px solid var(--grp-color) !important;
+   color: var(--grp-color) !important;
+   border-radius: 18px 0 !important;
+   letter-spacing: 1.2px !important;
+   text-transform: uppercase !important;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.75), 0 0 12px var(--grp-glow) !important;
 }
-
 .sc-group-badge::before {
-    content: "" !important;
-    display: inline-block !important;
-    width: 44px !important;
-    height: 44px !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)) !important;
+   content: "" !important;
+   display: inline-block !important;
+   width: 44px !important;
+   height: 44px !important;
+   background-size: contain !important;
+   background-repeat: no-repeat !important;
+   background-position: center !important;
+   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8)) !important;
 }
-
 .sc-group-badge::after {
-    content: "Umbra" !important;
+   content: "Umbra" !important;
 }
-
 /* Changement automatique de la médaille et du texte selon le <select> */
 .sc-fiche:has(option[value="umbra"]:checked) .sc-group-badge::before      { background-image: url('https://zupimages.net/up/26/47/r5fa.png') !important; }
 .sc-fiche:has(option[value="umbra"]:checked) .sc-group-badge::after        { content: "Umbra" !important; }
@@ -3971,98 +3964,96 @@ html body#modernbb .signature_div img {
 
 /* --- CORPS DE LA FICHE --- */
 .sc-body {
-    padding: 25px !important;
+   padding: 25px !important;
 }
 
-/* --- TITRES ENCADRÉS TEKO 27PX AVEC DÉGRADÉ PA --- */
+/* --- TITRES ENCADRÉS TEKO 27PX AVEC DÉGRADÉ DU GROUPE (STYLE QEEL) --- */
 .sc-fiche h2.sc-section-title,
 .sc-section-title {
-    display: block !important;
-    font-family: 'Teko', sans-serif !important;
-    font-size: 27px !important;
-    font-weight: 500 !important;
-    line-height: 1.1 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1.4px !important;
-    color: #f4efe6 !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75) !important;
-    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
-    border: 1px solid #f4efe6 !important;
-    border-left: 7px solid var(--grp-color) !important;
-    border-radius: 16px 0 !important;
-    padding: 7px 18px !important;
-    margin: 0 0 16px 0 !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+   display: block !important;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 27px !important;
+   font-weight: 500 !important;
+   line-height: 1.1 !important;
+   text-transform: uppercase !important;
+   letter-spacing: 1.4px !important;
+   color: #f4efe6 !important;
+   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
+   background: var(--grp-grad) !important;
+   border: 1px solid rgba(244, 239, 230, 0.45) !important;
+   border-left: 7px solid var(--grp-color) !important;
+   border-radius: 16px 0 !important;
+   padding: 7px 18px !important;
+   margin: 0 0 16px 0 !important;
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
 }
-
 /* --- GRILLE IDENTITÉ & GLYPHE (CADRES CRÈME CHAUD) --- */
 .sc-info-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-    margin-bottom: 18px !important;
+   display: grid !important;
+   grid-template-columns: repeat(2, 1fr) !important;
+   gap: 10px !important;
+   margin-bottom: 18px !important;
 }
 .sc-info-item {
-    background: var(--f-bg-card) !important;
-    color: #19191c !important;
-    border: 1px solid var(--f-border) !important;
-    border-left: 4px solid var(--grp-color) !important;
-    padding: 9px 14px !important;
-    border-radius: 12px 0 !important;
-    font-size: 13.5px !important;
+   background: var(--f-bg-card) !important;
+   color: #19191c !important;
+   border: 1px solid var(--f-border) !important;
+   border-left: 4px solid var(--grp-color) !important;
+   padding: 9px 14px !important;
+   border-radius: 12px 0 !important;
+   font-size: 13.5px !important;
 }
 .sc-info-item strong {
-    font-family: 'Teko', sans-serif !important;
-    font-size: 19px !important;
-    color: #19191c !important;
-    letter-spacing: 0.5px !important;
-    margin-right: 6px !important;
-    text-transform: uppercase !important;
-    border-bottom: 2px solid var(--grp-color) !important;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 19px !important;
+   color: #19191c !important;
+   letter-spacing: 0.5px !important;
+   margin-right: 6px !important;
+   text-transform: uppercase !important;
+   border-bottom: 2px solid var(--grp-color) !important;
 }
-
 .sc-glyphe-card {
-    background: var(--f-bg-card) !important;
-    color: #19191c !important;
-    border: 1.5px solid var(--grp-color) !important;
-    border-left: 5px solid var(--grp-color) !important;
-    padding: 14px 18px !important;
-    border-radius: 16px 0 !important;
-    margin-bottom: 25px !important;
-    font-size: 13.5px !important;
-    line-height: 1.55 !important;
+   background: var(--f-bg-card) !important;
+   color: #19191c !important;
+   border: 1.5px solid var(--grp-color) !important;
+   border-left: 5px solid var(--grp-color) !important;
+   padding: 14px 18px !important;
+   border-radius: 16px 0 !important;
+   margin-bottom: 25px !important;
+   font-size: 13.5px !important;
+   line-height: 1.55 !important;
 }
 .sc-glyphe-title {
-    font-family: 'Teko', sans-serif !important;
-    font-size: 21px !important;
-    color: var(--grp-color) !important;
-    letter-spacing: 0.6px !important;
-    text-transform: uppercase !important;
-    display: block !important;
-    margin-bottom: 4px !important;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 21px !important;
+   color: var(--grp-color) !important;
+   letter-spacing: 0.6px !important;
+   text-transform: uppercase !important;
+   display: block !important;
+   margin-bottom: 4px !important;
 }
 
 /* --- BLOCS NARRATIFS (CADRES CRÈME LISIBLES) --- */
 .sc-text-box {
-    background: var(--f-bg-card) !important;
-    color: #19191c !important;
-    border: 1px solid var(--f-border) !important;
-    border-left: 5px solid var(--grp-color) !important;
-    padding: 18px 20px !important;
-    border-radius: 16px 0 !important;
-    margin-bottom: 25px !important;
-    font-size: 14px !important;
-    line-height: 1.65 !important;
-    max-height: 230px !important;
-    overflow-y: auto !important;
-    text-align: justify !important;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+   background: var(--f-bg-card) !important;
+   color: #19191c !important;
+   border: 1px solid var(--f-border) !important;
+   border-left: 5px solid var(--grp-color) !important;
+   padding: 18px 20px !important;
+   border-radius: 16px 0 !important;
+   margin-bottom: 25px !important;
+   font-size: 14px !important;
+   line-height: 1.65 !important;
+   max-height: 230px !important;
+   overflow-y: auto !important;
+   text-align: justify !important;
+   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12) !important;
 }
 
 /* --- BAS DE FICHE : JOUEUR (200x200px + ENCART CRÈME) --- */
 .sc-player-section {
-    display: flex !important;
-    gap: 20px !important;
+   display: flex !important;
+   gap: 20px !important;
    background: var(--f-bg-card) !important;
    color: #19191c !important;
    border: 1.5px solid var(--grp-color) !important;
@@ -4120,6 +4111,7 @@ html body#modernbb .signature_div img {
    padding: 14px 18px !important;
    border-radius: 16px 0 !important;
 }
+
 .sc-credit-header {
    font-family: 'Teko', sans-serif !important;
    font-size: 20px !important;
@@ -4128,11 +4120,12 @@ html body#modernbb .signature_div img {
    margin-bottom: 8px !important;
    text-transform: uppercase !important;
 }
+
 .sc-credit-code {
    display: block !important;
    width: 100% !important;
    box-sizing: border-box !important;
-   background: #6d6860  !important;
+   background: #6d6860 !important;
    color: #f4efe6 !important;
    border: 1px solid var(--grp-color) !important;
    border-left: 5px solid var(--grp-color) !important;
