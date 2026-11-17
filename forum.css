@@ -4337,31 +4337,55 @@ html body#modernbb .sceditor-dropdown.sceditor-font-picker {
 }
 
 /* =========================================================
-   HARMONISATION HAUTEUR BLOC SMILEYS = BLOC ÉDITEUR
+   HARMONISATION HAUTEUR BLOC SMILEYS = BLOC ÉDITEUR (AU PX PRÈS)
    ========================================================= */
 
-/* 1. Étire les deux colonnes (#smiley-box et #message-box) à la même hauteur */
+/* 1. Étire #smiley-box et #message-box sur exactement la même hauteur */
 html body#modernbb #postingbox #parent_editor_simple,
 html body#modernbb #postingbox fieldset.fields1 {
     align-items: stretch !important;
 }
 
-/* 2. Transforme #smiley-box en colonne flexible pour remplir toute la hauteur */
+/* 2. #message-box remplit 100% de la hauteur de sa colonne sans marge parasite */
+html body#modernbb #postingbox #message-box,
+html body#modernbb #postingbox #textarea_content,
+html body#modernbb #postingbox .sceditor-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb #postingbox .sceditor-container iframe,
+html body#modernbb #postingbox .sceditor-container textarea {
+    flex: 1 1 auto !important;
+}
+
+/* 3. #smiley-box compact : texte HTML/BBCode serré + iframe ajustée */
 html body#modernbb #postingbox #smiley-box,
 html body#modernbb #postingbox fieldset.fields1 > #smiley-box,
 html body#modernbb #postingbox #parent_editor_simple > #smiley-box {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    margin-top: 0 !important;
+    margin: 0 !important;
+    padding: 8px !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
     box-sizing: border-box !important;
 }
 
-/* 3. L'iframe des smileys s'étire pour combler tout l'espace vertical disponible */
+html body#modernbb #postingbox #smiley-box br {
+    display: block !important;
+    content: "" !important;
+    margin: 1px 0 !important;
+}
+
 html body#modernbb #postingbox #smiley-box iframe,
 html body#modernbb #postingbox #smilies_box {
     flex: 1 1 auto !important;
     height: auto !important;
-    min-height: 250px !important;
-    margin-bottom: 10px !important;
+    min-height: 220px !important;
+    margin-bottom: 6px !important;
 }
