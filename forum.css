@@ -4137,3 +4137,77 @@ html body#modernbb .signature_div img {
    user-select: all !important;
    overflow-x: auto !important;
 }
+
+/* =========================================================
+   CORRECTIF MENUS DÉROULANTS & POPUPS DE L'ÉDITEUR (SCEDITOR)
+   ========================================================= */
+
+/* 1. Rétablit la position flottante (absolute) et une hauteur maîtrisée avec scroll */
+html body#modernbb .panel:not(:has(#PA)) .sceditor-dropdown,
+html body#modernbb .sceditor-container .sceditor-dropdown,
+html body#modernbb div.sceditor-dropdown {
+    position: absolute !important;
+    z-index: 9999 !important;
+    background: #1e1e20 !important;
+    color: var(--border-cream, #f4efe6) !important;
+    border: 1.5px solid var(--gold, #d89b3c) !important;
+    border-radius: 14px 0 !important;
+    padding: 12px !important;
+    max-height: 260px !important;
+    overflow-y: auto !important;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* 2. Rétablit le positionnement interne des éléments dans les popups */
+html body#modernbb .panel:not(:has(#PA)) .sceditor-dropdown * {
+    position: relative !important;
+    height: auto !important;
+}
+
+/* 3. Champs texte et labels lisibles dans les fenêtres Lien / Image / YouTube */
+html body#modernbb .sceditor-dropdown label {
+    display: block !important;
+    color: var(--gold, #d89b3c) !important;
+    font-family: var(--titres, 'Teko', sans-serif) !important;
+    font-size: 16px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 4px !important;
+}
+
+html body#modernbb .sceditor-dropdown input[type="text"],
+html body#modernbb .sceditor-dropdown textarea {
+    background: #141416 !important;
+    color: var(--border-cream, #f4efe6) !important;
+    -webkit-text-fill-color: var(--border-cream, #f4efe6) !important;
+    border: 1px solid var(--border-grey, #9e988e) !important;
+    border-radius: 8px 0 !important;
+    padding: 6px 10px !important;
+    margin-bottom: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 4. Grille compacte pour la palette de couleurs et les emojis */
+html body#modernbb .sceditor-dropdown.sceditor-twemojifa {
+    width: 245px !important;
+    max-height: 220px !important;
+}
+
+html body#modernbb .sceditor-dropdown.sceditor-twemojifa img.emoji {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 2px !important;
+    cursor: pointer !important;
+}
+
+html body#modernbb .sceditor-color-column {
+    float: left !important;
+}
+
+html body#modernbb .sceditor-color-option {
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    border: 1px solid #141416 !important;
+}
