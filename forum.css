@@ -1938,13 +1938,13 @@ html body#modernbb .sc-post-hover-label {
     color: var(--gold) !important;
 }
 
-/* Masque l'ancien bloc d'infos qui s'affichait hors de l'avatar */
+/* On garde .infos-membre-arte visible pour afficher le pseudo et le rang en haut à droite */
 html body#modernbb .infos-membre-arte {
-    display: none !important;
+    display: flex !important;
 }
 
 /* Signature proprement séparée en bas du message */
-html body#modernbb .signature-artemis {
+html body#modernbb .signature_div {
     margin-top: 22px !important;
     padding-top: 14px !important;
     border-top: 1px dashed rgba(25, 25, 28, 0.25) !important;
