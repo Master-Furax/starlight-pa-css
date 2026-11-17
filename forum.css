@@ -3538,3 +3538,26 @@ html body#modernbb #preview .postbody > div.content {
     text-align: justify !important;
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.12) !important;
 }
+
+/* =========================================================
+   CORRECTIF VIEWTOPIC : HAUTEUR MIN 350PX & PSEUDO À DROITE
+   ========================================================= */
+
+/* 1. Rétablit une hauteur minimale de 350px et étire le cadre crème du message */
+html body#modernbb .message-contenu-arte {
+    min-height: 350px !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* 2. Replace le bloc Pseudo + Rang tout à droite du bandeau membre */
+html body#modernbb .infos-membre-arte .pseudo-et-rang {
+    margin-left: auto !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+    max-width: none !important;
+}
+
