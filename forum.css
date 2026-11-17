@@ -4336,3 +4336,32 @@ html body#modernbb .sceditor-dropdown.sceditor-font-picker {
     z-index: 9999 !important;
 }
 
+/* =========================================================
+   HARMONISATION HAUTEUR BLOC SMILEYS = BLOC ÉDITEUR
+   ========================================================= */
+
+/* 1. Étire les deux colonnes (#smiley-box et #message-box) à la même hauteur */
+html body#modernbb #postingbox #parent_editor_simple,
+html body#modernbb #postingbox fieldset.fields1 {
+    align-items: stretch !important;
+}
+
+/* 2. Transforme #smiley-box en colonne flexible pour remplir toute la hauteur */
+html body#modernbb #postingbox #smiley-box,
+html body#modernbb #postingbox fieldset.fields1 > #smiley-box,
+html body#modernbb #postingbox #parent_editor_simple > #smiley-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    margin-top: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. L'iframe des smileys s'étire pour combler tout l'espace vertical disponible */
+html body#modernbb #postingbox #smiley-box iframe,
+html body#modernbb #postingbox #smilies_box {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 250px !important;
+    margin-bottom: 10px !important;
+}
