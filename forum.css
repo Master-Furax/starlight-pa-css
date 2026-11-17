@@ -3402,3 +3402,16 @@ html body#modernbb #postingbox .sceditor-grip {
     border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+/* Centrage des titres de chaque onglet du panneau utilisateur (UCP) */
+html body#modernbb #cp-main.ucp-main h1,
+html body#modernbb #cp-main.ucp-main h1.page-title,
+html body#modernbb #cp-main .panel h2,
+html body#modernbb #cp-main .panel h3,
+html body#modernbb #postingbox.panel h2.u,
+html body#modernbb #postingbox.panel .h3 {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+
