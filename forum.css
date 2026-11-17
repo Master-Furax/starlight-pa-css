@@ -3610,52 +3610,40 @@ html body#modernbb .signature_div img {
 
 
 /* =========================================================
-   FICHE DE PERSONNAGE — STARLIGHT CONVERGENCE
+   FICHE DE PERSONNAGE — STARLIGHT CONVERGENCE (STYLE PA)
    ========================================================= */
 
 .sc-fiche-chk {
     display: none !important;
 }
 
-/* --- VARIABLES PAR DÉFAUT (AMBIANCE ANTHRACITE PROFOND) --- */
+/* --- BASE CLAIRE FAÇON PA (FOND ANTHRACITE + CADRES CRÈME CHAUD) --- */
 .sc-fiche {
     --f-bg-main: #19191c;
-    --f-bg-card: #212126;
-    --f-bg-inset: #131316;
-    --f-text-main: #f4efe6;
-    --f-text-muted: #b8b2a6;
-    --f-border: #3a3a42;
-    --f-cream: #f4efe6;
+    --f-bg-card: #d8d2c7;
+    --f-bg-inset: #e8e2d7;
+    --f-text-main: #19191c;
+    --f-text-light: #f4efe6;
+    --f-border: #8e887d;
+    --f-gold: #ffb01f;
     --f-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
 
-    /* Couleur par défaut (Umbra / Non-classé) */
+    /* Couleur par défaut (Umbra) */
     --grp-color: #7C828D;
-    --grp-bg: rgba(124, 130, 141, 0.14);
-    --grp-glow: rgba(124, 130, 141, 0.3);
+    --grp-bg: rgba(124, 130, 141, 0.16);
+    --grp-glow: rgba(124, 130, 141, 0.35);
 
-    max-width: 780px;
-    margin: 20px auto;
-    background: var(--f-bg-main);
-    color: var(--f-text-main);
-    border: 1.5px solid var(--f-border);
-    border-top: 4px solid var(--grp-color);
-    border-radius: 20px 0;
-    font-family: var(--textes, 'Inter', sans-serif);
-    overflow: hidden;
-    box-shadow: var(--f-shadow);
-    transition: background 0.3s ease, color 0.3s ease;
-    box-sizing: border-box;
-}
-
-/* --- VARIATION AMBIANCE CLAIRE (TONS CRÈME CHAUD & ANTHRACITE) --- */
-.sc-fiche-chk:checked + .sc-fiche {
-    --f-bg-main: #d8d2c7;
-    --f-bg-card: #e6e0d5;
-    --f-bg-inset: #cbc4b8;
-    --f-text-main: #19191c;
-    --f-text-muted: #4a4843;
-    --f-border: #8e887d;
-    --f-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    max-width: 780px !important;
+    margin: 20px auto !important;
+    background: var(--f-bg-main) !important;
+    color: var(--f-text-main) !important;
+    border: 1.5px solid var(--f-border) !important;
+    border-top: 4px solid var(--grp-color) !important;
+    border-radius: 24px 0 !important;
+    font-family: var(--textes, 'Inter', sans-serif) !important;
+    overflow: hidden !important;
+    box-shadow: var(--f-shadow) !important;
+    box-sizing: border-box !important;
 }
 
 /* --- COULEURS EXACTES DES GROUPES DU FORUM --- */
@@ -3668,275 +3656,328 @@ html body#modernbb .signature_div img {
 .sc-fiche.grp-insulaire    { --grp-color: #2A915E; --grp-bg: rgba(42, 145, 94, 0.16);   --grp-glow: rgba(42, 145, 94, 0.35); }
 .sc-fiche.grp-lesteur      { --grp-color: #2D5D8F; --grp-bg: rgba(45, 93, 143, 0.16);   --grp-glow: rgba(45, 93, 143, 0.35); }
 
-/* --- BARRE SUPÉRIEURE (SWITCH AMBIANCE + LECTEUR AUDIO) --- */
+/* --- BARRE SUPÉRIEURE (SWITCH AMBIANCE + LECTEUR STYLE #PAmusique) --- */
 .sc-topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: var(--f-bg-card);
-    border-bottom: 1px solid var(--f-border);
-    gap: 14px;
-    flex-wrap: wrap;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 20px !important;
+    background: #141417 !important;
+    border-bottom: 1px solid #3a3a42 !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
 }
 
 .sc-theme-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--f-bg-inset);
-    color: var(--f-text-main);
-    border: 1px solid var(--grp-color);
-    padding: 4px 14px;
-    border-radius: 10px 0;
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.2s;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #212126 !important;
+    color: #f4efe6 !important;
+    border: 1px solid #9e988e !important;
+    padding: 6px 14px !important;
+    border-radius: 14px 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    transition: 0.2s !important;
 }
 .sc-theme-btn:hover {
-    background: var(--grp-bg);
+    border-color: var(--f-gold) !important;
+    color: var(--f-gold) !important;
 }
 
-.sc-audio-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--f-bg-inset);
-    padding: 4px 12px;
-    border-radius: 10px 0;
-    border: 1px solid var(--f-border);
+/* Lecteur musical calqué sur #PAmusique de la PA */
+.sc-pa-player {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 6px 14px !important;
+    background: linear-gradient(90deg, rgba(30, 30, 32, 0.95) 0%, rgba(42, 34, 40, 0.95) 100%) !important;
+    border: 1px solid #9e988e !important;
+    border-radius: 18px 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
-.sc-audio-title {
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 18px;
-    color: var(--grp-color);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+.sc-pa-btns {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
 }
-.sc-audio-box audio {
-    height: 26px;
-    max-width: 210px;
+.sc-pa-circle {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    background: #19191c !important;
+    border: 1px solid #9e988e !important;
+    color: #f4efe6 !important;
+    font-size: 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.sc-pa-circle.play {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(135deg, #ee5574, #ffb01f) !important;
+    border: none !important;
+    color: #19191c !important;
+    font-size: 12px !important;
+}
+.sc-pa-track-info {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.1 !important;
+}
+.sc-pa-track-title {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 17px !important;
+    color: #f4efe6 !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+}
+.sc-pa-track-artist {
+    font-size: 11px !important;
+    color: #ffb01f !important;
+    font-weight: 600 !important;
+}
+.sc-pa-player audio {
+    height: 24px !important;
+    max-width: 170px !important;
+    filter: invert(0.9) hue-rotate(180deg) !important;
 }
 
 /* --- IMAGE D'ENTÊTE (PLEINE LARGEUR x 300PX) --- */
 .sc-banner {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-bottom: 2px solid var(--grp-color);
+    position: relative !important;
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    border-bottom: 2px solid var(--grp-color) !important;
+    background: #121215 !important;
 }
 .sc-banner img.sc-banner-bg {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    display: block !important;
 }
 .sc-banner-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 25px 16px;
-    background: linear-gradient(to top, rgba(19, 19, 22, 0.96) 15%, transparent 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 15px;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 30px 25px 16px !important;
+    background: linear-gradient(to top, rgba(19, 19, 22, 0.96) 15%, transparent 100%) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    gap: 15px !important;
 }
 .sc-char-name {
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 42px;
-    line-height: 0.95;
-    color: #f4efe6;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 0;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    font-family: 'Teko', sans-serif !important;
+    font-size: 42px !important;
+    line-height: 0.95 !important;
+    color: #f4efe6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin: 0 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
 }
 .sc-group-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 21px;
-    padding: 3px 14px;
-    background: rgba(25, 25, 28, 0.85);
-    border: 1px solid var(--grp-color);
-    color: var(--grp-color);
-    border-radius: 12px 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 21px !important;
+    padding: 3px 14px !important;
+    background: rgba(25, 25, 28, 0.9) !important;
+    border: 1.5px solid var(--grp-color) !important;
+    color: var(--grp-color) !important;
+    border-radius: 14px 0 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
 }
 .sc-group-badge img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
+    width: 22px !important;
+    height: 22px !important;
+    object-fit: contain !important;
 }
 
 /* --- CORPS DE LA FICHE --- */
 .sc-body {
-    padding: 25px;
+    padding: 25px !important;
 }
 
-/* --- TITRES ENCADRÉS STYLE QEEL / MEMBRES (TEKO 27PX) --- */
+/* --- TITRES ENCADRÉS TEKO 27PX AVEC DÉGRADÉ PA --- */
+.sc-fiche h2.sc-section-title,
 .sc-section-title {
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 27px;
-    font-weight: 500;
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--grp-color);
-    background: var(--grp-bg);
-    border: 1px solid var(--grp-color);
-    border-left: 6px solid var(--grp-color);
-    border-radius: 14px 0;
-    padding: 6px 16px;
-    margin: 0 0 16px 0;
-    box-shadow: 0 0 12px var(--grp-glow);
+    display: block !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 27px !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.4px !important;
+    color: #f4efe6 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75) !important;
+    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+    border: 1px solid #f4efe6 !important;
+    border-left: 7px solid var(--grp-color) !important;
+    border-radius: 16px 0 !important;
+    padding: 7px 18px !important;
+    margin: 0 0 16px 0 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* --- GRILLE IDENTITÉ & GLYPHE --- */
+/* --- GRILLE IDENTITÉ & GLYPHE (CADRES CRÈME CHAUD) --- */
 .sc-info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 18px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    margin-bottom: 18px !important;
 }
 .sc-info-item {
-    background: var(--f-bg-card);
-    border: 1px solid var(--f-border);
-    padding: 9px 14px;
-    border-radius: 10px 0;
-    font-size: 13.5px;
+    background: var(--f-bg-card) !important;
+    color: #19191c !important;
+    border: 1px solid var(--f-border) !important;
+    border-left: 4px solid var(--grp-color) !important;
+    padding: 9px 14px !important;
+    border-radius: 12px 0 !important;
+    font-size: 13.5px !important;
 }
 .sc-info-item strong {
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 18px;
-    color: var(--grp-color);
-    letter-spacing: 0.5px;
-    margin-right: 6px;
-    text-transform: uppercase;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 19px !important;
+    color: #19191c !important;
+    letter-spacing: 0.5px !important;
+    margin-right: 6px !important;
+    text-transform: uppercase !important;
+    border-bottom: 2px solid var(--grp-color) !important;
 }
 
 .sc-glyphe-card {
-    background: var(--f-bg-card);
-    border: 1px dashed var(--grp-color);
-    padding: 14px 18px;
-    border-radius: 14px 0;
-    margin-bottom: 25px;
-    font-size: 13.5px;
-    line-height: 1.55;
+    background: var(--f-bg-card) !important;
+    color: #19191c !important;
+    border: 1.5px solid var(--grp-color) !important;
+    border-left: 5px solid var(--grp-color) !important;
+    padding: 14px 18px !important;
+    border-radius: 16px 0 !important;
+    margin-bottom: 25px !important;
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
 }
 .sc-glyphe-title {
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 20px;
-    color: var(--grp-color);
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 4px;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 21px !important;
+    color: var(--grp-color) !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    margin-bottom: 4px !important;
 }
 
-/* --- BLOCS NARRATIFS (CARACTÈRE / HISTOIRE) --- */
+/* --- BLOCS NARRATIFS (CADRES CRÈME LISIBLES) --- */
 .sc-text-box {
-    background: var(--f-bg-card);
-    border: 1px solid var(--f-border);
-    border-left: 3px solid var(--grp-color);
-    padding: 18px;
-    border-radius: 14px 0;
-    margin-bottom: 25px;
-    font-size: 14px;
-    line-height: 1.65;
-    max-height: 230px;
-    overflow-y: auto;
-    text-align: justify;
+    background: var(--f-bg-card) !important;
+    color: #19191c !important;
+    border: 1px solid var(--f-border) !important;
+    border-left: 5px solid var(--grp-color) !important;
+    padding: 18px 20px !important;
+    border-radius: 16px 0 !important;
+    margin-bottom: 25px !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    max-height: 230px !important;
+    overflow-y: auto !important;
+    text-align: justify !important;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* --- BAS DE FICHE : JOUEUR (200x200px + ENCART) --- */
+/* --- BAS DE FICHE : JOUEUR (200x200px + ENCART CRÈME) --- */
 .sc-player-section {
-    display: flex;
-    gap: 20px;
-    background: var(--f-bg-card);
-    border: 1.5px solid var(--grp-color);
-    padding: 18px;
-    border-radius: 16px 0;
-    align-items: center;
+    display: flex !important;
+    gap: 20px !important;
+   background: var(--f-bg-card) !important;
+   color: #19191c !important;
+   border: 1.5px solid var(--grp-color) !important;
+   padding: 18px !important;
+   border-radius: 18px 0 !important;
+   align-items: center !important;
 }
 .sc-player-avatar {
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-    object-fit: cover;
-    border-radius: 14px 0;
-    border: 2px solid var(--grp-color);
+   width: 200px !important;
+   height: 200px !important;
+   flex-shrink: 0 !important;
+   object-fit: cover !important;
+   border-radius: 14px 0 !important;
+   border: 2.5px solid #19191c !important;
 }
 .sc-player-desc {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+   flex-grow: 1 !important;
+   display: flex !important;
+   flex-direction: column !important;
+   gap: 10px !important;
 }
 .sc-player-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+   display: flex !important;
+   flex-wrap: wrap !important;
+   gap: 8px !important;
 }
 .sc-tag {
-    background: var(--grp-bg);
-    border: 1px solid var(--grp-color);
-    color: var(--grp-color);
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 17px;
-    padding: 2px 10px;
-    border-radius: 8px 0;
+   background: #19191c !important;
+   border: 1px solid var(--grp-color) !important;
+   color: #f4efe6 !important;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 17px !important;
+   padding: 2px 12px !important;
+   border-radius: 10px 0 !important;
+   letter-spacing: 0.5px !important;
 }
 .sc-player-notes {
-    background: var(--f-bg-inset);
-    border: 1px solid var(--f-border);
-    padding: 12px;
-    border-radius: 10px 0;
-    font-size: 13px;
-    line-height: 1.55;
-    height: 118px;
-    overflow-y: auto;
+   background: var(--f-bg-inset) !important;
+   color: #19191c !important;
+   border: 1px solid var(--f-border) !important;
+   padding: 12px !important;
+   border-radius: 12px 0 !important;
+   font-size: 13px !important;
+   line-height: 1.55 !important;
+   height: 118px !important;
+   overflow-y: auto !important;
 }
 
 /* --- ENCART CODE POUR LE RÉPERTOIRE DES ARTISTES / AVATARS --- */
 .sc-credit-box {
-    margin-top: 16px;
-    background: var(--f-bg-card);
-    border: 1px dashed var(--grp-color);
-    padding: 14px 18px;
-    border-radius: 14px 0;
+   margin-top: 16px !important;
+   background: var(--f-bg-card) !important;
+   color: #19191c !important;
+   border: 1px dashed #19191c !important;
+   padding: 14px 18px !important;
+   border-radius: 16px 0 !important;
 }
 .sc-credit-header {
-    font-family: var(--titres, 'Teko', sans-serif);
-    font-size: 20px;
-    color: var(--grp-color);
-    letter-spacing: 0.8px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+   font-family: 'Teko', sans-serif !important;
+   font-size: 20px !important;
+   color: #19191c !important;
+   letter-spacing: 0.8px !important;
+   margin-bottom: 8px !important;
+   text-transform: uppercase !important;
 }
 .sc-credit-code {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    background: var(--f-bg-inset);
-    color: var(--f-text-main);
-    border: 1px solid var(--f-border);
-    border-left: 4px solid var(--grp-color);
-    padding: 10px 12px;
-    border-radius: 8px 0;
-    font-family: monospace;
-    font-size: 12.5px;
-    line-height: 1.4;
-    user-select: all;
-    overflow-x: auto;
+   display: block !important;
+   width: 100% !important;
+   box-sizing: border-box !important;
+   background: #19191c !important;
+   color: #f4efe6 !important;
+   border: 1px solid var(--grp-color) !important;
+   border-left: 5px solid var(--grp-color) !important;
+   padding: 10px 12px !important;
+   border-radius: 10px 0 !important;
+   font-family: monospace !important;
+   font-size: 12.5px !important;
+   line-height: 1.4 !important;
+   user-select: all !important;
+   overflow-x: auto !important;
 }
-
