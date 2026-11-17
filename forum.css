@@ -3646,15 +3646,34 @@ html body#modernbb .signature_div img {
     box-sizing: border-box !important;
 }
 
-/* --- COULEURS EXACTES DES GROUPES DU FORUM --- */
-.sc-fiche.grp-umbra        { --grp-color: #7C828D; --grp-bg: rgba(124, 130, 141, 0.16); --grp-glow: rgba(124, 130, 141, 0.35); }
-.sc-fiche.grp-tiamat       { --grp-color: #B7890B; --grp-bg: rgba(183, 137, 11, 0.16);  --grp-glow: rgba(183, 137, 11, 0.35); }
-.sc-fiche.grp-synchronyste { --grp-color: #8C3ACF; --grp-bg: rgba(140, 58, 207, 0.16);  --grp-glow: rgba(140, 58, 207, 0.35); }
-.sc-fiche.grp-ancre        { --grp-color: #D50156; --grp-bg: rgba(213, 1, 86, 0.16);    --grp-glow: rgba(213, 1, 86, 0.35); }
-.sc-fiche.grp-harmoniseur  { --grp-color: #D76609; --grp-bg: rgba(215, 102, 9, 0.16);   --grp-glow: rgba(215, 102, 9, 0.35); }
-.sc-fiche.grp-asynchrone   { --grp-color: #AB0707; --grp-bg: rgba(171, 7, 7, 0.16);     --grp-glow: rgba(171, 7, 7, 0.35); }
-.sc-fiche.grp-insulaire    { --grp-color: #2A915E; --grp-bg: rgba(42, 145, 94, 0.16);   --grp-glow: rgba(42, 145, 94, 0.35); }
-.sc-fiche.grp-lesteur      { --grp-color: #2D5D8F; --grp-bg: rgba(45, 93, 143, 0.16);   --grp-glow: rgba(45, 93, 143, 0.35); }
+/* --- SÉLECTEUR DE GROUPE DYNAMIQUE (CSS PUR VIA :has) --- */
+.sc-fiche:has(option[value="umbra"]:checked)        { --grp-color: #7C828D; --grp-bg: rgba(124, 130, 141, 0.16); --grp-glow: rgba(124, 130, 141, 0.35); }
+.sc-fiche:has(option[value="tiamat"]:checked)       { --grp-color: #B7890B; --grp-bg: rgba(183, 137, 11, 0.16);  --grp-glow: rgba(183, 137, 11, 0.35); }
+.sc-fiche:has(option[value="synchronyste"]:checked) { --grp-color: #8C3ACF; --grp-bg: rgba(140, 58, 207, 0.16);  --grp-glow: rgba(140, 58, 207, 0.35); }
+.sc-fiche:has(option[value="ancre"]:checked)        { --grp-color: #D50156; --grp-bg: rgba(213, 1, 86, 0.16);    --grp-glow: rgba(213, 1, 86, 0.35); }
+.sc-fiche:has(option[value="harmoniseur"]:checked)  { --grp-color: #D76609; --grp-bg: rgba(215, 102, 9, 0.16);   --grp-glow: rgba(215, 102, 9, 0.35); }
+.sc-fiche:has(option[value="asynchrone"]:checked)   { --grp-color: #AB0707; --grp-bg: rgba(171, 7, 7, 0.16);     --grp-glow: rgba(171, 7, 7, 0.35); }
+.sc-fiche:has(option[value="insulaire"]:checked)    { --grp-color: #2A915E; --grp-bg: rgba(42, 145, 94, 0.16);   --grp-glow: rgba(42, 145, 94, 0.35); }
+.sc-fiche:has(option[value="lesteur"]:checked)      { --grp-color: #2D5D8F; --grp-bg: rgba(45, 93, 143, 0.16);   --grp-glow: rgba(45, 93, 143, 0.35); }
+
+/* Style du menu déroulant de groupe */
+.sc-group-select {
+    background: #212126 !important;
+    color: var(--grp-color) !important;
+    border: 1.5px solid var(--grp-color) !important;
+    border-radius: 12px 0 !important;
+    padding: 4px 12px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    outline: none !important;
+}
+.sc-group-select option {
+    background: #19191c !important;
+    color: #f4efe6 !important;
+}
 
 /* --- BARRE SUPÉRIEURE (SWITCH AMBIANCE + LECTEUR STYLE #PAmusique) --- */
 .sc-topbar {
@@ -3767,28 +3786,19 @@ html body#modernbb .signature_div img {
     display: block !important;
 }
 
-/* Voile coloré automatique selon la classe du groupe */
+/* --- VOILE UNI SUBTIL SUR LA BANNIÈRE --- */
 .sc-banner::before {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(135deg, var(--grp-color) 0%, transparent 65%, var(--grp-color) 100%) !important;
-    opacity: 0.48 !important;
-    mix-blend-mode: screen !important;
+    background: var(--grp-color) !important;
+    opacity: 0.22 !important;
+    mix-blend-mode: color !important;
     pointer-events: none !important;
     z-index: 1 !important;
 }
-
-/* Teinte subtile sur les tracés dorés */
 .sc-banner::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background: var(--grp-color) !important;
-    opacity: 0.25 !important;
-    mix-blend-mode: color !important;
-    pointer-events: none !important;
-    z-index: 2 !important;
+    display: none !important;
 }
 
 .sc-banner-overlay {
