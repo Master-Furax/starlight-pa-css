@@ -4140,3 +4140,75 @@ html body#modernbb .signature_div img {
    overflow-x: auto !important;
 }
 
+/* =========================================================
+   CORRECTIF ÉDITEUR : SIGNATURE CÔTE À CÔTE & MENUS DROPDOWNS
+   ========================================================= */
+
+/* 1. Alignement côte à côte dans l'onglet Signature (#parent_editor_simple) */
+html body#modernbb #postingbox #parent_editor_simple {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb #postingbox #parent_editor_simple > #smiley-box {
+    flex: 0 0 192px !important;
+    width: 192px !important;
+    margin: 0 !important;
+}
+
+html body#modernbb #postingbox #parent_editor_simple > #message-box {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+/* 2. Lisibilité parfaite des menus déroulants SCEditor (Lien, Image, Police, Titres) */
+html body#modernbb .sceditor-dropdown,
+html body#modernbb .sceditor-dropdown label,
+html body#modernbb .sceditor-dropdown a,
+html body#modernbb .sceditor-dropdown span,
+html body#modernbb .sceditor-dropdown div,
+html body#modernbb .sceditor-dropdown h1,
+html body#modernbb .sceditor-dropdown h2,
+html body#modernbb .sceditor-dropdown h3,
+html body#modernbb .sceditor-dropdown h4,
+html body#modernbb .sceditor-dropdown h5,
+html body#modernbb .sceditor-dropdown h6 {
+    color: var(--border-cream) !important;
+    -webkit-text-fill-color: var(--border-cream) !important;
+}
+
+html body#modernbb .sceditor-dropdown a:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 6px 0 !important;
+}
+
+html body#modernbb .sceditor-dropdown input[type="text"],
+html body#modernbb .sceditor-dropdown input[type="url"] {
+    background: #141416 !important;
+    color: var(--border-cream) !important;
+    -webkit-text-fill-color: var(--border-cream) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 6px 0 !important;
+    padding: 5px 8px !important;
+}
+
+html body#modernbb .sceditor-dropdown input[type="button"],
+html body#modernbb .sceditor-dropdown button {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid var(--border-cream) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 14px !important;
+    cursor: pointer !important;
+    margin-top: 6px !important;
+}
+
