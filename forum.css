@@ -3749,33 +3749,62 @@ html body#modernbb .signature_div img {
     filter: invert(0.9) hue-rotate(180deg) !important;
 }
 
-/* --- IMAGE D'ENTÊTE (PLEINE LARGEUR x 300PX) --- */
+/* --- IMAGE D'ENTÊTE AVEC VOILE DYNAMIQUE AUX COULEURS DU GROUPE --- */
 .sc-banner {
     position: relative !important;
     width: 100% !important;
     height: 300px !important;
     overflow: hidden !important;
     border-bottom: 2px solid var(--grp-color) !important;
-    background: #121215 !important;
+    background: #0a0a0c !important;
 }
+
 .sc-banner img.sc-banner-bg {
     width: 100% !important;
     height: 300px !important;
     object-fit: cover !important;
+    object-position: center 45% !important;
     display: block !important;
 }
+
+/* Voile coloré automatique selon la classe du groupe */
+.sc-banner::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(135deg, var(--grp-color) 0%, transparent 65%, var(--grp-color) 100%) !important;
+    opacity: 0.48 !important;
+    mix-blend-mode: screen !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* Teinte subtile sur les tracés dorés */
+.sc-banner::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: var(--grp-color) !important;
+    opacity: 0.25 !important;
+    mix-blend-mode: color !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
 .sc-banner-overlay {
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    padding: 30px 25px 16px !important;
+    z-index: 3 !important;
+    padding: 35px 25px 16px !important;
     background: linear-gradient(to top, rgba(19, 19, 22, 0.96) 15%, transparent 100%) !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: flex-end !important;
     gap: 15px !important;
 }
+
 .sc-char-name {
     font-family: 'Teko', sans-serif !important;
     font-size: 42px !important;
