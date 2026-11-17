@@ -4389,3 +4389,52 @@ html body#modernbb #postingbox #smilies_box {
     min-height: 230px !important;
     margin-bottom: 6px !important;
 }
+
+/* =========================================================
+   HARMONISATION PRÉVISUALISATION & LARGEUR FICHE EN SUJET
+   ========================================================= */
+
+/* 1. Bloc Code, Spoiler & Citation taupe (#6d6860) AUSSI en prévisualisation (#preview) */
+html body#modernbb #preview .spoiler,
+html body#modernbb #preview dl.codebox,
+html body#modernbb #preview blockquote,
+html body#modernbb #preview .codebox {
+    background: #6d6860 !important;
+    background-color: #6d6860 !important;
+    color: var(--border-cream) !important;
+    border: 1px solid #19191c !important;
+    border-left: 4px solid var(--gold) !important;
+    border-radius: 12px 0 !important;
+    padding: 12px 16px !important;
+    margin: 12px 0 !important;
+}
+
+html body#modernbb #preview dl.codebox code,
+html body#modernbb #preview .codebox code {
+    display: block !important;
+    user-select: all !important;
+    -webkit-user-select: all !important;
+    cursor: pointer !important;
+    color: #f4efe6 !important;
+}
+
+/* 2. #message-box s'aligne sur #smiley-box tout en restant redimensionnable */
+html body#modernbb #postingbox #message-box,
+html body#modernbb #postingbox #textarea_content,
+html body#modernbb #postingbox .sceditor-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 325px !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb #postingbox .sceditor-container iframe,
+html body#modernbb #postingbox .sceditor-container textarea {
+    flex: 1 1 auto !important;
+    min-height: 275px !important;
+    resize: vertical !important;
+}
+
+
