@@ -1890,6 +1890,7 @@ html body#modernbb .corps-message-artemis {
     grid-template-columns: 200px 1fr !important;
     align-items: start !important;
     gap: 20px !important;
+    border-radius: 0 0 27px;
 }
 
 /* L'avatar glisse le long du message et s'arrête en bas du bloc du joueur */
