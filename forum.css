@@ -4274,3 +4274,65 @@ html body#modernbb .message-contenu-arte .codebox code {
     cursor: pointer !important;
     color: #f4efe6 !important;
 }
+
+/* =========================================================
+   FINITIONS POPUPS SCEditor : CURSEUR, BOUTONS & POLICES
+   ========================================================= */
+
+/* 1. Curseur clignotant visible & contour doré au focus dans les popups */
+html body#modernbb .sceditor-dropdown input[type="text"],
+html body#modernbb .sceditor-dropdown input[type="url"],
+html body#modernbb .sceditor-dropdown textarea {
+    caret-color: var(--gold) !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body#modernbb .sceditor-dropdown input[type="text"]:focus,
+html body#modernbb .sceditor-dropdown input[type="url"]:focus,
+html body#modernbb .sceditor-dropdown textarea:focus {
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 8px rgba(216, 155, 60, 0.45) !important;
+    outline: none !important;
+}
+
+/* 2. Boutons "Insérer" dégradés unifiés sur TOUS les popups (Lien, Image, Embed, YouTube) */
+html body#modernbb .sceditor-dropdown input[type="button"],
+html body#modernbb .sceditor-dropdown input[type="submit"],
+html body#modernbb .sceditor-dropdown input.button,
+html body#modernbb .sceditor-dropdown button {
+    background: var(--grad-btn) !important;
+    background-image: var(--grad-btn) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid var(--border-cream) !important;
+    border-radius: 8px 0 !important;
+    padding: 5px 14px !important;
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    margin-top: 6px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body#modernbb .sceditor-dropdown input[type="button"]:hover,
+html body#modernbb .sceditor-dropdown input[type="submit"]:hover,
+html body#modernbb .sceditor-dropdown input.button:hover,
+html body#modernbb .sceditor-dropdown button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(216, 155, 60, 0.55) !important;
+}
+
+/* 3. Empêche le menu des polices de passer sous le bas de l'éditeur */
+html body#modernbb #postingbox .sceditor-container,
+html body#modernbb .sceditor-container {
+    overflow: visible !important;
+}
+
+html body#modernbb .sceditor-dropdown.sceditor-font-picker {
+    max-height: 215px !important;
+    overflow-y: auto !important;
+    z-index: 9999 !important;
+}
+
