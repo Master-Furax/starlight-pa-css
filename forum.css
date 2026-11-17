@@ -3564,3 +3564,37 @@ html {
     scroll-padding-top: 105px !important;
 }
 
+/* =========================================================
+   CADRE SIGNATURE HARMONISÉ (DANS LE MESSAGE)
+   ========================================================= */
+
+/* Masque la signature si elle est vide */
+html body#modernbb .signature_div:empty {
+    display: none !important;
+}
+
+/* Style du cadre signature (encart anthracite + liseré groupe) */
+html body#modernbb .signature_div {
+    margin-top: auto !important;
+    padding: 14px 18px !important;
+    background: var(--bg-dark, #19191c) !important;
+    color: var(--border-cream, #f4efe6) !important;
+    border: 1px solid var(--border-grey, #3a3a42) !important;
+    border-left: 4px solid var(--jscouleur, var(--gold)) !important;
+    border-radius: 14px 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35) !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Supprime les tirets / lignes par défaut */
+html body#modernbb .signature_div hr {
+    display: none !important;
+}
+
+/* Ajuste les images dans la signature */
+html body#modernbb .signature_div img {
+    max-width: 100% !important;
+    border-radius: 6px !important;
+}
