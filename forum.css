@@ -4417,7 +4417,3 @@ html body#modernbb .panel.msgdie-panel a {
     text-decoration: none !important;
 }
 
-/* Empêche div#page-header de créer un bloc noir vide sous la bannière */
-html body#modernbb div#page-header > *:not(banniere):not(#parallax):not(.headerbar) {
-    display: none !important;
-}
