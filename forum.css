@@ -3560,4 +3560,7 @@ html body#modernbb .infos-membre-arte .pseudo-et-rang {
     text-align: right !important;
     max-width: none !important;
 }
+html {
+    scroll-padding-top: 105px !important;
+}
 
