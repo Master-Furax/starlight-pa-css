@@ -4280,3 +4280,82 @@ html body#modernbb .sceditor-dropdown .button {
     margin-top: 4px !important;
 }
 
+/* =========================================================
+   CORRECTIF PALETTE COULEURS MODERNE & EMOJIS (SCEDITOR)
+   ========================================================= */
+
+/* 1. Supprime la barre de défilement horizontale des emojis */
+html body#modernbb .sceditor-dropdown.sceditor-twemojifa {
+    width: 265px !important;
+    max-height: 230px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+/* 2. Rétablit l'affichage de la palette de couleurs moderne */
+html body#modernbb .sceditor-dropdown.sceditor-color-picker {
+    width: auto !important;
+    max-width: 360px !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+html body#modernbb .sceditor-color-picker-modern {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+html body#modernbb .sceditor-color-native-section {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+html body#modernbb .sceditor-color-native-section input[type="color"] {
+    width: 100% !important;
+    height: 30px !important;
+    border: 1px solid var(--border-grey, #9e988e) !important;
+    border-radius: 8px 0 !important;
+    background: #141416 !important;
+    cursor: pointer !important;
+}
+
+html body#modernbb .sceditor-color-grid {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+html body#modernbb .sceditor-color-palette {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+}
+
+html body#modernbb .sceditor-color-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 3px !important;
+}
+
+/* Restaure la taille réelle des pastilles de couleur (écrasée par height: auto) */
+html body#modernbb .panel:not(:has(#PA)) .sceditor-dropdown a.sceditor-color-option,
+html body#modernbb a.sceditor-color-option {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 3px !important;
+    cursor: pointer !important;
+    transition: transform 0.15s ease !important;
+}
+
+html body#modernbb a.sceditor-color-option:hover {
+    transform: scale(1.25) !important;
+    border-color: #ffffff !important;
+    z-index: 2 !important;
+}
