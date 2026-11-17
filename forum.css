@@ -4418,13 +4418,15 @@ html body#modernbb #preview .codebox code {
     color: #f4efe6 !important;
 }
 
-/* 2. #message-box s'aligne sur #smiley-box tout en restant redimensionnable */
+/* 2. #message-box s'aligne sur #smiley-box ET laisse SCEditor redimensionner librement */
 html body#modernbb #postingbox #message-box,
-html body#modernbb #postingbox #textarea_content,
+html body#modernbb #postingbox #textarea_content {
+    display: block !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+}
+
 html body#modernbb #postingbox .sceditor-container {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
     min-height: 325px !important;
     margin-bottom: 0 !important;
     box-sizing: border-box !important;
@@ -4432,9 +4434,7 @@ html body#modernbb #postingbox .sceditor-container {
 
 html body#modernbb #postingbox .sceditor-container iframe,
 html body#modernbb #postingbox .sceditor-container textarea {
-    flex: 1 1 auto !important;
     min-height: 275px !important;
-    resize: vertical !important;
 }
 
 
