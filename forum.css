@@ -4554,51 +4554,65 @@ html body#modernbb #search_menu a[href*="search"] {
     box-sizing: border-box !important;
 }
 
-/* 2. Masque la barre du fil d'Ariane uniquement sur la page d'accueil (index) */
-html body#modernbb #page-body > .sub-header:not(:has(h1)),
-html body#modernbb #page-body > .navbar,
-html body#modernbb #page-body > ul.linklist.navlinks,
-html body#modernbb .sub-header:not(:has(h1)) .breadcrumbs {
-    display: none !important;
+/* 2. Rend transparent/invisible le bloc vide au-dessus de la PA sans toucher aux sous-forums */
+html body#modernbb #page-body > div:first-child:not(.pa-starlight):not(:has(h1)),
+html body#modernbb .sub-header:not(:has(h1)) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/* 3. Rendu mobile unifié (calqué sur #wrap 1000px + #banniere-header aligné) */
-html body#modernbb #banniere-header {
-    width: 1000px !important;
+/* 3. Rendu mobile unifié (Opera, Firefox & Chrome) */
+html body#modernbb #banniere-header,
+html body#modernbb #banniere-header img {
+    width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+    display: block !important;
 }
 
 @media only screen and (hover: none) and (pointer: coarse) {
     html,
     body#modernbb {
-        min-width: 1120px !important;
-        width: 100% !important;
-        margin: 0 !important;
+        min-width: 1100px !important;
+        width: 1100px !important;
+        max-width: 1100px !important;
+        margin: 0 auto !important;
         padding-left: 72px !important;
-        padding-right: 16px !important;
+        padding-right: 12px !important;
         box-sizing: border-box !important;
         background-attachment: scroll !important;
         background-size: cover !important;
         background-position: center top !important;
-        background-repeat: no-repeat !important;
     }
 
-    /* Barre supérieure pleine largeur avec dégradé explicite (compatible Chrome Android) */
+    /* Empêche Opera de dézoomer trop loin et restaure le dégradé sur Chrome Android */
     html body#modernbb div#fa_toolbar {
         width: 100% !important;
-        min-width: 1120px !important;
-        background-color: #4e386a !important;
+        max-width: 1100px !important;
+        min-width: 1100px !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        background: #4e386a !important;
         background-image: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
     }
 
-    html body#modernbb #banniere-header,
     html body#modernbb #wrap,
     html body#modernbb #page-footer {
         width: 1000px !important;
         max-width: 1000px !important;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    /* Empêche la pub Air Corsica / Google Ads de décaler Chrome Android */
+    html body#modernbb iframe,
+    html body#modernbb ins,
+    html body#modernbb [id*="google_ads"],
+    html body#modernbb [id*="taboola"] {
+        max-width: 980px !important;
     }
 }
