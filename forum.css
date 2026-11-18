@@ -4629,15 +4629,22 @@ html body#modernbb #banniere-header img {
         z-index: 900 !important;
         box-sizing: border-box !important;
     }
-
-    /* Empêche Navigation de toucher Connexion sur Firefox/Chrome mobile */
+    /* Déplace le menu de navigation légèrement à gauche pour ne jamais toucher CONNEXION */
     html body#modernbb #headerbar-top {
-        width: 1000px !important;
-        max-width: 1000px !important;
-        padding: 0 215px 0 165px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+        justify-content: flex-start !important;
+        padding: 0 230px 0 185px !important;
         box-sizing: border-box !important;
+    }
+
+    html body#modernbb #headerbar-top .navbar a,
+    html body#modernbb #headerbar-top a {
+        font-size: 18px !important;
+        padding: 4px 5px !important;
     }
 
     html body#modernbb #wrap {
