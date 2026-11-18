@@ -4611,7 +4611,7 @@ html body#modernbb {
 }
 
 /* =========================================================
-   CORRECTIF SPÉCIAL CHROME ANDROID (BARRE HAUT & PUBS INVITÉS)
+   CORRECTIF SPÉCIAL CHROME ANDROID (DÉGRADÉ NAVBAR & OVERFLOW)
    ========================================================= */
 @media only screen and (max-width: 1100px), only screen and (hover: none) and (pointer: coarse) {
     html,
@@ -4623,10 +4623,21 @@ html body#modernbb {
         overflow-x: clip !important;
     }
 
-    /* Force la barre du haut et la bannière à couvrir 100% des 1040px jusqu'au bord droit */
-    html body#modernbb #page-header,
+    /* Force la barre du haut à couvrir 100% avec son dégradé prune-fuchsia-doré */
     html body#modernbb #headerbar-top,
     html body#modernbb #headerbar-top .wrap,
+    html body#modernbb .navigation_barre {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        min-height: 48px !important;
+        background: linear-gradient(90deg, #4b1d3f 0%, #9b2259 50%, #d89b3c 100%) !important;
+        background-image: linear-gradient(90deg, #4b1d3f 0%, #9b2259 50%, #d89b3c 100%) !important;
+        border-bottom: 2px solid var(--gold) !important;
+        box-sizing: border-box !important;
+    }
+
+    html body#modernbb #page-header,
     html body#modernbb .headerbar,
     html body#modernbb .headerbar .wrap,
     html body#modernbb .container {
@@ -4636,12 +4647,13 @@ html body#modernbb {
         box-sizing: border-box !important;
     }
 
-    /* Empêche les conteneurs de publicités invités de déborder à droite sur Chrome */
+    /* Empêche la pub fixe du bas et les pubs invités de créer un scroll horizontal */
+    html body#modernbb > div,
     html body#modernbb iframe,
     html body#modernbb ins,
     html body#modernbb [id*="google_ads"],
     html body#modernbb [id*="taboola"] {
-        max-width: 930px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
-
