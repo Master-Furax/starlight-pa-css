@@ -4305,7 +4305,6 @@ html body#modernbb .sc-fiche .sc-player-section {
     box-sizing: border-box !important;
 }
 
-
 html body#modernbb .sc-fiche .sc-player-avatar {
     width: 170px !important;
     height: 170px !important;
@@ -4338,6 +4337,24 @@ html body#modernbb .sc-fiche .sc-player-notes {
     width: 100% !important;
     font-size: 13px !important;
     box-sizing: border-box !important;
+}
+
+/* Empêche le badge et la médaille de rétrécir ou de passer sur 2 lignes dans la bannière */
+html body#modernbb .sc-fiche .sc-char-name {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+}
+
+html body#modernbb .sc-fiche .sc-group-badge {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+}
+
+html body#modernbb .sc-fiche .sc-group-badge::before {
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    flex-shrink: 0 !important;
 }
 
 
