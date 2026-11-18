@@ -4279,30 +4279,31 @@ html body#modernbb .sc-fiche .sc-info-grid {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
-    gap: 10px !important;
+    gap: 10px 0 !important;
     width: 100% !important;
     font-size: 0 !important;
     box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-fiche .sc-info-item {
-    flex: 0 0 calc(50% - 5px) !important;
-    width: calc(50% - 5px) !important;
-    max-width: calc(50% - 5px) !important;
+    flex: 0 0 calc(50% - 14px) !important;
+    width: calc(50% - 14px) !important;
+    max-width: calc(50% - 14px) !important;
     font-size: 13.5px !important;
     box-sizing: border-box !important;
     word-wrap: break-word !important;
 }
 
-/* 6. Section Joueur (HRP) : Avatar carré à gauche, badges + notes à droite */
+/* 6. Section Joueur (HRP) : Avatar carré centré verticalement avec les badges et notes à droite */
 html body#modernbb .sc-fiche .sc-player-section {
     display: flex !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     gap: 18px !important;
     width: 100% !important;
     font-size: 0 !important;
     box-sizing: border-box !important;
 }
+
 
 html body#modernbb .sc-fiche .sc-player-avatar {
     width: 170px !important;
