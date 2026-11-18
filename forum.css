@@ -4157,6 +4157,82 @@ html body#modernbb .signature_div img {
 }
 
 /* =========================================================
+   CORRECTIF FICHE PERSONNAGE (.sc-fiche) DANS LES SUJETS
+   ========================================================= */
+
+/* 1. Adapte la fiche à 100% de la largeur du message sans déborder */
+html body#modernbb .message-contenu-arte .sc-fiche {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Supprime les <br> injectés par Forumactif dans les grilles et flexboxes */
+html body#modernbb .sc-fiche br {
+    display: none !important;
+}
+
+/* Réautorise uniquement les retours à la ligne dans les paragraphes RP / Histoire / Caractère */
+html body#modernbb .sc-fiche p br,
+html body#modernbb .sc-fiche .sc-text-block br,
+html body#modernbb .sc-fiche [class*="desc"] br,
+html body#modernbb .sc-fiche [class*="story"] br,
+html body#modernbb .sc-fiche [class*="histoire"] br,
+html body#modernbb .sc-fiche [class*="caractere"] br {
+    display: inline !important;
+}
+
+/* 3. Grille 2 colonnes propre pour les données biométriques (.sc-info-grid) */
+html body#modernbb .sc-fiche .sc-info-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb .sc-fiche .sc-info-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+}
+
+/* 4. Alignement propre de la section Joueur (.sc-player-section) */
+html body#modernbb .sc-fiche .sc-player-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb .sc-fiche .sc-player-avatar {
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+}
+
+html body#modernbb .sc-fiche .sc-player-desc {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+/* 5. Corrige l'affichage texte ":track_previous:" / ":track_next:" du lecteur audio */
+html body#modernbb .sc-fiche [class*="track"],
+html body#modernbb .sc-fiche [class*="audio"] button,
+html body#modernbb .sc-fiche [class*="player"] button {
+    font-size: 0 !important;
+    line-height: 1 !important;
+}
+
+
+/* =========================================================
    CORRECTIF ÉDITEUR : SIGNATURE CÔTE À CÔTE & MENUS DROPDOWNS
    ========================================================= */
 
