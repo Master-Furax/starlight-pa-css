@@ -4451,10 +4451,10 @@ html body#modernbb #postingbox .sceditor-container textarea {
 }
 
 /* =========================================================
-   CORRECTIF GLOBAL : POPUP RECHERCHE, FOOTER BAS & MOBILE
+   POPUP RECHERCHE & HARMONISATION MOBILE UNIFIÉE (OPERA, FIREFOX, CHROME)
    ========================================================= */
 
-/* 1. Popup "Rechercher" (#search_menu) large, lisible et assorti au menu Navigation */
+/* 1. Popup "Rechercher" (#search_menu) large, lisible et assorti */
 html body#modernbb #search_menu {
     position: absolute !important;
     top: 100% !important;
@@ -4474,7 +4474,6 @@ html body#modernbb #search_menu .overview.row {
     min-width: 320px !important;
     max-width: 92vw !important;
     background: #1e1e20 !important;
-    background-color: #1e1e20 !important;
     border: 1px solid var(--border-cream) !important;
     border-top: 2px solid var(--gold) !important;
     border-radius: 0 0 14px 14px !important;
@@ -4555,61 +4554,44 @@ html body#modernbb #search_menu a[href*="search"] {
     box-sizing: border-box !important;
 }
 
-/* 2. Supprime le vide gris sous le trait doré du footer sur les pages courtes */
-html body#modernbb {
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-html body#modernbb #wrap {
-    flex: 1 0 auto !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-html body#modernbb #page-footer {
-    flex-shrink: 0 !important;
-    width: 100% !important;
-    margin-top: auto !important;
-}
-
-/* =========================================================
-   CORRECTIF MOBILE CHIRURGICAL (OPERA, CHROME & FIREFOX)
-   ========================================================= */
-
-/* 1. Masque le fil d'Ariane vide sur l'index (la barre noire vide au-dessus de la PA) */
-html body#modernbb p.crumbs:empty,
-html body#modernbb .breadcrumbs:empty,
-html body#modernbb .sub-header:not(:has(h1)) {
+/* 2. Masque la barre vide du fil d'Ariane au-dessus de la PA sur l'index */
+html body#modernbb ul.linklist.navlinks,
+html body#modernbb .navbar.navlinks-top,
+html body#modernbb #page-body > .navbar:first-child {
     display: none !important;
 }
 
-/* 2. Réglages écrans tactiles (respecte div#fa_toolbar, #headerbar-top et #wrap à 1000px) */
+html body#modernbb .page-header ul.linklist.navlinks,
+html body#modernbb .sub-header ul.linklist.navlinks {
+    display: block !important;
+}
+
+/* 3. Rendu mobile unifié (calqué sur la structure naturelle qui marche sur les 3 navigateurs) */
 @media only screen and (hover: none) and (pointer: coarse) {
     html,
     body#modernbb {
-        min-width: 1180px !important;
+        min-width: 1160px !important;
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        padding-left: 85px !important;
-        padding-right: 15px !important;
+        padding-left: 90px !important;
+        padding-right: 20px !important;
         box-sizing: border-box !important;
         background-attachment: scroll !important;
+        background-size: 100% 100% !important;
     }
 
-    /* Garde le conteneur principal à 1000px exactement comme sur PC */
+    /* Barre supérieure toujours pleine largeur et visible même sur Chrome Android */
+    html body#modernbb div#fa_toolbar {
+        width: 100% !important;
+        min-width: 1160px !important;
+        background-color: #4e386a !important;
+        background-image: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+    }
+
     html body#modernbb #wrap {
         width: 1000px !important;
         max-width: 1000px !important;
         margin: 0 auto !important;
-    }
-
-    /* Empêche les pubs invités de dépasser sur Chrome mobile */
-    html body#modernbb iframe[id*="google_ads"],
-    html body#modernbb ins.adsbygoogle,
-    html body#modernbb [id*="taboola"] {
-        max-width: 950px !important;
     }
 }
