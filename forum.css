@@ -5914,3 +5914,143 @@ html body#modernbb .panel ul.group_list li:has(a[href*="/g8-"])::after {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* ==========================================================================
+   REFONTE DE L'INTÉRIEUR D'UNE PAGE DE GROUPE (/g1-, /g2-, etc.)
+   ========================================================================== */
+
+/* 1. Conteneur du tableau des membres (.forumbg-table) */
+html body#modernbb .forumbg-table {
+    background: #19191c !important;
+    border: 1px solid rgba(216, 210, 199, 0.14) !important;
+    border-radius: 6px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    margin-bottom: 18px !important;
+}
+
+html body#modernbb .forumbg-table > .inner {
+    padding: 0 !important;
+}
+
+html body#modernbb table.table1 {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 0 !important;
+}
+
+/* 2. En-tête des colonnes (Message privé, Nom d'utilisateur, Messages...) */
+html body#modernbb table.table1 thead tr,
+html body#modernbb table.table1 thead th {
+    background: #222226 !important;
+    color: #d8d2c7 !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.9px !important;
+    text-transform: uppercase !important;
+    padding: 12px 16px !important;
+    border-bottom: 1px solid rgba(216, 210, 199, 0.16) !important;
+}
+
+/* 3. Lignes de séparation "Modérateur du groupe" et "Membres du groupe" (tr.row3) */
+html body#modernbb table.table1 tbody tr.row3,
+html body#modernbb table.table1 tbody tr.row3 td {
+    background: #141417 !important;
+    color: var(--jscouleur, #d89b3c) !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    padding: 9px 16px !important;
+    border-top: 1px solid rgba(216, 210, 199, 0.1) !important;
+    border-bottom: 1px solid rgba(216, 210, 199, 0.14) !important;
+}
+
+/* 4. Suppression du fond blanc .row2 et du texte noir sur toutes les cellules */
+html body#modernbb table.table1 tbody tr.row1,
+html body#modernbb table.table1 tbody tr.row2 {
+    background: #19191c !important;
+    transition: background 0.2s ease !important;
+}
+
+html body#modernbb table.table1 tbody tr.row2 {
+    background: #1d1d21 !important;
+}
+
+html body#modernbb table.table1 tbody tr.row1:hover,
+html body#modernbb table.table1 tbody tr.row2:hover {
+    background: #242429 !important;
+}
+
+html body#modernbb table.table1 tbody td {
+    background: transparent !important;
+    color: #d8d2c7 !important;
+    font-size: 13px !important;
+    padding: 11px 16px !important;
+    border-top: none !important;
+    border-bottom: 1px solid rgba(216, 210, 199, 0.08) !important;
+    vertical-align: middle !important;
+}
+
+/* Pseudo des membres en Oswald lisible (conserve la couleur du groupe) */
+html body#modernbb table.table1 tbody td a[href^="/u"] {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 14.5px !important;
+    letter-spacing: 0.5px !important;
+    text-decoration: none !important;
+}
+
+html body#modernbb table.table1 tbody td a[href^="/u"]:hover {
+    text-decoration: underline !important;
+}
+
+/* 5. Icônes MP / Email / Site web dans le tableau */
+html body#modernbb table.table1 tbody td a.sc-contact-icon,
+html body#modernbb table.table1 tbody td a img {
+    vertical-align: middle !important;
+}
+
+html body#modernbb table.table1 tbody td input[type="checkbox"] {
+    accent-color: var(--jscouleur, #d89b3c);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* 6. Formulaires, boutons et inputs des pages de groupe (/g1-, /g2-...) */
+html body#modernbb form[action*="/g"] input.inputbox,
+html body#modernbb form[action*="/groupcp"] input.inputbox,
+html body#modernbb .panel input.inputbox {
+    background: #141417 !important;
+    color: #d8d2c7 !important;
+    border: 1px solid rgba(216, 210, 199, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 7px 12px !important;
+    font-size: 13px !important;
+}
+
+html body#modernbb form[action*="/g"] input.button1,
+html body#modernbb form[action*="/g"] input.button2,
+html body#modernbb form[action*="/groupcp"] input.button1,
+html body#modernbb form[action*="/groupcp"] input.button2 {
+    background: #222226 !important;
+    color: #d8d2c7 !important;
+    border: 1px solid rgba(216, 210, 199, 0.22) !important;
+    border-radius: 4px !important;
+    padding: 8px 16px !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 12.5px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+html body#modernbb form[action*="/g"] input.button1:hover,
+html body#modernbb form[action*="/g"] input.button2:hover,
+html body#modernbb form[action*="/groupcp"] input.button1:hover,
+html body#modernbb form[action*="/groupcp"] input.button2:hover {
+    background: var(--grad-btn) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+}
