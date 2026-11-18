@@ -5661,3 +5661,259 @@ html body#modernbb .sc-pm-new-btn a img {
 html body#modernbb .sc-pm-new-btn a::after {
     content: "Nouveau message";
 }
+
+/* ==========================================================================
+   REFONTE PAGE DES GROUPES (/groups) : COULEURS, BADGES & DÉGRADÉS OFFICIELS
+   ========================================================================== */
+
+/* 1. Rétablissement des couleurs officielles des groupes (annule l'écrasement crème ligne 1111) */
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g1-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g1-"] {
+    color: #d8d2c7 !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g2-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g2-"] {
+    color: #B7890B !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g3-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g3-"] {
+    color: #8C3ACF !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g4-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g4-"] {
+    color: #D50156 !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g5-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g5-"] {
+    color: #D76609 !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g6-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g6-"] {
+    color: #2A915E !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g7-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g7-"] {
+    color: #AB0707 !important;
+}
+
+html body#modernbb .panel ul.noList li a.usr_grp_clr[href*="/g8-"],
+html body#modernbb .panel ul.group_list li a.usr_grp_clr[href*="/g8-"] {
+    color: #2D5D8F !important;
+}
+
+/* 2. Bloc "Appartenance à un groupe" : mini-badges ronds + alignement propre */
+html body#modernbb .panel ul.noList:not(.group_list) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    padding: 4px 0 !important;
+}
+
+html body#modernbb .panel ul.noList:not(.group_list) li {
+    margin: 0 !important;
+}
+
+html body#modernbb .panel ul.noList:not(.group_list) li a.usr_grp_clr {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #19191c !important;
+    border: 1px solid rgba(216, 210, 199, 0.14) !important;
+    border-radius: 20px !important;
+    padding: 5px 14px 5px 7px !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 13.5px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+html body#modernbb .panel ul.noList:not(.group_list) li a.usr_grp_clr:hover {
+    transform: translateY(-2px) !important;
+    border-color: currentColor !important;
+}
+
+html body#modernbb .panel ul.noList:not(.group_list) li a.usr_grp_clr::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 50% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* 3. Bloc "Liste des groupes" : Grille de 2 colonnes en cartes sombres avec badge 44x44px */
+html body#modernbb .panel ul.group_list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    margin-top: 6px !important;
+}
+
+html body#modernbb .panel ul.group_list li {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 46px 1fr !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 14px !important;
+    row-gap: 3px !important;
+    align-items: center !important;
+    background: #19191c !important;
+    border: 1px solid rgba(216, 210, 199, 0.14) !important;
+    border-radius: 6px !important;
+    padding: 14px 16px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease !important;
+}
+
+html body#modernbb .panel ul.group_list li:hover {
+    background: #202025 !important;
+    transform: translateY(-2px) !important;
+    border-color: rgba(216, 210, 199, 0.28) !important;
+}
+
+/* Barre dégradée officielle en haut de chaque carte */
+html body#modernbb .panel ul.group_list li::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: rgba(216, 210, 199, 0.25) !important;
+    opacity: 0.85 !important;
+    transition: opacity 0.2s ease, height 0.2s ease !important;
+}
+
+html body#modernbb .panel ul.group_list li:hover::after {
+    opacity: 1 !important;
+    height: 4px !important;
+}
+
+/* Badge 44x44px placé dans la colonne de gauche sur les 2 lignes */
+html body#modernbb .panel ul.group_list li::before {
+    content: "" !important;
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45) !important;
+}
+
+html body#modernbb .panel ul.group_list li a.usr_grp_clr {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 16.5px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    line-height: 1.2 !important;
+}
+
+html body#modernbb .panel ul.group_list li div {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    font-size: 12px !important;
+    color: #9e9990 !important;
+}
+
+html body#modernbb .panel ul.group_list li hr {
+    display: none !important;
+}
+
+/* 4. Attribution des images de badges et dégradés par groupe */
+/* Administrateurs (/g1-) : étoile dorée/crème */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g1-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g1-"])::before {
+    background-color: #28282d !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='%23d8d2c7'%3E%3Cpath d='M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z'/%3E%3C/svg%3E") !important;
+    background-size: 62% !important;
+    background-repeat: no-repeat !important;
+    border: 1px solid rgba(216, 210, 199, 0.35) !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g1-"])::after {
+    background: linear-gradient(90deg, #8c857b, #d8d2c7) !important;
+}
+
+/* Cercle Tiamat (/g2-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g2-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g2-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/2l1m.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g2-"])::after {
+    background: linear-gradient(90deg, #9c6b19, #f5b942) !important;
+}
+
+/* Synchronystes (/g3-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g3-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g3-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/0vf3.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g3-"])::after {
+    background: linear-gradient(90deg, #4b1d78, #a855f7) !important;
+}
+
+/* Ancres (/g4-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g4-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g4-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/k55r.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g4-"])::after {
+    background: linear-gradient(90deg, #8a154b, #ec4899) !important;
+}
+
+/* Harmoniseurs (/g5-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g5-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g5-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/s10z.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g5-"])::after {
+    background: linear-gradient(90deg, #9a3412, #f97316) !important;
+}
+
+/* Insulaires (/g6-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g6-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g6-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/h76f.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g6-"])::after {
+    background: linear-gradient(90deg, #14532d, #22c55e) !important;
+}
+
+/* Asynchrones (/g7-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g7-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g7-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/xju7.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g7-"])::after {
+    background: linear-gradient(90deg, #7f1d1d, #ef4444) !important;
+}
+
+/* Veilleurs / Lesteurs (/g8-) */
+html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g8-"]::before,
+html body#modernbb .panel ul.group_list li:has(a[href*="/g8-"])::before {
+    background-image: url('https://zupimages.net/up/26/46/6z9m.png') !important;
+}
+html body#modernbb .panel ul.group_list li:has(a[href*="/g8-"])::after {
+    background: linear-gradient(90deg, #112c70, #2892ac) !important;
+}
+
+@media (max-width: 760px) {
+    html body#modernbb .panel ul.group_list {
+        grid-template-columns: 1fr !important;
+    }
+}
