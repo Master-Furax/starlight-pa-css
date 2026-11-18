@@ -6180,22 +6180,35 @@ html body#modernbb table.table1 tbody td a img[src*="icon_contact_"] {
 }
 
 /* ==========================================================================
-   BOUTON DISCORD DANS LA BARRE DE NAVIGATION
+   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (AVEC TON ICÔNE 6vdm.png)
    ========================================================================== */
+html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
+html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]),
 html body#modernbb .navbar a.mainmenu[href*="discord.gg"],
 html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
-    background: rgba(88, 101, 242, 0.22) !important;
+    gap: 7px !important;
+    background: rgba(88, 101, 242, 0.24) !important;
     border: 1px solid rgba(88, 101, 242, 0.65) !important;
     border-radius: 4px !important;
-    padding: 4px 11px !important;
+    padding: 4px 12px !important;
     color: #c5cbff !important;
     text-shadow: none !important;
     transition: all 0.2s ease !important;
 }
 
+html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]) img,
+html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) img {
+    display: inline-block !important;
+    width: 18px !important;
+    height: 18px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+}
+
+html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover,
+html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb .navbar a.mainmenu[href*="discord.gg"]:hover,
 html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"]:hover {
     background: linear-gradient(90deg, #4752c4, #5865f2) !important;
