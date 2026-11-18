@@ -4738,3 +4738,29 @@ html body#modernbb fieldset.SBJ .lmsgSBJ > img:not([src*="icon_topic_latest"]) {
     padding: 2px !important;
     flex-shrink: 0 !important;
 }
+/* Alignement propre entre l'hexagone, le texte et la flèche dans .lmsgSBJ */
+html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 48px !important;
+    background: linear-gradient(135deg, #ee5574, #ffb01f) !important;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%) !important;
+    padding: 2px !important;
+    flex-shrink: 0 !important;
+}
+
+html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%) !important;
+    display: block !important;
+}
+
+html body#modernbb fieldset.SBJ .lmsgSBJ .lmsgSBJ-txt {
+    flex: 1 !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+}
