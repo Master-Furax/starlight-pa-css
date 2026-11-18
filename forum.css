@@ -4585,10 +4585,10 @@ html body#modernbb #search_menu a[href*="search"] {
     box-sizing: border-box !important;
 }
 
-/* 1. Masque uniquement les listes de liens vides sur l'accueil */
-html body#modernbb p.crumbs:empty,
-html body#modernbb ul.linklist.navlinks:empty,
-html body#modernbb .breadcrumbs:empty {
+/* 1. Masque le fil d'Ariane vide (sans lien) au-dessus de la PA sur l'accueil */
+html body#modernbb ul.linklist.navlinks:not(:has(a)),
+html body#modernbb p.crumbs:not(:has(a)),
+html body#modernbb .breadcrumbs:not(:has(a)) {
     display: none !important;
 }
 
@@ -4612,20 +4612,29 @@ html body#modernbb #banniere-header img {
         background-position: center top !important;
     }
 
-    /* Restaure le dégradé prune-fuchsia-doré sur Chrome Android + largeur naturelle */
+    /* Force Chrome Android à afficher la barre colorée + Connexion / S'enregistrer */
     html body#modernbb div#fa_toolbar {
-        width: 100% !important;
-        min-width: 1000px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        top: 0 !important;
         left: 0 !important;
         right: 0 !important;
+        width: 100% !important;
+        min-width: 1000px !important;
+        height: 85px !important;
         background: #4e386a !important;
         background-image: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+        z-index: 900 !important;
         box-sizing: border-box !important;
     }
 
+    /* Empêche Navigation de toucher Connexion sur Firefox/Chrome mobile */
     html body#modernbb #headerbar-top {
         width: 1000px !important;
         max-width: 1000px !important;
+        padding: 0 215px 0 165px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         box-sizing: border-box !important;
@@ -4637,9 +4646,10 @@ html body#modernbb #banniere-header img {
         margin: 0 auto !important;
     }
 
+    /* Aligne le footer à 950px exactement sous le QEEL sur Opera mobile */
     html body#modernbb #page-footer {
-        width: 100% !important;
-        margin-top: 40px !important;
-        padding-bottom: 10px !important;
+        width: 950px !important;
+        max-width: 100% !important;
+        margin: 30px auto 10px !important;
     }
 }
