@@ -6190,8 +6190,8 @@ html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
     align-items: center !important;
     gap: 8px !important;
     background: #19191c !important;
-    border: 1px solid rgba(216, 210, 199, 0.32) !important;
-    border-radius: 4px !important;
+    border: 1px solid rgb(233 209 164 / 89%) !important;
+    border-radius: 7px 0 !important;
     padding: 5px 13px !important;
     color: #f4efe6 !important;
     text-shadow: none !important;
