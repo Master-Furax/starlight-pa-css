@@ -4736,40 +4736,42 @@ html body#modernbb [class*="lastpost"] a:has(img):hover {
     filter: brightness(1.15) !important;
 }
 
-/* 3. Avatar hexagonal du dernier posteur (style Switcheroo, centré dans le bloc) */
-html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar,
-html body#modernbb fieldset.SBJ .lmsgSBJ > img:not([src*="icon_topic_latest"]) {
-    width: 44px !important;
-    height: 48px !important;
-    object-fit: cover !important;
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%) !important;
-    background: linear-gradient(135deg, #ee5574, #ffb01f) !important;
-    padding: 2px !important;
-    flex-shrink: 0 !important;
-}
-/* Alignement propre entre l'hexagone, le texte et la flèche dans .lmsgSBJ */
+/* 3. Hexagone du dernier posteur identique aux catégories (.sc-last-avatar) */
 html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar {
+    position: relative !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 44px !important;
-    height: 48px !important;
-    background: linear-gradient(135deg, #ee5574, #ffb01f) !important;
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%) !important;
+    width: 54px !important;
+    height: 47px !important;
+    background: linear-gradient(135deg, #4e386a, #ee5574, #ffb01f) !important;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+    border-radius: 0 !important;
     padding: 2px !important;
+    box-sizing: border-box !important;
     flex-shrink: 0 !important;
+}
+
+/* Supprime le fond blanc ::after de ModernBB et le border-radius: 38px de 33-ltr.css */
+html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar::after,
+html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar::before {
+    display: none !important;
 }
 
 html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%) !important;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
+    border-radius: 0 !important;
+    background: #141416 !important;
     display: block !important;
 }
 
+/* Alignement propre du texte à côté de l'hexagone */
 html body#modernbb fieldset.SBJ .lmsgSBJ .lmsgSBJ-txt {
     flex: 1 !important;
     text-align: center !important;
     line-height: 1.35 !important;
 }
+
