@@ -5652,3 +5652,12 @@ html body#modernbb .sc-pm-review-wrap .postbody blockquote {
         height: 115px !important;
     }
 }
+/* Remplace l'image native "NOUVEAU" par un bouton texte 100 % harmonisé avec les autres boutons MP */
+html body#modernbb .sc-pm-new-btn a img.i_msg_newpost,
+html body#modernbb .sc-pm-new-btn a img {
+    display: none !important;
+}
+
+html body#modernbb .sc-pm-new-btn a::after {
+    content: "Nouveau message";
+}
