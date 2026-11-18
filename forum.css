@@ -4585,9 +4585,10 @@ html body#modernbb #search_menu a[href*="search"] {
     box-sizing: border-box !important;
 }
 
-/* 1. Masque uniquement la barre vide au-dessus de la PA sur l'accueil */
-html body#modernbb #page-body > ul.linklist,
-html body#modernbb #page-body > .sub-header:not(:has(h1)) {
+/* 1. Masque uniquement les listes de liens vides sur l'accueil */
+html body#modernbb p.crumbs:empty,
+html body#modernbb ul.linklist.navlinks:empty,
+html body#modernbb .breadcrumbs:empty {
     display: none !important;
 }
 
