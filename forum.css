@@ -5836,14 +5836,14 @@ html body#modernbb .panel ul.group_list li hr {
 }
 
 /* 4. Attribution des images de badges et dégradés par groupe */
-/* Administrateurs (/g1-) : remplace URL_DU_BADGE_ADMIN par ton lien Zupimages */
+/* Administrateurs (/g1-) */
 html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g1-"]::before,
 html body#modernbb .panel ul.group_list li:has(a[href*="/g1-"])::before {
     background-image: url('https://zupimages.net/up/26/47/cwh1.png') !important;
     background-size: cover !important;
 }
 html body#modernbb .panel ul.group_list li:has(a[href*="/g1-"])::after {
-    background: linear-gradient(90deg, #8c857b, #d8d2c7) !important;
+    background: linear-gradient(90deg, #32324a, #e2b857) !important;
 }
 
 /* Cercle Tiamat (/g2-) */
