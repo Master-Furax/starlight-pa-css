@@ -4585,11 +4585,12 @@ html body#modernbb #search_menu a[href*="search"] {
     box-sizing: border-box !important;
 }
 
-/* 2. Masque uniquement la petite barre de fil d'Ariane de l'index (ne touche PAS au corps du forum) */
-html body#modernbb #page-body > .sub-header:not(:has(h1)),
-html body#modernbb #page-body > .navbar:not(:has(h1)) {
+/* 2. Masque uniquement le fil d'Ariane vide de l'index sans jamais toucher au corps du forum */
+html body#modernbb ul#nav-breadcrumbs:empty,
+html body#modernbb .sub-header:not(:has(h1)) ul.breadcrumbs {
     display: none !important;
 }
+
 
 /* 3. Barre supérieure colorée garantie sur TOUS les navigateurs (même Chrome Android) */
 html body#modernbb::before {
