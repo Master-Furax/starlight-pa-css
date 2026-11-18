@@ -4160,50 +4160,106 @@ html body#modernbb .signature_div img {
    CORRECTIF FICHE PERSONNAGE (.sc-fiche) DANS LES SUJETS
    ========================================================= */
 
-/* 1. Adapte la fiche à 100% de la largeur du message sans déborder */
-html body#modernbb .message-contenu-arte .sc-fiche {
+/* 1. Adapte la fiche à 100% de la largeur du message en conservant ton fond anthracite (#28282b) */
+html body#modernbb .message-contenu-arte .sc-fiche,
+html body#modernbb #preview .sc-fiche {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
-    --f-bg-main: #1e1e20;
-    --f-bg-card: #28282b;
-    --f-text: #f4efe6;
-    --f-border: #3f3f46;
-    background: var(--f-bg-main) !important;
-    color: var(--f-text) !important;
+    background: #28282b !important;
+    color: #d8d2c7 !important;
 }
 
-/* Mode Crème activé uniquement au clic (via classe .sc-light-mode) */
-html body#modernbb .message-contenu-arte .sc-fiche.sc-light-mode {
-    --f-bg-main: #f4efe6 !important;
-    --f-bg-card: #ebe4d8 !important;
-    --f-text: #19191c !important;
-    --f-border: #c8bfb0 !important;
-    background: #f4efe6 !important;
-    color: #19191c !important;
+/* 2. Relie la bascule JS (.sc-light-mode) à ta variante sombre veloutée (#141416) */
+html body#modernbb .sc-fiche.sc-light-mode {
+    background: #141416 !important;
+    color: #f4efe6 !important;
+    border-color: #3a3a42 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.85) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-topbar {
+    background: #0f0f12 !important;
+    border-bottom-color: #2c2c33 !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-info-item,
+html body#modernbb .sc-fiche.sc-light-mode .sc-info-item:nth-child(even) {
+    background: #1d1d22 !important;
+    color: #f4efe6 !important;
+    border-color: #33333b !important;
+    border-left: 4px solid var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-info-item strong {
+    color: var(--grp-color) !important;
+    border-bottom-color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-glyphe-card {
+    background: #1a1a1f !important;
+    color: #e8e2d7 !important;
+    border: 1px solid var(--grp-color) !important;
+    border-left: 5px solid var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-glyphe-title {
+    color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-text-box {
+    background: #1d1d22 !important;
+    color: #f4efe6 !important;
+    border-color: #33333b !important;
+    border-left: 5px solid var(--grp-color) !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-player-section {
+    background: #1d1d22 !important;
+    color: #f4efe6 !important;
+    border-color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-player-avatar {
+    border-color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-tag {
+    background: #121215 !important;
+    border-color: var(--grp-color) !important;
+    color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-player-notes {
+    background: #121215 !important;
+    color: #e8e2d7 !important;
+    border-color: #33333b !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-credit-box {
+    background: #1a1a1f !important;
+    color: #f4efe6 !important;
+    border-color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-credit-header {
+    color: var(--grp-color) !important;
+}
+html body#modernbb .sc-fiche.sc-light-mode .sc-credit-code {
+    background: #111114 !important;
+    color: #f4efe6 !important;
+    border-color: #33333b !important;
+    border-left: 5px solid var(--grp-color) !important;
 }
 
-/* 2. Supprime tous les <br> injectés par Forumactif dans la structure HTML */
+/* 3. Supprime tous les <br> injectés par Forumactif dans la structure HTML */
 html body#modernbb .sc-fiche br {
     display: none !important;
 }
-
-/* Réautorise uniquement les sauts de ligne dans les zones de rédaction du joueur */
 html body#modernbb .sc-fiche .sc-text-box br,
 html body#modernbb .sc-fiche .sc-player-notes br {
     display: inline !important;
 }
 
-/* 3. Barre supérieure : Ambiance, Groupe & Lecteur audio compact */
+/* 4. Barre supérieure : Ambiance, Groupe & Lecteur audio compact */
 html body#modernbb .sc-fiche .sc-topbar {
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
     justify-content: space-between !important;
     gap: 10px !important;
-    padding: 14px 18px !important;
+    padding: 12px 18px !important;
     box-sizing: border-box !important;
 }
 
@@ -4213,50 +4269,38 @@ html body#modernbb .sc-fiche .sc-pa-player {
     max-width: 100% !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 12px !important;
-    padding: 6px 14px !important;
+    gap: 10px !important;
+    padding: 4px 12px !important;
     box-sizing: border-box !important;
 }
 
-html body#modernbb .sc-fiche .sc-pa-btns {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    flex-shrink: 0 !important;
-}
-
-html body#modernbb .sc-fiche .sc-pa-circle {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 26px !important;
-    height: 26px !important;
-    font-size: 11px !important;
-    line-height: 1 !important;
-}
-
-/* 4. Grille 2 colonnes propre pour les données biométriques */
+/* 5. Flexbox 2 colonnes insensible aux espaces &nbsp; de Forumactif */
 html body#modernbb .sc-fiche .sc-info-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
     width: 100% !important;
+    font-size: 0 !important;
     box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-fiche .sc-info-item {
-    width: 100% !important;
-    min-width: 0 !important;
+    flex: 0 0 calc(50% - 5px) !important;
+    width: calc(50% - 5px) !important;
+    max-width: calc(50% - 5px) !important;
+    font-size: 13.5px !important;
     box-sizing: border-box !important;
     word-wrap: break-word !important;
 }
 
-/* 5. Section Joueur (HRP) : Avatar carré à gauche, badges + notes à droite */
+/* 6. Section Joueur (HRP) : Avatar carré à gauche, badges + notes à droite */
 html body#modernbb .sc-fiche .sc-player-section {
     display: flex !important;
     align-items: flex-start !important;
-    gap: 20px !important;
+    gap: 18px !important;
     width: 100% !important;
+    font-size: 0 !important;
     box-sizing: border-box !important;
 }
 
@@ -4272,7 +4316,7 @@ html body#modernbb .sc-fiche .sc-player-desc {
     min-width: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 10px !important;
 }
 
 html body#modernbb .sc-fiche .sc-player-tags {
@@ -4280,6 +4324,7 @@ html body#modernbb .sc-fiche .sc-player-tags {
     flex-wrap: wrap !important;
     gap: 8px !important;
     width: 100% !important;
+    font-size: 0 !important;
 }
 
 html body#modernbb .sc-fiche .sc-tag {
@@ -4289,6 +4334,7 @@ html body#modernbb .sc-fiche .sc-tag {
 
 html body#modernbb .sc-fiche .sc-player-notes {
     width: 100% !important;
+    font-size: 13px !important;
     box-sizing: border-box !important;
 }
 
