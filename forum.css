@@ -4575,7 +4575,7 @@ html body#modernbb #page-footer {
 }
 
 /* =========================================================
-   CORRECTIF MOBILE UNIFIÉ (BASE FIREFOX PROPRE)
+   CORRECTIF MOBILE UNIFIÉ (OPERA, FIREFOX & CHROME)
    ========================================================= */
 html,
 body,
@@ -4588,6 +4588,7 @@ html body#modernbb {
     html body#modernbb {
         min-width: 1020px !important;
         width: 1020px !important;
+        max-width: 1020px !important;
         padding-left: 72px !important;
         padding-right: 16px !important;
         overflow-x: hidden !important;
@@ -4598,17 +4599,55 @@ html body#modernbb {
     html body#modernbb .headerbar,
     html body#modernbb #wrap,
     html body#modernbb #page-footer {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 932px !important;
+        max-width: 932px !important;
+        min-width: 932px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        box-sizing: border-box !important;
     }
 
-    /* Empêche uniquement les pubs invités de dépasser à droite sur Chrome */
+    /* Force la barre de navigation et les boutons Connexion / S'enregistrer dans les 932px */
+    html body#modernbb #headerbar-top .wrap,
+    html body#modernbb .headerbar-top .wrap,
+    html body#modernbb ul.navbar.navlinks {
+        width: 100% !important;
+        max-width: 932px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    html body#modernbb ul.navbar.navlinks > li > a {
+        font-size: 12px !important;
+        padding: 4px 6px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Ramène le bloc Connexion / S'enregistrer à l'intérieur des 932px */
+    html body#modernbb #headerbar-top .right-box,
+    html body#modernbb #headerbar-top .nav-right,
+    html body#modernbb #headerbar-top [class*="login"],
+    html body#modernbb #headerbar-top [class*="auth"] {
+        position: static !important;
+        right: auto !important;
+        margin-left: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Empêche les pubs invités de dépasser à droite sur Chrome */
     html body#modernbb iframe,
     html body#modernbb ins,
     html body#modernbb [id*="taboola"],
     html body#modernbb [class*="taboola"] {
-        max-width: 930px !important;
+        max-width: 932px !important;
     }
 }
+
