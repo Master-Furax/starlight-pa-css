@@ -6054,3 +6054,88 @@ html body#modernbb form[action*="/groupcp"] input.button2:hover {
     border-color: transparent !important;
     color: #ffffff !important;
 }
+
+/* ==========================================================================
+   BOUTONS DES PAGES DE GROUPE + AVATARS HEXAGONAUX DES MEMBRES
+   ========================================================================== */
+
+/* 1. Boutons et champs texte dans la même veine que la PA et les MP */
+html body#modernbb .panel input.button1,
+html body#modernbb .panel input.button2,
+html body#modernbb fieldset.submit-buttons input,
+html body#modernbb form[action*="/g"] input[type="submit"],
+html body#modernbb form[action*="/groupcp"] input[type="submit"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #222226 !important;
+    color: #d8d2c7 !important;
+    border: 1px solid rgba(216, 210, 199, 0.22) !important;
+    border-radius: 4px !important;
+    padding: 8px 18px !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 12.5px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+    transition: all 0.2s ease !important;
+}
+
+html body#modernbb .panel input.button1:hover,
+html body#modernbb .panel input.button2:hover,
+html body#modernbb fieldset.submit-buttons input:hover,
+html body#modernbb form[action*="/g"] input[type="submit"]:hover,
+html body#modernbb form[action*="/groupcp"] input[type="submit"]:hover {
+    background: var(--grad-btn) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+}
+
+html body#modernbb .panel input.inputbox,
+html body#modernbb form[action*="/g"] input[type="text"],
+html body#modernbb form[action*="/groupcp"] input[type="text"] {
+    background: #141417 !important;
+    color: #d8d2c7 !important;
+    border: 1px solid rgba(216, 210, 199, 0.22) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    margin-right: 8px !important;
+}
+
+/* 2. Cellule Nom d'utilisateur + Hexagone avatar */
+html body#modernbb table.table1 tbody td.sc-member-cell {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+html body#modernbb .sc-hex-avatar {
+    position: relative !important;
+    width: 38px !important;
+    height: 42px !important;
+    flex-shrink: 0 !important;
+    background: rgba(216, 210, 199, 0.28) !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    transition: transform 0.2s ease, background 0.2s ease !important;
+}
+
+html body#modernbb table.table1 tbody tr:hover .sc-hex-avatar {
+    transform: scale(1.08) !important;
+    background: var(--grad-btn) !important;
+}
+
+html body#modernbb .sc-hex-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 18% !important; /* Cadre automatiquement sur la tête */
+    display: block !important;
+    background: #121215 !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+}
