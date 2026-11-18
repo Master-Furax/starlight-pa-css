@@ -4544,6 +4544,8 @@ html body#modernbb #search_menu a[href*="search"] {
     background: var(--grad-btn) !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
+    text-shadow: none !important;
+    letter-spacing: 1px !important;
     border: 1px solid var(--border-cream) !important;
     border-radius: 8px 0 !important;
     padding: 6px 10px !important;
