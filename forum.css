@@ -4575,47 +4575,19 @@ html body#modernbb #page-footer {
 }
 
 /* =========================================================
-   CORRECTIF DÉFINITIF MOBILE : PLUS DE FOND BLANC NI PA COUPÉE
+   CORRECTIF MOBILE PROPRE (SANS TOUCHER AU FOND DÉGRADÉ PC)
    ========================================================= */
 
-/* 1. Supprime définitivement le fond blanc étoilé de Forumactif sur html et body */
+/* 1. Couleur de secours sous ton fond dégradé (ne touche PAS au background-image PC) */
 html,
 body,
 html body#modernbb {
-    background: #141416 !important;
-    background-image: none !important;
     background-color: #141416 !important;
 }
 
-/* 2. Sur mobile / écran tactile : empêche la PA, les catégories et le QEEL de dépasser */
-@media only screen and (max-width: 1100px), only screen and (hover: none) and (pointer: coarse) {
-    html,
-    html body#modernbb {
-        min-width: 1020px !important;
-        width: 1020px !important;
-        padding-left: 72px !important;
-        padding-right: 16px !important;
-        overflow-x: auto !important;
-        box-sizing: border-box !important;
-    }
-
-    html body#modernbb #headerbar-top,
-    html body#modernbb .headerbar,
-    html body#modernbb #wrap,
-    html body#modernbb #page-footer {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-}
-
-/* =========================================================
-   CORRECTIF SPÉCIAL CHROME ANDROID (DÉGRADÉ NATIF & SCROLL)
-   ========================================================= */
-@media only screen and (max-width: 1100px), only screen and (hover: none) and (pointer: coarse) {
+/* 2. Réglages uniquement sur téléphones & tablettes (écrans tactiles) */
+@media only screen and (hover: none) and (pointer: coarse) {
     html {
-        background-color: #141416 !important;
         overflow-x: hidden !important;
         width: 100% !important;
     }
@@ -4630,13 +4602,10 @@ html body#modernbb {
         box-sizing: border-box !important;
     }
 
-    /* Étire la barre du haut et la bannière sur 100% SANS écraser leur dégradé natif */
     html body#modernbb #page-header,
     html body#modernbb #headerbar-top,
-    html body#modernbb .headerbar-top,
-    html body#modernbb #headerbar-top .wrap,
     html body#modernbb .headerbar,
-    html body#modernbb .headerbar .wrap,
+    html body#modernbb .wrap,
     html body#modernbb .container {
         width: 100% !important;
         max-width: 100% !important;
@@ -4644,7 +4613,7 @@ html body#modernbb {
         box-sizing: border-box !important;
     }
 
-    /* Verrouille la largeur de la pub fixe tout en bas de l'écran sur Chrome */
+    /* Empêche les pubs fixes en bas de créer un scroll horizontal sur Chrome Android */
     html body#modernbb > div[style*="fixed"],
     html body#modernbb > div[style*="bottom"],
     html body#modernbb iframe,
