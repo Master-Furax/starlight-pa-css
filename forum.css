@@ -4575,14 +4575,33 @@ html body#modernbb #page-footer {
 }
 
 /* =========================================================
-   CORRECTIF MOBILE PROPRE : LAISSE LA LARGEUR PC NATURELLE
+   CORRECTIF MOBILE FINAL (OPERA, CHROME & FIREFOX)
    ========================================================= */
-html,
+
+/* 1. Peint le fond derrière le QEEL en #141416 et étire le dégradé de body jusqu'en bas */
+html {
+    background: #141416 !important;
+    background-image: none !important;
+    background-color: #141416 !important;
+    min-height: 100% !important;
+    height: auto !important;
+}
+
 body,
 html body#modernbb {
     background-color: #141416 !important;
+    min-height: 100vh !important;
+    height: auto !important;
 }
 
+/* 2. Masque la barre de fil d'Ariane vide au-dessus de la PA */
+html body#modernbb #nav-breadcrumbs:empty,
+html body#modernbb .nav-breadcrumbs:empty,
+html body#modernbb #page-body > .navbar:first-child {
+    display: none !important;
+}
+
+/* 3. Réglages écrans tactiles (Opera, Chrome & Firefox mobile) */
 @media only screen and (hover: none) and (pointer: coarse) {
     html,
     body,
@@ -4595,7 +4614,19 @@ html body#modernbb {
         box-sizing: border-box !important;
     }
 
+    /* Restaure le dégradé prune-fuchsia-doré sur Chrome Android & aligne les boutons à droite */
     html body#modernbb #headerbar-top,
+    html body#modernbb .headerbar-top {
+        width: 100% !important;
+        max-width: 1120px !important;
+        min-height: 44px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        background: linear-gradient(90deg, #4b1d3f 0%, #9b2259 50%, #d89b3c 100%) !important;
+        border-bottom: 2px solid var(--gold) !important;
+        box-sizing: border-box !important;
+    }
+
     html body#modernbb .headerbar,
     html body#modernbb #wrap,
     html body#modernbb #page-footer {
