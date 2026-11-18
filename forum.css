@@ -776,6 +776,15 @@ a.sc-last-topic:hover { color: var(--border-cream) !important; }
     vertical-align: middle !important;
     transition: transform 0.2s ease !important;
 }
+/* Effet hover identique aux "+" de la PA sur le bouton flèche des catégories (.sc-last-arrow) */
+html body#modernbb .sc-last-arrow {
+    transition: transform 0.2s ease, filter 0.2s ease !important;
+}
+
+html body#modernbb .sc-last-arrow:hover {
+    transform: scale(1.15) !important;
+    filter: brightness(1.15) !important;
+}
 
 .sc-last-stats { 
    font-size: 10px !important; 
