@@ -6180,7 +6180,7 @@ html body#modernbb table.table1 tbody td a img[src*="icon_contact_"] {
 }
 
 /* ==========================================================================
-   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (ICÔNE HARMONISÉE + HALO DORÉ)
+   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (FOND NOIR + HOVER ICÔNE & TEXTE DORÉS)
    ========================================================================== */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]),
@@ -6198,7 +6198,7 @@ html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
     transition: all 0.2s ease !important;
 }
 
-/* Transforme l'icône bleu/vert en crème assorti au thème */
+/* Icône crème au repos */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]) img,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) img {
     display: inline-block !important;
@@ -6210,21 +6210,21 @@ html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) img {
     transition: filter 0.2s ease !important;
 }
 
-/* Hover : teinte dorée dégradée + contour #f4efe6 + halo doré */
+/* Hover : fond noir conservé + texte doré + contour #f4efe6 + halo doré */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb .navbar a.mainmenu[href*="discord.gg"]:hover,
 html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"]:hover {
-    background: linear-gradient(135deg, #9c6b19, #e2b857) !important;
+    background: #19191c !important;
     border-color: transparent !important;
-    color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55) !important;
+    color: #f5b942 !important;
+    text-shadow: 0 0 10px rgba(245, 185, 66, 0.45) !important;
     box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
     transform: translateY(-1px) !important;
 }
 
+/* Icône qui passe exactement dans le même doré (#f5b942) au survol */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover img,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover img {
-    filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5)) !important;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(61%) saturate(566%) hue-rotate(356deg) brightness(99%) contrast(94%) !important;
 }
-
