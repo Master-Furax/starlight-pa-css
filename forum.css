@@ -4449,6 +4449,37 @@ html body#modernbb #postingbox .sceditor-container iframe,
 html body#modernbb #postingbox .sceditor-container textarea {
     min-height: 275px !important;
 }
+/* =========================================================
+   CORRECTIF DÉBORDEMENT TEXTE DANS LES NOTIFICATIONS
+   ========================================================= */
+html body#modernbb #fa_toolbar #fa_right #notif_list li .content {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb #fa_toolbar #fa_right #notif_list li .contentText {
+    float: none !important;
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb #fa_toolbar #fa_right #notif_list li a.delete {
+    float: none !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+}
+
+html body#modernbb #fa_toolbar #fa_right #notif_list li .contentTime {
+    width: 100% !important;
+    margin-top: 4px !important;
+}
 
 /* =========================================================
    POPUP RECHERCHE & HARMONISATION MOBILE UNIFIÉE (OPERA, FIREFOX, CHROME)
