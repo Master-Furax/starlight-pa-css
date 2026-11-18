@@ -4603,3 +4603,51 @@ html body#modernbb #page-footer {
     }
 }
 
+/* =========================================================
+   CORRECTIF MOBILE (FIREFOX & CHROME) : FIN DE LA BANDE GRISE
+   ========================================================= */
+
+/* 1. Force le fond sombre sur TOUTE la largeur du viewport mobile (même dézoomé) */
+html,
+html body#modernbb {
+    background-color: #141416 !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Centre le contenu principal et empêche le décalage à gauche sur mobile/tablette */
+@media only screen and (max-width: 1050px), only screen and (hover: none) and (pointer: coarse) {
+    html body#modernbb {
+        padding-left: 72px !important;
+        padding-right: 12px !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    html body#modernbb #headerbar-top,
+    html body#modernbb .headerbar,
+    html body#modernbb #wrap,
+    html body#modernbb #page-footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Évite que le bouton CONNEXION chevauche "Navigation" sur écrans tactiles */
+    html body#modernbb #headerbar-top .wrap {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-right: 10px !important;
+        gap: 8px !important;
+    }
+
+    html body#modernbb ul.navbar.navlinks {
+        gap: 8px !important;
+        font-size: 13px !important;
+    }
+}
+
