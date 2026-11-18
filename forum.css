@@ -4166,24 +4166,59 @@ html body#modernbb .message-contenu-arte .sc-fiche {
     max-width: 100% !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
 }
 
-/* 2. Supprime les <br> injectés par Forumactif dans les grilles et flexboxes */
+/* 2. Supprime tous les <br> injectés par Forumactif dans la structure HTML */
 html body#modernbb .sc-fiche br {
     display: none !important;
 }
 
-/* Réautorise uniquement les retours à la ligne dans les paragraphes RP / Histoire / Caractère */
-html body#modernbb .sc-fiche p br,
-html body#modernbb .sc-fiche .sc-text-block br,
-html body#modernbb .sc-fiche [class*="desc"] br,
-html body#modernbb .sc-fiche [class*="story"] br,
-html body#modernbb .sc-fiche [class*="histoire"] br,
-html body#modernbb .sc-fiche [class*="caractere"] br {
+/* Réautorise uniquement les sauts de ligne dans les zones de rédaction du joueur */
+html body#modernbb .sc-fiche .sc-text-box br,
+html body#modernbb .sc-fiche .sc-player-notes br {
     display: inline !important;
 }
 
-/* 3. Grille 2 colonnes propre pour les données biométriques (.sc-info-grid) */
+/* 3. Barre supérieure : Ambiance, Groupe & Lecteur audio bien alignés */
+html body#modernbb .sc-fiche .sc-topbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    padding: 16px 20px !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb .sc-fiche .sc-pa-player {
+    flex: 1 1 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+}
+
+html body#modernbb .sc-fiche .sc-pa-btns {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+}
+
+html body#modernbb .sc-fiche .sc-pa-circle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+}
+
+/* 4. Grille 2 colonnes propre pour les données biométriques */
 html body#modernbb .sc-fiche .sc-info-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -4199,18 +4234,18 @@ html body#modernbb .sc-fiche .sc-info-item {
     word-wrap: break-word !important;
 }
 
-/* 4. Alignement propre de la section Joueur (.sc-player-section) */
+/* 5. Section Joueur (HRP) : Avatar carré à gauche, badges + notes à droite */
 html body#modernbb .sc-fiche .sc-player-section {
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     gap: 20px !important;
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-fiche .sc-player-avatar {
-    width: 180px !important;
-    height: 180px !important;
+    width: 170px !important;
+    height: 170px !important;
     object-fit: cover !important;
     flex-shrink: 0 !important;
 }
@@ -4220,17 +4255,25 @@ html body#modernbb .sc-fiche .sc-player-desc {
     min-width: 0 !important;
     display: flex !important;
     flex-direction: column !important;
+    gap: 12px !important;
+}
+
+html body#modernbb .sc-fiche .sc-player-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
     gap: 8px !important;
+    width: 100% !important;
 }
 
-/* 5. Corrige l'affichage texte ":track_previous:" / ":track_next:" du lecteur audio */
-html body#modernbb .sc-fiche [class*="track"],
-html body#modernbb .sc-fiche [class*="audio"] button,
-html body#modernbb .sc-fiche [class*="player"] button {
-    font-size: 0 !important;
-    line-height: 1 !important;
+html body#modernbb .sc-fiche .sc-tag {
+    display: inline-block !important;
+    margin: 0 !important;
 }
 
+html body#modernbb .sc-fiche .sc-player-notes {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
 
 /* =========================================================
    CORRECTIF ÉDITEUR : SIGNATURE CÔTE À CÔTE & MENUS DROPDOWNS
