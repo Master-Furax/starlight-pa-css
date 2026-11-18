@@ -6151,11 +6151,9 @@ html body#modernbb .panel p.row1 strong {
 }
 
 /* ==========================================================================
-   ICÔNES DE CONTACT MODERNISÉES DANS LES PAGES DE GROUPE (MP, EMAIL, SITE)
+   ICÔNES DE CONTACT MODERNISÉES DANS LES PAGES DE GROUPE (MP, EMAIL, SITE, ETC.)
    ========================================================================== */
-html body#modernbb table.table1 tbody td a:has(img.i_icon_pm),
-html body#modernbb table.table1 tbody td a:has(img.i_icon_email),
-html body#modernbb table.table1 tbody td a:has(img.i_icon_www) {
+html body#modernbb table.table1 tbody td a:has(img[src*="icon_contact_"]) {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -6168,17 +6166,13 @@ html body#modernbb table.table1 tbody td a:has(img.i_icon_www) {
     transition: all 0.2s ease !important;
 }
 
-html body#modernbb table.table1 tbody td a:has(img.i_icon_pm):hover,
-html body#modernbb table.table1 tbody td a:has(img.i_icon_email):hover,
-html body#modernbb table.table1 tbody td a:has(img.i_icon_www):hover {
+html body#modernbb table.table1 tbody td a:has(img[src*="icon_contact_"]):hover {
     background: var(--grad-btn) !important;
     border-color: transparent !important;
     transform: translateY(-1px) !important;
 }
 
-html body#modernbb table.table1 tbody td a img.i_icon_pm,
-html body#modernbb table.table1 tbody td a img.i_icon_email,
-html body#modernbb table.table1 tbody td a img.i_icon_www {
+html body#modernbb table.table1 tbody td a img[src*="icon_contact_"] {
     width: 16px !important;
     height: 16px !important;
     object-fit: contain !important;
