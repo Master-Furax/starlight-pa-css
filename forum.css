@@ -6106,19 +6106,19 @@ html body#modernbb form[action*="/groupcp"] input[type="text"] {
     margin-right: 8px !important;
 }
 
-/* 2. Cellule Nom d'utilisateur + Hexagone avatar */
+/* 2. Cellule Nom d'utilisateur + Hexagone avatar 48x50px */
 html body#modernbb table.table1 tbody td.sc-member-cell {
     display: flex !important;
     align-items: center !important;
-    gap: 12px !important;
+    gap: 14px !important;
 }
 
 html body#modernbb .sc-hex-avatar {
     position: relative !important;
-    width: 38px !important;
-    height: 42px !important;
+    width: 48px !important;
+    height: 50px !important;
     flex-shrink: 0 !important;
-    background: rgba(216, 210, 199, 0.28) !important;
+    background: rgba(216, 210, 199, 0.3) !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
     padding: 2px !important;
     box-sizing: border-box !important;
@@ -6126,7 +6126,7 @@ html body#modernbb .sc-hex-avatar {
 }
 
 html body#modernbb table.table1 tbody tr:hover .sc-hex-avatar {
-    transform: scale(1.08) !important;
+    transform: scale(1.07) !important;
     background: var(--grad-btn) !important;
 }
 
@@ -6134,8 +6134,18 @@ html body#modernbb .sc-hex-avatar img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center 18% !important; /* Cadre automatiquement sur la tête */
+    object-position: center 15% !important;
     display: block !important;
     background: #121215 !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+}
+
+/* 3. Netteté du texte d'avertissement "Tout membre faisant partie de ce groupe..." */
+html body#modernbb .panel p.row1,
+html body#modernbb .panel p.row1 strong {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 13.5px !important;
+    letter-spacing: 0.2px !important;
+    -webkit-font-smoothing: antialiased !important;
 }
