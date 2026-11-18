@@ -891,12 +891,12 @@ text-transform: uppercase; font-size: 34px !important; text-align: left; height:
 .content_qeel_arte h4 span { display: block; width: auto; text-align: center; font-size: 20px; font-weight: 900; }
 .content_qeel_arte h4 span, .content_qeel_arte h4 span a { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95) !important; letter-spacing: 1px !important; }
 
-/* Garde le cadre de description des groupes toujours au-dessus des étoiles décoratives */
-.content_qeel_arte .groupe_qeel,
-.content_qeel_arte [class*="groupe"] {
-    position: relative !important;
+/* Garde uniquement les boîtes de description des groupes au-dessus des étoiles décoratives */
+.content_qeel_arte .crew_color > div,
+.content_qeel_arte .groupe_qeel {
     z-index: 5 !important;
 }
+
 
 .messandmember {
     background: linear-gradient(274deg, #706083, #bb768a, #f9d08b) !important;
