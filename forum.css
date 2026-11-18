@@ -4575,65 +4575,40 @@ html body#modernbb #page-footer {
 }
 
 /* =========================================================
-   CORRECTIF MOBILE PROPRE (SANS TOUCHER AU FOND DÉGRADÉ PC)
+   CORRECTIF MOBILE UNIFIÉ (BASE FIREFOX PROPRE)
    ========================================================= */
-
-/* 1. Couleur de secours sous ton fond dégradé (ne touche PAS au background-image PC) */
 html,
 body,
 html body#modernbb {
     background-color: #141416 !important;
 }
 
-/* 2. Réglages uniquement sur téléphones & tablettes (écrans tactiles) */
 @media only screen and (hover: none) and (pointer: coarse) {
-    html {
-        background-color: #141416 !important;
-        overflow-x: hidden !important;
-        width: 100% !important;
-    }
-
-    body,
+    html,
     html body#modernbb {
-        min-width: 1040px !important;
-        width: 1040px !important;
-        max-width: 1040px !important;
+        min-width: 1020px !important;
+        width: 1020px !important;
         padding-left: 72px !important;
         padding-right: 16px !important;
-        overflow-x: clip !important;
+        overflow-x: hidden !important;
         box-sizing: border-box !important;
     }
 
-    /* Redonne explicitement le dégradé prune-fuchsia-doré à la barre du haut sur mobile */
     html body#modernbb #headerbar-top,
-    html body#modernbb .headerbar-top {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        min-height: 46px !important;
-        background: linear-gradient(135deg, #4b1d3f 0%, #8c2356 50%, #d89b3c 100%) !important;
-        background-image: linear-gradient(135deg, #4b1d3f 0%, #8c2356 50%, #d89b3c 100%) !important;
-        border-bottom: 2px solid var(--gold) !important;
-        box-sizing: border-box !important;
-    }
-
-    html body#modernbb #page-header,
     html body#modernbb .headerbar,
-    html body#modernbb .wrap,
-    html body#modernbb .container {
+    html body#modernbb #wrap,
+    html body#modernbb #page-footer {
         width: 100% !important;
         max-width: 100% !important;
-        min-width: 100% !important;
-        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
-    /* Bloque net la largeur de la pub fixe en bas et des bannières Taboola sur Chrome Android */
-    html body#modernbb > div,
+    /* Empêche uniquement les pubs invités de dépasser à droite sur Chrome */
     html body#modernbb iframe,
     html body#modernbb ins,
     html body#modernbb [id*="taboola"],
     html body#modernbb [class*="taboola"] {
-        max-width: 950px !important;
-        box-sizing: border-box !important;
+        max-width: 930px !important;
     }
 }
