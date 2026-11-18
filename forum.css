@@ -4180,31 +4180,43 @@ html body#modernbb .sc-fiche .sc-player-notes br {
     display: inline !important;
 }
 
-/* 3. Barre supérieure : Ambiance, Groupe & Lecteur audio bien alignés */
+/* 3. Rétablit le bouton Ambiance Anthracite / Crème malgré le <br> de Forumactif */
+html body#modernbb .sc-fiche-chk:checked ~ .sc-fiche,
+html body#modernbb #sc-fiche-mode:checked ~ .sc-fiche {
+    --f-bg-main: #f4efe6 !important;
+    --f-bg-card: #ebe4d8 !important;
+    --f-text: #19191c !important;
+    --f-border: #c8bfb0 !important;
+    background: #f4efe6 !important;
+    color: #19191c !important;
+}
+
+/* Barre supérieure : Ambiance, Groupe & Lecteur audio compact comme à l'origine */
 html body#modernbb .sc-fiche .sc-topbar {
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 12px !important;
-    padding: 16px 20px !important;
+    gap: 10px !important;
+    padding: 14px 18px !important;
     box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-fiche .sc-pa-player {
-    flex: 1 1 100% !important;
-    display: flex !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    display: inline-flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
-    gap: 14px !important;
-    padding: 10px 16px !important;
+    gap: 12px !important;
+    padding: 6px 14px !important;
     box-sizing: border-box !important;
 }
 
 html body#modernbb .sc-fiche .sc-pa-btns {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
+    gap: 8px !important;
     flex-shrink: 0 !important;
 }
 
@@ -4212,11 +4224,12 @@ html body#modernbb .sc-fiche .sc-pa-circle {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 28px !important;
-    height: 28px !important;
-    font-size: 12px !important;
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 11px !important;
     line-height: 1 !important;
 }
+
 
 /* 4. Grille 2 colonnes propre pour les données biométriques */
 html body#modernbb .sc-fiche .sc-info-grid {
