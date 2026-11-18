@@ -4167,6 +4167,22 @@ html body#modernbb .message-contenu-arte .sc-fiche {
     margin: 0 auto !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
+    --f-bg-main: #1e1e20;
+    --f-bg-card: #28282b;
+    --f-text: #f4efe6;
+    --f-border: #3f3f46;
+    background: var(--f-bg-main) !important;
+    color: var(--f-text) !important;
+}
+
+/* Mode Crème activé uniquement au clic (via classe .sc-light-mode) */
+html body#modernbb .message-contenu-arte .sc-fiche.sc-light-mode {
+    --f-bg-main: #f4efe6 !important;
+    --f-bg-card: #ebe4d8 !important;
+    --f-text: #19191c !important;
+    --f-border: #c8bfb0 !important;
+    background: #f4efe6 !important;
+    color: #19191c !important;
 }
 
 /* 2. Supprime tous les <br> injectés par Forumactif dans la structure HTML */
@@ -4180,18 +4196,7 @@ html body#modernbb .sc-fiche .sc-player-notes br {
     display: inline !important;
 }
 
-/* 3. Rétablit le bouton Ambiance Anthracite / Crème malgré le <br> de Forumactif */
-html body#modernbb .sc-fiche-chk:checked ~ .sc-fiche,
-html body#modernbb #sc-fiche-mode:checked ~ .sc-fiche {
-    --f-bg-main: #f4efe6 !important;
-    --f-bg-card: #ebe4d8 !important;
-    --f-text: #19191c !important;
-    --f-border: #c8bfb0 !important;
-    background: #f4efe6 !important;
-    color: #19191c !important;
-}
-
-/* Barre supérieure : Ambiance, Groupe & Lecteur audio compact comme à l'origine */
+/* 3. Barre supérieure : Ambiance, Groupe & Lecteur audio compact */
 html body#modernbb .sc-fiche .sc-topbar {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -4229,7 +4234,6 @@ html body#modernbb .sc-fiche .sc-pa-circle {
     font-size: 11px !important;
     line-height: 1 !important;
 }
-
 
 /* 4. Grille 2 colonnes propre pour les données biométriques */
 html body#modernbb .sc-fiche .sc-info-grid {
@@ -4287,6 +4291,7 @@ html body#modernbb .sc-fiche .sc-player-notes {
     width: 100% !important;
     box-sizing: border-box !important;
 }
+
 
 /* =========================================================
    CORRECTIF ÉDITEUR : SIGNATURE CÔTE À CÔTE & MENUS DROPDOWNS
