@@ -4392,6 +4392,7 @@ html body#modernbb #postingbox #parent_editor_simple > #smiley-box {
 
 html body#modernbb #postingbox #smiley-box a {
     display: inline !important;
+    white-space: nowrap !important;
 }
 
 html body#modernbb #postingbox #smiley-box iframe,
