@@ -5839,7 +5839,7 @@ html body#modernbb .panel ul.group_list li hr {
 /* Administrateurs (/g1-) */
 html body#modernbb .panel ul.noList:not(.group_list) li a[href*="/g1-"]::before,
 html body#modernbb .panel ul.group_list li:has(a[href*="/g1-"])::before {
-    background-image: url('https://zupimages.net/up/26/47/cwh1.png') !important;
+    background-image: url('https://zupimages.net/up/26/47/50pd.png') !important;
     background-size: cover !important;
 }
 html body#modernbb .panel ul.group_list li:has(a[href*="/g1-"])::after {
