@@ -4588,6 +4588,7 @@ html body#modernbb {
 /* 2. Réglages uniquement sur téléphones & tablettes (écrans tactiles) */
 @media only screen and (hover: none) and (pointer: coarse) {
     html {
+        background-color: #141416 !important;
         overflow-x: hidden !important;
         width: 100% !important;
     }
@@ -4599,11 +4600,24 @@ html body#modernbb {
         max-width: 1040px !important;
         padding-left: 72px !important;
         padding-right: 16px !important;
+        overflow-x: clip !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Redonne explicitement le dégradé prune-fuchsia-doré à la barre du haut sur mobile */
+    html body#modernbb #headerbar-top,
+    html body#modernbb .headerbar-top {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        min-height: 46px !important;
+        background: linear-gradient(135deg, #4b1d3f 0%, #8c2356 50%, #d89b3c 100%) !important;
+        background-image: linear-gradient(135deg, #4b1d3f 0%, #8c2356 50%, #d89b3c 100%) !important;
+        border-bottom: 2px solid var(--gold) !important;
         box-sizing: border-box !important;
     }
 
     html body#modernbb #page-header,
-    html body#modernbb #headerbar-top,
     html body#modernbb .headerbar,
     html body#modernbb .wrap,
     html body#modernbb .container {
@@ -4613,12 +4627,13 @@ html body#modernbb {
         box-sizing: border-box !important;
     }
 
-    /* Empêche les pubs fixes en bas de créer un scroll horizontal sur Chrome Android */
-    html body#modernbb > div[style*="fixed"],
-    html body#modernbb > div[style*="bottom"],
+    /* Bloque net la largeur de la pub fixe en bas et des bannières Taboola sur Chrome Android */
+    html body#modernbb > div,
     html body#modernbb iframe,
-    html body#modernbb ins {
-        max-width: 100vw !important;
+    html body#modernbb ins,
+    html body#modernbb [id*="taboola"],
+    html body#modernbb [class*="taboola"] {
+        max-width: 950px !important;
         box-sizing: border-box !important;
     }
 }
