@@ -6180,7 +6180,7 @@ html body#modernbb table.table1 tbody td a img[src*="icon_contact_"] {
 }
 
 /* ==========================================================================
-   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (IDENTIQUE À NOTIFICATIONS)
+   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (ICÔNE HARMONISÉE + HALO DORÉ)
    ========================================================================== */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]),
@@ -6190,31 +6190,41 @@ html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
     align-items: center !important;
     gap: 8px !important;
     background: #19191c !important;
-    border: 1px solid rgba(216, 210, 199, 0.28) !important;
+    border: 1px solid rgba(216, 210, 199, 0.32) !important;
     border-radius: 4px !important;
     padding: 5px 13px !important;
-    color: #d8d2c7 !important;
+    color: #f4efe6 !important;
     text-shadow: none !important;
     transition: all 0.2s ease !important;
 }
 
+/* Transforme l'icône bleu/vert en crème assorti au thème */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]) img,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) img {
     display: inline-block !important;
-    width: 24px !important;
-    height: 24px !important;
+    width: 22px !important;
+    height: 22px !important;
     object-fit: contain !important;
     margin: 0 !important;
+    filter: brightness(0) invert(0.92) sepia(0.15) !important;
+    transition: filter 0.2s ease !important;
 }
 
+/* Hover : teinte dorée dégradée + contour #f4efe6 + halo doré */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb .navbar a.mainmenu[href*="discord.gg"]:hover,
 html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"]:hover {
-    background: var(--grad-btn) !important;
+    background: linear-gradient(135deg, #9c6b19, #e2b857) !important;
     border-color: transparent !important;
     color: #ffffff !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55) !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
     transform: translateY(-1px) !important;
 }
+
+html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover img,
+html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover img {
+    filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5)) !important;
+}
+
