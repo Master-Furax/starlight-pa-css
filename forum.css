@@ -6149,3 +6149,38 @@ html body#modernbb .panel p.row1 strong {
     letter-spacing: 0.2px !important;
     -webkit-font-smoothing: antialiased !important;
 }
+
+/* ==========================================================================
+   ICÔNES DE CONTACT MODERNISÉES DANS LES PAGES DE GROUPE (MP, EMAIL, SITE)
+   ========================================================================== */
+html body#modernbb table.table1 tbody td a:has(img.i_icon_pm),
+html body#modernbb table.table1 tbody td a:has(img.i_icon_email),
+html body#modernbb table.table1 tbody td a:has(img.i_icon_www) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: #222226 !important;
+    border: 1px solid rgba(216, 210, 199, 0.2) !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+html body#modernbb table.table1 tbody td a:has(img.i_icon_pm):hover,
+html body#modernbb table.table1 tbody td a:has(img.i_icon_email):hover,
+html body#modernbb table.table1 tbody td a:has(img.i_icon_www):hover {
+    background: var(--grad-btn) !important;
+    border-color: transparent !important;
+    transform: translateY(-1px) !important;
+}
+
+html body#modernbb table.table1 tbody td a img.i_icon_pm,
+html body#modernbb table.table1 tbody td a img.i_icon_email,
+html body#modernbb table.table1 tbody td a img.i_icon_www {
+    width: 16px !important;
+    height: 16px !important;
+    object-fit: contain !important;
+    filter: brightness(0.95) contrast(1.1) !important;
+}
