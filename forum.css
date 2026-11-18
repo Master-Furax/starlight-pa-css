@@ -6180,7 +6180,7 @@ html body#modernbb table.table1 tbody td a img[src*="icon_contact_"] {
 }
 
 /* ==========================================================================
-   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (AVEC TON ICÔNE 6vdm.png)
+   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (IDENTIQUE À NOTIFICATIONS)
    ========================================================================== */
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]),
@@ -6188,12 +6188,12 @@ html body#modernbb .navbar a.mainmenu[href*="discord.gg"],
 html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 7px !important;
-    background: rgba(88, 101, 242, 0.24) !important;
-    border: 1px solid rgba(88, 101, 242, 0.65) !important;
+    gap: 8px !important;
+    background: #19191c !important;
+    border: 1px solid rgba(216, 210, 199, 0.28) !important;
     border-radius: 4px !important;
-    padding: 4px 12px !important;
-    color: #c5cbff !important;
+    padding: 5px 13px !important;
+    color: #d8d2c7 !important;
     text-shadow: none !important;
     transition: all 0.2s ease !important;
 }
@@ -6201,8 +6201,8 @@ html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
 html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]) img,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) img {
     display: inline-block !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 24px !important;
     object-fit: contain !important;
     margin: 0 !important;
 }
@@ -6211,9 +6211,10 @@ html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover,
 html body#modernbb .navbar a.mainmenu[href*="discord.gg"]:hover,
 html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"]:hover {
-    background: linear-gradient(90deg, #4752c4, #5865f2) !important;
-    border-color: #7983f5 !important;
+    background: var(--grad-btn) !important;
+    border-color: transparent !important;
     color: #ffffff !important;
-    box-shadow: 0 0 12px rgba(88, 101, 242, 0.5) !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
     transform: translateY(-1px) !important;
 }
