@@ -4667,3 +4667,74 @@ html body#modernbb #banniere-header img {
         margin: 30px auto 10px !important;
     }
 }
+
+/* =========================================================
+   LISTING DES SUJETS (.SBJ) : FLÈCHE DERNIER MESSAGE & HEXAGONE
+   ========================================================= */
+
+/* 1. Alignement propre de la boîte de droite (.boxSBJ et .lmsgSBJ) */
+html body#modernbb fieldset.SBJ .boxSBJ {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+html body#modernbb fieldset.SBJ .lmsgSBJ {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    min-width: 250px !important;
+}
+
+/* 2. Stylise la petite flèche "Voir le dernier message" comme les "+" de la PA */
+html body#modernbb fieldset.SBJ .lmsgSBJ a[href*="#"],
+html body#modernbb fieldset.SBJ .lmsgSBJ a:has(img[src*="icon_topic_latest"]) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    background: linear-gradient(135deg, #d89b3c 0%, #c83256 100%) !important;
+    border: 1px solid #f4efe6 !important;
+    border-radius: 5px 0 5px 0 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7) !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, filter 0.2s ease !important;
+    position: relative !important;
+    margin-left: 6px !important;
+}
+
+/* Cache l'icône bleue par défaut et affiche une flèche blanche nette */
+html body#modernbb fieldset.SBJ .lmsgSBJ a:has(img[src*="icon_topic_latest"]) img {
+    display: none !important;
+}
+
+html body#modernbb fieldset.SBJ .lmsgSBJ a:has(img[src*="icon_topic_latest"])::after {
+    content: "➔" !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+}
+
+/* Effet hover identique aux "+" de la PA (sur le listing des sujets ET sur les catégories de l'accueil) */
+html body#modernbb fieldset.SBJ .lmsgSBJ a:has(img[src*="icon_topic_latest"]):hover,
+html body#modernbb .forum-category a[href*="f"]:has(img[src*="icon_post_latest"]):hover,
+html body#modernbb [class*="lastpost"] a:has(img):hover {
+    transform: scale(1.15) !important;
+    filter: brightness(1.15) !important;
+}
+
+/* 3. Avatar hexagonal du dernier posteur (style Switcheroo, centré dans le bloc) */
+html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar,
+html body#modernbb fieldset.SBJ .lmsgSBJ > img:not([src*="icon_topic_latest"]) {
+    width: 44px !important;
+    height: 48px !important;
+    object-fit: cover !important;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%) !important;
+    background: linear-gradient(135deg, #ee5574, #ffb01f) !important;
+    padding: 2px !important;
+    flex-shrink: 0 !important;
+}
