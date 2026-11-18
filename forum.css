@@ -4739,28 +4739,27 @@ html body#modernbb [class*="lastpost"] a:has(img):hover {
 /* 3. Hexagone du dernier posteur identique aux catégories (.sc-last-avatar) */
 html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar {
     position: relative !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: inline-block !important;
     width: 54px !important;
     height: 47px !important;
     background: linear-gradient(135deg, #4e386a, #ee5574, #ffb01f) !important;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
     border-radius: 0 !important;
-    padding: 2px !important;
-    box-sizing: border-box !important;
+    padding: 0 !important;
     flex-shrink: 0 !important;
 }
 
-/* Supprime le fond blanc ::after de ModernBB et le border-radius: 38px de 33-ltr.css */
 html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar::after,
 html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar::before {
     display: none !important;
 }
 
 html body#modernbb fieldset.SBJ .lmsgSBJ .lastpost-avatar img {
-    width: 100% !important;
-    height: 100% !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 2px !important;
+    width: calc(100% - 4px) !important;
+    height: calc(100% - 4px) !important;
     object-fit: cover !important;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) !important;
     border-radius: 0 !important;
