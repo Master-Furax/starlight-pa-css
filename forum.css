@@ -4978,3 +4978,9 @@ html body#modernbb fieldset.SBJ .lmsgSBJ .lmsgSBJ-txt {
     line-height: 1.35 !important;
 }
 
+/* Supprime le fond rouge natif de 33-ltr.css au survol du bouton supprimer */
+html body#modernbb .date-et-options .btn-delete a:hover,
+html body#modernbb .un-message-artemis .btn-delete a:hover {
+    background-color: var(--jscouleur, #d89b3c) !important;
+    color: #19191c !important;
+}
