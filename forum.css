@@ -6179,55 +6179,6 @@ html body#modernbb table.table1 tbody td a img[src*="icon_contact_"] {
     filter: brightness(0.95) contrast(1.1) !important;
 }
 
-/* ==========================================================================
-   BOUTON DISCORD DANS LA BARRE DE NAVIGATION (FOND NOIR + HOVER ICÔNE & TEXTE DORÉS)
-   ========================================================================== */
-html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
-html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]),
-html body#modernbb .navbar a.mainmenu[href*="discord.gg"],
-html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"] {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    background: #19191c !important;
-    border: 1px solid rgb(233 209 164 / 89%) !important;
-    border-radius: 7px 0 !important;
-    padding: 5px 13px !important;
-    color: #f4efe6 !important;
-    text-shadow: none !important;
-    transition: all 0.2s ease !important;
-}
-
-/* Icône crème au repos */
-html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]) img,
-html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) img {
-    display: inline-block !important;
-    width: 22px !important;
-    height: 22px !important;
-    object-fit: contain !important;
-    margin: 0 !important;
-    filter: brightness(0) invert(0.92) sepia(0.15) !important;
-    transition: filter 0.2s ease !important;
-}
-
-/* Hover : fond noir conservé + texte doré + contour #f4efe6 + halo doré */
-html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover,
-html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover,
-html body#modernbb .navbar a.mainmenu[href*="discord.gg"]:hover,
-html body#modernbb #headerbar-top a.mainmenu[href*="discord.gg"]:hover {
-    background: #19191c !important;
-    border-color: transparent !important;
-    color: #f5b942 !important;
-    text-shadow: 0 0 10px rgba(245, 185, 66, 0.45) !important;
-    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
-    transform: translateY(-1px) !important;
-}
-
-/* Icône qui passe exactement dans le même doré (#f5b942) au survol */
-html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]):hover img,
-html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover img {
-    filter: brightness(0) saturate(100%) invert(76%) sepia(61%) saturate(566%) hue-rotate(356deg) brightness(99%) contrast(94%) !important;
-}
 
 /* ==========================================================================
    CACHET DES ICÔNES DE SUJETS (.imgSBJ) + OUTILS DE MODÉRATION + RÉSEAUX SOCIAUX
@@ -6323,55 +6274,85 @@ html body#modernbb a:has(img[src*="icon_contact_sk"]):hover {
 }
 
 /* ==========================================================================
-   POSITION DU BOUTON DISCORD AVANT "ACCUEIL" + ANTI-CHEVAUCHEMENT PSEUDO LONG
+   BOUTON DISCORD (TAILLE HARMONISÉE PC + ALIGNEMENT MOBILE SANS CHEVAUCHEMENT)
    ========================================================================== */
 
-/* 1. Place automatiquement le bouton Discord tout à gauche (juste avant "Accueil") */
-html body#modernbb .navbar ul li:has(a.mainmenu:has(img[src*="6vdm.png"])),
-html body#modernbb #headerbar-top ul li:has(a.mainmenu:has(img[src*="6vdm.png"])),
-html body#modernbb .navbar ul li:has(a.mainmenu[href*="discord.gg"]),
-html body#modernbb #headerbar-top ul li:has(a.mainmenu[href*="discord.gg"]) {
+/* 1. Place le bouton Discord juste avant "Accueil" */
+html body#modernbb ul.navigation_barre.navbar.navlinks > li:has(a.mainmenu:has(img[src*="6vdm.png"])),
+html body#modernbb ul.navigation_barre.navbar.navlinks > li:has(a.mainmenu[href*="discord.gg"]) {
     order: -1 !important;
-    margin-right: 6px !important;
+    margin-right: 12px !important;
 }
 
-/* 2. Évite que le menu ne vienne mordre sur un pseudo long sur écrans moyens / mobiles */
-@media (max-width: 1320px) {
-    html body#modernbb .navbar ul.linklist,
-    html body#modernbb #headerbar-top ul {
-        gap: 6px !important;
-        margin-left: auto !important;
-    }
-
-    html body#modernbb .navbar a.mainmenu,
-    html body#modernbb #headerbar-top a.mainmenu {
-        font-size: 13px !important;
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-    }
-
-    html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
-    html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) {
-        padding: 4px 9px !important;
-    }
+/* 2. Gabarit bien proportionné sur PC (même hauteur que le bouton Notifications) */
+html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]),
+html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu[href*="discord.gg"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 40px !important;
+    height: 34px !important;
+    padding: 0 11px !important;
+    background: #19191c !important;
+    border: 1px solid rgba(216, 210, 199, 0.32) !important;
+    border-radius: 5px !important;
+    color: #f4efe6 !important;
+    text-shadow: none !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
 }
 
-@media (max-width: 1024px) {
-    /* Compacte légèrement le pseudo très long pour laisser respirer la navigation */
-    html body#modernbb #headerbar-top .welcome-user,
-    html body#modernbb .headerbar .user-welcome,
-    html body#modernbb [class*="bienvenue"],
-    html body#modernbb [class*="welcome"] {
-        max-width: 210px !important;
-        white-space: nowrap !important;
+html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]) img {
+    display: inline-block !important;
+    width: 27px !important;
+    height: 27px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    filter: brightness(0) invert(0.92) sepia(0.15) !important;
+    transition: filter 0.2s ease !important;
+}
+
+/* Hover : fond noir + icône dorée + contour #f4efe6 + halo doré */
+html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]):hover,
+html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu[href*="discord.gg"]:hover {
+    background: #19191c !important;
+    border-color: transparent !important;
+    color: #f5b942 !important;
+    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
+    transform: translateY(-1px) !important;
+}
+
+html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]):hover img {
+    filter: brightness(0) saturate(100%) invert(76%) sepia(61%) saturate(566%) hue-rotate(356deg) brightness(99%) contrast(94%) !important;
+}
+
+/* 3. Correctif Android / écrans <= 1150px : empêche la barre de mordre sur le pseudo long */
+@media (max-width: 1150px) {
+    html body#modernbb #headerbar-top .wrap > div:first-child,
+    html body#modernbb #headerbar-top .wrap > span:first-child {
+        max-width: 185px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
+        white-space: nowrap !important;
     }
 
-    html body#modernbb .navbar a.mainmenu,
-    html body#modernbb #headerbar-top a.mainmenu {
-        font-size: 12px !important;
-        padding-left: 3px !important;
-        padding-right: 3px !important;
+    html body#modernbb ul.navigation_barre.navbar.navlinks {
+        margin-left: auto !important;
+        gap: 4px !important;
+    }
+
+    html body#modernbb ul.navigation_barre.navbar.navlinks > li:has(a.mainmenu:has(img[src*="6vdm.png"])) {
+        margin-right: 4px !important;
+    }
+
+    html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]) {
+        min-width: 30px !important;
+        height: 26px !important;
+        padding: 0 7px !important;
+    }
+
+    html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]) img {
+        width: 16px !important;
+        height: 16px !important;
     }
 }
