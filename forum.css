@@ -6258,8 +6258,9 @@ html body#modernbb .SBJ .boxSBJ img.imgSBJ[src*="empty.gif"] {
     display: none !important;
 }
 
-/* 2. Boutons de modération en bas des sujets (Supprimer, Déplacer, Verrouiller, etc.) */
-html body#modernbb p.right a.btn.btn-flat[href*="/modcp"] {
+/* 2. Boutons de modération en bas des sujets (y compris /merge? et sans rond blanc) */
+html body#modernbb p.right a.btn.btn-flat[href*="/modcp"],
+html body#modernbb p.right a.btn.btn-flat[href*="/merge?"] {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -6269,10 +6270,12 @@ html body#modernbb p.right a.btn.btn-flat[href*="/modcp"] {
     background: #222226 !important;
     border: 1px solid rgba(216, 210, 199, 0.2) !important;
     border-radius: 5px !important;
+    vertical-align: middle !important;
     transition: all 0.2s ease !important;
 }
 
-html body#modernbb p.right a.btn.btn-flat[href*="/modcp"]:hover {
+html body#modernbb p.right a.btn.btn-flat[href*="/modcp"]:hover,
+html body#modernbb p.right a.btn.btn-flat[href*="/merge?"]:hover {
     background: var(--grad-btn) !important;
     border-color: transparent !important;
     transform: translateY(-2px) !important;
@@ -6284,16 +6287,14 @@ html body#modernbb p.right a.btn.btn-flat[href*="mode=trash"]:hover {
     background: linear-gradient(135deg, #7f1d1d, #dc2626) !important;
 }
 
-html body#modernbb p.right a.btn.btn-flat[href*="/modcp"] img {
-    width: 15px !important;
-    height: 15px !important;
+/* Rend le fond sombre natif du PNG transparent pour ne garder que l'icône blanche nette */
+html body#modernbb p.right a.btn.btn-flat[href*="/modcp"] img,
+html body#modernbb p.right a.btn.btn-flat[href*="/merge?"] img {
+    width: 16px !important;
+    height: 16px !important;
     object-fit: contain !important;
-    filter: brightness(0) invert(0.92) !important;
-    transition: filter 0.2s ease !important;
-}
-
-html body#modernbb p.right a.btn.btn-flat[href*="/modcp"]:hover img {
-    filter: brightness(0) invert(1) !important;
+    filter: brightness(1.35) contrast(1.2) !important;
+    mix-blend-mode: lighten !important;
 }
 
 /* 3. Icônes de réseaux sociaux (fb, tw, pi, sk) harmonisées si renseignées */
