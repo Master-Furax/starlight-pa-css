@@ -6320,3 +6320,57 @@ html body#modernbb a:has(img[src*="icon_contact_sk"]):hover {
     border-color: transparent !important;
     transform: translateY(-1px) !important;
 }
+
+/* ==========================================================================
+   POSITION DU BOUTON DISCORD AVANT "ACCUEIL" + ANTI-CHEVAUCHEMENT PSEUDO LONG
+   ========================================================================== */
+
+/* 1. Place automatiquement le bouton Discord tout à gauche (juste avant "Accueil") */
+html body#modernbb .navbar ul li:has(a.mainmenu:has(img[src*="6vdm.png"])),
+html body#modernbb #headerbar-top ul li:has(a.mainmenu:has(img[src*="6vdm.png"])),
+html body#modernbb .navbar ul li:has(a.mainmenu[href*="discord.gg"]),
+html body#modernbb #headerbar-top ul li:has(a.mainmenu[href*="discord.gg"]) {
+    order: -1 !important;
+    margin-right: 6px !important;
+}
+
+/* 2. Évite que le menu ne vienne mordre sur un pseudo long sur écrans moyens / mobiles */
+@media (max-width: 1320px) {
+    html body#modernbb .navbar ul.linklist,
+    html body#modernbb #headerbar-top ul {
+        gap: 6px !important;
+        margin-left: auto !important;
+    }
+
+    html body#modernbb .navbar a.mainmenu,
+    html body#modernbb #headerbar-top a.mainmenu {
+        font-size: 13px !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    html body#modernbb .navbar a.mainmenu:has(img[src*="6vdm.png"]),
+    html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]) {
+        padding: 4px 9px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Compacte légèrement le pseudo très long pour laisser respirer la navigation */
+    html body#modernbb #headerbar-top .welcome-user,
+    html body#modernbb .headerbar .user-welcome,
+    html body#modernbb [class*="bienvenue"],
+    html body#modernbb [class*="welcome"] {
+        max-width: 210px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    html body#modernbb .navbar a.mainmenu,
+    html body#modernbb #headerbar-top a.mainmenu {
+        font-size: 12px !important;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
