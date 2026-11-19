@@ -6238,14 +6238,14 @@ html body#modernbb p.right a.btn.btn-flat[href*="mode=trash"]:hover {
     background: linear-gradient(135deg, #7f1d1d, #dc2626) !important;
 }
 
-/* Rend le fond sombre natif du PNG transparent pour ne garder que l'icône blanche nette */
+/* Affiche tes nouvelles icônes admin dorées avec tout leur relief */
 html body#modernbb p.right a.btn.btn-flat[href*="/modcp"] img,
 html body#modernbb p.right a.btn.btn-flat[href*="/merge?"] img {
-    width: 16px !important;
-    height: 16px !important;
+    width: 18px !important;
+    height: 18px !important;
     object-fit: contain !important;
-    filter: brightness(1.35) contrast(1.2) !important;
-    mix-blend-mode: lighten !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
 }
 
 /* 3. Icônes de réseaux sociaux (fb, tw, pi, sk) harmonisées si renseignées */
@@ -6274,31 +6274,21 @@ html body#modernbb a:has(img[src*="icon_contact_sk"]):hover {
 }
 
 /* ==========================================================================
-   ICÔNE DISCORD LIBRE SUR LA PA + ANIMATION HOVER FAÇON CHARGEMENT DISCORD
+   ICÔNE DISCORD LIBRE SUR LA PA (starli10.png) + ROTATION HOVER DISCORD
    ========================================================================== */
 @keyframes scDiscordLoadSpin {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    20% {
-        transform: rotate(-18deg) scale(0.92);
-    }
-    55% {
-        transform: rotate(195deg) scale(1.14);
-    }
-    80% {
-        transform: rotate(372deg) scale(1.04);
-    }
-    100% {
-        transform: rotate(360deg) scale(1.08);
-    }
+    0%   { transform: rotate(0deg) scale(1); }
+    20%  { transform: rotate(-18deg) scale(0.92); }
+    55%  { transform: rotate(195deg) scale(1.14); }
+    80%  { transform: rotate(372deg) scale(1.04); }
+    100% { transform: rotate(360deg) scale(1.08); }
 }
 
 html body#modernbb #PA .sc-pa-discord-btn {
     position: absolute !important;
-    top: 196px !important;
-    left: 376px !important;
-    z-index: 15 !important;
+    top: 192px !important;
+    left: 330px !important;
+    z-index: 30 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -6311,17 +6301,15 @@ html body#modernbb #PA .sc-pa-discord-btn {
     cursor: pointer !important;
 }
 
-/* Icône crème/dorée sans cadre avec ombre portée nette */
 html body#modernbb #PA .sc-pa-discord-btn img {
-    width: 62px !important;
-    height: 62px !important;
+    width: 64px !important;
+    height: 64px !important;
     object-fit: contain !important;
-    filter: brightness(0) invert(0.92) sepia(0.18) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.75)) !important;
+    filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.8)) !important;
     transition: filter 0.25s ease, transform 0.25s ease !important;
 }
 
-/* Hover : rotation 360° avec rebond façon chargement Discord + lueur dorée */
 html body#modernbb #PA .sc-pa-discord-btn:hover img {
     animation: scDiscordLoadSpin 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
-    filter: brightness(0) saturate(100%) invert(76%) sepia(61%) saturate(566%) hue-rotate(356deg) brightness(102%) contrast(96%) drop-shadow(0 0 14px rgba(245, 185, 66, 0.85)) !important;
+    filter: drop-shadow(0 0 16px rgba(245, 185, 66, 0.85)) brightness(1.08) !important;
 }
