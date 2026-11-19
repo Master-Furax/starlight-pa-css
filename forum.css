@@ -6496,18 +6496,6 @@ html body#modernbb .sc-admin-doc .sc-staff-item .sc-tag {
     border-color: var(--staff-grp) !important;
 }
 
-/* Mode sombre velouté : conserve l'accent du groupe */
-html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item {
-    border-color: var(--staff-grp) !important;
-}
-html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item img {
-    border-color: var(--staff-grp) !important;
-}
-html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item .sc-tag:not(:first-child) {
-    color: var(--staff-grp) !important;
-    border-color: var(--staff-grp) !important;
-}
-
 
 /* ==========================================================================
    VARIANTE SOMBRE VELOUTÉE (.sc-light-mode) IDENTIQUE À LA FICHE PERSO
@@ -6551,3 +6539,22 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-bio {
     color: #e8e2d7 !important;
     border-color: #33333b !important;
 }
+
+/* Mode sombre velouté : fond noir #121215 sur les tags pour un contraste parfait */
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item {
+    border-color: var(--staff-grp) !important;
+}
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item img {
+    border-color: var(--staff-grp) !important;
+}
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item .sc-tag {
+    background: #121215 !important;
+    color: var(--staff-grp) !important;
+    border-color: var(--staff-grp) !important;
+}
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item .sc-tag:first-child {
+    background: var(--staff-grp) !important;
+    color: #ffffff !important;
+    border-color: var(--staff-grp) !important;
+}
+
