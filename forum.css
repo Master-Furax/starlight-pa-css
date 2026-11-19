@@ -6238,15 +6238,16 @@ html body#modernbb p.right a.btn.btn-flat[href*="mode=trash"]:hover {
     background: linear-gradient(135deg, #7f1d1d, #dc2626) !important;
 }
 
-/* Affiche tes nouvelles icônes admin dorées avec tout leur relief */
+/* Rend tes 6 icônes admin blanc crème ultra-lisibles sur fond sombre et au survol */
 html body#modernbb p.right a.btn.btn-flat[href*="/modcp"] img,
 html body#modernbb p.right a.btn.btn-flat[href*="/merge?"] img {
     width: 18px !important;
     height: 18px !important;
     object-fit: contain !important;
-    filter: none !important;
+    filter: brightness(0) invert(0.94) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7)) !important;
     mix-blend-mode: normal !important;
 }
+
 
 /* 3. Icônes de réseaux sociaux (fb, tw, pi, sk) harmonisées si renseignées */
 html body#modernbb a:has(img[src*="icon_contact_fb"]),
