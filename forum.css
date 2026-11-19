@@ -6274,85 +6274,54 @@ html body#modernbb a:has(img[src*="icon_contact_sk"]):hover {
 }
 
 /* ==========================================================================
-   BOUTON DISCORD (TAILLE HARMONISÉE PC + ALIGNEMENT MOBILE SANS CHEVAUCHEMENT)
+   ICÔNE DISCORD LIBRE SUR LA PA + ANIMATION HOVER FAÇON CHARGEMENT DISCORD
    ========================================================================== */
-
-/* 1. Place le bouton Discord juste avant "Accueil" */
-html body#modernbb ul.navigation_barre.navbar.navlinks > li:has(a.mainmenu:has(img[src*="6vdm.png"])),
-html body#modernbb ul.navigation_barre.navbar.navlinks > li:has(a.mainmenu[href*="discord.gg"]) {
-    order: -1 !important;
-    margin-right: 12px !important;
+@keyframes scDiscordLoadSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    20% {
+        transform: rotate(-18deg) scale(0.92);
+    }
+    55% {
+        transform: rotate(195deg) scale(1.14);
+    }
+    80% {
+        transform: rotate(372deg) scale(1.04);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.08);
+    }
 }
 
-/* 2. Gabarit bien proportionné sur PC (même hauteur que le bouton Notifications) */
-html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]),
-html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu[href*="discord.gg"] {
+html body#modernbb #PA .sc-pa-discord-btn {
+    position: absolute !important;
+    top: 196px !important;
+    left: 376px !important;
+    z-index: 15 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    min-width: 40px !important;
-    height: 34px !important;
-    padding: 0 11px !important;
-    background: #19191c !important;
-    border: 1px solid rgba(216, 210, 199, 0.32) !important;
-    border-radius: 5px !important;
-    color: #f4efe6 !important;
-    text-shadow: none !important;
-    box-sizing: border-box !important;
-    transition: all 0.2s ease !important;
+    width: 68px !important;
+    height: 68px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
 }
 
-html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]) img {
-    display: inline-block !important;
-    width: 27px !important;
-    height: 27px !important;
+/* Icône crème/dorée sans cadre avec ombre portée nette */
+html body#modernbb #PA .sc-pa-discord-btn img {
+    width: 62px !important;
+    height: 62px !important;
     object-fit: contain !important;
-    margin: 0 !important;
-    filter: brightness(0) invert(0.92) sepia(0.15) !important;
-    transition: filter 0.2s ease !important;
+    filter: brightness(0) invert(0.92) sepia(0.18) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.75)) !important;
+    transition: filter 0.25s ease, transform 0.25s ease !important;
 }
 
-/* Hover : fond noir + icône dorée + contour #f4efe6 + halo doré */
-html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]):hover,
-html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu[href*="discord.gg"]:hover {
-    background: #19191c !important;
-    border-color: transparent !important;
-    color: #f5b942 !important;
-    box-shadow: 0 6px 14px rgba(216, 155, 60, 0.85), 0 0 0 2px #f4efe6 !important;
-    transform: translateY(-1px) !important;
-}
-
-html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]):hover img {
-    filter: brightness(0) saturate(100%) invert(76%) sepia(61%) saturate(566%) hue-rotate(356deg) brightness(99%) contrast(94%) !important;
-}
-
-/* 3. Correctif Android / écrans <= 1150px : empêche la barre de mordre sur le pseudo long */
-@media (max-width: 1150px) {
-    html body#modernbb #headerbar-top .wrap > div:first-child,
-    html body#modernbb #headerbar-top .wrap > span:first-child {
-        max-width: 185px !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
-    }
-
-    html body#modernbb ul.navigation_barre.navbar.navlinks {
-        margin-left: auto !important;
-        gap: 4px !important;
-    }
-
-    html body#modernbb ul.navigation_barre.navbar.navlinks > li:has(a.mainmenu:has(img[src*="6vdm.png"])) {
-        margin-right: 4px !important;
-    }
-
-    html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]) {
-        min-width: 30px !important;
-        height: 26px !important;
-        padding: 0 7px !important;
-    }
-
-    html body#modernbb ul.navigation_barre.navbar.navlinks a.mainmenu:has(img[src*="6vdm.png"]) img {
-        width: 16px !important;
-        height: 16px !important;
-    }
+/* Hover : rotation 360° avec rebond façon chargement Discord + lueur dorée */
+html body#modernbb #PA .sc-pa-discord-btn:hover img {
+    animation: scDiscordLoadSpin 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(61%) saturate(566%) hue-rotate(356deg) brightness(102%) contrast(96%) drop-shadow(0 0 14px rgba(245, 185, 66, 0.85)) !important;
 }
