@@ -6321,7 +6321,7 @@ html body#modernbb #PA .sc-pa-discord-btn:hover img {
    ========================================================================== */
 .sc-admin-doc {
     --doc-accent: #ffb01f;
-    --doc-grad: linear-gradient(90deg, #9c6b19, #ec4899);
+    --doc-grad: linear-gradient(90deg, #4a154b 0%, #d81b60 52%, #f5b942 100%);
     max-width: 780px !important;
     margin: 20px auto !important;
     background: #28282b !important;
