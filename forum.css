@@ -6240,7 +6240,7 @@ html body#modernbb .SBJ .boxSBJ img.imgSBJ {
     padding: 5px !important;
     background: #19191c !important;
     border: 1px solid rgba(216, 210, 199, 0.18) !important;
-    border-radius: 6px !important;
+    border-radius: 0 7px !important;
     object-fit: contain !important;
     box-sizing: border-box !important;
     transition: all 0.2s ease !important;
