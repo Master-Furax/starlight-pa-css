@@ -6235,8 +6235,8 @@ html body#modernbb #headerbar-top a.mainmenu:has(img[src*="6vdm.png"]):hover img
 
 /* 1. Médaillon sombre et lueur au survol pour tes icônes de sujets (topics_list_box) */
 html body#modernbb .SBJ .boxSBJ img.imgSBJ {
-    width: 38px !important;
-    height: 38px !important;
+    width: 40px !important;
+    height: 40px !important;
     padding: 5px !important;
     background: #19191c !important;
     border: 1px solid rgba(216, 210, 199, 0.18) !important;
