@@ -6463,6 +6463,53 @@ html body#modernbb .sc-admin-doc .sc-staff-bio br { display: inline !important; 
 }
 
 /* ==========================================================================
+   COULEURS DE GROUPE PAR MEMBRE DU STAFF (.sc-staff-item.grp-...)
+   ========================================================================== */
+.sc-admin-doc .sc-staff-item { --staff-grp: var(--doc-accent, #ffb01f); }
+.sc-admin-doc .sc-staff-item.grp-umbra        { --staff-grp: #7C828D; }
+.sc-admin-doc .sc-staff-item.grp-tiamat       { --staff-grp: #B7890B; }
+.sc-admin-doc .sc-staff-item.grp-synchronyste { --staff-grp: #8C3ACF; }
+.sc-admin-doc .sc-staff-item.grp-ancre        { --staff-grp: #D50156; }
+.sc-admin-doc .sc-staff-item.grp-harmoniseur  { --staff-grp: #D76609; }
+.sc-admin-doc .sc-staff-item.grp-asynchrone   { --staff-grp: #AB0707; }
+.sc-admin-doc .sc-staff-item.grp-insulaire    { --staff-grp: #2A915E; }
+.sc-admin-doc .sc-staff-item.grp-lesteur      { --staff-grp: #2D5D8F; }
+
+/* Application de la couleur du groupe sur la carte, l'avatar et les tags */
+html body#modernbb .sc-admin-doc .sc-staff-item {
+    border: 1.5px solid var(--staff-grp) !important;
+    border-left: 6px solid var(--staff-grp) !important;
+}
+
+html body#modernbb .sc-admin-doc .sc-staff-item img {
+    border: 2.5px solid var(--staff-grp) !important;
+}
+
+html body#modernbb .sc-admin-doc .sc-staff-item .sc-tag:first-child {
+    background: var(--staff-grp) !important;
+    border-color: var(--staff-grp) !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+html body#modernbb .sc-admin-doc .sc-staff-item .sc-tag {
+    border-color: var(--staff-grp) !important;
+}
+
+/* Mode sombre velouté : conserve l'accent du groupe */
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item {
+    border-color: var(--staff-grp) !important;
+}
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item img {
+    border-color: var(--staff-grp) !important;
+}
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item .sc-tag:not(:first-child) {
+    color: var(--staff-grp) !important;
+    border-color: var(--staff-grp) !important;
+}
+
+
+/* ==========================================================================
    VARIANTE SOMBRE VELOUTÉE (.sc-light-mode) IDENTIQUE À LA FICHE PERSO
    ========================================================================== */
 html body#modernbb .sc-admin-doc.sc-light-mode {
