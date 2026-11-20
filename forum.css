@@ -6583,3 +6583,65 @@ html body#modernbb .sc-admin-doc .sc-staff-details > br,
 html body#modernbb .sc-admin-doc .sc-staff-tags > br {
     display: none !important;
 }
+
+/* ==========================================================================
+   BANNIÈRE & BAS DE PAGE LÉGER POUR LES MODÈLES ADMINISTRATIFS (.sc-admin-doc)
+   ========================================================================== */
+.sc-admin-doc .sc-doc-banner {
+    position: relative !important;
+    width: 100% !important;
+    height: 185px !important;
+    overflow: hidden !important;
+    border-bottom: 2px solid var(--doc-accent, #ffb01f) !important;
+}
+
+.sc-admin-doc .sc-doc-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 45% !important;
+    display: block !important;
+}
+
+.sc-admin-doc .sc-doc-banner::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(20, 20, 24, 0.08) 45%, rgba(40, 40, 43, 0.88) 100%) !important;
+    pointer-events: none !important;
+}
+
+html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
+    background: linear-gradient(180deg, rgba(20, 20, 24, 0.08) 45%, rgba(20, 20, 22, 0.92) 100%) !important;
+}
+
+/* Bas de page léger aux tons PA / Navigation */
+.sc-admin-doc .sc-doc-footer {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    padding: 11px 25px !important;
+    background: linear-gradient(90deg, rgba(74, 21, 75, 0.35) 0%, rgba(216, 27, 96, 0.22) 52%, rgba(245, 185, 66, 0.28) 100%) !important;
+    border-top: 1px solid rgba(216, 210, 199, 0.22) !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 16px !important;
+    letter-spacing: 1.2px !important;
+    text-transform: uppercase !important;
+    color: #e4dfd5 !important;
+}
+
+.sc-admin-doc .sc-doc-footer::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 2px !important;
+    background: var(--doc-grad, linear-gradient(90deg, #4a154b 0%, #d81b60 52%, #f5b942 100%)) !important;
+}
+
+.sc-admin-doc .sc-doc-footer span:last-child {
+    color: var(--doc-accent, #ffb01f) !important;
+}
