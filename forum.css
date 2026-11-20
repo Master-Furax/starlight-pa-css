@@ -6320,8 +6320,8 @@ html body#modernbb #PA .sc-pa-discord-btn:hover img {
    MODÈLES ADMINISTRATIFS — STYLE IDENTIQUE À LA FICHE PERSONNAGE (.sc-fiche)
    ========================================================================== */
 .sc-admin-doc {
-    --doc-accent: #ffb01f;
-    --doc-grad: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%);
+    --doc-accent: var(--jscouleur, #d89b3c);
+    --doc-grad: linear-gradient(90deg, #4a154b 0%, #d81b60 52%, var(--doc-accent) 100%);
     max-width: 780px !important;
     margin: 20px auto !important;
     background: #28282b !important;
