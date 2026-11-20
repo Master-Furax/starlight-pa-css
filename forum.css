@@ -6559,16 +6559,20 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-staff-item .sc-tag:first-chil
 }
 
 /* ==========================================================================
-   1. FIL D'ARIANE SUR UNE SEULE LIGNE (TAILLE DE POLICE D'ORIGINE CONSERVÉE)
+   1. FIL D'ARIANE SUR UNE SEULE LIGNE (ARRÊTÉ PILE AVANT L'ARRONDIT DE L'ÉTOILE)
    ========================================================================== */
 html body#modernbb .fil-ariane-arte > span {
     flex-wrap: nowrap !important;
+    gap: 5px !important;
+    font-size: 0 !important;
+    max-width: calc(100% - 45px) !important;
 }
 
 html body#modernbb .fil-ariane-arte > span a {
     white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 5px 11px !important;
 }
-
 
 /* ==========================================================================
    2. PROTECTION DE LA FICHE STAFF CONTRE LES <br> ET LIENS AUTO DE L'ÉDITEUR
