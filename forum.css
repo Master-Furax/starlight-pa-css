@@ -6590,7 +6590,7 @@ html body#modernbb .sc-admin-doc .sc-staff-tags > br {
 .sc-admin-doc .sc-doc-banner {
     position: relative !important;
     width: 100% !important;
-    height: 185px !important;
+    height: 227px !important;
     overflow: hidden !important;
     border-bottom: 2px solid var(--doc-accent, #ffb01f) !important;
 }
