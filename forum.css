@@ -7050,15 +7050,39 @@ html body#modernbb #preview .sc-liens-sheet {
     box-sizing: border-box !important;
 }
 
-/* Couleur dynamique selon le groupe sélectionné (en direct + au chargement) */
-html body#modernbb .sc-liens-sheet[data-grp="umbra"],        html body#modernbb .sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D; }
-html body#modernbb .sc-liens-sheet[data-grp="tiamat"],       html body#modernbb .sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B; }
-html body#modernbb .sc-liens-sheet[data-grp="synchronyste"], html body#modernbb .sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF; }
-html body#modernbb .sc-liens-sheet[data-grp="ancre"],        html body#modernbb .sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156; }
-html body#modernbb .sc-liens-sheet[data-grp="harmoniseur"],  html body#modernbb .sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609; }
-html body#modernbb .sc-liens-sheet[data-grp="asynchrone"],   html body#modernbb .sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707; }
-html body#modernbb .sc-liens-sheet[data-grp="insulaire"],    html body#modernbb .sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E; }
-html body#modernbb .sc-liens-sheet[data-grp="lesteur"],      html body#modernbb .sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F; }
+/* Couleur dynamique selon le groupe sélectionné (spécificité gagnante sur #preview et le sujet) */
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="umbra"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="umbra"],
+html body#modernbb .sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="tiamat"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="tiamat"],
+html body#modernbb .sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="synchronyste"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="synchronyste"],
+html body#modernbb .sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="ancre"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="ancre"],
+html body#modernbb .sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156 !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="harmoniseur"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="harmoniseur"],
+html body#modernbb .sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609 !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="asynchrone"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="asynchrone"],
+html body#modernbb .sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707 !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="insulaire"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="insulaire"],
+html body#modernbb .sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E !important; }
+
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="lesteur"],
+html body#modernbb #preview .sc-liens-sheet[data-grp="lesteur"],
+html body#modernbb .sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F !important; }
+
 
 /* Barre supérieure */
 .sc-ls-topbar {
@@ -7369,29 +7393,38 @@ background: #e8e2d7 !important;
 color: #19191c !important;
 }
 /* Teintes approfondies sur fond crème pour le confort des yeux */
-html body#modernbb .sc-liens-sheet[data-grp="umbra"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="umbra"]:checked)        { --sheet-grp: #5c626d; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="umbra"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="umbra"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="umbra"]:checked)        { --sheet-grp: #5c626d !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="tiamat"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="tiamat"]:checked)       { --sheet-grp: #966d00; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="tiamat"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="tiamat"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="tiamat"]:checked)       { --sheet-grp: #966d00 !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="synchronyste"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="synchronyste"]:checked) { --sheet-grp: #7628b8; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="synchronyste"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="synchronyste"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="synchronyste"]:checked) { --sheet-grp: #7628b8 !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="ancre"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="ancre"]:checked)        { --sheet-grp: #c2004e; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="ancre"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="ancre"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="ancre"]:checked)        { --sheet-grp: #c2004e !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="harmoniseur"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="harmoniseur"]:checked)  { --sheet-grp: #b85200; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="harmoniseur"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="harmoniseur"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="harmoniseur"]:checked)  { --sheet-grp: #b85200 !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="asynchrone"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="asynchrone"]:checked)   { --sheet-grp: #9e0606; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="asynchrone"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="asynchrone"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="asynchrone"]:checked)   { --sheet-grp: #9e0606 !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="insulaire"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="insulaire"]:checked)    { --sheet-grp: #1f784c; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="insulaire"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="insulaire"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="insulaire"]:checked)    { --sheet-grp: #1f784c !important; }
 
-html body#modernbb .sc-liens-sheet[data-grp="lesteur"]:has(.sc-ls-theme-btn input:checked),
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="lesteur"]:checked)      { --sheet-grp: #224c78; }
+html body#modernbb .message-contenu-arte .sc-liens-sheet[data-grp="lesteur"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb #preview .sc-liens-sheet[data-grp="lesteur"]:has(.sc-ls-theme-btn input:checked),
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="lesteur"]:checked)      { --sheet-grp: #224c78 !important; }
+
 
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bio-pill,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
