@@ -7050,15 +7050,16 @@ html body#modernbb #preview .sc-liens-sheet {
     box-sizing: border-box !important;
 }
 
-/* Couleur du personnage propriétaire de la fiche */
-.sc-liens-sheet:has(option[value="umbra"][selected])        { --sheet-grp: #7C828D; }
-.sc-liens-sheet:has(option[value="tiamat"][selected])       { --sheet-grp: #B7890B; }
-.sc-liens-sheet:has(option[value="synchronyste"][selected]) { --sheet-grp: #8C3ACF; }
-.sc-liens-sheet:has(option[value="ancre"][selected])        { --sheet-grp: #D50156; }
-.sc-liens-sheet:has(option[value="harmoniseur"][selected])  { --sheet-grp: #D76609; }
-.sc-liens-sheet:has(option[value="asynchrone"][selected])   { --sheet-grp: #AB0707; }
-.sc-liens-sheet:has(option[value="insulaire"][selected])    { --sheet-grp: #2A915E; }
-.sc-liens-sheet:has(option[value="lesteur"][selected])      { --sheet-grp: #2D5D8F; }
+//* Couleur du personnage propriétaire de la fiche (en direct au clic) */
+.sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D; }
+.sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B; }
+.sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF; }
+.sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156; }
+.sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609; }
+.sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707; }
+.sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E; }
+.sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F; }
+
 
 /* Barre supérieure */
 .sc-ls-topbar {
@@ -7366,37 +7367,50 @@ color: #e8e2d7 !important;
 text-align: justify !important;
 }
 /* =========================================================
-VARIANTE CLAIRE (CRÈME CHAUD) — FICHE DE LIENS
-========================================================= */
+   VARIANTE CLAIRE (CRÈME CHAUD) — CONTRASTE DOUX & GROUPE
+   ========================================================= */
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) {
-background: #e8e2d7 !important;
-color: #19191c !important;
+    --sheet-grp: #a86800; /* Ambre doux par défaut à la place du jaune vif */
+    background: #e8e2d7 !important;
+    color: #19191c !important;
 }
+
+/* Teintes légèrement approfondies sur fond crème pour le confort des yeux */
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="umbra"]:checked)        { --sheet-grp: #5c626d; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="tiamat"]:checked)       { --sheet-grp: #966d00; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="synchronyste"]:checked) { --sheet-grp: #7628b8; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="ancre"]:checked)        { --sheet-grp: #c2004e; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="harmoniseur"]:checked)  { --sheet-grp: #b85200; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="asynchrone"]:checked)   { --sheet-grp: #9e0606; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="insulaire"]:checked)    { --sheet-grp: #1f784c; }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="lesteur"]:checked)      { --sheet-grp: #224c78; }
+
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bio-pill,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-card {
-background: #f4efe6 !important;
-color: #19191c !important;
-border-color: #b5afa4 !important;
+    background: #f4efe6 !important;
+    color: #19191c !important;
+    border-color: #b5afa4 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-trait {
-background: #d8d2c7 !important;
-color: #19191c !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box strong.sc-ls-label,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step strong {
-color: #9d2b6b !important;
+    color: var(--sheet-grp) !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-head {
-border-bottom-color: #b5afa4 !important;
+    border-bottom-color: #b5afa4 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-tag {
-background: #e8e2d7 !important;
+    background: #e8e2d7 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-text {
-color: #19191c !important;
+    color: #19191c !important;
 }
+
 
 
 /* =========================================================
