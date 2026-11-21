@@ -6662,39 +6662,226 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
     }
 }
 
-/* --- 1. BOTTIN DES AVATARS (75x75px — COMPATIBLE FICHE DE PERSO) --- */
-.sc-avatar-list {
+/* =========================================================
+   BOTTINS & CHRONOLOGIE — HARMONISÉS SUR .sc-admin-doc
+   ========================================================= */
+
+html body#modernbb .postbody .sc-admin-box,
+html body#modernbb #preview .sc-admin-box {
+    max-width: 780px !important;
+    margin: 20px auto !important;
+    background: #19191c !important;
+    color: #f4efe6 !important;
+    border: 1.5px solid #8e887d !important;
+    border-top: 4px solid #ffb01f !important;
+    border-radius: 20px 0 !important;
+    padding: 26px !important;
+    font-family: 'Inter', sans-serif !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7) !important;
+    box-sizing: border-box !important;
+}
+
+/* Titre encadré identique aux fiches de contexte (.sc-admin-doc) */
+html body#modernbb .postbody .sc-admin-box .sc-admin-main-title,
+html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
+    display: block !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 27px !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.4px !important;
+    color: #f4efe6 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85) !important;
+    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+    border: 1px solid rgba(244, 239, 230, 0.45) !important;
+    border-radius: 16px 0 !important;
+    padding: 8px 20px !important;
+    margin: 0 0 22px 0 !important;
+}
+
+/* --- 1. BOTTIN DES AVATARS (FOND SOMBRE UNIFIÉ + 75x75px) --- */
+html body#modernbb .postbody .sc-avatar-list,
+html body#modernbb #preview .sc-avatar-list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 10px !important;
 }
-.sc-avatar-row,
-.rep-artiste-item {
+html body#modernbb .postbody .sc-avatar-row,
+html body#modernbb .postbody .rep-artiste-item,
+html body#modernbb #preview .sc-avatar-row,
+html body#modernbb #preview .rep-artiste-item {
     display: flex !important;
     align-items: center !important;
     gap: 14px !important;
-    background: #d8d2c7 !important;
-    color: #19191c !important;
-    border: 1px solid #8e887d !important;
+    background: #212126 !important;
+    color: #f4efe6 !important;
+    border: 1px solid #3a3a42 !important;
     border-left: 5px solid #ee5574 !important;
     border-radius: 12px 0 !important;
     padding: 8px 14px !important;
     font-size: 13.5px !important;
-    font-weight: 500 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
 }
-.sc-avatar-row img,
-.rep-artiste-item img {
+html body#modernbb .postbody .sc-avatar-row img,
+html body#modernbb .postbody .rep-artiste-item img,
+html body#modernbb #preview .sc-avatar-row img,
+html body#modernbb #preview .rep-artiste-item img {
     width: 75px !important;
     height: 75px !important;
     min-width: 75px !important;
     object-fit: cover !important;
     border-radius: 10px 0 !important;
-    border: 1.5px solid #19191c !important;
+    border: 1.5px solid #ffb01f !important;
     flex-shrink: 0 !important;
 }
-.sc-avatar-sep {
+html body#modernbb .postbody .sc-avatar-sep,
+html body#modernbb #preview .sc-avatar-sep {
     color: #ee5574 !important;
     font-weight: 700 !important;
+}
+
+/* --- 2. BOTTIN DES MÉTIERS PAR BIOMES / COURONNES --- */
+html body#modernbb .postbody .sc-biome-card,
+html body#modernbb #preview .sc-biome-card {
+    background: #141417 !important;
+    border: 1px solid #3a3a42 !important;
+    border-left: 5px solid #ffb01f !important;
+    border-radius: 16px 0 !important;
+    padding: 16px 20px !important;
+    margin-bottom: 16px !important;
+}
+html body#modernbb .postbody .sc-biome-title,
+html body#modernbb #preview .sc-biome-title {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 24px !important;
+    color: #ffb01f !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border-bottom: 1px solid #3a3a42 !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 12px !important;
+}
+html body#modernbb .postbody .sc-job-list,
+html body#modernbb #preview .sc-job-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+html body#modernbb .postbody .sc-job-item,
+html body#modernbb #preview .sc-job-item {
+    background: #212126 !important;
+    color: #f4efe6 !important;
+    padding: 8px 14px !important;
+    border-radius: 10px 0 !important;
+    border: 1px solid #33333b !important;
+    border-left: 4px solid #ee5574 !important;
+    font-size: 13.5px !important;
+}
+html body#modernbb .postbody .sc-job-item strong,
+html body#modernbb #preview .sc-job-item strong {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 18px !important;
+    color: #ffb01f !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-right: 6px !important;
+}
+
+/* --- 3. CHRONOLOGIE ALTERNÉE GAUCHE / DROITE (IMAGE 100x50px) --- */
+html body#modernbb .postbody .sc-timeline,
+html body#modernbb #preview .sc-timeline {
+    position: relative !important;
+    padding: 10px 0 !important;
+}
+html body#modernbb .postbody .sc-timeline::before,
+html body#modernbb #preview .sc-timeline::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    width: 3px !important;
+    transform: translateX(-50%) !important;
+    background: linear-gradient(180deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+}
+html body#modernbb .postbody .sc-tl-row,
+html body#modernbb #preview .sc-tl-row {
+    display: flex !important;
+    width: 100% !important;
+    margin-bottom: 22px !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+html body#modernbb .postbody .sc-tl-row.left,
+html body#modernbb #preview .sc-tl-row.left {
+    justify-content: flex-start !important;
+    padding-right: calc(50% + 22px) !important;
+}
+html body#modernbb .postbody .sc-tl-row.right,
+html body#modernbb #preview .sc-tl-row.right {
+    justify-content: flex-end !important;
+    padding-left: calc(50% + 22px) !important;
+}
+html body#modernbb .postbody .sc-tl-row::after,
+html body#modernbb #preview .sc-tl-row::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 18px !important;
+    left: 50% !important;
+    width: 14px !important;
+    height: 14px !important;
+    transform: translateX(-50%) !important;
+    background: #ffb01f !important;
+    border: 3px solid #19191c !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 8px #ee5574 !important;
+}
+html body#modernbb .postbody .sc-tl-card,
+html body#modernbb #preview .sc-tl-card {
+    width: 100% !important;
+    background: #212126 !important;
+    color: #f4efe6 !important;
+    border: 1px solid #3a3a42 !important;
+    border-top: 3px solid #ee5574 !important;
+    border-radius: 14px 0 !important;
+    padding: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+html body#modernbb .postbody .sc-tl-header,
+html body#modernbb #preview .sc-tl-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    border-bottom: 1px solid #3a3a42 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+}
+html body#modernbb .postbody .sc-tl-header img,
+html body#modernbb #preview .sc-tl-header img {
+    width: 100px !important;
+    height: 50px !important;
+    min-width: 100px !important;
+    object-fit: cover !important;
+    border-radius: 8px 0 !important;
+    border: 1.5px solid #ffb01f !important;
+    flex-shrink: 0 !important;
+}
+html body#modernbb .postbody .sc-tl-date,
+html body#modernbb #preview .sc-tl-date {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+    color: #ffb01f !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+}
+html body#modernbb .postbody .sc-tl-desc,
+html body#modernbb #preview .sc-tl-desc {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    color: #e8e2d7 !important;
 }
 
 /* =========================================================
