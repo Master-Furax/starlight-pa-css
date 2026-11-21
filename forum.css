@@ -7875,10 +7875,6 @@ html body#modernbb .arstek-com.grp-asynchrone:has(.arstek-theme-btn input:checke
 html body#modernbb .arstek-com.grp-insulaire:has(.arstek-theme-btn input:checked)    { --com-grp: #1f784c; }
 html body#modernbb .arstek-com.grp-lesteur:has(.arstek-theme-btn input:checked)      { --com-grp: #224c78; }
 
-html body#modernbb .arstek-com.call:has(.arstek-theme-btn input:checked) {
-    background: linear-gradient(135deg, #e8e2d7 0%, #dcd4c6 100%) !important;
-}
-
 html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) .arstek-sender {
     color: #19191c !important;
 }
