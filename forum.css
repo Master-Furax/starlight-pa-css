@@ -6698,6 +6698,34 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
 }
 
 /* =========================================================
+   COULEURS DYNAMIQUES PAR GROUPE DANS LES BOTTINS
+   ========================================================= */
+.rep-artiste-item { --item-grp: #ee5574; } /* Couleur par défaut */
+
+.rep-artiste-item.grp-umbra        { --item-grp: #7C828D; }
+.rep-artiste-item.grp-tiamat       { --item-grp: #B7890B; }
+.rep-artiste-item.grp-synchronyste { --item-grp: #8C3ACF; }
+.rep-artiste-item.grp-ancre        { --item-grp: #D50156; }
+.rep-artiste-item.grp-harmoniseur  { --item-grp: #D76609; }
+.rep-artiste-item.grp-asynchrone   { --item-grp: #AB0707; }
+.rep-artiste-item.grp-insulaire    { --item-grp: #2A915E; }
+.rep-artiste-item.grp-lesteur      { --item-grp: #2D5D8F; }
+
+/* Application automatique de la couleur sur le cadre, l'image et les séparateurs */
+.rep-artiste-item[class*="grp-"] {
+    border-left: 6px solid var(--item-grp) !important;
+    border-color: var(--item-grp) !important;
+    box-shadow: inset 4px 0 12px color-mix(in srgb, var(--item-grp) 18%, transparent) !important;
+}
+.rep-artiste-item[class*="grp-"] img {
+    border: 2px solid var(--item-grp) !important;
+}
+.rep-artiste-item[class*="grp-"] .sc-avatar-sep {
+    color: var(--item-grp) !important;
+}
+
+
+/* =========================================================
    BOTTIN DES AVATARS À ONGLETS ALPHABÉTIQUES (CSS PUR)
    ========================================================= */
 .sc-tabs-box {
