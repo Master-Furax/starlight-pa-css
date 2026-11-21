@@ -6666,10 +6666,12 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
    BOTTINS & CHRONOLOGIE — HARMONISÉS SUR .sc-admin-doc
    ========================================================= */
 
+html body#modernbb .message-contenu-arte .sc-admin-box,
 html body#modernbb .postbody .sc-admin-box,
 html body#modernbb #preview .sc-admin-box {
-    max-width: 815px !important;
-    margin: 20px auto !important;
+    width: 100% !important;
+    max-width: 780px !important;
+    margin: 10px auto !important;
     background: #19191c !important;
     color: #f4efe6 !important;
     border: 1.5px solid #8e887d !important;
@@ -6682,6 +6684,7 @@ html body#modernbb #preview .sc-admin-box {
 }
 
 /* Titre encadré identique aux fiches de contexte (.sc-admin-doc) */
+html body#modernbb .message-contenu-arte .sc-admin-box .sc-admin-main-title,
 html body#modernbb .postbody .sc-admin-box .sc-admin-main-title,
 html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
     display: block !important;
@@ -6702,12 +6705,15 @@ html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
 }
 
 /* --- 1. BOTTIN DES AVATARS (FOND SOMBRE UNIFIÉ + 75x75px) --- */
+html body#modernbb .message-contenu-arte .sc-avatar-list,
 html body#modernbb .postbody .sc-avatar-list,
 html body#modernbb #preview .sc-avatar-list {
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
 }
+html body#modernbb .message-contenu-arte .sc-avatar-row,
+html body#modernbb .message-contenu-arte .rep-artiste-item,
 html body#modernbb .postbody .sc-avatar-row,
 html body#modernbb .postbody .rep-artiste-item,
 html body#modernbb #preview .sc-avatar-row,
@@ -6724,6 +6730,8 @@ html body#modernbb #preview .rep-artiste-item {
     font-size: 13.5px !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
 }
+html body#modernbb .message-contenu-arte .sc-avatar-row img,
+html body#modernbb .message-contenu-arte .rep-artiste-item img,
 html body#modernbb .postbody .sc-avatar-row img,
 html body#modernbb .postbody .rep-artiste-item img,
 html body#modernbb #preview .sc-avatar-row img,
@@ -6736,6 +6744,7 @@ html body#modernbb #preview .rep-artiste-item img {
     border: 1.5px solid #ffb01f !important;
     flex-shrink: 0 !important;
 }
+html body#modernbb .message-contenu-arte .sc-avatar-sep,
 html body#modernbb .postbody .sc-avatar-sep,
 html body#modernbb #preview .sc-avatar-sep {
     color: #ee5574 !important;
@@ -6743,6 +6752,7 @@ html body#modernbb #preview .sc-avatar-sep {
 }
 
 /* --- 2. BOTTIN DES MÉTIERS PAR BIOMES / COURONNES --- */
+html body#modernbb .message-contenu-arte .sc-biome-card,
 html body#modernbb .postbody .sc-biome-card,
 html body#modernbb #preview .sc-biome-card {
     background: #141417 !important;
@@ -6752,6 +6762,7 @@ html body#modernbb #preview .sc-biome-card {
     padding: 16px 20px !important;
     margin-bottom: 16px !important;
 }
+html body#modernbb .message-contenu-arte .sc-biome-title,
 html body#modernbb .postbody .sc-biome-title,
 html body#modernbb #preview .sc-biome-title {
     font-family: 'Teko', sans-serif !important;
@@ -6763,12 +6774,14 @@ html body#modernbb #preview .sc-biome-title {
     padding-bottom: 4px !important;
     margin-bottom: 12px !important;
 }
+html body#modernbb .message-contenu-arte .sc-job-list,
 html body#modernbb .postbody .sc-job-list,
 html body#modernbb #preview .sc-job-list {
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
 }
+html body#modernbb .message-contenu-arte .sc-job-item,
 html body#modernbb .postbody .sc-job-item,
 html body#modernbb #preview .sc-job-item {
     background: #212126 !important;
@@ -6779,6 +6792,7 @@ html body#modernbb #preview .sc-job-item {
     border-left: 4px solid #ee5574 !important;
     font-size: 13.5px !important;
 }
+html body#modernbb .message-contenu-arte .sc-job-item strong,
 html body#modernbb .postbody .sc-job-item strong,
 html body#modernbb #preview .sc-job-item strong {
     font-family: 'Teko', sans-serif !important;
@@ -6790,11 +6804,13 @@ html body#modernbb #preview .sc-job-item strong {
 }
 
 /* --- 3. CHRONOLOGIE ALTERNÉE GAUCHE / DROITE (IMAGE 100x50px) --- */
+html body#modernbb .message-contenu-arte .sc-timeline,
 html body#modernbb .postbody .sc-timeline,
 html body#modernbb #preview .sc-timeline {
     position: relative !important;
     padding: 10px 0 !important;
 }
+html body#modernbb .message-contenu-arte .sc-timeline::before,
 html body#modernbb .postbody .sc-timeline::before,
 html body#modernbb #preview .sc-timeline::before {
     content: "" !important;
@@ -6806,6 +6822,7 @@ html body#modernbb #preview .sc-timeline::before {
     transform: translateX(-50%) !important;
     background: linear-gradient(180deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-row,
 html body#modernbb .postbody .sc-tl-row,
 html body#modernbb #preview .sc-tl-row {
     display: flex !important;
@@ -6814,16 +6831,19 @@ html body#modernbb #preview .sc-tl-row {
     position: relative !important;
     box-sizing: border-box !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-row.left,
 html body#modernbb .postbody .sc-tl-row.left,
 html body#modernbb #preview .sc-tl-row.left {
     justify-content: flex-start !important;
     padding-right: calc(50% + 22px) !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-row.right,
 html body#modernbb .postbody .sc-tl-row.right,
 html body#modernbb #preview .sc-tl-row.right {
     justify-content: flex-end !important;
     padding-left: calc(50% + 22px) !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-row::after,
 html body#modernbb .postbody .sc-tl-row::after,
 html body#modernbb #preview .sc-tl-row::after {
     content: "" !important;
@@ -6838,6 +6858,7 @@ html body#modernbb #preview .sc-tl-row::after {
     border-radius: 50% !important;
     box-shadow: 0 0 8px #ee5574 !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-card,
 html body#modernbb .postbody .sc-tl-card,
 html body#modernbb #preview .sc-tl-card {
     width: 100% !important;
@@ -6849,6 +6870,7 @@ html body#modernbb #preview .sc-tl-card {
     padding: 12px !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-header,
 html body#modernbb .postbody .sc-tl-header,
 html body#modernbb #preview .sc-tl-header {
     display: flex !important;
@@ -6858,6 +6880,7 @@ html body#modernbb #preview .sc-tl-header {
     padding-bottom: 8px !important;
     margin-bottom: 8px !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-header img,
 html body#modernbb .postbody .sc-tl-header img,
 html body#modernbb #preview .sc-tl-header img {
     width: 100px !important;
@@ -6868,6 +6891,7 @@ html body#modernbb #preview .sc-tl-header img {
     border: 1.5px solid #ffb01f !important;
     flex-shrink: 0 !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-date,
 html body#modernbb .postbody .sc-tl-date,
 html body#modernbb #preview .sc-tl-date {
     font-family: 'Teko', sans-serif !important;
@@ -6877,12 +6901,14 @@ html body#modernbb #preview .sc-tl-date {
     text-transform: uppercase !important;
     font-weight: 500 !important;
 }
+html body#modernbb .message-contenu-arte .sc-tl-desc,
 html body#modernbb .postbody .sc-tl-desc,
 html body#modernbb #preview .sc-tl-desc {
     font-size: 13px !important;
     line-height: 1.55 !important;
     color: #e8e2d7 !important;
 }
+
 
 /* =========================================================
    COULEURS DYNAMIQUES PAR GROUPE DANS LES BOTTINS
