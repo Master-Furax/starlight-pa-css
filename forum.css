@@ -6645,3 +6645,9 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
 .sc-admin-doc .sc-doc-footer span:last-child {
     color: var(--doc-accent, #ffb01f) !important;
 }
+
+/* Dégradé officiel sur la barre supérieure des signatures Starlight */
+.signature_div div[style*="height: 4px"],
+#preview div[style*="height: 4px"] {
+    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+}
