@@ -7369,14 +7369,30 @@ background: #e8e2d7 !important;
 color: #19191c !important;
 }
 /* Teintes approfondies sur fond crème pour le confort des yeux */
+html body#modernbb .sc-liens-sheet[data-grp="umbra"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="umbra"]:checked)        { --sheet-grp: #5c626d; }
+
+html body#modernbb .sc-liens-sheet[data-grp="tiamat"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="tiamat"]:checked)       { --sheet-grp: #966d00; }
+
+html body#modernbb .sc-liens-sheet[data-grp="synchronyste"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="synchronyste"]:checked) { --sheet-grp: #7628b8; }
+
+html body#modernbb .sc-liens-sheet[data-grp="ancre"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="ancre"]:checked)        { --sheet-grp: #c2004e; }
+
+html body#modernbb .sc-liens-sheet[data-grp="harmoniseur"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="harmoniseur"]:checked)  { --sheet-grp: #b85200; }
+
+html body#modernbb .sc-liens-sheet[data-grp="asynchrone"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="asynchrone"]:checked)   { --sheet-grp: #9e0606; }
+
+html body#modernbb .sc-liens-sheet[data-grp="insulaire"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="insulaire"]:checked)    { --sheet-grp: #1f784c; }
+
+html body#modernbb .sc-liens-sheet[data-grp="lesteur"]:has(.sc-ls-theme-btn input:checked),
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="lesteur"]:checked)      { --sheet-grp: #224c78; }
+
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bio-pill,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step,
