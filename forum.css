@@ -6651,3 +6651,29 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
 #preview div[style*="height: 4px"] {
     background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
 }
+
+/* =========================================================
+   CORRECTION BARRE DE NAVIGATION SUR MOBILE / TABLETTE
+   ========================================================= */
+@media (max-width: 1024px) {
+    /* Décale le bloc des liens de navigation vers la droite */
+    body#modernbb ul.navlinks,
+    body#modernbb #navlinks,
+    body#modernbb .navbar-nav {
+        margin-left: auto !important;
+        margin-right: 14px !important;
+        padding-left: 15px !important;
+        gap: 8px !important;
+        justify-content: flex-end !important;
+    }
+
+    /* Empêche un pseudo long de toucher "Accueil" */
+    body#modernbb .welcome-box,
+    body#modernbb .user-welcome,
+    body#modernbb #header-welcome {
+        max-width: 145px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+}
