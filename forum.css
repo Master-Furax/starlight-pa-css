@@ -6653,20 +6653,14 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
 }
 
 /* =========================================================
-   CORRECTION BARRE DE NAVIGATION SUR MOBILE / TABLETTE
+   DÉCALAGE DU PSEUDO SOUS LA BARRE DE NAV SUR MOBILE
    ========================================================= */
 @media (max-width: 1024px) {
-    html body#modernbb #headerbar-top .wrap > ul,
-    html body#modernbb #headerbar-top ul.navbar-nav {
-        margin-left: auto !important;
-        margin-right: 115px !important;
-        gap: 0px !important;
-        justify-content: flex-end !important;
-    }
-
-    html body#modernbb #headerbar-top ul.navbar-nav li a.mainmenu {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-        font-size: 13px !important;
+    html body#modernbb #headerbar-top .wrap::before,
+    html body#modernbb #headerbar-top .wrap::after,
+    html body#modernbb .headerbar .welcome-member,
+    html body#modernbb #headerbar-top .user-info {
+        top: 66px !important;
+        margin-top: 66px !important;
     }
 }
