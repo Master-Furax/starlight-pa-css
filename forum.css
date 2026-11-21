@@ -7685,7 +7685,7 @@ html body#modernbb .sc-ac-footer > br {
 }
 
 /* =========================================================
-   MODULE ARSTEK COM' — MESSAGERIE & APPELS RP
+   MODULE ARSTEK COM' — MESSAGERIE & APPELS RP (SOMBRE & CLAIR)
    ========================================================= */
 
 .arstek-com {
@@ -7702,7 +7702,7 @@ html body#modernbb .sc-ac-footer > br {
     font-family: var(--textes, 'Inter', sans-serif) !important;
 }
 
-/* Couleurs des 8 groupes */
+/* Couleurs des 8 groupes (Mode Sombre) */
 .arstek-com.grp-umbra        { --com-grp: #7C828D; }
 .arstek-com.grp-tiamat       { --com-grp: #B7890B; }
 .arstek-com.grp-synchronyste { --com-grp: #8C3ACF; }
@@ -7712,14 +7712,14 @@ html body#modernbb .sc-ac-footer > br {
 .arstek-com.grp-insulaire    { --com-grp: #2A915E; }
 .arstek-com.grp-lesteur      { --com-grp: #2D5D8F; }
 
-/* Variante Message Reçu (liseré à droite et légèrement décalé) */
+/* Variante Message Reçu */
 .arstek-com.received {
     border-left: 1px solid #3a3a42 !important;
     border-right: 5px solid var(--com-grp) !important;
     background: #202025 !important;
 }
 
-/* Variante Appel Vocal (liseré haut et bas lumineux) */
+/* Variante Appel Vocal */
 .arstek-com.call {
     border-top: 2px solid var(--com-grp) !important;
     border-bottom: 2px solid var(--com-grp) !important;
@@ -7731,6 +7731,7 @@ html body#modernbb .sc-ac-footer > br {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+    gap: 10px !important;
     padding: 7px 16px !important;
     background: #121215 !important;
     border-bottom: 1px solid #2e2e36 !important;
@@ -7745,15 +7746,44 @@ html body#modernbb .sc-ac-footer > br {
     font-weight: 600 !important;
 }
 
+.arstek-header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
 .arstek-time {
     color: #9e988e !important;
 }
 
-/* Corps du message aligné avec l'avatar 120x120px */
+/* Bouton bascule Clair / Sombre */
+.arstek-theme-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #212126 !important;
+    color: #f4efe6 !important;
+    border: 1px solid #8e887d !important;
+    border-radius: 8px 0 !important;
+    padding: 1px 8px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    user-select: none !important;
+}
+.arstek-theme-btn:hover {
+    border-color: var(--com-grp) !important;
+    color: var(--com-grp) !important;
+}
+.arstek-theme-btn input {
+    display: none !important;
+}
+
+/* Corps du message aligné avec l'avatar portrait 130x180px */
 .arstek-body {
     display: flex !important;
     align-items: center !important;
-    gap: 4px !important;
+    gap: 18px !important;
     padding: 16px 20px !important;
 }
 
@@ -7777,12 +7807,12 @@ html body#modernbb .sc-ac-footer > br {
     flex-grow: 1 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 8px !important;
 }
 
 .arstek-sender {
     font-family: 'Teko', sans-serif !important;
-    font-size: 20px !important;
+    font-size: 22px !important;
     line-height: 1 !important;
     color: #f4efe6 !important;
     text-transform: uppercase !important;
@@ -7799,7 +7829,7 @@ html body#modernbb .sc-ac-footer > br {
     background: #25252a !important;
     color: #e8e2d7 !important;
     border: 1px solid #3a3a42 !important;
-    padding: 10px 14px !important;
+    padding: 12px 16px !important;
     border-radius: 12px 0 !important;
     font-size: 13.5px !important;
     line-height: 1.55 !important;
@@ -7812,15 +7842,45 @@ html body#modernbb .sc-ac-footer > br {
 }
 
 /* =========================================================
-   ANTI-<BR> & ALIGNEMENT PROPRE POUR .arstek-com
+   VARIANTE CLAIRE (CRÈME CHAUD) — .arstek-com
    ========================================================= */
-html body#modernbb .arstek-com > br,
-html body#modernbb .arstek-header > br,
-html body#modernbb .arstek-body > br,
-html body#modernbb .arstek-content > br {
-    display: none !important;
+html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) {
+    background: #e8e2d7 !important;
+    color: #19191c !important;
+    border-color: #b5afa4 !important;
 }
 
+/* Teintes approfondies sur fond crème */
+html body#modernbb .arstek-com.grp-umbra:has(.arstek-theme-btn input:checked)        { --com-grp: #5c626d; }
+html body#modernbb .arstek-com.grp-tiamat:has(.arstek-theme-btn input:checked)       { --com-grp: #966d00; }
+html body#modernbb .arstek-com.grp-synchronyste:has(.arstek-theme-btn input:checked) { --com-grp: #7628b8; }
+html body#modernbb .arstek-com.grp-ancre:has(.arstek-theme-btn input:checked)        { --com-grp: #c2004e; }
+html body#modernbb .arstek-com.grp-harmoniseur:has(.arstek-theme-btn input:checked)  { --com-grp: #b85200; }
+html body#modernbb .arstek-com.grp-asynchrone:has(.arstek-theme-btn input:checked)   { --com-grp: #9e0606; }
+html body#modernbb .arstek-com.grp-insulaire:has(.arstek-theme-btn input:checked)    { --com-grp: #1f784c; }
+html body#modernbb .arstek-com.grp-lesteur:has(.arstek-theme-btn input:checked)      { --com-grp: #224c78; }
+
+html body#modernbb .arstek-com.call:has(.arstek-theme-btn input:checked) {
+    background: linear-gradient(135deg, #e8e2d7 0%, #dcd4c6 100%) !important;
+}
+
+html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) .arstek-sender {
+    color: #19191c !important;
+}
+
+html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) .arstek-msg {
+    background: #f4efe6 !important;
+    color: #19191c !important;
+    border-color: #b5afa4 !important;
+}
+
+/* Anti-<br> Forumactif */
+html body#modernbb .arstek-com > br,
+html body#modernbb .arstek-header > br,
+html body#modernbb .arstek-header-right > br,
+html body#modernbb .arstek-body > br,
+html body#modernbb .arstek-content > br,
 html body#modernbb .arstek-msg > br:first-child {
     display: none !important;
 }
+
