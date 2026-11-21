@@ -6653,14 +6653,11 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
 }
 
 /* =========================================================
-   DÉCALAGE DU PSEUDO SOUS LA BARRE DE NAV SUR MOBILE
+   DÉCALAGE DE #fa_menu (BIENVENUE + PSEUDO) SUR MOBILE
    ========================================================= */
-@media (max-width: 1024px) {
-    html body#modernbb #headerbar-top .wrap::before,
-    html body#modernbb #headerbar-top .wrap::after,
-    html body#modernbb .headerbar .welcome-member,
-    html body#modernbb #headerbar-top .user-info {
-        top: 70px !important;
-        margin-top: 70px !important;
+@media screen and (max-width: 1150px) {
+    html body#modernbb div#fa_menu {
+        top: 68px !important;
+        left: 165px !important;
     }
 }
