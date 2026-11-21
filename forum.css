@@ -7031,141 +7031,373 @@ html body#modernbb #preview .sc-tl-desc {
 
 
 /* =========================================================
-   FICHE DE LIENS — STARLIGHT CONVERGENCE
+   FICHE DE LIENS COMPLÈTE — STARLIGHT CONVERGENCE
    ========================================================= */
-html body#modernbb .message-contenu-arte .sc-liens-box,
-html body#modernbb #preview .sc-liens-box {
+html body#modernbb .message-contenu-arte .sc-liens-sheet,
+html body#modernbb #preview .sc-liens-sheet {
+    --sheet-grp: #ffb01f;
     width: 100% !important;
     max-width: 780px !important;
-    margin: 10px auto !important;
+    margin: 14px auto !important;
     background: #19191c !important;
     color: #f4efe6 !important;
     border: 1.5px solid #8e887d !important;
-    border-top: 4px solid #ffb01f !important;
+    border-top: 4px solid var(--sheet-grp) !important;
     border-radius: 22px 0 !important;
-    padding: 24px !important;
+    overflow: hidden !important;
     font-family: 'Inter', sans-serif !important;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75) !important;
     box-sizing: border-box !important;
 }
 
-.sc-liens-header {
+/* Couleur du personnage propriétaire de la fiche */
+.sc-liens-sheet:has(option[value="umbra"][selected])        { --sheet-grp: #7C828D; }
+.sc-liens-sheet:has(option[value="tiamat"][selected])       { --sheet-grp: #B7890B; }
+.sc-liens-sheet:has(option[value="synchronyste"][selected]) { --sheet-grp: #8C3ACF; }
+.sc-liens-sheet:has(option[value="ancre"][selected])        { --sheet-grp: #D50156; }
+.sc-liens-sheet:has(option[value="harmoniseur"][selected])  { --sheet-grp: #D76609; }
+.sc-liens-sheet:has(option[value="asynchrone"][selected])   { --sheet-grp: #AB0707; }
+.sc-liens-sheet:has(option[value="insulaire"][selected])    { --sheet-grp: #2A915E; }
+.sc-liens-sheet:has(option[value="lesteur"][selected])      { --sheet-grp: #2D5D8F; }
+
+/* Barre supérieure */
+.sc-ls-topbar {
     display: flex !important;
+    justify-content: space-between !important;
     align-items: center !important;
-    gap: 18px !important;
+    padding: 10px 20px !important;
+    background: #121215 !important;
+    border-bottom: 1px solid #3a3a42 !important;
+}
+.sc-ls-theme-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
     background: #212126 !important;
-    border: 1px solid #3a3a42 !important;
-    border-left: 5px solid #ee5574 !important;
-    border-radius: 16px 0 !important;
-    padding: 16px !important;
-    margin-bottom: 22px !important;
-}
-.sc-liens-header img {
-    width: 95px !important;
-    height: 95px !important;
-    min-width: 95px !important;
-    object-fit: cover !important;
-    border-radius: 14px 0 !important;
-    border: 2px solid #ffb01f !important;
-    flex-shrink: 0 !important;
-}
-.sc-liens-intro {
-    flex: 1 !important;
-}
-.sc-liens-name {
+    color: #f4efe6 !important;
+    border: 1px solid #8e887d !important;
+    border-radius: 10px 0 !important;
+    padding: 4px 12px !important;
     font-family: 'Teko', sans-serif !important;
-    font-size: 28px !important;
-    line-height: 1.05 !important;
-    color: #ffb01f !important;
+    font-size: 16px !important;
+    letter-spacing: 0.8px !important;
     text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    margin-bottom: 6px !important;
+    cursor: pointer !important;
+    user-select: none !important;
 }
-.sc-liens-wanted {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    color: #e8e2d7 !important;
+.sc-ls-theme-btn:hover { border-color: #ffb01f !important; color: #ffb01f !important; }
+.sc-ls-theme-btn input { display: none !important; }
+
+.sc-ls-select {
+    background: #212126 !important;
+    color: var(--sheet-grp) !important;
+    border: 1px solid var(--sheet-grp) !important;
+    border-radius: 10px 0 !important;
+    padding: 3px 10px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
 }
 
-/* Liste des cartes de relations */
-.sc-liens-grid {
+/* Bannière pleine largeur */
+.sc-ls-banner {
+    position: relative !important;
+    width: 100% !important;
+    height: 230px !important;
+    overflow: hidden !important;
+    border-bottom: 3px solid var(--sheet-grp) !important;
+}
+.sc-ls-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+.sc-ls-banner-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(0deg, rgba(18, 18, 21, 0.92) 0%, rgba(18, 18, 21, 0.25) 60%, transparent 100%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 18px 24px !important;
+}
+.sc-ls-title {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 36px !important;
+    line-height: 1 !important;
+    color: #f4efe6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+    margin: 0 !important;
+}
+.sc-ls-subtitle {
+    font-size: 12.5px !important;
+    color: var(--sheet-grp) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-top: 4px !important;
+}
+
+.sc-ls-body {
+    padding: 24px !important;
+}
+
+/* Sous-titres dégradés identiques au reste du forum */
+.sc-ls-sec-title {
+    display: block !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    color: #f4efe6 !important;
+    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+    border: 1px solid rgba(244, 239, 230, 0.4) !important;
+    border-radius: 14px 0 !important;
+    padding: 6px 18px !important;
+    margin: 22px 0 14px 0 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+.sc-ls-sec-title:first-child { margin-top: 0 !important; }
+
+/* 1. Données biométriques compactes (3 colonnes) */
+.sc-ls-bio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+}
+.sc-ls-bio-pill {
+    background: #212126 !important;
+    border: 1px solid #3a3a42 !important;
+    border-left: 3px solid var(--sheet-grp) !important;
+    border-radius: 10px 0 !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    color: #e8e2d7 !important;
+}
+.sc-ls-bio-pill strong {
+    display: block !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    color: var(--sheet-grp) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* 2. Pilules de traits de caractère (façon Screen 1) */
+.sc-ls-traits {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 14px !important;
+}
+.sc-ls-trait {
+    background: #2b2927 !important;
+    color: #f4efe6 !important;
+    border: 1.5px solid var(--sheet-grp) !important;
+    border-radius: 12px 0 !important;
+    padding: 4px 14px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 17px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+}
+
+/* Encarts texte (Goûts, Physique, Liens recherchés) */
+.sc-ls-card-box {
+    background: #212126 !important;
+    border: 1px solid #3a3a42 !important;
+    border-left: 4px solid #ee5574 !important;
+    border-radius: 14px 0 !important;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    color: #e8e2d7 !important;
+    margin-bottom: 12px !important;
+}
+.sc-ls-card-box strong.sc-ls-label {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 18px !important;
+    color: #ffb01f !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+    margin-right: 6px !important;
+}
+
+/* 3. Moodboard (6 images en grille 3x2) */
+.sc-ls-moodboard {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+}
+.sc-ls-moodboard img {
+    width: 100% !important;
+    height: 125px !important;
+    object-fit: cover !important;
+    border-radius: 14px 0 !important;
+    border: 1.5px solid var(--sheet-grp) !important;
+    display: block !important;
+}
+
+/* 4. Chronologie express du background */
+.sc-ls-bg-tl {
+    border-left: 2px solid #ee5574 !important;
+    margin-left: 10px !important;
+    padding-left: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+.sc-ls-bg-step {
+    position: relative !important;
+    background: #212126 !important;
+    border: 1px solid #3a3a42 !important;
+    border-radius: 12px 0 !important;
+    padding: 9px 14px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    color: #e8e2d7 !important;
+}
+.sc-ls-bg-step::before {
+    content: "" !important;
+    position: absolute !important;
+    left: -24px !important;
+    top: 13px !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: #ffb01f !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 6px #ee5574 !important;
+}
+.sc-ls-bg-step strong {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 17px !important;
+    color: #ffb01f !important;
+    text-transform: uppercase !important;
+    margin-right: 6px !important;
+}
+
+/* 5. Liens en quinconce automatique (Gauche -> Droite -> Gauche) */
+.sc-ls-rel-list {
     display: flex !important;
     flex-direction: column !important;
     gap: 14px !important;
 }
-
-.sc-lien-card {
-    --l-grp: #ee5574;
+.sc-ls-rel-card {
+    --rel-grp: #ee5574;
     display: flex !important;
     align-items: flex-start !important;
     gap: 16px !important;
     background: #212126 !important;
     border: 1px solid #3a3a42 !important;
-    border-left: 6px solid var(--l-grp) !important;
+    border-left: 5px solid var(--rel-grp) !important;
     border-radius: 16px 0 !important;
     padding: 14px 16px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+/* Alternance automatique en quinconce sur les cartes paires */
+.sc-ls-rel-card:nth-child(even) {
+    flex-direction: row-reverse !important;
+    border-left: 1px solid #3a3a42 !important;
+    border-right: 5px solid var(--rel-grp) !important;
+    border-radius: 0 16px !important;
 }
 
-/* Couleurs dynamiques selon le groupe de la relation */
-.sc-lien-card.grp-umbra        { --l-grp: #7C828D; }
-.sc-lien-card.grp-tiamat       { --l-grp: #B7890B; }
-.sc-lien-card.grp-synchronyste { --l-grp: #8C3ACF; }
-.sc-lien-card.grp-ancre        { --l-grp: #D50156; }
-.sc-lien-card.grp-harmoniseur  { --l-grp: #D76609; }
-.sc-lien-card.grp-asynchrone   { --l-grp: #AB0707; }
-.sc-lien-card.grp-insulaire    { --l-grp: #2A915E; }
-.sc-lien-card.grp-lesteur      { --l-grp: #2D5D8F; }
+/* Couleurs manuelles OU automatiques via mention @"Pseudo" */
+.sc-ls-rel-card.grp-umbra,        .sc-ls-rel-card:has([style*="#7C828D" i]) { --rel-grp: #7C828D; }
+.sc-ls-rel-card.grp-tiamat,       .sc-ls-rel-card:has([style*="#B7890B" i]) { --rel-grp: #B7890B; }
+.sc-ls-rel-card.grp-synchronyste, .sc-ls-rel-card:has([style*="#8C3ACF" i]) { --rel-grp: #8C3ACF; }
+.sc-ls-rel-card.grp-ancre,        .sc-ls-rel-card:has([style*="#D50156" i]) { --rel-grp: #D50156; }
+.sc-ls-rel-card.grp-harmoniseur,  .sc-ls-rel-card:has([style*="#D76609" i]) { --rel-grp: #D76609; }
+.sc-ls-rel-card.grp-asynchrone,   .sc-ls-rel-card:has([style*="#AB0707" i]) { --rel-grp: #AB0707; }
+.sc-ls-rel-card.grp-insulaire,    .sc-ls-rel-card:has([style*="#2A915E" i]) { --rel-grp: #2A915E; }
+.sc-ls-rel-card.grp-lesteur,      .sc-ls-rel-card:has([style*="#2D5D8F" i]) { --rel-grp: #2D5D8F; }
 
-.sc-lien-card img {
-    width: 85px !important;
-    height: 85px !important;
-    min-width: 85px !important;
-    object-fit: cover !important;
-    border-radius: 12px 0 !important;
-    border: 2px solid var(--l-grp) !important;
-    flex-shrink: 0 !important;
+.sc-ls-rel-card img {
+width: 85px !important;
+height: 85px !important;
+min-width: 85px !important;
+object-fit: cover !important;
+border-radius: 12px 0 !important;
+border: 2px solid var(--rel-grp) !important;
+flex-shrink: 0 !important;
 }
-.sc-lien-body {
-    flex: 1 !important;
-    min-width: 0 !important;
+.sc-ls-rel-body { flex: 1 !important; min-width: 0 !important; }
+.sc-ls-rel-head {
+display: flex !important;
+flex-wrap: wrap !important;
+justify-content: space-between !important;
+align-items: center !important;
+gap: 8px !important;
+border-bottom: 1px solid #3a3a42 !important;
+padding-bottom: 6px !important;
+margin-bottom: 8px !important;
 }
-.sc-lien-top {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 8px !important;
-    border-bottom: 1px solid #3a3a42 !important;
-    padding-bottom: 6px !important;
-    margin-bottom: 8px !important;
+.sc-ls-rel-name,
+.sc-ls-rel-name a {
+font-family: 'Teko', sans-serif !important;
+font-size: 22px !important;
+line-height: 1 !important;
+color: var(--rel-grp) !important;
+text-transform: uppercase !important;
+letter-spacing: 0.8px !important;
+text-decoration: none !important;
 }
-.sc-lien-target {
-    font-family: 'Teko', sans-serif !important;
-    font-size: 22px !important;
-    line-height: 1 !important;
-    color: var(--l-grp) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.8px !important;
+.sc-ls-rel-tag {
+font-family: 'Teko', sans-serif !important;
+font-size: 15px !important;
+padding: 2px 10px !important;
+background: #141417 !important;
+color: var(--rel-grp) !important;
+border: 1px solid var(--rel-grp) !important;
+border-radius: 8px 0 !important;
+text-transform: uppercase !important;
 }
-.sc-lien-badge {
-    font-family: 'Teko', sans-serif !important;
-    font-size: 15px !important;
-    line-height: 1 !important;
-    padding: 3px 12px !important;
-    background: #141417 !important;
-    color: var(--l-grp) !important;
-    border: 1px solid var(--l-grp) !important;
-    border-radius: 8px 0 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.6px !important;
+.sc-ls-rel-text {
+font-size: 13px !important;
+line-height: 1.55 !important;
+color: #e8e2d7 !important;
+text-align: justify !important;
 }
-.sc-lien-desc {
-    font-size: 13.5px !important;
-    line-height: 1.55 !important;
-    color: #e8e2d7 !important;
-    text-align: justify !important;
+/* =========================================================
+VARIANTE CLAIRE (CRÈME CHAUD) — FICHE DE LIENS
+========================================================= */
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) {
+background: #e8e2d7 !important;
+color: #19191c !important;
 }
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bio-pill,
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step,
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-card {
+background: #f4efe6 !important;
+color: #19191c !important;
+border-color: #b5afa4 !important;
+}
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-trait {
+background: #d8d2c7 !important;
+color: #19191c !important;
+}
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box strong.sc-ls-label,
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step strong {
+color: #9d2b6b !important;
+}
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-head {
+border-bottom-color: #b5afa4 !important;
+}
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-tag {
+background: #e8e2d7 !important;
+}
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-text {
+color: #19191c !important;
+}
+
 
 /* =========================================================
    ARSTEK COM' — MESSAGERIE INSTANTANÉE DE LA STATION
