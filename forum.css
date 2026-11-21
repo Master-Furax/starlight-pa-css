@@ -6660,7 +6660,7 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
     html body#modernbb #headerbar-top .wrap::after,
     html body#modernbb .headerbar .welcome-member,
     html body#modernbb #headerbar-top .user-info {
-        top: 66px !important;
-        margin-top: 66px !important;
+        top: 70px !important;
+        margin-top: 70px !important;
     }
 }
