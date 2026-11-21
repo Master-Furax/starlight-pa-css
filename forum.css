@@ -7167,3 +7167,139 @@ html body#modernbb #preview .sc-liens-box {
     text-align: justify !important;
 }
 
+/* =========================================================
+   ARSTEK COM' — MESSAGERIE INSTANTANÉE DE LA STATION
+   ========================================================= */
+html body#modernbb .message-contenu-arte .sc-arstek-com,
+html body#modernbb #preview .sc-arstek-com {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 14px auto !important;
+    background: #141417 !important;
+    color: #f4efe6 !important;
+    border: 1.5px solid #8e887d !important;
+    border-top: 4px solid #ffb01f !important;
+    border-radius: 22px 0 !important;
+    overflow: hidden !important;
+    font-family: 'Inter', sans-serif !important;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.75), 0 0 15px rgba(238, 85, 116, 0.15) !important;
+    box-sizing: border-box !important;
+}
+
+/* Barre système supérieure */
+.sc-ac-topbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 16px !important;
+    background: linear-gradient(90deg, #2a1d38 0%, #1e1e24 100%) !important;
+    border-bottom: 1px solid #3a3a42 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #ffb01f !important;
+}
+.sc-ac-signal {
+    color: #2A915E !important;
+    font-weight: 600 !important;
+}
+
+/* En-tête du correspondant */
+.sc-ac-contact {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 12px 16px !important;
+    background: #1b1b20 !important;
+    border-bottom: 1px solid #3a3a42 !important;
+}
+.sc-ac-contact img {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    object-fit: cover !important;
+    border-radius: 10px 0 !important;
+    border: 1.5px solid #ee5574 !important;
+}
+.sc-ac-contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.15 !important;
+}
+.sc-ac-contact-name {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 21px !important;
+    color: #f4efe6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+}
+.sc-ac-contact-status {
+    font-size: 11px !important;
+    color: #ee5574 !important;
+}
+
+/* Zone des messages */
+.sc-ac-feed {
+    padding: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    background: radial-gradient(circle at top right, rgba(78, 56, 106, 0.18), transparent 60%) !important;
+}
+
+.sc-ac-msg {
+    max-width: 82% !important;
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    position: relative !important;
+}
+
+/* Message reçu (gauche) */
+.sc-ac-msg.in {
+    align-self: flex-start !important;
+    background: #222228 !important;
+    color: #f4efe6 !important;
+    border: 1px solid #3a3a42 !important;
+    border-left: 3px solid #ee5574 !important;
+    border-radius: 0 14px 14px 14px !important;
+}
+
+/* Message envoyé (droite) */
+.sc-ac-msg.out {
+    align-self: flex-end !important;
+    background: #29231b !important;
+    color: #f4efe6 !important;
+    border: 1px solid rgba(255, 176, 31, 0.4) !important;
+    border-right: 3px solid #ffb01f !important;
+    border-radius: 14px 0 14px 14px !important;
+}
+
+.sc-ac-time {
+    display: block !important;
+    font-size: 10px !important;
+    color: #8e887d !important;
+    margin-top: 4px !important;
+    text-align: right !important;
+}
+
+/* Barre inférieure décorative */
+.sc-ac-footer {
+    padding: 9px 16px !important;
+    background: #1b1b20 !important;
+    border-top: 1px solid #3a3a42 !important;
+    font-size: 11.5px !important;
+    color: #8e887d !important;
+    font-style: italic !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.sc-ac-send {
+    font-family: 'Teko', sans-serif !important;
+    font-style: normal !important;
+    font-size: 15px !important;
+    color: #ffb01f !important;
+    letter-spacing: 0.8px !important;
+}
