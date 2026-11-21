@@ -7809,3 +7809,16 @@ html body#modernbb .sc-ac-footer > br {
     text-align: center !important;
 }
 
+/* =========================================================
+   ANTI-<BR> & ALIGNEMENT PROPRE POUR .arstek-com
+   ========================================================= */
+html body#modernbb .arstek-com > br,
+html body#modernbb .arstek-header > br,
+html body#modernbb .arstek-body > br,
+html body#modernbb .arstek-content > br {
+    display: none !important;
+}
+
+html body#modernbb .arstek-msg > br:first-child {
+    display: none !important;
+}
