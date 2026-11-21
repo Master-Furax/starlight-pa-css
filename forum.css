@@ -7050,15 +7050,15 @@ html body#modernbb #preview .sc-liens-sheet {
     box-sizing: border-box !important;
 }
 
-/* Couleur dynamique selon le groupe sélectionné (spécificité renforcée) */
-html body#modernbb .sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D; }
-html body#modernbb .sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B; }
-html body#modernbb .sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF; }
-html body#modernbb .sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156; }
-html body#modernbb .sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609; }
-html body#modernbb .sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707; }
-html body#modernbb .sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E; }
-html body#modernbb .sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F; }
+/* Couleur dynamique selon le groupe sélectionné (en direct + au chargement) */
+html body#modernbb .sc-liens-sheet[data-grp="umbra"],        html body#modernbb .sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D; }
+html body#modernbb .sc-liens-sheet[data-grp="tiamat"],       html body#modernbb .sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B; }
+html body#modernbb .sc-liens-sheet[data-grp="synchronyste"], html body#modernbb .sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF; }
+html body#modernbb .sc-liens-sheet[data-grp="ancre"],        html body#modernbb .sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156; }
+html body#modernbb .sc-liens-sheet[data-grp="harmoniseur"],  html body#modernbb .sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609; }
+html body#modernbb .sc-liens-sheet[data-grp="asynchrone"],   html body#modernbb .sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707; }
+html body#modernbb .sc-liens-sheet[data-grp="insulaire"],    html body#modernbb .sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E; }
+html body#modernbb .sc-liens-sheet[data-grp="lesteur"],      html body#modernbb .sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F; }
 
 /* Barre supérieure */
 .sc-ls-topbar {
