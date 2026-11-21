@@ -6697,3 +6697,89 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
     font-weight: 700 !important;
 }
 
+/* =========================================================
+   BOTTIN DES AVATARS À ONGLETS ALPHABÉTIQUES (CSS PUR)
+   ========================================================= */
+.sc-tabs-box {
+    position: relative !important;
+}
+
+/* Masque les boutons radio natifs */
+.sc-tab-radio {
+    display: none !important;
+}
+
+/* Barre des onglets alphabétiques */
+.sc-tab-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 14px !important;
+    border-bottom: 1px solid #3a3a42 !important;
+}
+
+.sc-tab-label {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    padding: 6px 16px !important;
+    background: #232329 !important;
+    color: #d8d2c7 !important;
+    border: 1px solid #8e887d !important;
+    border-radius: 12px 0 !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.2s ease !important;
+    user-select: none !important;
+}
+
+.sc-tab-label:hover {
+    border-color: #ffb01f !important;
+    color: #ffb01f !important;
+}
+
+/* Masque tous les panneaux par défaut */
+.sc-tab-panel {
+    display: none !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+/* Activation de l'onglet et affichage du panneau correspondant */
+#tab-abc:checked ~ .sc-tab-nav label[for="tab-abc"],
+#tab-def:checked ~ .sc-tab-nav label[for="tab-def"],
+#tab-ghi:checked ~ .sc-tab-nav label[for="tab-ghi"],
+#tab-jkl:checked ~ .sc-tab-nav label[for="tab-jkl"],
+#tab-mno:checked ~ .sc-tab-nav label[for="tab-mno"],
+#tab-pqr:checked ~ .sc-tab-nav label[for="tab-pqr"],
+#tab-stu:checked ~ .sc-tab-nav label[for="tab-stu"],
+#tab-vwxyz:checked ~ .sc-tab-nav label[for="tab-vwxyz"] {
+    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+    color: #f4efe6 !important;
+    border-color: #f4efe6 !important;
+    box-shadow: 0 0 12px rgba(238, 85, 116, 0.45) !important;
+}
+
+#tab-abc:checked ~ .sc-tab-panels #panel-abc,
+#tab-def:checked ~ .sc-tab-panels #panel-def,
+#tab-ghi:checked ~ .sc-tab-panels #panel-ghi,
+#tab-jkl:checked ~ .sc-tab-panels #panel-jkl,
+#tab-mno:checked ~ .sc-tab-panels #panel-mno,
+#tab-pqr:checked ~ .sc-tab-panels #panel-pqr,
+#tab-stu:checked ~ .sc-tab-panels #panel-stu,
+#tab-vwxyz:checked ~ .sc-tab-panels #panel-vwxyz {
+    display: flex !important;
+}
+
+.sc-empty-letter {
+    text-align: center !important;
+    color: #8e887d !important;
+    font-style: italic !important;
+    padding: 18px !important;
+    background: #212126 !important;
+    border-radius: 12px 0 !important;
+    border: 1px dashed #3a3a42 !important;
+}
