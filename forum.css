@@ -7303,3 +7303,85 @@ html body#modernbb #preview .sc-arstek-com {
     color: #ffb01f !important;
     letter-spacing: 0.8px !important;
 }
+
+/* Bouton bascule Clair / Sombre dans la barre supérieure */
+.sc-ac-theme-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    background: #141417 !important;
+    color: #f4efe6 !important;
+    border: 1px solid #8e887d !important;
+    border-radius: 8px 0 !important;
+    padding: 1px 8px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.6px !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    transition: border-color 0.2s ease, color 0.2s ease !important;
+}
+.sc-ac-theme-btn:hover {
+    border-color: #ffb01f !important;
+    color: #ffb01f !important;
+}
+.sc-ac-theme-btn input {
+    display: none !important;
+}
+
+/* =========================================================
+   VARIANTE CLAIRE (CRÈME CHAUD) — ARSTEK COM'
+   ========================================================= */
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) {
+    background: #e8e2d7 !important;
+    color: #19191c !important;
+    border-color: #8e887d !important;
+}
+
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-contact,
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-footer {
+    background: #d8d2c7 !important;
+    border-color: #b5afa4 !important;
+    color: #4a4640 !important;
+}
+
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-contact-name {
+    color: #19191c !important;
+}
+
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-contact-status {
+    color: #b82948 !important;
+    font-weight: 600 !important;
+}
+
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-feed {
+    background: radial-gradient(circle at top right, rgba(238, 85, 116, 0.12), transparent 65%) !important;
+}
+
+/* Bulle reçue en mode clair */
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-msg.in {
+    background: #f4efe6 !important;
+    color: #19191c !important;
+    border-color: #b5afa4 !important;
+    border-left: 3px solid #ee5574 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Bulle envoyée en mode clair */
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-msg.out {
+    background: #f5e6cc !important;
+    color: #19191c !important;
+    border-color: #d89b3c !important;
+    border-right: 3px solid #d89b3c !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-time {
+    color: #5c5852 !important;
+}
+
+html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-send {
+    color: #9d2b6b !important;
+    font-weight: 700 !important;
+}
+
