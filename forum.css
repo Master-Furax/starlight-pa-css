@@ -7753,7 +7753,7 @@ html body#modernbb .sc-ac-footer > br {
 .arstek-body {
     display: flex !important;
     align-items: center !important;
-    gap: 18px !important;
+    gap: 4px !important;
     padding: 16px 20px !important;
 }
 
@@ -7762,9 +7762,9 @@ html body#modernbb .sc-ac-footer > br {
 }
 
 .arstek-avatar {
-    width: 120px !important;
-    height: 120px !important;
-    min-width: 120px !important;
+    width: 130px !important;
+    height: 180px !important;
+    min-width: 130px !important;
     border-radius: 14px 0 !important;
     object-fit: cover !important;
     border: 2px solid var(--com-grp) !important;
