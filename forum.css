@@ -7749,12 +7749,12 @@ html body#modernbb .sc-ac-footer > br {
     color: #9e988e !important;
 }
 
-/* Corps du message */
+/* Corps du message aligné avec l'avatar 120x120px */
 .arstek-body {
     display: flex !important;
-    align-items: flex-start !important;
-    gap: 14px !important;
-    padding: 14px 16px !important;
+    align-items: center !important;
+    gap: 18px !important;
+    padding: 16px 20px !important;
 }
 
 .arstek-com.received .arstek-body {
@@ -7762,13 +7762,15 @@ html body#modernbb .sc-ac-footer > br {
 }
 
 .arstek-avatar {
-    width: 64px !important;
-    height: 64px !important;
-    border-radius: 12px 0 !important;
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    border-radius: 14px 0 !important;
     object-fit: cover !important;
     border: 2px solid var(--com-grp) !important;
     flex-shrink: 0 !important;
     background: #121215 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
 .arstek-content {
