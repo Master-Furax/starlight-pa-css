@@ -6668,7 +6668,7 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
 
 html body#modernbb .postbody .sc-admin-box,
 html body#modernbb #preview .sc-admin-box {
-    max-width: 780px !important;
+    max-width: 815px !important;
     margin: 20px auto !important;
     background: #19191c !important;
     color: #f4efe6 !important;
