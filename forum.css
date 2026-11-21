@@ -7035,7 +7035,7 @@ html body#modernbb #preview .sc-tl-desc {
    ========================================================= */
 html body#modernbb .message-contenu-arte .sc-liens-sheet,
 html body#modernbb #preview .sc-liens-sheet {
-    --sheet-grp: #ffb01f;
+    --sheet-grp: #7C828D; /* Couleur Umbra par défaut */
     width: 100% !important;
     max-width: 780px !important;
     margin: 14px auto !important;
@@ -7050,16 +7050,15 @@ html body#modernbb #preview .sc-liens-sheet {
     box-sizing: border-box !important;
 }
 
-//* Couleur du personnage propriétaire de la fiche (en direct au clic) */
-.sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D; }
-.sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B; }
-.sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF; }
-.sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156; }
-.sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609; }
-.sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707; }
-.sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E; }
-.sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F; }
-
+/* Couleur dynamique selon le groupe sélectionné (spécificité renforcée) */
+html body#modernbb .sc-liens-sheet:has(option[value="umbra"]:checked)        { --sheet-grp: #7C828D; }
+html body#modernbb .sc-liens-sheet:has(option[value="tiamat"]:checked)       { --sheet-grp: #B7890B; }
+html body#modernbb .sc-liens-sheet:has(option[value="synchronyste"]:checked) { --sheet-grp: #8C3ACF; }
+html body#modernbb .sc-liens-sheet:has(option[value="ancre"]:checked)        { --sheet-grp: #D50156; }
+html body#modernbb .sc-liens-sheet:has(option[value="harmoniseur"]:checked)  { --sheet-grp: #D76609; }
+html body#modernbb .sc-liens-sheet:has(option[value="asynchrone"]:checked)   { --sheet-grp: #AB0707; }
+html body#modernbb .sc-liens-sheet:has(option[value="insulaire"]:checked)    { --sheet-grp: #2A915E; }
+html body#modernbb .sc-liens-sheet:has(option[value="lesteur"]:checked)      { --sheet-grp: #2D5D8F; }
 
 /* Barre supérieure */
 .sc-ls-topbar {
@@ -7086,7 +7085,7 @@ html body#modernbb #preview .sc-liens-sheet {
     cursor: pointer !important;
     user-select: none !important;
 }
-.sc-ls-theme-btn:hover { border-color: #ffb01f !important; color: #ffb01f !important; }
+.sc-ls-theme-btn:hover { border-color: var(--sheet-grp) !important; color: var(--sheet-grp) !important; }
 .sc-ls-theme-btn input { display: none !important; }
 
 .sc-ls-select {
@@ -7142,11 +7141,9 @@ html body#modernbb #preview .sc-liens-sheet {
     margin-top: 4px !important;
 }
 
-.sc-ls-body {
-    padding: 24px !important;
-}
+.sc-ls-body { padding: 24px !important; }
 
-/* Sous-titres dégradés identiques au reste du forum */
+/* Sous-titres dégradés */
 .sc-ls-sec-title {
     display: block !important;
     font-family: 'Teko', sans-serif !important;
@@ -7165,7 +7162,7 @@ html body#modernbb #preview .sc-liens-sheet {
 }
 .sc-ls-sec-title:first-child { margin-top: 0 !important; }
 
-/* 1. Données biométriques compactes (3 colonnes) */
+/* 1. Données biométriques compactes */
 .sc-ls-bio-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -7191,7 +7188,7 @@ html body#modernbb #preview .sc-liens-sheet {
     letter-spacing: 0.5px !important;
 }
 
-/* 2. Pilules de traits de caractère (façon Screen 1) */
+/* 2. Pilules de traits de caractère */
 .sc-ls-traits {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -7210,11 +7207,11 @@ html body#modernbb #preview .sc-liens-sheet {
     text-transform: uppercase !important;
 }
 
-/* Encarts texte (Goûts, Physique, Liens recherchés) */
+/* Encarts texte */
 .sc-ls-card-box {
     background: #212126 !important;
     border: 1px solid #3a3a42 !important;
-    border-left: 4px solid #ee5574 !important;
+    border-left: 4px solid var(--sheet-grp) !important;
     border-radius: 14px 0 !important;
     padding: 12px 16px !important;
     font-size: 13px !important;
@@ -7225,13 +7222,13 @@ html body#modernbb #preview .sc-liens-sheet {
 .sc-ls-card-box strong.sc-ls-label {
     font-family: 'Teko', sans-serif !important;
     font-size: 18px !important;
-    color: #ffb01f !important;
+    color: var(--sheet-grp) !important;
     text-transform: uppercase !important;
     letter-spacing: 0.6px !important;
     margin-right: 6px !important;
 }
 
-/* 3. Moodboard (6 images en grille 3x2) */
+/* 3. Moodboard (6 images) */
 .sc-ls-moodboard {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -7249,7 +7246,7 @@ html body#modernbb #preview .sc-liens-sheet {
 
 /* 4. Chronologie express du background */
 .sc-ls-bg-tl {
-    border-left: 2px solid #ee5574 !important;
+    border-left: 2px solid var(--sheet-grp) !important;
     margin-left: 10px !important;
     padding-left: 18px !important;
     display: flex !important;
@@ -7273,19 +7270,19 @@ html body#modernbb #preview .sc-liens-sheet {
     top: 13px !important;
     width: 10px !important;
     height: 10px !important;
-    background: #ffb01f !important;
+    background: var(--sheet-grp) !important;
     border-radius: 50% !important;
-    box-shadow: 0 0 6px #ee5574 !important;
+    box-shadow: 0 0 6px var(--sheet-grp) !important;
 }
 .sc-ls-bg-step strong {
     font-family: 'Teko', sans-serif !important;
     font-size: 17px !important;
-    color: #ffb01f !important;
+    color: var(--sheet-grp) !important;
     text-transform: uppercase !important;
     margin-right: 6px !important;
 }
 
-/* 5. Liens en quinconce automatique (Gauche -> Droite -> Gauche) */
+/* 5. Liens en quinconce automatique */
 .sc-ls-rel-list {
     display: flex !important;
     flex-direction: column !important;
@@ -7302,7 +7299,6 @@ html body#modernbb #preview .sc-liens-sheet {
     border-radius: 16px 0 !important;
     padding: 14px 16px !important;
 }
-/* Alternance automatique en quinconce sur les cartes paires */
 .sc-ls-rel-card:nth-child(even) {
     flex-direction: row-reverse !important;
     border-left: 1px solid #3a3a42 !important;
@@ -7310,7 +7306,6 @@ html body#modernbb #preview .sc-liens-sheet {
     border-radius: 0 16px !important;
 }
 
-/* Couleurs manuelles OU automatiques via mention @"Pseudo" */
 .sc-ls-rel-card.grp-umbra,        .sc-ls-rel-card:has([style*="#7C828D" i]) { --rel-grp: #7C828D; }
 .sc-ls-rel-card.grp-tiamat,       .sc-ls-rel-card:has([style*="#B7890B" i]) { --rel-grp: #B7890B; }
 .sc-ls-rel-card.grp-synchronyste, .sc-ls-rel-card:has([style*="#8C3ACF" i]) { --rel-grp: #8C3ACF; }
@@ -7319,7 +7314,6 @@ html body#modernbb #preview .sc-liens-sheet {
 .sc-ls-rel-card.grp-asynchrone,   .sc-ls-rel-card:has([style*="#AB0707" i]) { --rel-grp: #AB0707; }
 .sc-ls-rel-card.grp-insulaire,    .sc-ls-rel-card:has([style*="#2A915E" i]) { --rel-grp: #2A915E; }
 .sc-ls-rel-card.grp-lesteur,      .sc-ls-rel-card:has([style*="#2D5D8F" i]) { --rel-grp: #2D5D8F; }
-
 .sc-ls-rel-card img {
 width: 85px !important;
 height: 85px !important;
@@ -7366,16 +7360,15 @@ line-height: 1.55 !important;
 color: #e8e2d7 !important;
 text-align: justify !important;
 }
-/* =========================================================
-   VARIANTE CLAIRE (CRÈME CHAUD) — CONTRASTE DOUX & GROUPE
-   ========================================================= */
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) {
-    --sheet-grp: #a86800; /* Ambre doux par défaut à la place du jaune vif */
-    background: #e8e2d7 !important;
-    color: #19191c !important;
-}
 
-/* Teintes légèrement approfondies sur fond crème pour le confort des yeux */
+/* =========================================================
+VARIANTE CLAIRE (CRÈME CHAUD) — CONTRASTE DOUX & GROUPE
+========================================================= */
+html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) {
+background: #e8e2d7 !important;
+color: #19191c !important;
+}
+/* Teintes approfondies sur fond crème pour le confort des yeux */
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="umbra"]:checked)        { --sheet-grp: #5c626d; }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="tiamat"]:checked)       { --sheet-grp: #966d00; }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="synchronyste"]:checked) { --sheet-grp: #7628b8; }
@@ -7384,33 +7377,27 @@ html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(optio
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="asynchrone"]:checked)   { --sheet-grp: #9e0606; }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="insulaire"]:checked)    { --sheet-grp: #1f784c; }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked):has(option[value="lesteur"]:checked)      { --sheet-grp: #224c78; }
-
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bio-pill,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-card {
-    background: #f4efe6 !important;
-    color: #19191c !important;
-    border-color: #b5afa4 !important;
+background: #f4efe6 !important;
+color: #19191c !important;
+border-color: #b5afa4 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-trait {
-    background: #d8d2c7 !important;
-    color: #19191c !important;
-}
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box strong.sc-ls-label,
-html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step strong {
-    color: var(--sheet-grp) !important;
+background: #d8d2c7 !important;
+color: #19191c !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-head {
-    border-bottom-color: #b5afa4 !important;
+border-bottom-color: #b5afa4 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-tag {
-    background: #e8e2d7 !important;
+background: #e8e2d7 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-text {
-    color: #19191c !important;
+color: #19191c !important;
 }
-
 
 
 /* =========================================================
