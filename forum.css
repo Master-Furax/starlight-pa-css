@@ -1105,10 +1105,10 @@ html body#modernbb .forumbg:not(.starlight-cat) {
     overflow: visible !important;
 }
 
-/* Empêche le chevauchement vertical de texte sans casser #PA ni l'éditeur */
-html body#modernbb .block *:not(.sceditor-container):not(.sceditor-container *),
-html body#modernbb #page-desc-content *,
-html body#modernbb .panel:not(:has(#PA)) *:not(.sceditor-container):not(.sceditor-container *):not(.sceditor-dropdown):not(.sceditor-dropdown *) {
+/* Empêche le chevauchement vertical de texte sans casser #PA, l'éditeur ni les codes externes */
+html body#modernbb .block *:not(.sceditor-container):not(.sceditor-container *):not([style]):not([style] *),
+html body#modernbb #page-desc-content *:not([style]):not([style] *),
+html body#modernbb .panel:not(:has(#PA)) *:not(.sceditor-container):not(.sceditor-container *):not(.sceditor-dropdown):not(.sceditor-dropdown *):not([style]):not([style] *) {
     position: static !important;
     color: var(--border-cream) !important;
     line-height: 1.55 !important;
