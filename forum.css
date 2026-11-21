@@ -7847,8 +7847,23 @@ html body#modernbb .sc-ac-footer > br {
 html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) {
     background: #e8e2d7 !important;
     color: #19191c !important;
-    border-color: #b5afa4 !important;
+    border-top-color: #b5afa4 !important;
+    border-right-color: #b5afa4 !important;
+    border-bottom-color: #b5afa4 !important;
+    border-left: 5px solid var(--com-grp) !important;
 }
+
+html body#modernbb .arstek-com.received:has(.arstek-theme-btn input:checked) {
+    border-left: 1px solid #b5afa4 !important;
+    border-right: 5px solid var(--com-grp) !important;
+}
+
+html body#modernbb .arstek-com.call:has(.arstek-theme-btn input:checked) {
+    border-top: 2px solid var(--com-grp) !important;
+    border-bottom: 2px solid var(--com-grp) !important;
+    background: linear-gradient(135deg, #e8e2d7 0%, #dcd4c6 100%) !important;
+}
+
 
 /* Teintes approfondies sur fond crème */
 html body#modernbb .arstek-com.grp-umbra:has(.arstek-theme-btn input:checked)        { --com-grp: #5c626d; }
