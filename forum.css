@@ -6661,3 +6661,39 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
         left: 165px !important;
     }
 }
+
+/* --- 1. BOTTIN DES AVATARS (75x75px — COMPATIBLE FICHE DE PERSO) --- */
+.sc-avatar-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+.sc-avatar-row,
+.rep-artiste-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    border: 1px solid #8e887d !important;
+    border-left: 5px solid #ee5574 !important;
+    border-radius: 12px 0 !important;
+    padding: 8px 14px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+}
+.sc-avatar-row img,
+.rep-artiste-item img {
+    width: 75px !important;
+    height: 75px !important;
+    min-width: 75px !important;
+    object-fit: cover !important;
+    border-radius: 10px 0 !important;
+    border: 1.5px solid #19191c !important;
+    flex-shrink: 0 !important;
+}
+.sc-avatar-sep {
+    color: #ee5574 !important;
+    font-weight: 700 !important;
+}
+
