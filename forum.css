@@ -7807,7 +7807,7 @@ html body#modernbb .sc-ac-footer > br {
     flex-grow: 1 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 4px !important;
 }
 
 .arstek-sender {
