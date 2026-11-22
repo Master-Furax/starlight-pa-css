@@ -7469,6 +7469,12 @@ html body#modernbb .sc-liens-sheet:has(option[value="lesteur"]:checked)      { -
     border-radius: 16px 0 !important;
     padding: 14px 16px !important;
 }
+/* Remettre la bordure colorée uniquement à droite pour les cartes paires en mode clair */
+.sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-card:nth-child(even) {
+  border-left: 1.5px solid #b5afa4 !important;
+  border-right: 5px solid var(--rel-grp) !important;
+}
+
 .sc-ls-rel-card:nth-child(even) {
     flex-direction: row-reverse !important;
     border-left: 1px solid #3a3a42 !important;
