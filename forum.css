@@ -7996,13 +7996,13 @@ html body#modernbb .arstek-msg > br:first-child {
 
 /* Corps : Histoire & Caractère */
 .sc-predef-body {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  display: flex !important;
   gap: 15px !important;
   margin-top: 18px !important;
 }
 
 .sc-predef-col {
+  flex: 1 !important;
   background: #eae3d5 !important;
   border: 1px solid rgba(142, 136, 125, 0.35) !important;
   border-radius: 12px 0 !important;
