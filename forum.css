@@ -8134,3 +8134,82 @@ html body#modernbb .arstek-msg > br:first-child {
 .sc-predef-box.mode-sombre .sc-predef-powers-text {
   color: #e6e0d5 !important;
 }
+
+/* =========================================================
+   BOUTON INTERACTIF CLAIR / SOMBRE (PUR CSS)
+   ========================================================= */
+.sc-predef-header {
+  position: relative !important;
+}
+
+.sc-predef-theme-btn {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #141417 !important;
+  color: #f4efe6 !important;
+  border: 1px solid #8e887d !important;
+  border-radius: 8px 0 !important;
+  padding: 2px 8px !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+.sc-predef-toggle {
+  display: none !important;
+}
+
+/* Activation automatique du mode sombre au clic sur le bouton */
+.sc-predef-box:has(.sc-predef-toggle:checked) {
+  background: #19191c !important;
+  color: #f4efe6 !important;
+  border-color: #8e887d !important;
+  border-top-color: #ffb01f !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-ava {
+  border-color: #ffb01f !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-nom {
+  color: #f4efe6 !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-meta {
+  color: #b8b2a6 !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-col,
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-powers,
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-footer {
+  background: #222226 !important;
+  border-color: rgba(142, 136, 125, 0.25) !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-powers {
+  border-left-color: #ffb01f !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-footer {
+  border-left-color: #ff5e7e !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-sub,
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-powers-title,
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-tag-gold {
+  color: #ffb01f !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-tag-coral {
+  color: #ff5e7e !important;
+}
+
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-text,
+.sc-predef-box:has(.sc-predef-toggle:checked) .sc-predef-powers-text {
+  color: #e6e0d5 !important;
+}
+
