@@ -7962,6 +7962,25 @@ html body#modernbb .arstek-msg > br:first-child {
   margin-bottom: 6px !important;
 }
 
+/* Statut : LIBRE (Vert émeraude / turquoise lumineux) */
+.sc-predef-statut.statut-libre {
+  background: linear-gradient(90deg, #2ecc71, #1abc9c) !important;
+  color: #19191c !important;
+}
+
+/* Statut : RÉSERVÉ (Ton dégradé Or / Corail d'origine) */
+.sc-predef-statut.statut-reserve {
+  background: linear-gradient(90deg, #ff5e7e, #ffb01f) !important;
+  color: #19191c !important;
+}
+
+/* Statut : PRIS (Gris anthracite / bordeaux discret) */
+.sc-predef-statut.statut-pris {
+  background: #5c5852 !important;
+  color: #f4efe6 !important;
+}
+
+
 .sc-predef-nom {
   margin: 0 0 4px 0 !important;
   font-size: 22px !important;
