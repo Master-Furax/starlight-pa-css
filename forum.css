@@ -7615,6 +7615,29 @@ html body#modernbb #preview .sc-arstek-com {
     box-sizing: border-box !important;
 }
 
+/* Variables de couleurs des groupes pour le fil de conversation .sc-arstek-com */
+.sc-arstek-com.grp-umbra { --ac-grp: #8a56ac; }
+.sc-arstek-com.grp-tiamat { --ac-grp: #d63656; }
+.sc-arstek-com.grp-synchronyste { --ac-grp: #4885b8; }
+.sc-arstek-com.grp-ancre { --ac-grp: #2e8b57; }
+.sc-arstek-com.grp-harmoniseur { --ac-grp: #d9822b; }
+.sc-arstek-com.grp-asynchrone { --ac-grp: #5c768d; }
+.sc-arstek-com.grp-insulaire { --ac-grp: #c97b00; }
+.sc-arstek-com.grp-lesteur { --ac-grp: #765095; }
+
+/* Application de la couleur du groupe sur la bordure du haut et les bulles sortantes */
+html body#modernbb .sc-arstek-com[class*="grp-"] {
+  border-top: 4px solid var(--ac-grp) !important;
+}
+
+html body#modernbb .sc-arstek-com[class*="grp-"] .sc-ac-msg.out {
+  border-right: 4px solid var(--ac-grp) !important;
+}
+
+html body#modernbb .sc-arstek-com[class*="grp-"] .sc-ac-send {
+  color: var(--ac-grp) !important;
+}
+
 /* Barre système supérieure */
 .sc-ac-topbar {
     display: flex !important;
