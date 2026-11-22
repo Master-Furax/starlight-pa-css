@@ -6710,6 +6710,91 @@ html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
     margin: 0 0 22px 0 !important;
 }
 
+/* =========================================================
+   BOUTON & MODE CLAIR POUR .sc-admin-box (Chronologie / Répertoires)
+   ========================================================= */
+.sc-admin-topbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 18px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid rgba(142, 136, 125, 0.3) !important;
+}
+
+.sc-admin-theme-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #141417 !important;
+  color: #f4efe6 !important;
+  border: 1px solid #8e887d !important;
+  border-radius: 8px 0 !important;
+  padding: 5px 12px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+.sc-admin-badge {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #ffb01f !important;
+}
+
+.sc-admin-toggle {
+  display: none !important;
+}
+
+/* --- BASCULE EN MODE CLAIR AU CLIC --- */
+.sc-admin-box:has(.sc-admin-toggle:checked) {
+  background: #f4efe6 !important;
+  color: #28282b !important;
+  border-color: #b8b0a2 !important;
+}
+
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-main-title {
+  color: #19191c !important;
+}
+
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-badge {
+  color: #c97b00 !important;
+}
+
+/* Adaptation Chronologie (.sc-tl-*) */
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-card {
+  background: #eae3d5 !important;
+  border-color: rgba(142, 136, 125, 0.4) !important;
+}
+
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-date {
+  color: #c97b00 !important;
+}
+
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-desc {
+  color: #28282b !important;
+}
+
+/* Adaptation Répertoires (.sc-tab-* & .rep-artiste-item) */
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tab-label {
+  background: #eae3d5 !important;
+  color: #28282b !important;
+  border-color: rgba(142, 136, 125, 0.4) !important;
+}
+
+.sc-admin-box:has(.sc-admin-toggle:checked) .rep-artiste-item,
+.sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter {
+  background: #eae3d5 !important;
+  color: #28282b !important;
+  border-color: rgba(142, 136, 125, 0.35) !important;
+}
+
+
 /* --- 1. BOTTIN DES AVATARS (FOND SOMBRE UNIFIÉ + 75x75px) --- */
 html body#modernbb .message-contenu-arte .sc-avatar-list,
 html body#modernbb .postbody .sc-avatar-list,
