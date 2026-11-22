@@ -7673,7 +7673,7 @@ html body#modernbb #preview .sc-arstek-com {
     display: flex !important;
     flex-direction: column !important;
     gap: 12px !important;
-    background: radial-gradient(circle at top right, rgba(78, 56, 106, 0.18), transparent 60%) !important;
+    background: radial-gradient(circle at top right, rgb(78 56 106 / 61%), rgb(243 198 84 / 22%) 60%) !important;
 }
 
 .sc-ac-msg {
