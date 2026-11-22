@@ -7783,12 +7783,12 @@ html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-con
 }
 
 html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-feed {
-    background: radial-gradient(circle at top right, rgba(238, 85, 116, 0.12), transparent 65%) !important;
+    background: radial-gradient(circle at top right, rgb(127 61 148 / 30%), rgb(125 102 68 / 40%) 65%) !important;
 }
 
 /* Bulle reçue en mode clair */
 html body#modernbb .sc-arstek-com:has(.sc-ac-theme-btn input:checked) .sc-ac-msg.in {
-    background: #1e1e20 !important;
+    background: #d8d2c7 !important;
     color: #19191c !important;
     border-color: #b5afa4 !important;
     border-left: 3px solid #ee5574 !important;
