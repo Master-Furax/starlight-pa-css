@@ -6751,47 +6751,95 @@ html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
   display: none !important;
 }
 
-/* --- BASCULE EN MODE CLAIR AU CLIC --- */
-.sc-admin-box:has(.sc-admin-toggle:checked) {
+/* =========================================================
+   BASCULE EN MODE CLAIR POUR .sc-admin-box (Priorité maximale)
+   ========================================================= */
+html body#modernbb .message-contenu-arte .sc-admin-box:has(.sc-admin-toggle:checked),
+html body#modernbb .postbody .sc-admin-box:has(.sc-admin-toggle:checked),
+html body#modernbb #preview .sc-admin-box:has(.sc-admin-toggle:checked) {
   background: #f4efe6 !important;
   color: #28282b !important;
   border-color: #b8b0a2 !important;
 }
 
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-main-title {
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-topbar {
+  border-bottom-color: rgba(142, 136, 125, 0.35) !important;
+}
+
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-theme-btn {
+  background: #eae3d5 !important;
   color: #19191c !important;
+  border-color: #b8b0a2 !important;
 }
 
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-badge {
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-admin-badge {
   color: #c97b00 !important;
 }
 
-/* Adaptation Chronologie (.sc-tl-*) */
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-card {
+/* --- CHRONOLOGIE EN MODE CLAIR --- */
+html body#modernbb .message-contenu-arte .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-card,
+html body#modernbb .postbody .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-card,
+html body#modernbb #preview .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-card {
   background: #eae3d5 !important;
+  color: #28282b !important;
   border-color: rgba(142, 136, 125, 0.4) !important;
+  border-top: 3px solid #ee5574 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
 }
 
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-date {
+html body#modernbb .message-contenu-arte .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-header,
+html body#modernbb .postbody .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-header,
+html body#modernbb #preview .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-header {
+  border-bottom-color: rgba(142, 136, 125, 0.35) !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-date,
+html body#modernbb .postbody .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-date,
+html body#modernbb #preview .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-date {
   color: #c97b00 !important;
 }
 
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-desc {
+html body#modernbb .message-contenu-arte .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-desc,
+html body#modernbb .postbody .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-desc,
+html body#modernbb #preview .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tl-desc {
   color: #28282b !important;
 }
 
-/* Adaptation Répertoires (.sc-tab-* & .rep-artiste-item) */
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-tab-label {
+/* --- RÉPERTOIRES (ONGLETS & CARTES) EN MODE CLAIR --- */
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tab-nav {
+  border-bottom-color: rgba(142, 136, 125, 0.35) !important;
+}
+
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-tab-label {
+  background: #eae3d5 !important;
+  color: #28282b !important;
+  border-color: rgba(142, 136, 125, 0.45) !important;
+}
+
+/* Onglet actif en mode clair (garde ton dégradé officiel) */
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-abc:checked ~ .sc-tab-nav label[for="tab-abc"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-def:checked ~ .sc-tab-nav label[for="tab-def"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-ghi:checked ~ .sc-tab-nav label[for="tab-ghi"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-jkl:checked ~ .sc-tab-nav label[for="tab-jkl"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-mno:checked ~ .sc-tab-nav label[for="tab-mno"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-pqr:checked ~ .sc-tab-nav label[for="tab-pqr"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-stu:checked ~ .sc-tab-nav label[for="tab-stu"],
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) #tab-vwxyz:checked ~ .sc-tab-nav label[for="tab-vwxyz"] {
+  background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+  color: #f4efe6 !important;
+  border-color: #19191c !important;
+}
+
+/* Cartes d'avatars en mode clair (conserve les classes de groupe .grp-*) */
+html body#modernbb .message-contenu-arte .sc-admin-box:has(.sc-admin-toggle:checked) .rep-artiste-item,
+html body#modernbb .postbody .sc-admin-box:has(.sc-admin-toggle:checked) .rep-artiste-item,
+html body#modernbb #preview .sc-admin-box:has(.sc-admin-toggle:checked) .rep-artiste-item,
+html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter {
   background: #eae3d5 !important;
   color: #28282b !important;
   border-color: rgba(142, 136, 125, 0.4) !important;
-}
-
-.sc-admin-box:has(.sc-admin-toggle:checked) .rep-artiste-item,
-.sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter {
-  background: #eae3d5 !important;
-  color: #28282b !important;
-  border-color: rgba(142, 136, 125, 0.35) !important;
+  border-left-color: var(--item-grp, #ee5574) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
 
