@@ -8198,14 +8198,13 @@ html body#modernbb .arstek-msg > br:first-child {
 .sc-predef-footer {
   margin-top: 15px !important;
   background: #eae3d5 !important;
-  color: #282827 !important; /* 
+  color: #282827 !important; 
   border-left: 4px solid #d63656 !important;
   border-radius: 0 12px 0 0 !important;
   padding: 12px 15px !important;
   font-size: 13px !important;
   line-height: 1.5 !important;
-}
-
+}   
 .sc-predef-line {
   margin-bottom: 6px !important;
 }
