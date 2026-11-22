@@ -7903,16 +7903,16 @@ html body#modernbb .arstek-msg > br:first-child {
 
 
 /* =========================================================
-   FICHE PRÉDÉFINIS - MODE SOMBRE PAR DÉFAUT (.sc-predef-box)
+   FICHE PRÉDÉFINIS - MODE CLAIR PAR DÉFAUT (.sc-predef-box)
    ========================================================= */
 .sc-predef-box {
   width: 100% !important;
   max-width: 750px !important;
   margin: 15px auto !important;
-  background: #19191c !important;
-  color: #f4efe6 !important;
-  border: 1.5px solid #8e887d !important;
-  border-top: 4px solid #ffb01f !important;
+  background: #f4efe6 !important;
+  color: #28282b !important;
+  border: 1.5px solid #b8b0a2 !important;
+  border-top: 4px solid #e09100 !important;
   border-radius: 20px 0 !important;
   padding: 25px !important;
   box-sizing: border-box !important;
@@ -7941,7 +7941,7 @@ html body#modernbb .arstek-msg > br:first-child {
   height: 110px !important;
   object-fit: cover !important;
   border-radius: 15px 0 !important;
-  border: 2px solid #ffb01f !important;
+  border: 2px solid #e09100 !important;
   flex-shrink: 0 !important;
 }
 
@@ -7967,12 +7967,12 @@ html body#modernbb .arstek-msg > br:first-child {
   font-size: 22px !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
-  color: #f4efe6 !important;
+  color: #19191c !important;
 }
 
 .sc-predef-meta {
   font-size: 13px !important;
-  color: #b8b2a6 !important;
+  color: #5c5852 !important;
 }
 
 /* Corps : Histoire & Caractère */
@@ -7984,8 +7984,8 @@ html body#modernbb .arstek-msg > br:first-child {
 }
 
 .sc-predef-col {
-  background: #222226 !important;
-  border: 1px solid rgba(142, 136, 125, 0.25) !important;
+  background: #eae3d5 !important;
+  border: 1px solid rgba(142, 136, 125, 0.35) !important;
   border-radius: 12px 0 !important;
   padding: 14px !important;
 }
@@ -7995,27 +7995,27 @@ html body#modernbb .arstek-msg > br:first-child {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
-  color: #ffb01f !important;
+  color: #c97b00 !important;
   margin-bottom: 8px !important;
-  border-bottom: 1px dashed rgba(255, 176, 31, 0.4) !important;
+  border-bottom: 1px dashed rgba(201, 123, 0, 0.4) !important;
   padding-bottom: 4px !important;
 }
 
 .sc-predef-text {
   font-size: 13.5px !important;
   line-height: 1.55 !important;
-  color: #e6e0d5 !important;
+  color: #28282b !important;
   max-height: 170px !important;
   overflow-y: auto !important;
   padding-right: 6px !important;
 }
 
-/* NOUVEAU BLOC : Caractéristiques & Pouvoirs selon l'espèce */
+/* Bloc Caractéristiques & Pouvoirs selon l'espèce */
 .sc-predef-powers {
   margin-top: 15px !important;
-  background: #222226 !important;
-  border: 1px solid rgba(142, 136, 125, 0.25) !important;
-  border-left: 4px solid #ffb01f !important;
+  background: #eae3d5 !important;
+  border: 1px solid rgba(142, 136, 125, 0.35) !important;
+  border-left: 4px solid #e09100 !important;
   border-radius: 0 12px 0 0 !important;
   padding: 12px 15px !important;
 }
@@ -8025,21 +8025,21 @@ html body#modernbb .arstek-msg > br:first-child {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
-  color: #ffb01f !important;
+  color: #c97b00 !important;
   margin-bottom: 5px !important;
 }
 
 .sc-predef-powers-text {
   font-size: 13px !important;
   line-height: 1.5 !important;
-  color: #e6e0d5 !important;
+  color: #28282b !important;
 }
 
 /* Pied de fiche : Liens recherchés & Exigences */
 .sc-predef-footer {
   margin-top: 15px !important;
-  background: #222226 !important;
-  border-left: 4px solid #ff5e7e !important;
+  background: #eae3d5 !important;
+  border-left: 4px solid #d63656 !important;
   border-radius: 0 12px 0 0 !important;
   padding: 12px 15px !important;
   font-size: 13px !important;
@@ -8055,51 +8055,63 @@ html body#modernbb .arstek-msg > br:first-child {
 }
 
 .sc-predef-tag-gold {
-  color: #ffb01f !important;
+  color: #c97b00 !important;
   font-weight: 700 !important;
 }
 
 .sc-predef-tag-coral {
-  color: #ff5e7e !important;
+  color: #d63656 !important;
   font-weight: 700 !important;
 }
 
 /* =========================================================
-   VARIANTE MODE CLAIR (.sc-predef-box.mode-clair)
+   VARIANTE OPTIONNELLE : MODE SOMBRE (.sc-predef-box.mode-sombre)
    ========================================================= */
-.sc-predef-box.mode-clair {
-  background: #f4efe6 !important;
-  color: #28282b !important;
-  border-color: #b8b0a2 !important;
-  border-top-color: #e09100 !important;
+.sc-predef-box.mode-sombre {
+  background: #19191c !important;
+  color: #f4efe6 !important;
+  border-color: #8e887d !important;
+  border-top-color: #ffb01f !important;
 }
 
-.sc-predef-box.mode-clair .sc-predef-nom {
-  color: #19191c !important;
+.sc-predef-box.mode-sombre .sc-predef-ava {
+  border-color: #ffb01f !important;
 }
 
-.sc-predef-box.mode-clair .sc-predef-meta {
-  color: #5c5852 !important;
+.sc-predef-box.mode-sombre .sc-predef-nom {
+  color: #f4efe6 !important;
 }
 
-.sc-predef-box.mode-clair .sc-predef-col,
-.sc-predef-box.mode-clair .sc-predef-powers,
-.sc-predef-box.mode-clair .sc-predef-footer {
-  background: #eae3d5 !important;
-  border-color: rgba(142, 136, 125, 0.35) !important;
+.sc-predef-box.mode-sombre .sc-predef-meta {
+  color: #b8b2a6 !important;
 }
 
-.sc-predef-box.mode-clair .sc-predef-sub,
-.sc-predef-box.mode-clair .sc-predef-powers-title,
-.sc-predef-box.mode-clair .sc-predef-tag-gold {
-  color: #c97b00 !important;
+.sc-predef-box.mode-sombre .sc-predef-col,
+.sc-predef-box.mode-sombre .sc-predef-powers,
+.sc-predef-box.mode-sombre .sc-predef-footer {
+  background: #222226 !important;
+  border-color: rgba(142, 136, 125, 0.25) !important;
 }
 
-.sc-predef-box.mode-clair .sc-predef-tag-coral {
-  color: #d63656 !important;
+.sc-predef-box.mode-sombre .sc-predef-powers {
+  border-left-color: #ffb01f !important;
 }
 
-.sc-predef-box.mode-clair .sc-predef-text,
-.sc-predef-box.mode-clair .sc-predef-powers-text {
-  color: #28282b !important;
+.sc-predef-box.mode-sombre .sc-predef-footer {
+  border-left-color: #ff5e7e !important;
+}
+
+.sc-predef-box.mode-sombre .sc-predef-sub,
+.sc-predef-box.mode-sombre .sc-predef-powers-title,
+.sc-predef-box.mode-sombre .sc-predef-tag-gold {
+  color: #ffb01f !important;
+}
+
+.sc-predef-box.mode-sombre .sc-predef-tag-coral {
+  color: #ff5e7e !important;
+}
+
+.sc-predef-box.mode-sombre .sc-predef-text,
+.sc-predef-box.mode-sombre .sc-predef-powers-text {
+  color: #e6e0d5 !important;
 }
