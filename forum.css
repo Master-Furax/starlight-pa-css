@@ -6657,7 +6657,7 @@ html body#modernbb .sc-admin-doc.sc-light-mode .sc-doc-banner::after {
    ========================================================= */
 @media screen and (max-width: 1150px) {
     html body#modernbb div#fa_menu {
-        top: 44px !important;
+        top: 34px !important;
         left: 165px !important;
     }
 }
