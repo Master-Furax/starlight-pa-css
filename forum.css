@@ -4154,7 +4154,13 @@ html body#modernbb .signature_div img {
    line-height: 1.4 !important;
    user-select: all !important;
    overflow-x: auto !important;
+   white-space: pre-wrap !important;
 }
+
+.sc-credit-code br {
+  display: none !important;
+}
+
 
 /* =========================================================
    CORRECTIF FICHE PERSONNAGE (.sc-fiche) DANS LES SUJETS
