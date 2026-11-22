@@ -7901,3 +7901,122 @@ html body#modernbb .arstek-msg > br:first-child {
     display: none !important;
 }
 
+
+/* =========================================================
+   FICHE PRÉDÉFINIS (.sc-predef-box)
+   ========================================================= */
+.sc-predef-box {
+  width: 100% !important;
+  max-width: 750px !important;
+  margin: 15px auto !important;
+  background: #19191c !important;
+  color: #f4efe6 !important;
+  border: 1.5px solid #8e887d !important;
+  border-top: 4px solid #ffb01f !important;
+  border-radius: 20px 0 !important;
+  padding: 25px !important;
+  box-sizing: border-box !important;
+}
+
+/* Suppression des sauts de ligne automatiques FA */
+.sc-predef-box br,
+.sc-predef-header br,
+.sc-predef-body br,
+.sc-predef-footer br {
+  display: none !important;
+}
+
+/* En-tête : Avatar + Identité + Statut */
+.sc-predef-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  padding-bottom: 18px !important;
+  border-bottom: 1px solid rgba(142, 136, 125, 0.35) !important;
+}
+
+.sc-predef-ava {
+  width: 110px !important;
+  height: 110px !important;
+  object-fit: cover !important;
+  border-radius: 15px 0 !important;
+  border: 2px solid #ffb01f !important;
+  flex-shrink: 0 !important;
+}
+
+.sc-predef-identite {
+  flex-grow: 1 !important;
+}
+
+.sc-predef-statut {
+  display: inline-block !important;
+  background: linear-gradient(90deg, #ff5e7e, #ffb01f) !important;
+  color: #19191c !important;
+  font-weight: 800 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  padding: 3px 10px !important;
+  border-radius: 8px 0 !important;
+  margin-bottom: 6px !important;
+}
+
+.sc-predef-nom {
+  margin: 0 0 4px 0 !important;
+  font-size: 22px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #f4efe6 !important;
+}
+
+.sc-predef-meta {
+  font-size: 13px !important;
+  color: #b8b2a6 !important;
+}
+
+/* Corps : Histoire & Caractère */
+.sc-predef-body {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 15px !important;
+  margin-top: 18px !important;
+}
+
+.sc-predef-col {
+  background: #222226 !important;
+  border: 1px solid rgba(142, 136, 125, 0.25) !important;
+  border-radius: 12px 0 !important;
+  padding: 14px !important;
+}
+
+.sc-predef-sub {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #ffb01f !important;
+  margin-bottom: 8px !important;
+  border-bottom: 1px dashed rgba(255, 176, 31, 0.4) !important;
+  padding-bottom: 4px !important;
+}
+
+.sc-predef-text {
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  color: #e6e0d5 !important;
+  max-height: 170px !important;
+  overflow-y: auto !important;
+  padding-right: 6px !important;
+}
+
+/* Pied de fiche : Liens recherchés & Exigences */
+.sc-predef-footer {
+  margin-top: 15px !important;
+  background: #222226 !important;
+  border-left: 4px solid #ff5e7e !important;
+  border-radius: 0 12px 0 0 !important;
+  padding: 12px 15px !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
