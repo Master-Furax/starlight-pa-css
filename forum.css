@@ -7579,6 +7579,7 @@ html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-re
 background: #e8e2d7 !important;
 color: #19191b !important;
 border-color: #b5afa4 !important;
+border-left: 5px solid var(--rel-grp) !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-trait {
 background: #d8d2c7 !important;
