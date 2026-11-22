@@ -7535,7 +7535,7 @@ text-align: justify !important;
 VARIANTE CLAIRE (CRÈME CHAUD) — CONTRASTE DOUX & GROUPE
 ========================================================= */
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) {
-background: #e8e2d7 !important;
+background: #1e1e20 !important;
 color: #19191c !important;
 }
 /* Teintes approfondies sur fond crème pour le confort des yeux */
@@ -7576,8 +7576,8 @@ html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bi
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-card {
-background: #28282b !important;
-color: #f4efe6 !important;
+background: #e8e2d7 !important;
+color: #19191b !important;
 border-color: #b5afa4 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-trait {
