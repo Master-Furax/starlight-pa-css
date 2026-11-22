@@ -7616,16 +7616,16 @@ html body#modernbb #preview .sc-arstek-com {
 }
 
 /* Variables de couleurs des groupes pour le fil de conversation .sc-arstek-com */
-.sc-arstek-com.grp-umbra { --ac-grp: #8a56ac; }
-.sc-arstek-com.grp-tiamat { --ac-grp: #d63656; }
-.sc-arstek-com.grp-synchronyste { --ac-grp: #4885b8; }
-.sc-arstek-com.grp-ancre { --ac-grp: #2e8b57; }
-.sc-arstek-com.grp-harmoniseur { --ac-grp: #d9822b; }
-.sc-arstek-com.grp-asynchrone { --ac-grp: #5c768d; }
-.sc-arstek-com.grp-insulaire { --ac-grp: #c97b00; }
-.sc-arstek-com.grp-lesteur { --ac-grp: #765095; }
+.sc-arstek-com.grp-umbra { --ac-grp: #7C828D; }
+.sc-arstek-com.grp-tiamat { --ac-grp: #B7890B; }
+.sc-arstek-com.grp-synchronyste { --ac-grp: #8C3ACF; }
+.sc-arstek-com.grp-ancre { --ac-grp: #D50156; }
+.sc-arstek-com.grp-harmoniseur { --ac-grp: #D76609; }
+.sc-arstek-com.grp-asynchrone { --ac-grp: #AB0707; }
+.sc-arstek-com.grp-insulaire { --ac-grp: #2A915E; }
+.sc-arstek-com.grp-lesteur { --ac-grp: #2D5D8F; }
 
-/* Application de la couleur du groupe sur la bordure du haut et les bulles sortantes */
+/* Application de la couleur du groupe */
 html body#modernbb .sc-arstek-com[class*="grp-"] {
   border-top: 4px solid var(--ac-grp) !important;
 }
