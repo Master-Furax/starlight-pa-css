@@ -7607,7 +7607,7 @@ html body#modernbb #preview .sc-arstek-com {
     background: #141417 !important;
     color: #f4efe6 !important;
     border: 1.5px solid #8e887d !important;
-    border-top: 4px solid #ffb01f !important;
+    border-top: 4px solid var(--ac-grp, #ffb01f) !important;
     border-radius: 22px 0 !important;
     overflow: hidden !important;
     font-family: 'Inter', sans-serif !important;
@@ -7625,10 +7625,6 @@ html body#modernbb #preview .sc-arstek-com {
 .sc-arstek-com.grp-insulaire { --ac-grp: #2A915E; }
 .sc-arstek-com.grp-lesteur { --ac-grp: #2D5D8F; }
 
-/* Application de la couleur du groupe */
-html body#modernbb .sc-arstek-com[class*="grp-"] {
-  border-top: 4px solid var(--ac-grp) !important;
-}
 
 html body#modernbb .sc-arstek-com[class*="grp-"] .sc-ac-msg.out {
   border-right: 4px solid var(--ac-grp) !important;
