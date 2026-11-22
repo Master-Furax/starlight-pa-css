@@ -8077,8 +8077,8 @@ html body#modernbb .arstek-msg > br:first-child {
 }
 
 .sc-predef-ava {
-  width: 110px !important;
-  height: 110px !important;
+  width: 220px !important;
+  height: 180px !important;
   object-fit: cover !important;
   border-radius: 15px 0 !important;
   border: 2px solid #e09100 !important;
