@@ -7576,8 +7576,8 @@ html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bi
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-card-box,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-bg-step,
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-rel-card {
-background: #f4efe6 !important;
-color: #19191c !important;
+background: #28282b !important;
+color: #f4efe6 !important;
 border-color: #b5afa4 !important;
 }
 html body#modernbb .sc-liens-sheet:has(.sc-ls-theme-btn input:checked) .sc-ls-trait {
@@ -8026,7 +8026,7 @@ html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) .arstek-send
 }
 
 html body#modernbb .arstek-com:has(.arstek-theme-btn input:checked) .arstek-msg {
-    background: #f4efe6 !important;
+    background: #28282b !important;
     color: #19191c !important;
     border-color: #b5afa4 !important;
 }
@@ -8049,7 +8049,7 @@ html body#modernbb .arstek-msg > br:first-child {
   width: 100% !important;
   max-width: 750px !important;
   margin: 15px auto !important;
-  background: #f4efe6 !important;
+  background: #28282b !important;
   color: #28282b !important;
   border: 1.5px solid #b8b0a2 !important;
   border-top: 4px solid #e09100 !important;
