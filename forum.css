@@ -8384,3 +8384,324 @@ html body#modernbb .arstek-msg > br:first-child {
   color: #e6e0d5 !important;
 }
 
+/* ================= BOTTIN DES RANGS & MÉTIERS ================= */
+.sc-bottin-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  background: #282827 !important;
+  color: #d8d2c7 !important;
+  border: 1.5px solid #3f3d39 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55) !important;
+}
+
+.sc-bottin-box > br,
+.sc-bt-topbar br,
+.sc-bt-banner br,
+.sc-bt-body > br,
+.sc-bt-sec-head br,
+.sc-bt-job-card br,
+.sc-bt-job-top br,
+.sc-bt-occupants br {
+  display: none !important;
+}
+
+/* Topbar & Bouton Ambiance */
+.sc-bt-topbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 18px !important;
+  background: #1f1f1e !important;
+  border-bottom: 1px solid #383632 !important;
+}
+
+.sc-bt-theme-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background: #2d2c2a !important;
+  color: #eae3d5 !important;
+  border: 1px solid #4a4742 !important;
+  border-radius: 20px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+}
+
+.sc-bt-theme-btn input {
+  display: none !important;
+}
+
+.sc-bt-badge-top {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.2px !important;
+  text-transform: uppercase !important;
+  color: #ffb01f !important;
+  background: rgba(255, 176, 31, 0.12) !important;
+  border: 1px solid rgba(255, 176, 31, 0.35) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+}
+
+/* Bannière façon fiche de présentation */
+.sc-bt-banner {
+  position: relative !important;
+  height: 190px !important;
+  overflow: hidden !important;
+  border-bottom: 2px solid #3f3d39 !important;
+}
+
+.sc-bt-banner img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  filter: brightness(0.45) !important;
+}
+
+.sc-bt-banner-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, #282827 5%, rgba(40, 40, 39, 0.35) 70%, transparent 100%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 20px 26px !important;
+}
+
+.sc-bt-main-title {
+  margin: 0 !important;
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  color: #f4efe6 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+.sc-bt-main-sub {
+  font-size: 12px !important;
+  color: #ffb01f !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin-top: 4px !important;
+}
+
+/* Corps & Couleurs des 5 Secteurs / Biomes */
+.sc-bt-body {
+  padding: 22px 26px 28px 26px !important;
+}
+
+.sc-bt-sector {
+  margin-bottom: 28px !important;
+}
+
+.sc-bt-sector:last-child {
+  margin-bottom: 0 !important;
+}
+
+.sc-bt-sector.sec-admin { --sec-col: #299ec2; --sec-bg: rgba(41, 158, 194, 0.14); --sec-bd: rgba(41, 158, 194, 0.45); }
+.sc-bt-sector.sec-phase { --sec-col: #8c7ae6; --sec-bg: rgba(140, 122, 230, 0.14); --sec-bd: rgba(140, 122, 230, 0.45); }
+.sc-bt-sector.sec-science { --sec-col: #27ae82; --sec-bg: rgba(39, 174, 130, 0.14); --sec-bd: rgba(39, 174, 130, 0.45); }
+.sc-bt-sector.sec-forge { --sec-col: #e67e22; --sec-bg: rgba(230, 126, 34, 0.14); --sec-bd: rgba(230, 126, 34, 0.45); }
+.sc-bt-sector.sec-edu { --sec-col: #b565a7; --sec-bg: rgba(181, 101, 167, 0.14); --sec-bd: rgba(181, 101, 167, 0.45); }
+
+/* Barre de titre de section (Style Fiche de Présentation) */
+.sc-bt-sec-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding: 10px 16px !important;
+  background: var(--sec-bg) !important;
+  border: 1px solid var(--sec-bd) !important;
+  border-left: 5px solid var(--sec-col) !important;
+  border-radius: 8px !important;
+  margin-bottom: 10px !important;
+}
+
+.sc-bt-sec-title {
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  color: var(--sec-col) !important;
+}
+
+.sc-bt-biome-tag {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  padding: 3px 10px !important;
+  border-radius: 12px !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: var(--sec-col) !important;
+  border: 1px solid var(--sec-bd) !important;
+}
+
+.sc-bt-sec-desc {
+  font-size: 12.5px !important;
+  font-style: italic !important;
+  color: #b5afa4 !important;
+  margin-bottom: 14px !important;
+  padding-left: 6px !important;
+}
+
+/* Cartes des Métiers */
+.sc-bt-job-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.sc-bt-job-card {
+  background: #222221 !important;
+  border: 1px solid #383632 !important;
+  border-left: 3px solid var(--sec-col) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+}
+
+.sc-bt-job-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 5px !important;
+}
+
+.sc-bt-job-name {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: var(--sec-col) !important;
+}
+
+.sc-bt-job-desc {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: #d8d2c7 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Zone des inscrits & Couleurs des 8 Groupes */
+.sc-bt-occupants {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding-top: 8px !important;
+  border-top: 1px dashed #3f3d39 !important;
+  font-size: 11.5px !important;
+}
+
+.sc-bt-occ-label {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+  letter-spacing: 0.5px !important;
+  color: #9e988e !important;
+  margin-right: 4px !important;
+}
+
+.sc-bt-member {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 2px 10px !important;
+  border-radius: 12px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  background: #4a4742 !important;
+}
+
+.sc-bt-member.grp-umbra { background: #7C828D !important; }
+.sc-bt-member.grp-tiamat { background: #B7890B !important; }
+.sc-bt-member.grp-synchronyste { background: #8C3ACF !important; }
+.sc-bt-member.grp-ancre { background: #D50156 !important; }
+.sc-bt-member.grp-harmoniseur { background: #D76609 !important; }
+.sc-bt-member.grp-asynchrone { background: #AB0707 !important; }
+.sc-bt-member.grp-insulaire { background: #2A915E !important; }
+.sc-bt-member.grp-lesteur { background: #2D5D8F !important; }
+
+.sc-bt-empty {
+  font-size: 11.5px !important;
+  font-style: italic !important;
+  color: #858077 !important;
+}
+
+/* ================= MODE CLAIR / CRÈME (ACTIF PAR DÉFAUT) ================= */
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) {
+  background: #e8e2d7 !important;
+  color: #19191b !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-topbar {
+  background: #dcd5c7 !important;
+  border-bottom-color: #b5afa4 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-theme-btn {
+  background: #e8e2d7 !important;
+  color: #19191b !important;
+  border-color: #9e988e !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-badge-top {
+  color: #9c6500 !important;
+  background: rgba(183, 137, 11, 0.14) !important;
+  border-color: #b7890b !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-banner-overlay {
+  background: linear-gradient(to top, #e8e2d7 5%, rgba(232, 226, 215, 0.35) 70%, transparent 100%) !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-main-title {
+  color: #19191b !important;
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.85) !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-main-sub {
+  color: #9c6500 !important;
+}
+
+/* Nuances légèrement plus soutenues pour un contraste parfait sur fond crème */
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-admin { --sec-col: #146c87; --sec-bg: rgba(20, 108, 135, 0.12); --sec-bd: rgba(20, 108, 135, 0.4); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-phase { --sec-col: #5b46b8; --sec-bg: rgba(91, 70, 184, 0.12); --sec-bd: rgba(91, 70, 184, 0.4); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-science { --sec-col: #167858; --sec-bg: rgba(22, 120, 88, 0.12); --sec-bd: rgba(22, 120, 88, 0.4); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-forge { --sec-col: #b84d0e; --sec-bg: rgba(184, 77, 14, 0.12); --sec-bd: rgba(184, 77, 14, 0.4); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-edu { --sec-col: #7d3474; --sec-bg: rgba(125, 52, 116, 0.12); --sec-bd: rgba(125, 52, 116, 0.4); }
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-biome-tag {
+  background: rgba(255, 255, 255, 0.55) !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sec-desc {
+  color: #4f4b44 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-job-card {
+  background: #dfd8ca !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-job-desc {
+  color: #242321 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-occupants {
+border-top-color: #b5afa4 !important;
+}
