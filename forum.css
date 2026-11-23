@@ -8456,7 +8456,7 @@ html body#modernbb .arstek-msg > br:first-child {
 /* Bannière façon fiche de présentation */
 .sc-bt-banner {
   position: relative !important;
-  height: 190px !important;
+  height: 327px !important;
   overflow: hidden !important;
   border-bottom: 2px solid #3f3d39 !important;
 }
