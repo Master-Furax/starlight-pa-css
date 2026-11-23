@@ -8810,3 +8810,51 @@ border-top-color: #b5afa4 !important;
 }
 
 
+/* ================= REGISTRE DES GROUPES (COULEURS OFFICIELLES) ================= */
+.sc-bt-sector.grp-sec-tiamat { --sec-col: #B7890B; --sec-bg: rgba(183, 137, 11, 0.15); --sec-bd: rgba(183, 137, 11, 0.45); }
+.sc-bt-sector.grp-sec-synchronyste { --sec-col: #9d50e0; --sec-bg: rgba(140, 58, 207, 0.15); --sec-bd: rgba(140, 58, 207, 0.45); }
+.sc-bt-sector.grp-sec-ancre { --sec-col: #e61e6e; --sec-bg: rgba(213, 1, 86, 0.15); --sec-bd: rgba(213, 1, 86, 0.45); }
+.sc-bt-sector.grp-sec-harmoniseur { --sec-col: #e8771a; --sec-bg: rgba(215, 102, 9, 0.15); --sec-bd: rgba(215, 102, 9, 0.45); }
+.sc-bt-sector.grp-sec-lesteur { --sec-col: #3d7ab8; --sec-bg: rgba(45, 93, 143, 0.16); --sec-bd: rgba(45, 93, 143, 0.48); }
+.sc-bt-sector.grp-sec-insulaire { --sec-col: #2fa66b; --sec-bg: rgba(42, 145, 94, 0.15); --sec-bd: rgba(42, 145, 94, 0.45); }
+.sc-bt-sector.grp-sec-asynchrone { --sec-col: #d42626; --sec-bg: rgba(171, 7, 7, 0.16); --sec-bd: rgba(171, 7, 7, 0.48); }
+.sc-bt-sector.grp-sec-umbra { --sec-col: #9298a3; --sec-bg: rgba(124, 130, 141, 0.15); --sec-bd: rgba(124, 130, 141, 0.45); }
+
+/* Mode Clair / Crème (nuances contrastées) */
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-tiamat { --sec-col: #966f05; --sec-bg: rgba(183, 137, 11, 0.13); --sec-bd: rgba(183, 137, 11, 0.42); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-synchronyste { --sec-col: #7428b3; --sec-bg: rgba(140, 58, 207, 0.12); --sec-bd: rgba(140, 58, 207, 0.40); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-ancre { --sec-col: #b8004a; --sec-bg: rgba(213, 1, 86, 0.12); --sec-bd: rgba(213, 1, 86, 0.40); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-harmoniseur { --sec-col: #b85304; --sec-bg: rgba(215, 102, 9, 0.12); --sec-bd: rgba(215, 102, 9, 0.40); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-lesteur { --sec-col: #214973; --sec-bg: rgba(45, 93, 143, 0.13); --sec-bd: rgba(45, 93, 143, 0.42); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-insulaire { --sec-col: #1e7349; --sec-bg: rgba(42, 145, 94, 0.12); --sec-bd: rgba(42, 145, 94, 0.40); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-asynchrone { --sec-col: #960606; --sec-bg: rgba(171, 7, 7, 0.12); --sec-bd: rgba(171, 7, 7, 0.40); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.grp-sec-umbra { --sec-col: #555a63; --sec-bg: rgba(124, 130, 141, 0.14); --sec-bd: rgba(124, 130, 141, 0.42); }
+
+/* Sous-divisions internes (ex: Veilleurs / Lesteurs) */
+.sc-grp-subgrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 10px !important;
+  margin-top: 10px !important;
+}
+
+.sc-grp-branch {
+  background: rgba(0, 0, 0, 0.18) !important;
+  border: 1px solid #3f3d39 !important;
+  border-left: 3px solid var(--sec-col) !important;
+  border-radius: 6px !important;
+  padding: 10px 12px !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-grp-branch {
+  background: rgba(255, 255, 255, 0.45) !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-grp-branch-title {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  color: var(--sec-col) !important;
+  margin-bottom: 4px !important;
+}
