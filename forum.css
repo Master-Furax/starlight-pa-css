@@ -8515,8 +8515,8 @@ html body#modernbb .arstek-msg > br:first-child {
 .sc-bt-sector.sec-science { --sec-col: #27ae82; --sec-bg: rgba(39, 174, 130, 0.14); --sec-bd: rgba(39, 174, 130, 0.45); }
 .sc-bt-sector.sec-forge { --sec-col: #e67e22; --sec-bg: rgba(230, 126, 34, 0.14); --sec-bd: rgba(230, 126, 34, 0.45); }
 .sc-bt-sector.sec-edu { --sec-col: #b565a7; --sec-bg: rgba(181, 101, 167, 0.14); --sec-bd: rgba(181, 101, 167, 0.45); }
-.sc-bt-sector.sec-loisirs { --sec-col: #e07a5f; --sec-bg: rgba(224, 122, 95, 0.14); --sec-bd: rgba(224, 122, 95, 0.45); }
-.sc-bt-sector.sec-ombres { --sec-col: #a8557a; --sec-bg: rgba(168, 85, 122, 0.14); --sec-bd: rgba(168, 85, 122, 0.45); }
+.sc-bt-sector.sec-loisirs { --sec-col: #e5b53a; --sec-bg: rgba(229, 181, 58, 0.14); --sec-bd: rgba(229, 181, 58, 0.45); }
+.sc-bt-sector.sec-ombres { --sec-col: #d94343; --sec-bg: rgba(217, 67, 67, 0.14); --sec-bd: rgba(217, 67, 67, 0.45); }
 
 /* Barre de titre de section (Style Fiche de Présentation) */
 .sc-bt-sec-head {
@@ -8686,9 +8686,8 @@ html body#modernbb .arstek-msg > br:first-child {
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-science { --sec-col: #167858; --sec-bg: rgba(22, 120, 88, 0.12); --sec-bd: rgba(22, 120, 88, 0.4); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-forge { --sec-col: #b84d0e; --sec-bg: rgba(184, 77, 14, 0.12); --sec-bd: rgba(184, 77, 14, 0.4); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-edu { --sec-col: #7d3474; --sec-bg: rgba(125, 52, 116, 0.12); --sec-bd: rgba(125, 52, 116, 0.4); }
-.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-loisirs { --sec-col: #b54d32; --sec-bg: rgba(181, 77, 50, 0.12); --sec-bd: rgba(181, 77, 50, 0.4); }
-.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-ombres { --sec-col: #7d3354; --sec-bg: rgba(125, 51, 84, 0.12); --sec-bd: rgba(125, 51, 84, 0.4); }
-
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-loisirs { --sec-col: #9e7408; --sec-bg: rgba(158, 116, 8, 0.13); --sec-bd: rgba(158, 116, 8, 0.42); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-ombres { --sec-col: #a32020; --sec-bg: rgba(163, 32, 32, 0.12); --sec-bd: rgba(163, 32, 32, 0.40); }
 
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-biome-tag {
   background: rgba(255, 255, 255, 0.55) !important;
@@ -8710,3 +8709,78 @@ html body#modernbb .arstek-msg > br:first-child {
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-occupants {
 border-top-color: #b5afa4 !important;
 }
+
+/* ================= FICHE LEXIQUE : LE QUANON ================= */
+.sc-quanon-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 10px !important;
+  margin-top: 10px !important;
+}
+
+.sc-qn-chakram {
+  background: #222221 !important;
+  border: 1px solid #3f3d39 !important;
+  border-left: 4px solid var(--ck-col) !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+}
+
+.sc-qn-ck-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 4px !important;
+}
+
+.sc-qn-ck-name {
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  color: var(--ck-col) !important;
+  text-transform: uppercase !important;
+}
+
+.sc-qn-ck-pts {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 2px 8px !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--ck-col) !important;
+}
+
+.sc-qn-ck-desc {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  color: #d8d2c7 !important;
+}
+
+.sc-qn-chakram.ck-acier { --ck-col: #95a5a6; }
+.sc-qn-chakram.ck-argent { --ck-col: #d5dbdb; }
+.sc-qn-chakram.ck-or { --ck-col: #f1c40f; }
+.sc-qn-chakram.ck-platine { --ck-col: #5dade2; }
+.sc-qn-chakram.ck-chroma { --ck-col: #e056fd; }
+.sc-qn-chakram.ck-astral { --ck-col: #ffb01f; box-shadow: 0 0 12px rgba(255, 176, 31, 0.25) !important; }
+
+/* Mode Clair pour les Chakrams */
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram {
+  background: #dfd8ca !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-ck-desc {
+  color: #242321 !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-ck-pts {
+  background: rgba(0, 0, 0, 0.08) !important;
+}
+
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-acier { --ck-col: #566573; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-argent { --ck-col: #626567; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-or { --ck-col: #9c7206; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-platine { --ck-col: #1f618d; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-chroma { --ck-col: #8e44ad; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-astral { --ck-col: #b76e00; }
+
+
