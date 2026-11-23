@@ -8510,12 +8510,12 @@ html body#modernbb .arstek-msg > br:first-child {
   margin-bottom: 0 !important;
 }
 
-.sc-bt-sector.sec-admin { --sec-col: #299ec2; --sec-bg: rgba(41, 158, 194, 0.14); --sec-bd: rgba(41, 158, 194, 0.45); }
+.sc-bt-sector.sec-admin { --sec-col: #e5b53a; --sec-bg: rgba(229, 181, 58, 0.14); --sec-bd: rgba(229, 181, 58, 0.45); }
 .sc-bt-sector.sec-phase { --sec-col: #8c7ae6; --sec-bg: rgba(140, 122, 230, 0.14); --sec-bd: rgba(140, 122, 230, 0.45); }
 .sc-bt-sector.sec-science { --sec-col: #27ae82; --sec-bg: rgba(39, 174, 130, 0.14); --sec-bd: rgba(39, 174, 130, 0.45); }
 .sc-bt-sector.sec-forge { --sec-col: #e67e22; --sec-bg: rgba(230, 126, 34, 0.14); --sec-bd: rgba(230, 126, 34, 0.45); }
 .sc-bt-sector.sec-edu { --sec-col: #b565a7; --sec-bg: rgba(181, 101, 167, 0.14); --sec-bd: rgba(181, 101, 167, 0.45); }
-.sc-bt-sector.sec-loisirs { --sec-col: #e5b53a; --sec-bg: rgba(229, 181, 58, 0.14); --sec-bd: rgba(229, 181, 58, 0.45); }
+.sc-bt-sector.sec-loisirs { --sec-col: #299ec2; --sec-bg: rgba(41, 158, 194, 0.14); --sec-bd: rgba(41, 158, 194, 0.45); }
 .sc-bt-sector.sec-ombres { --sec-col: #d94343; --sec-bg: rgba(217, 67, 67, 0.14); --sec-bd: rgba(217, 67, 67, 0.45); }
 
 /* Barre de titre de section (Style Fiche de Présentation) */
@@ -8681,12 +8681,12 @@ html body#modernbb .arstek-msg > br:first-child {
 }
 
 /* Nuances légèrement plus soutenues pour un contraste parfait sur fond crème */
-.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-admin { --sec-col: #146c87; --sec-bg: rgba(20, 108, 135, 0.12); --sec-bd: rgba(20, 108, 135, 0.4); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-admin { --sec-col: #9e7408; --sec-bg: rgba(158, 116, 8, 0.13); --sec-bd: rgba(158, 116, 8, 0.42); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-phase { --sec-col: #5b46b8; --sec-bg: rgba(91, 70, 184, 0.12); --sec-bd: rgba(91, 70, 184, 0.4); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-science { --sec-col: #167858; --sec-bg: rgba(22, 120, 88, 0.12); --sec-bd: rgba(22, 120, 88, 0.4); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-forge { --sec-col: #b84d0e; --sec-bg: rgba(184, 77, 14, 0.12); --sec-bd: rgba(184, 77, 14, 0.4); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-edu { --sec-col: #7d3474; --sec-bg: rgba(125, 52, 116, 0.12); --sec-bd: rgba(125, 52, 116, 0.4); }
-.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-loisirs { --sec-col: #9e7408; --sec-bg: rgba(158, 116, 8, 0.13); --sec-bd: rgba(158, 116, 8, 0.42); }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-loisirs { --sec-col: #146c87; --sec-bg: rgba(20, 108, 135, 0.12); --sec-bd: rgba(20, 108, 135, 0.40); }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-sector.sec-ombres { --sec-col: #a32020; --sec-bg: rgba(163, 32, 32, 0.12); --sec-bd: rgba(163, 32, 32, 0.40); }
 
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-bt-biome-tag {
@@ -8755,17 +8755,39 @@ border-top-color: #b5afa4 !important;
   color: #d8d2c7 !important;
 }
 
-.sc-qn-chakram.ck-acier { --ck-col: #95a5a6; }
+.sc-qn-chakram.ck-bronze { --ck-col: #cd7f32; }
 .sc-qn-chakram.ck-argent { --ck-col: #d5dbdb; }
 .sc-qn-chakram.ck-or { --ck-col: #f1c40f; }
 .sc-qn-chakram.ck-platine { --ck-col: #5dade2; }
 .sc-qn-chakram.ck-chroma { --ck-col: #e056fd; }
-.sc-qn-chakram.ck-astral { --ck-col: #ffb01f; box-shadow: 0 0 12px rgba(255, 176, 31, 0.25) !important; }
+
+/* Chakram Astral : Effet Nébuleuse Cosmique */
+.sc-qn-chakram.ck-astral {
+  --ck-col: #b388ff;
+  border: 1px solid rgba(179, 136, 255, 0.55) !important;
+  border-left: 4px solid #8c3ACF !important;
+  background: linear-gradient(135deg, rgba(140, 58, 207, 0.22) 0%, rgba(41, 158, 194, 0.18) 50%, rgba(213, 1, 86, 0.20) 100%), #222221 !important;
+  box-shadow: 0 0 14px rgba(140, 58, 207, 0.3) !important;
+}
+.sc-qn-chakram.ck-astral .sc-qn-ck-name {
+  background: linear-gradient(90deg, #d896ff, #64dfdf, #ff758f) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.sc-qn-chakram.ck-astral .sc-qn-ck-pts {
+  background: linear-gradient(90deg, #8c3ACF, #1b7f9e) !important;
+  color: #ffffff !important;
+}
 
 /* Mode Clair pour les Chakrams */
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram {
   background: #dfd8ca !important;
   border-color: #b5afa4 !important;
+}
+/* Mode Clair pour le Chakram Astral Nébuleuse */
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-astral {
+  background: linear-gradient(135deg, rgba(140, 58, 207, 0.16) 0%, rgba(41, 158, 194, 0.14) 50%, rgba(213, 1, 86, 0.14) 100%), #dfd8ca !important;
+  border-color: rgba(140, 58, 207, 0.45) !important;
 }
 
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-ck-desc {
@@ -8776,11 +8798,15 @@ border-top-color: #b5afa4 !important;
   background: rgba(0, 0, 0, 0.08) !important;
 }
 
-.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-acier { --ck-col: #566573; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-bronze { --ck-col: #9c5a1a; }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-argent { --ck-col: #626567; }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-or { --ck-col: #9c7206; }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-platine { --ck-col: #1f618d; }
 .sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-chroma { --ck-col: #8e44ad; }
-.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-astral { --ck-col: #b76e00; }
+.sc-bottin-box:has(.sc-bt-theme-btn input:checked) .sc-qn-chakram.ck-astral .sc-qn-ck-name {
+  background: linear-gradient(90deg, #6a1b9a, #00695c, #ad1457) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 
 
