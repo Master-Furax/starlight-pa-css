@@ -9269,3 +9269,184 @@ color: #ffffff !important;
 .sc-cx-dragon-card > br {
   display: none !important;
 }
+
+/* =========================================
+   FICHES PNJ COMPACTES (MODÈLE STAFF)
+   ========================================= */
+.sc-pnj-card {
+  --pnj-col: #b7890b;
+  --pnj-bg: rgba(183, 137, 11, 0.14);
+  width: 100% !important;
+  max-width: 750px !important;
+  margin: 16px auto !important;
+  background: #28282b !important;
+  color: #e6e2d5 !important;
+  border: 1.5px solid #454549 !important;
+  border-left: 4px solid var(--pnj-col) !important;
+  border-radius: 14px !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Variantes de couleurs par groupe (identiques aux fiches persos) */
+.sc-pnj-card.grp-tiamat { --pnj-col: #b7890b; --pnj-bg: rgba(183, 137, 11, 0.16); }
+.sc-pnj-card.grp-umbra { --pnj-col: #9c6b19; --pnj-bg: rgba(156, 107, 25, 0.16); }
+.sc-pnj-card.grp-synchronyste { --pnj-col: #8b5cf6; --pnj-bg: rgba(139, 92, 246, 0.16); }
+.sc-pnj-card.grp-ancre { --pnj-col: #0ea5e9; --pnj-bg: rgba(14, 165, 233, 0.16); }
+.sc-pnj-card.grp-harmoniseur { --pnj-col: #10b981; --pnj-bg: rgba(16, 185, 129, 0.16); }
+.sc-pnj-card.grp-asynchrone { --pnj-col: #ef4444; --pnj-bg: rgba(239, 68, 68, 0.16); }
+.sc-pnj-card.grp-insulaire { --pnj-col: #f59e0b; --pnj-bg: rgba(245, 158, 11, 0.16); }
+.sc-pnj-card.grp-lesteur { --pnj-col: #ec4899; --pnj-bg: rgba(236, 72, 153, 0.16); }
+
+/* Masque les sauts de ligne automatiques Forumactif entre les blocs */
+.sc-pnj-card > br,
+.sc-pnj-head > br,
+.sc-pnj-main > br,
+.sc-pnj-grid > br,
+.sc-pnj-body > br,
+.sc-pnj-col > br {
+  display: none !important;
+}
+
+/* En-tête : Avatar + Identité condensée */
+.sc-pnj-head {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+  gap: 18px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.sc-pnj-ava {
+  flex: 0 0 115px !important;
+  width: 115px !important;
+  height: 145px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1.5px solid var(--pnj-col) !important;
+  background: #1c1c1e !important;
+}
+
+.sc-pnj-ava img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.sc-pnj-main {
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+}
+
+.sc-pnj-badges {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 6px !important;
+}
+
+.sc-pnj-grp,
+.sc-pnj-statut {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+}
+
+.sc-pnj-grp {
+  color: var(--pnj-col) !important;
+  background: var(--pnj-bg) !important;
+  border: 1px solid var(--pnj-col) !important;
+}
+
+.sc-pnj-statut {
+  color: #d8d2c7 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.sc-pnj-name {
+  margin: 0 !important;
+  font-family: 'Teko', sans-serif !important;
+  font-size: 30px !important;
+  line-height: 1.05 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #ffffff !important;
+}
+
+.sc-pnj-role {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--pnj-col) !important;
+  margin-bottom: 10px !important;
+}
+
+/* Grille biométrique condensée (2x2) */
+.sc-pnj-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 6px 12px !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.sc-pnj-item {
+  font-size: 12.5px !important;
+  color: #d8d2c7 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.sc-pnj-item strong {
+  color: #9e9a90 !important;
+  font-weight: 600 !important;
+}
+
+/* Corps : 2 colonnes condensées (Profil + Résonance) */
+.sc-pnj-body {
+  display: grid !important;
+  grid-template-columns: 1.3fr 1fr !important;
+  gap: 14px !important;
+  margin-top: 14px !important;
+}
+
+.sc-pnj-col {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+}
+
+.sc-pnj-sub {
+  font-family: 'Teko', sans-serif !important;
+  font-size: 17px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: var(--pnj-col) !important;
+  margin-bottom: 5px !important;
+}
+
+.sc-pnj-txt {
+  font-size: 13px !important;
+  line-height: 1.48 !important;
+  color: #dcd7cc !important;
+  text-align: justify !important;
+}
+
+.sc-pnj-txt strong {
+  color: #ffffff !important;
+}
+
