@@ -8882,3 +8882,362 @@ border-top-color: #b5afa4 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
   border: 1.5px solid var(--sec-col) !important;
 }
+
+/* ================= CODEX BIO-MAGTEK : LE BESTIAIRE INTERACTIF ================= */
+.sc-codex-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  background: #222221 !important;
+  color: #d8d2c7 !important;
+  border: 1.5px solid #3f3d39 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6) !important;
+}
+
+.sc-codex-box br {
+  display: none !important;
+}
+
+.sc-cx-topbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding: 10px 18px !important;
+  background: #191918 !important;
+  border-bottom: 1px solid #383632 !important;
+}
+
+.sc-cx-theme-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background: #2d2c2a !important;
+  color: #eae3d5 !important;
+  border: 1px solid #4a4742 !important;
+  border-radius: 20px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+}
+
+.sc-cx-theme-btn input {
+  display: none !important;
+}
+
+.sc-cx-header {
+  padding: 22px 26px 18px 26px !important;
+  background: linear-gradient(135deg, #2b2a28 0%, #1c1c1b 100%) !important;
+  border-bottom: 1.5px solid #3f3d39 !important;
+}
+
+.sc-cx-sys {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+  color: #ffb01f !important;
+  text-transform: uppercase !important;
+  margin-bottom: 4px !important;
+}
+
+.sc-cx-title {
+  margin: 0 !important;
+  font-size: 26px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+  color: #f4efe6 !important;
+}
+
+.sc-cx-sub {
+  font-size: 12.5px !important;
+  color: #a8a298 !important;
+  margin-top: 4px !important;
+}
+
+/* Barre de Navigation Interactive (Onglets Biomes) */
+.sc-cx-nav {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding: 14px 22px !important;
+  background: #1b1b1a !important;
+  border-bottom: 1.5px solid #3f3d39 !important;
+}
+
+.sc-cx-tab {
+  flex: 1 1 160px !important;
+  padding: 9px 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #3f3d39 !important;
+  background: #262523 !important;
+  color: #b5afa4 !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  margin: 0 !important;
+}
+
+.sc-cx-tab input {
+  display: none !important;
+}
+
+.sc-cx-tab:has(input:checked) {
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35) !important;
+}
+
+.sc-cx-tab.t-forge:has(input:checked) { background: #c85a17 !important; }
+.sc-cx-tab.t-sylve:has(input:checked) { background: #1f8e6b !important; }
+.sc-cx-tab.t-phase:has(input:checked) { background: #6a5acd !important; }
+.sc-cx-tab.t-abysse:has(input:checked) { background: #1b7f9e !important; }
+.sc-cx-tab.t-cimes:has(input:checked) { background: #8e4585 !important; }
+
+/* Affichage conditionnel des pages du Codex */
+.sc-cx-page {
+  display: none !important;
+  padding: 22px 26px 28px 26px !important;
+}
+
+.sc-codex-box:has(.t-forge input:checked) .sc-cx-page.p-forge { display: block !important; --bx-col: #e67e22; --bx-bg: rgba(230, 126, 34, 0.13); }
+.sc-codex-box:has(.t-sylve input:checked) .sc-cx-page.p-sylve { display: block !important; --bx-col: #27ae82; --bx-bg: rgba(39, 174, 130, 0.13); }
+.sc-codex-box:has(.t-phase input:checked) .sc-cx-page.p-phase { display: block !important; --bx-col: #8c7ae6; --bx-bg: rgba(140, 122, 230, 0.13); }
+.sc-codex-box:has(.t-abysse input:checked) .sc-cx-page.p-abysse { display: block !important; --bx-col: #299ec2; --bx-bg: rgba(41, 158, 194, 0.13); }
+.sc-codex-box:has(.t-cimes input:checked) .sc-cx-page.p-cimes { display: block !important; --bx-col: #b565a7; --bx-bg: rgba(181, 101, 167, 0.13); }
+
+/* En-tête de chapitre Biome */
+.sc-cx-chap-head {
+  padding: 12px 16px !important;
+  background: var(--bx-bg) !important;
+  border-left: 5px solid var(--bx-col) !important;
+  border-radius: 8px !important;
+  margin-bottom: 18px !important;
+}
+
+.sc-cx-chap-title {
+  margin: 0 0 4px 0 !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  color: var(--bx-col) !important;
+}
+
+.sc-cx-chap-desc {
+  font-size: 12.5px !important;
+  color: #c5bfb4 !important;
+}
+
+/* Carte Dragon Primordial / Entité Majeure */
+.sc-cx-dragon-card {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  background: linear-gradient(135deg, var(--bx-bg) 0%, #1c1c1b 100%) !important;
+  border: 1.5px solid var(--bx-col) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+.sc-cx-img-slot {
+  flex: 0 0 180px !important;
+  min-height: 150px !important;
+  border-radius: 8px !important;
+  border: 1px dashed var(--bx-col) !important;
+  background: rgba(0, 0, 0, 0.28) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 10px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: var(--bx-col) !important;
+  overflow: hidden !important;
+}
+
+.sc-cx-img-slot img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 6px !important;
+}
+
+.sc-cx-dragon-info {
+  flex: 1 1 300px !important;
+}
+
+.sc-cx-badges {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+.sc-cx-pill {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  padding: 3px 9px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #eae3d5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.sc-cx-pill.p-primordial { background: var(--bx-col) !important; color: #ffffff !important; border: none !important; }
+.sc-cx-pill.d-low { color: #2ecc71 !important; border-color: rgba(46, 204, 113, 0.4) !important; }
+.sc-cx-pill.d-med { color: #f1c40f !important; border-color: rgba(241, 196, 15, 0.4) !important; }
+.sc-cx-pill.d-high { color: #e74c3c !important; border-color: rgba(231, 76, 60, 0.4) !important; }
+
+.sc-cx-ent-name {
+  margin: 0 0 8px 0 !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  color: var(--bx-col) !important;
+}
+
+.sc-cx-text {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 8px !important;
+}
+
+.sc-cx-role-box {
+  font-size: 12px !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  border-left: 3px solid var(--bx-col) !important;
+}
+
+/* Grille des Créatures Associées */
+.sc-cx-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.sc-cx-mob-card {
+  background: #282827 !important;
+  border: 1px solid #3f3d39 !important;
+  border-top: 3px solid var(--bx-col) !important;
+  border-radius: 8px !important;
+  padding: 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.sc-cx-mob-img {
+  width: 100% !important;
+  height: 110px !important;
+  border-radius: 6px !important;
+  border: 1px dashed #4a4742 !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  color: #858077 !important;
+  margin-bottom: 10px !important;
+  overflow: hidden !important;
+}
+
+.sc-cx-mob-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.sc-cx-mob-name {
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  color: var(--bx-col) !important;
+  margin-bottom: 6px !important;
+}
+
+/* ================= MODE CLAIR / CRÈME ================= */
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) {
+  background: #e8e2d7 !important;
+  color: #19191b !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-topbar,
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-nav {
+  background: #dcd5c7 !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-header {
+  background: linear-gradient(135deg, #e2dbd0 0%, #d4cdc0 100%) !important;
+  border-bottom-color: #b5afa4 !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-title {
+  color: #19191b !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-sub,
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-chap-desc {
+  color: #4a463f !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-tab {
+  background: #e8e2d7 !important;
+  color: #3d3a34 !important;
+  border-color: #b5afa4 !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-tab:has(input:checked) {
+  color: #ffffff !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-forge { --bx-col: #b84d0e; --bx-bg: rgba(184, 77, 14, 0.12); }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-sylve { --bx-col: #167858; --bx-bg: rgba(22, 120, 88, 0.12); }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-phase { --bx-col: #5b46b8; --bx-bg: rgba(91, 70, 184, 0.12); }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-abysse { --bx-col: #146c87; --bx-bg: rgba(20, 108, 135, 0.12); }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-cimes { --bx-col: #7d3474; --bx-bg: rgba(125, 52, 116, 0.12); }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-dragon-card {
+background: linear-gradient(135deg, var(--bx-bg) 0%, #dfd8ca 100%) !important;
+}
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-mob-card {
+background: #dfd8ca !important;
+border-color: #b5afa4 !important;
+}
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-role-box,
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-img-slot,
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-mob-img {
+background: rgba(255, 255, 255, 0.45) !important;
+}
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill {
+background: rgba(0, 0, 0, 0.08) !important;
+color: #19191b !important;
+border-color: rgba(0, 0, 0, 0.15) !important;
+}
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.p-primordial {
+background: var(--bx-col) !important;
+color: #ffffff !important;
+}
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-low { color: #167858 !important; }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-med { color: #9c7206 !important; }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-high { color: #a32020 !important; }
