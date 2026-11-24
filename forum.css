@@ -9265,3 +9265,7 @@ color: #ffffff !important;
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-med { color: #9c7206 !important; }
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-high { color: #a32020 !important; }
 
+.sc-cx-page > br,
+.sc-cx-dragon-card > br {
+  display: none !important;
+}
