@@ -9449,3 +9449,11 @@ color: #ffffff !important;
 .sc-pnj-txt strong {
   color: var(--pnj-col) !important; /* Suit la couleur du groupe (ou mets #673AB7 pour garder le violet) */
 }
+/* Annule la largeur des espaces &nbsp; générés par l'éditeur WYSIWYG */
+.sc-pnj-card,
+.sc-pnj-head,
+.sc-pnj-main,
+.sc-pnj-grid,
+.sc-pnj-body {
+  font-size: 0 !important;
+}
