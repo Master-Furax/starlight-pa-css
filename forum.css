@@ -9457,3 +9457,9 @@ color: #ffffff !important;
 .sc-pnj-body {
   font-size: 0 !important;
 }
+/* Corrige la couleur noire forcée par Forumactif sur les labels du profil */
+#ucp-main fieldset dt,
+#ucp-main fieldset dt span[style*="color:#000000"],
+#ucp-main fieldset dt span[style*="color: #000000"] {
+  color: #e6e2d5 !important;
+}
