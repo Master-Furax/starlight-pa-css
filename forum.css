@@ -9162,10 +9162,13 @@ border-top-color: #b5afa4 !important;
   overflow: hidden !important;
 }
 
+.sc-cx-img-slot img,
 .sc-cx-mob-img img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
 }
 
 .sc-cx-mob-name {
@@ -9241,3 +9244,4 @@ color: #ffffff !important;
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-low { color: #167858 !important; }
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-med { color: #9c7206 !important; }
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-pill.d-high { color: #a32020 !important; }
+
