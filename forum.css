@@ -8858,3 +8858,27 @@ border-top-color: #b5afa4 !important;
   color: var(--sec-col) !important;
   margin-bottom: 4px !important;
 }
+
+/* 1. Rétablir les sauts de ligne à l'intérieur des boîtes [code] dans les formulaires */
+.sc-bottin-box .codebox br,
+.sc-bottin-box pre br,
+.sc-bottin-box code br {
+  display: inline !important;
+}
+
+/* 2. Mise en page des badges de factions dans les titres du Registre des Groupes */
+.sc-bt-sec-title-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.sc-grp-emblem {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+  border: 1.5px solid var(--sec-col) !important;
+}
