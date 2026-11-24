@@ -9043,7 +9043,8 @@ border-top-color: #b5afa4 !important;
 /* Carte Dragon Primordial / Entité Majeure */
 .sc-cx-dragon-card {
   display: flex !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important; /* Remplace wrap par nowrap */
+  align-items: flex-start !important;
   gap: 16px !important;
   background: linear-gradient(135deg, var(--bx-bg) 0%, #1c1c1b 100%) !important;
   border: 1.5px solid var(--bx-col) !important;
@@ -9051,6 +9052,7 @@ border-top-color: #b5afa4 !important;
   padding: 16px !important;
   margin-bottom: 20px !important;
 }
+
 
 .sc-cx-img-slot {
   flex: 0 0 230px !important;
@@ -9082,8 +9084,10 @@ border-top-color: #b5afa4 !important;
 }
 
 .sc-cx-dragon-info {
-  flex: 1 1 300px !important;
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
 }
+
 
 .sc-cx-badges {
   display: flex !important;
