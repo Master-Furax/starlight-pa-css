@@ -9169,6 +9169,8 @@ border-top-color: #b5afa4 !important;
   object-fit: cover !important;
   object-position: center !important;
   display: block !important;
+  padding: 0 !important; 
+  border-style: solid !important;
 }
 
 .sc-cx-mob-name {
