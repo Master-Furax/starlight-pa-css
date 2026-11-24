@@ -9220,8 +9220,20 @@ border-top-color: #b5afa4 !important;
 }
 
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-tab:has(input:checked) {
-  color: #ffffff !important;
+  color: #19191b !important;
+  border-color: #7c4d00 !important;
+  background: #f5f2e6 !important;
 }
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-bt-badge-top {
+  color: #7c4d00 !important;
+  background: rgba(183, 137, 11, 0.14) !important;
+  border-color: rgba(183, 137, 11, 0.45) !important;
+}
+
+.sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-header > *:first-child {
+  color: #8a5a00 !important;
+}
+
 
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-forge { --bx-col: #b84d0e; --bx-bg: rgba(184, 77, 14, 0.12); }
 .sc-codex-box:has(.sc-cx-theme-btn input:checked) .sc-cx-page.p-sylve { --bx-col: #167858; --bx-bg: rgba(22, 120, 88, 0.12); }
