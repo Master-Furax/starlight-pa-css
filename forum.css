@@ -9821,3 +9821,22 @@ color: #ffffff !important;
   background: rgba(171, 7, 7, 0.16) !important;
   color: #e6e2d5 !important;
 }
+
+/* Empêche les &nbsp; de décaler les onglets et l'en-tête du Registre ArsTek */
+.sc-tech-box,
+.sc-tech-head,
+.sc-tech-nav,
+.sc-tech-grid {
+  font-size: 0 !important;
+}
+
+.sc-tech-nav {
+  flex-wrap: nowrap !important;
+  gap: 6px !important;
+}
+
+.sc-tech-tab {
+  font-size: 15.5px !important;
+  padding: 7px 11px !important;
+  white-space: nowrap !important;
+}
