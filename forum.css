@@ -9853,3 +9853,29 @@ color: #ffffff !important;
   padding: 7px 11px !important;
   white-space: nowrap !important;
 }
+
+/* ==========================================================================
+   ALIGNEMENT À 1220PX DU BAS DE PAGE, RÉPONSE RAPIDE & NAVIGATION DES SUJETS
+   ========================================================================== */
+html body#modernbb .titre-sujet-arte,
+html body#modernbb .fil-ariane-arte,
+html body#modernbb .nouveau-repondre-arte,
+html body#modernbb .reponse-rapide-artemis,
+html body#modernbb fieldset.jumpbox,
+html body#modernbb fieldset.quickmod,
+html body#modernbb .panel:not(:has(#PA)),
+html body#modernbb #page-footer,
+html body#modernbb ul.linkbottom {
+    max-width: 1220px !important;
+    width: 96% !important;
+    box-sizing: border-box !important;
+}
+
+/* Étire la zone de texte SCEditor à 100 % de la largeur de la réponse rapide */
+html body#modernbb .reponse-rapide-artemis .sceditor-container,
+html body#modernbb .reponse-rapide-artemis .sceditor-container iframe,
+html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
