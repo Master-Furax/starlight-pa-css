@@ -13,11 +13,22 @@
     border-radius: 20px 0 !important;
     overflow: hidden !important;
     font-family: 'Roboto', sans-serif !important;
-    font-size: 13.5px !important;
+    font-size: 0 !important;
     line-height: 1.5 !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
     box-sizing: border-box !important;
     text-align: left !important;
+}
+
+.sc-part-box .sc-part-topbar,
+.sc-part-box .sc-part-banner-overlay,
+.sc-part-box .sc-part-body,
+.sc-part-box .sc-part-nav,
+.sc-part-box .sc-part-page,
+.sc-part-box .sc-part-stats,
+.sc-part-box .sc-part-staff-grid,
+.sc-part-box .sc-part-btn-grid {
+    font-size: 0 !important;
 }
 
 .sc-part-box *,
