@@ -10114,3 +10114,23 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
 .sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-msg::after { opacity: 0.14 !important; }
 .sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-msg a,
 .sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-sign { color: #e6c373 !important; }
+/* Pastille visuelle Crème / Anthracite (remplace les symboles Unicode bloqués par FA) */
+.sc-valid-box .sc-vb-theme .txt-light::before,
+.sc-valid-box .sc-vb-theme .txt-dark::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 9px !important;
+    height: 9px !important;
+    border-radius: 50% !important;
+    margin-right: 7px !important;
+    vertical-align: middle !important;
+}
+.sc-valid-box .sc-vb-theme .txt-light::before {
+    background: #f4efe6 !important;
+    border: 1.5px solid #e6c373 !important;
+    box-shadow: 0 0 6px #e6c373 !important;
+}
+.sc-valid-box .sc-vb-theme .txt-dark::before {
+    background: #19191c !important;
+    border: 1.5px solid #B7890B !important;
+}
