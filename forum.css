@@ -9879,3 +9879,238 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     max-width: 100% !important;
     box-sizing: border-box !important;
 }
+
+
+/* ==========================================================================
+   CORRECTIF REGISTRE ARSTEK & FICHE VALIDATION DE PERSONNAGE
+   ========================================================================== */
+.sc-tech-box .sc-tech-title {
+    text-align: left !important;
+    font-size: 32px !important;
+    line-height: 1.05 !important;
+}
+
+.sc-tech-box .sc-tech-nav {
+    font-size: 0 !important;
+}
+
+/* ==========================================================================
+   CARTE DE VALIDATION DE FICHE DE PERSONNAGE (.sc-valid-box) — CERCLE TIAMAT
+   ========================================================================== */
+.sc-valid-box {
+    display: block !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 15px auto !important;
+    padding: 0 !important;
+    background: #28282b !important;
+    color: #e6e2d5 !important;
+    border: 1.5px solid #B7890B !important;
+    border-top: 4px solid #B7890B !important;
+    border-radius: 20px 0 !important;
+    overflow: hidden !important;
+    font-family: var(--textes, 'Roboto', sans-serif) !important;
+    font-size: 0 !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55) !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+.sc-valid-box *, .sc-valid-box *::before, .sc-valid-box *::after { box-sizing: border-box !important; }
+.sc-valid-box br { display: none !important; }
+.sc-valid-box .sc-vb-msg br { display: inline !important; }
+
+/* Barre supérieure : Bascule Crème/Anthracite + Statut */
+.sc-valid-box .sc-vb-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 10px 20px !important;
+    background: #1c1c1f !important;
+    border-bottom: 1px solid #3a3a42 !important;
+}
+
+.sc-valid-box .sc-vb-theme {
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 4px 12px !important;
+    border-radius: 10px 0 !important;
+    background: #28282b !important;
+    color: #f4efe6 !important;
+    border: 1px solid #B7890B !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 14.5px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    user-select: none !important;
+}
+.sc-valid-box .sc-vb-theme input,
+.sc-valid-box .sc-vb-theme .txt-dark { display: none !important; }
+
+.sc-valid-box .sc-vb-badge {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.9px !important;
+    text-transform: uppercase !important;
+    padding: 2px 14px !important;
+    border-radius: 8px 0 !important;
+    background: rgba(42, 145, 94, 0.2) !important;
+    color: #4cd18e !important;
+    border: 1px solid #2A915E !important;
+}
+
+/* Variante A Modifier (Orange) */
+.sc-valid-box.is-edit .sc-vb-badge {
+    background: rgba(235, 138, 35, 0.2) !important;
+    color: #ffae52 !important;
+    border-color: #eb8a23 !important;
+}
+
+/* Variante Recalée (Rouge Rubis) */
+.sc-valid-box.is-refused .sc-vb-badge {
+    background: rgba(238, 85, 116, 0.2) !important;
+    color: #ff859d !important;
+    border-color: #ee5574 !important;
+}
+
+/* Bannière haute au-dessus du message */
+.sc-valid-box .sc-vb-banner {
+    position: relative !important;
+    width: 100% !important;
+    height: 165px !important;
+    overflow: hidden !important;
+    border-bottom: 2px solid #B7890B !important;
+    background: #161619 !important;
+}
+
+.sc-valid-box .sc-vb-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    display: block !important;
+}
+
+.sc-valid-box .sc-vb-banner-ov {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(0deg, rgba(22, 22, 26, 0.96) 8%, rgba(183, 137, 11, 0.22) 70%, transparent 100%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 14px 22px !important;
+}
+
+.sc-valid-box .sc-vb-kicker {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    color: #e6c373 !important;
+    text-transform: uppercase !important;
+}
+
+.sc-valid-box .sc-vb-title {
+    margin: 2px 0 0 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: #f4efe6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Corps du message avec badge Cercle Tiamat en filigrane bas droite */
+.sc-valid-box .sc-vb-body {
+    padding: 20px 22px !important;
+}
+
+.sc-valid-box .sc-vb-msg {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    border: 1.5px solid #B7890B !important;
+    border-left: 5px solid #B7890B !important;
+    border-radius: 0 16px !important;
+    padding: 18px 22px !important;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+}
+
+/* Filigrane du badge Tiamat en bas à droite derrière la signature */
+.sc-valid-box .sc-vb-msg::after {
+    content: "" !important;
+    position: absolute !important;
+    right: 12px !important;
+    bottom: 8px !important;
+    width: 115px !important;
+    height: 115px !important;
+    background: url("https://zupimages.net/up/26/47/50pd.png") no-repeat center / contain !important;
+    opacity: 0.16 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.sc-valid-box .sc-vb-content {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.sc-valid-box .sc-vb-msg a {
+    color: #8f6800 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 2px !important;
+}
+.sc-valid-box .sc-vb-msg a:hover {
+    color: #c94668 !important;
+}
+
+.sc-valid-box .sc-vb-sign {
+    margin-top: 14px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(183, 137, 11, 0.35) !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.7px !important;
+    text-transform: uppercase !important;
+    color: #7c5b00 !important;
+    text-align: right !important;
+}
+
+/* Pied de carte */
+.sc-valid-box .sc-vb-foot {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 8px 22px !important;
+    background: linear-gradient(90deg, #3c2e12 0%, #B7890B 55%, #e6c373 100%) !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    letter-spacing: 0.9px !important;
+    text-transform: uppercase !important;
+    color: #19191c !important;
+    font-weight: 700 !important;
+}
+
+/* Bascule Mode Anthracite */
+.sc-valid-box:has(.sc-vb-theme input:checked) { background: #18181b !important; }
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-theme { background: #d8d2c7 !important; color: #19191c !important; }
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-theme .txt-light { display: none !important; }
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-theme .txt-dark { display: inline !important; }
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-msg {
+    background: #212126 !important;
+    color: #e8e2d7 !important;
+    border-color: #B7890B !important;
+}
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-msg::after { opacity: 0.14 !important; }
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-msg a,
+.sc-valid-box:has(.sc-vb-theme input:checked) .sc-vb-sign { color: #e6c373 !important; }
