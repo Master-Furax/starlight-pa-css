@@ -9745,36 +9745,36 @@ color: #ffffff !important;
 }
 
 /* =========================================
-   THÈME CLAIR (MODE CRÈME ACTIVÉ)
+   THÈME SOMBRE (BULLE ANTHRACITE ACTIVÉE)
    ========================================= */
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) {
-  background: #e6e1d6 !important;
-  color: #19191b !important;
-  border-color: #b7890b !important;
+  background: #1f1f22 !important;
+  color: #e6e2d5 !important;
+  border-color: #3f3f44 !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-head {
-  border-bottom-color: rgba(25, 25, 27, 0.15) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-kicker {
-  color: #8a5a00 !important;
+  color: #ffb01f !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-title {
-  color: #19191b !important;
+  color: #ffffff !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-badge {
-  color: #7c4d00 !important;
-  background: rgba(183, 137, 11, 0.14) !important;
-  border-color: rgba(183, 137, 11, 0.45) !important;
+  color: #ffb01f !important;
+  background: rgba(255, 176, 31, 0.12) !important;
+  border-color: rgba(255, 176, 31, 0.4) !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-theme-btn {
-  background: #28282b !important;
-  color: #e6e2d5 !important;
-  border-color: #454549 !important;
+  background: #d8d2c7 !important;
+  color: #19191c !important;
+  border-color: #b7890b !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-theme-btn .txt-light {
@@ -9785,29 +9785,39 @@ color: #ffffff !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-tab {
-  background: #d5cfc2 !important;
-  color: #4a4740 !important;
-  border-color: #bab3a4 !important;
+  background: #161618 !important;
+  color: #9e9a90 !important;
+  border-color: #323236 !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-tab:has(input:checked) {
-  background: #f5f2e6 !important;
-  color: #19191b !important;
-  border-color: #7c4d00 !important;
+  background: #28282b !important;
+  color: #ffb01f !important;
+  border-color: #b7890b !important;
 }
 
+/* Cartes internes sombres (identiques au screen 3) */
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-card {
-  background: #f5f2e6 !important;
-  border-color: #cfc8b8 !important;
-  border-left-color: #8a5a00 !important;
+  background: #18181b !important;
+  color: #e6e2d5 !important;
+  border: 1px solid #35353a !important;
+  border-left: 4px solid #b7890b !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-card h4 {
+  color: #ffb01f !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-card p {
+  color: #dcd7cc !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-card strong {
+  color: #ffffff !important;
 }
 
 .sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-alert {
-  background: rgba(171, 7, 7, 0.08) !important;
-  color: #2b1414 !important;
-}
-
-.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-alert h4,
-.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-alert strong {
-  color: #9e0b0b !important;
+  background: rgba(171, 7, 7, 0.16) !important;
+  color: #e6e2d5 !important;
 }
