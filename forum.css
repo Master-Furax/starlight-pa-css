@@ -9471,3 +9471,34 @@ color: #ffffff !important;
 .ucp-main fieldset dt span {
   color: #e6e2d5 !important;
 }
+
+/* =========================================
+   ÉLARGISSEMENT DE LA ZONE DES SUJETS (ARTEMIS)
+   ========================================= */
+#wrap,
+.wrap,
+#page-body,
+.un-message-artemis {
+  max-width: 1220px !important;
+  width: 96% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.corps-message-artemis {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+.message-contenu-arte {
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Permet aux cartes PNJ et Bestiaire d'utiliser toute la largeur disponible */
+.sc-pnj-card {
+  max-width: 860px !important;
+}
