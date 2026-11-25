@@ -9465,8 +9465,9 @@ color: #ffffff !important;
   font-size: 0 !important;
 }
 /* Corrige la couleur noire forcée par Forumactif sur les labels du profil */
-#ucp-main fieldset dt,
-#ucp-main fieldset dt span[style*="color:#000000"],
-#ucp-main fieldset dt span[style*="color: #000000"] {
+#cp-main fieldset dt,
+#cp-main fieldset dt span,
+.ucp-main fieldset dt,
+.ucp-main fieldset dt span {
   color: #e6e2d5 !important;
 }
