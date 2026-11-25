@@ -9469,8 +9469,8 @@ color: #ffffff !important;
 }
 
 .sc-pnj-txt {
-  height: 227px !important; /* Ajuste cette hauteur selon tes préférences */
-  max-height: 227px !important;
+  height: 200px !important; /* Ajuste cette hauteur selon tes préférences */
+  max-height: 200px !important;
   overflow-y: auto !important;
   padding-right: 8px !important;
   scrollbar-width: thin;
@@ -9879,3 +9879,339 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     max-width: 100% !important;
     box-sizing: border-box !important;
 }
+
+/* ==========================================================================
+   FICHE DE PARTENARIAT — STYLE PA & REGISTRE ARSTEK (.sc-part-box)
+   ========================================================================== */
+.sc-part-box {
+    width: 100% !important;
+    max-width: 860px !important;
+    margin: 15px auto !important;
+    background: #28282b !important;
+    color: #e6e2d5 !important;
+    border: 1.5px solid #454549 !important;
+    border-top: 4px solid #ffb01f !important;
+    border-radius: 20px 0 !important;
+    overflow: hidden !important;
+    font-family: var(--textes, 'Roboto', sans-serif) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
+    box-sizing: border-box !important;
+}
+
+.sc-part-box br { display: none !important; }
+.sc-part-box .sc-part-card p br { display: inline !important; }
+
+/* Barre supérieure */
+.sc-part-topbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 10px 20px !important;
+    background: #1c1c1f !important;
+    border-bottom: 1px solid #3a3a42 !important;
+}
+
+.sc-part-theme-btn {
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 4px 12px !important;
+    border-radius: 10px 0 !important;
+    background: #28282b !important;
+    color: #f4efe6 !important;
+    border: 1px solid #8e887d !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    user-select: none !important;
+}
+.sc-part-theme-btn input,
+.sc-part-theme-btn .txt-dark { display: none !important; }
+
+.sc-part-badge {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
+    color: #ffb01f !important;
+    background: rgba(255, 176, 31, 0.12) !important;
+    border: 1px solid rgba(255, 176, 31, 0.4) !important;
+    padding: 2px 12px !important;
+    border-radius: 10px 0 !important;
+}
+
+/* Bannière haute du bloc */
+.sc-part-banner {
+    position: relative !important;
+    width: 100% !important;
+    height: 220px !important;
+    overflow: hidden !important;
+    border-bottom: 3px solid #ee5574 !important;
+}
+
+.sc-part-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+    display: block !important;
+}
+
+.sc-part-banner-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(0deg, rgba(25, 25, 28, 0.96) 10%, rgba(78, 56, 106, 0.35) 65%, transparent 100%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 18px 24px !important;
+}
+
+.sc-part-kicker {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    color: #ffb01f !important;
+    text-transform: uppercase !important;
+}
+
+.sc-part-title {
+    margin: 2px 0 0 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 34px !important;
+    line-height: 1 !important;
+    color: #f4efe6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+.sc-part-body { padding: 22px 24px !important; }
+
+/* Navigation par onglets */
+.sc-part-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+}
+
+.sc-part-tab {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    padding: 7px 14px !important;
+    border-radius: 10px 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    background: #1c1c1f !important;
+    color: #b8b2a6 !important;
+    border: 1px solid #3c3c40 !important;
+    transition: all 0.2s ease !important;
+    user-select: none !important;
+}
+.sc-part-tab input { display: none !important; }
+.sc-part-tab:has(input:checked) {
+    background: var(--grad-main) !important;
+    color: #ffffff !important;
+    border-color: #f4efe6 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.sc-part-page { display: none !important; }
+.sc-part-box:has(#part-t1:checked) .p-page-1,
+.sc-part-box:has(#part-t2:checked) .p-page-2,
+.sc-part-box:has(#part-t3:checked) .p-page-3,
+.sc-part-box:has(#part-t4:checked) .p-page-4 { display: block !important; }
+
+/* Onglet 1 : Tuiles infos + Cartes Crème */
+.sc-part-stats {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+}
+.sc-part-stat {
+    background: #1c1c1f !important;
+    border: 1px solid #3c3c40 !important;
+    border-left: 3px solid #ffb01f !important;
+    border-radius: 10px 0 !important;
+    padding: 8px 12px !important;
+    font-size: 12.5px !important;
+    color: #f4efe6 !important;
+}
+.sc-part-stat strong {
+    display: block !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    color: #ffb01f !important;
+    letter-spacing: 0.6px !important;
+}
+
+.sc-part-card {
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    border-radius: 0 14px !important;
+    padding: 16px 20px !important;
+    margin-bottom: 14px !important;
+    border: 1px solid #8e887d !important;
+    border-left: 5px solid #ee5574 !important;
+}
+.sc-part-card:last-child { margin-bottom: 0 !important; }
+.sc-part-card h4 {
+    margin: 0 0 8px 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 22px !important;
+    text-transform: uppercase !important;
+    color: #7c4d00 !important;
+    border-bottom: 1px solid rgba(25, 25, 28, 0.16) !important;
+    padding-bottom: 3px !important;
+}
+.sc-part-card p {
+    margin: 0 0 8px 0 !important;
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    color: #19191c !important;
+}
+.sc-part-card p:last-child { margin-bottom: 0 !important; }
+
+/* Onglet 2 : Cartes Staff style PA */
+.sc-part-staff-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+}
+.sc-part-staff-card {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    border: 1.5px solid var(--st-col, #ffb01f) !important;
+    border-left: 6px solid var(--st-col, #ffb01f) !important;
+    border-radius: 16px 0 !important;
+    padding: 14px !important;
+}
+.sc-part-staff-card img {
+    width: 105px !important;
+    height: 140px !important;
+    object-fit: cover !important;
+    border-radius: 12px 0 !important;
+    border: 2px solid var(--st-col, #ffb01f) !important;
+    flex-shrink: 0 !important;
+}
+.sc-part-staff-role {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    text-transform: uppercase !important;
+    color: var(--st-col, #7c4d00) !important;
+    font-weight: 700 !important;
+}
+.sc-part-staff-name {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 26px !important;
+    line-height: 1 !important;
+    color: #19191c !important;
+    margin-bottom: 6px !important;
+}
+.sc-part-staff-info p {
+    margin: 0 0 10px 0 !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    color: #28282b !important;
+}
+a.sc-part-mp-btn {
+    display: inline-block !important;
+    background: #19191c !important;
+    color: #ffb01f !important;
+    border: 1px solid var(--st-col, #ffb01f) !important;
+    border-radius: 8px 0 !important;
+    padding: 3px 12px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 15px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+a.sc-part-mp-btn:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+}
+
+/* Onglet 3 & 4 : Boutons & Codes prêts à copier */
+.sc-part-btn-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+.sc-part-code-card {
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    border: 1px solid #8e887d !important;
+    border-left: 5px solid #ffb01f !important;
+    border-radius: 14px 0 !important;
+    padding: 12px 16px !important;
+}
+.sc-part-code-head {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-bottom: 8px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 19px !important;
+    text-transform: uppercase !important;
+    color: #19191c !important;
+}
+.sc-part-code-head img {
+    max-height: 60px !important;
+    border-radius: 6px 0 !important;
+    border: 1px solid #19191c !important;
+}
+.sc-part-code {
+    display: block !important;
+    background: #19191c !important;
+    color: #f4efe6 !important;
+    border: 1px solid #3a3a42 !important;
+    border-left: 4px solid #ee5574 !important;
+    border-radius: 8px 0 !important;
+    padding: 8px 12px !important;
+    font-family: monospace !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    user-select: all !important;
+    -webkit-user-select: all !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+    cursor: pointer !important;
+}
+
+/* Bascule Ambiance Crème / Anthracite */
+.sc-part-box:has(.sc-part-theme-btn input:checked) {
+    background: #18181b !important;
+}
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-theme-btn {
+    background: #d8d2c7 !important;
+   color: #19191c !important;
+}
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-theme-btn .txt-light { display: none !important; }
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-theme-btn .txt-dark { display: inline !important; }
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card,
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-card,
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-card {
+   background: #212126 !important;
+   color: #f4efe6 !important;
+   border-color: #3a3a42 !important;
+}
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card h4,
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-head {
+   color: #ffb01f !important;
+}
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card p,
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-name,
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-info p {
+   color: #e8e2d7 !important;
