@@ -10199,3 +10199,185 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     background: #19191c !important;
     border: 1.5px solid #B7890B !important;
 }
+
+/* ==========================================================================
+   MP AUTOMATIQUE D'INSCRIPTION (.sc-welcome-mp) — TRANSMISSION ATRIUM
+   ========================================================================== */
+.sc-welcome-mp {
+    display: block !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 15px auto !important;
+    padding: 0 !important;
+    background: #28282b !important;
+    color: #e6e2d5 !important;
+    border: 1.5px solid #B7890B !important;
+    border-top: 4px solid #ee5574 !important;
+    border-radius: 20px 0 !important;
+    overflow: hidden !important;
+    font-family: var(--textes, 'Roboto', sans-serif) !important;
+    font-size: 0 !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55) !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+.sc-welcome-mp *, .sc-welcome-mp *::before, .sc-welcome-mp *::after { box-sizing: border-box !important; }
+.sc-welcome-mp br { display: none !important; }
+.sc-welcome-mp .sc-wm-msg br { display: inline !important; }
+
+.sc-welcome-mp .sc-wm-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 10px 20px !important;
+    background: #1c1c1f !important;
+    border-bottom: 1px solid #3a3a42 !important;
+}
+
+.sc-welcome-mp .sc-wm-kicker {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #e6c373 !important;
+}
+
+.sc-welcome-mp .sc-wm-badge {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    padding: 2px 12px !important;
+    border-radius: 8px 0 !important;
+    background: rgba(238, 85, 116, 0.18) !important;
+    color: #ff859d !important;
+    border: 1px solid #ee5574 !important;
+}
+
+/* Bannière illustrée haute du MP */
+.sc-welcome-mp .sc-wm-banner {
+    position: relative !important;
+    width: 100% !important;
+    height: 165px !important;
+    overflow: hidden !important;
+    border-bottom: 2px solid #B7890B !important;
+    background: #161619 !important;
+}
+
+.sc-welcome-mp .sc-wm-banner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    display: block !important;
+}
+
+.sc-welcome-mp .sc-wm-banner-ov {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(0deg, rgba(22, 22, 26, 0.96) 8%, rgba(78, 56, 106, 0.35) 65%, transparent 100%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 14px 22px !important;
+}
+
+.sc-welcome-mp .sc-wm-sub {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    color: #e6c373 !important;
+    text-transform: uppercase !important;
+}
+
+.sc-welcome-mp .sc-wm-title {
+    margin: 2px 0 0 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 29px !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+.sc-welcome-mp .sc-wm-body {
+    padding: 20px 22px !important;
+}
+
+.sc-welcome-mp .sc-wm-msg {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #d8d2c7 !important;
+    color: #19191c !important;
+    border: 1.5px solid #B7890B !important;
+    border-left: 5px solid #ee5574 !important;
+    border-radius: 0 16px !important;
+    padding: 18px 22px !important;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+}
+
+.sc-welcome-mp .sc-wm-msg::after {
+    content: "" !important;
+    position: absolute !important;
+    right: 12px !important;
+    bottom: 8px !important;
+    width: 110px !important;
+    height: 110px !important;
+    background: url("https://zupimages.net") no-repeat center / contain !important;
+    opacity: 0.14 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.sc-welcome-mp .sc-wm-content {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.sc-welcome-mp .sc-wm-links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+}
+
+.sc-welcome-mp a.sc-wm-btn {
+    display: block !important;
+    text-align: center !important;
+    padding: 6px 12px !important;
+    background: #19191c !important;
+    color: #e6c373 !important;
+    border: 1px solid #B7890B !important;
+    border-radius: 10px 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 16px !important;
+    letter-spacing: 0.7px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.sc-welcome-mp a.sc-wm-btn:hover {
+    background: linear-gradient(90deg, #4e386a, #c94668) !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.sc-welcome-mp .sc-wm-sign {
+    margin-top: 14px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid rgba(183, 137, 11, 0.35) !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 17px !important;
+    letter-spacing: 0.7px !important;
+    text-transform: uppercase !important;
+    color: #7c5b00 !important;
+    text-align: right !important;
+}
