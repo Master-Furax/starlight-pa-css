@@ -9,7 +9,7 @@
     background: #28282b !important;
     color: #e6e2d5 !important;
     border: 1.5px solid #454549 !important;
-    border-top: 4px solid #ffb01f !important;
+    border-top: 4px solid #e6c373 !important;
     border-radius: 20px 0 !important;
     overflow: hidden !important;
     font-family: 'Roboto', sans-serif !important;
@@ -27,7 +27,8 @@
 }
 
 .sc-part-box br { display: none !important; }
-.sc-part-box .sc-part-card p br { display: inline !important; }
+.sc-part-box .sc-part-card p br,
+.sc-part-box .sc-part-code br { display: inline !important; }
 
 /* Barre supérieure */
 .sc-part-box .sc-part-topbar {
@@ -64,9 +65,9 @@
     font-family: 'Teko', sans-serif !important;
     font-size: 15px !important;
     letter-spacing: 1px !important;
-    color: #ffb01f !important;
-    background: rgba(255, 176, 31, 0.12) !important;
-    border: 1px solid rgba(255, 176, 31, 0.4) !important;
+    color: #e6c373 !important;
+    background: rgba(230, 195, 115, 0.12) !important;
+    border: 1px solid rgba(230, 195, 115, 0.35) !important;
     padding: 2px 12px !important;
     border-radius: 10px 0 !important;
 }
@@ -78,6 +79,7 @@
     height: 220px !important;
     overflow: hidden !important;
     border-bottom: 3px solid #ee5574 !important;
+    background: #161619 !important;
 }
 
 .sc-part-box .sc-part-banner img {
@@ -106,7 +108,7 @@
     font-size: 11px !important;
     font-weight: 700 !important;
     letter-spacing: 1.5px !important;
-    color: #ffb01f !important;
+    color: #e6c373 !important;
     text-transform: uppercase !important;
 }
 
@@ -155,7 +157,7 @@
 }
 .sc-part-box .sc-part-tab input { display: none !important; }
 .sc-part-box .sc-part-tab:has(input:checked) {
-    background: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
+    background: linear-gradient(90deg, #4e386a 0%, #c94668 55%, #d6a456 100%) !important;
     color: #ffffff !important;
     border-color: #f4efe6 !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
@@ -177,7 +179,7 @@
 .sc-part-box .sc-part-stat {
     background: #1c1c1f !important;
     border: 1px solid #3c3c40 !important;
-    border-left: 3px solid #ffb01f !important;
+    border-left: 3px solid #e6c373 !important;
     border-radius: 10px 0 !important;
     padding: 8px 12px !important;
     font-family: 'Roboto', sans-serif !important;
@@ -188,7 +190,7 @@
     display: block !important;
     font-family: 'Teko', sans-serif !important;
     font-size: 15px !important;
-    color: #ffb01f !important;
+    color: #e6c373 !important;
     letter-spacing: 0.6px !important;
 }
 
@@ -222,11 +224,26 @@
 }
 .sc-part-box .sc-part-card p:last-child { margin-bottom: 0 !important; }
 
-/* Onglet 2 : Cartes Staff style PA */
+/* Badges de paliers d'alliance */
+.sc-part-box .sc-tier-tag {
+    display: inline-block !important;
+    padding: 1px 8px !important;
+    margin-right: 6px !important;
+    border-radius: 6px 0 !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 14px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    background: #19191c !important;
+    color: #e6c373 !important;
+    border: 1px solid #e6c373 !important;
+}
+
+/* Onglet 2 : Cartes Staff style PA (Grille 2x2 pour 4 membres) */
 .sc-part-box .sc-part-staff-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 16px !important;
+    gap: 14px !important;
 }
 .sc-part-box .sc-part-staff-card {
     display: flex !important;
@@ -234,55 +251,55 @@
     gap: 14px !important;
     background: #d8d2c7 !important;
     color: #19191c !important;
-    border: 1.5px solid var(--st-col, #ffb01f) !important;
-    border-left: 6px solid var(--st-col, #ffb01f) !important;
+    border: 1.5px solid var(--st-col, #e6c373) !important;
+    border-left: 6px solid var(--st-col, #e6c373) !important;
     border-radius: 16px 0 !important;
-    padding: 14px !important;
+    padding: 13px !important;
 }
 .sc-part-box .sc-part-staff-card img {
-    width: 100px !important;
-    height: 135px !important;
+    width: 95px !important;
+    height: 130px !important;
     object-fit: cover !important;
     border-radius: 12px 0 !important;
-    border: 2px solid var(--st-col, #ffb01f) !important;
+    border: 2px solid var(--st-col, #e6c373) !important;
     flex-shrink: 0 !important;
 }
 .sc-part-box .sc-part-staff-role {
     font-family: 'Teko', sans-serif !important;
-    font-size: 15px !important;
+    font-size: 14.5px !important;
     text-transform: uppercase !important;
     color: var(--st-col, #7c4d00) !important;
     font-weight: 700 !important;
 }
 .sc-part-box .sc-part-staff-name {
     font-family: 'Teko', sans-serif !important;
-    font-size: 26px !important;
+    font-size: 25px !important;
     font-weight: 700 !important;
     line-height: 1 !important;
     color: #19191c !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 5px !important;
 }
 .sc-part-box .sc-part-staff-info p {
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 9px 0 !important;
     font-family: 'Roboto', sans-serif !important;
-    font-size: 12.5px !important;
-    line-height: 1.45 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
     color: #28282b !important;
 }
 .sc-part-box a.sc-part-mp-btn {
     display: inline-block !important;
     background: #19191c !important;
-    color: #ffb01f !important;
-    border: 1px solid var(--st-col, #ffb01f) !important;
+    color: #e6c373 !important;
+    border: 1px solid var(--st-col, #e6c373) !important;
     border-radius: 8px 0 !important;
-    padding: 3px 12px !important;
+    padding: 3px 11px !important;
     font-family: 'Teko', sans-serif !important;
-    font-size: 15px !important;
+    font-size: 14.5px !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
 }
 .sc-part-box a.sc-part-mp-btn:hover {
-    background: linear-gradient(90deg, #9d2b6b, #d89b3c) !important;
+    background: linear-gradient(90deg, #9d2b6b, #c99642) !important;
     color: #ffffff !important;
 }
 
@@ -292,51 +309,55 @@
     flex-direction: column !important;
     gap: 12px !important;
 }
+
 .sc-part-box .sc-part-code-card {
     background: #d8d2c7 !important;
     color: #19191c !important;
     border: 1px solid #8e887d !important;
-    border-left: 5px solid #ffb01f !important;
+    border-left: 5px solid #e6c373 !important;
     border-radius: 14px 0 !important;
     padding: 12px 16px !important;
 }
+
 .sc-part-box .sc-part-code-head {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-  margin-bottom: 8px !important;
-  font-family: 'Teko', sans-serif !important;
-  font-size: 19px !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  color: #19191c !important;
-}
-.sc-part-box .sc-part-code-head img {
-  max-height: 60px !important;
-  border-radius: 6px 0 !important;
-  border: 1px solid #19191c !important;
-}
-.sc-part-box .sc-part-code {
-  display: block !important;
-  background: #19191c !important;
-  color: #f4efe6 !important;
-  border: 1px solid #3a3a42 !important;
-  border-left: 4px solid #ee5574 !important;
-  border-radius: 8px 0 !important;
-  padding: 8px 12px !important;
-  font-family: monospace !important;
-  font-size: 12px !important;
-  line-height: 1.45 !important;
-  user-select: all !important;
-  -webkit-user-select: all !important;
-  white-space: pre-wrap !important;
-  word-break: break-all !important;
-  cursor: pointer !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-bottom: 8px !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    color: #19191c !important;
 }
 
-/* Bascule Ambiance Crème / Anthracite */
+.sc-part-box .sc-part-code-head img {
+    max-height: 60px !important;
+    border-radius: 6px 0 !important;
+    border: 1px solid #19191c !important;
+}
+
+.sc-part-box .sc-part-code {
+    display: block !important;
+    background: #19191c !important;
+    color: #f4efe6 !important;
+    border: 1px solid #3a3a42 !important;
+    border-left: 4px solid #ee5574 !important;
+    border-radius: 8px 0 !important;
+    padding: 10px 12px !important;
+    font-family: monospace !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    user-select: all !important;
+    -webkit-user-select: all !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    cursor: pointer !important;
+}
+
+/* Bascule Ambiance Crème / Anthracite (avec jaune doux #e6c373) */
 .sc-part-box:has(.sc-part-theme-btn input:checked) { background: #18181b !important; }
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-theme-btn { background: #d8d2c7 !important; color: #19191c !important; }
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-theme-btn .txt-light { display: none !important; }
@@ -344,17 +365,16 @@
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-card,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-card {
-  background: #212126 !important;
-  color: #f4efe6 !important;
-  border-color: #3a3a42 !important;
+    background: #212126 !important;
+    color: #f4efe6 !important;
+    border-color: #3a3a42 !important;
 }
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card h4,
-.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-head { color: #ffb01f !important; }
+.sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-head { color: #e6c373 !important; }
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card p,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-name,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-info p { color: #e8e2d7 !important; }
 
-/* Responsive mobile & petits sujets partenaires */
 @media (max-width: 680px) {
 .sc-part-box .sc-part-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 .sc-part-box .sc-part-staff-grid { grid-template-columns: 1fr !important; }
