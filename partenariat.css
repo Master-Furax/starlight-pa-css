@@ -512,3 +512,46 @@
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
 }
 
+/* ==========================================================================
+   PASTILLES UNIFIÉES CRÈME / ANTHRACITE
+   ========================================================================== */
+
+/* Pastille lumineuse unifiée sur Fiche Perso, ArsTek, Lexique, Validation & Partenariats */
+.sc-theme-btn .txt-light::before,
+.sc-theme-btn .txt-dark::before,
+.sc-tech-theme .txt-light::before,
+.sc-tech-theme .txt-dark::before,
+.sc-lex-theme .txt-light::before,
+.sc-lex-theme .txt-dark::before,
+.sc-vb-theme .txt-light::before,
+.sc-vb-theme .txt-dark::before,
+.sc-part-theme-btn .txt-light::before,
+.sc-part-theme-btn .txt-dark::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 9px !important;
+    height: 9px !important;
+    border-radius: 50% !important;
+    margin-right: 7px !important;
+    vertical-align: middle !important;
+}
+
+.sc-theme-btn .txt-light::before,
+.sc-tech-theme .txt-light::before,
+.sc-lex-theme .txt-light::before,
+.sc-vb-theme .txt-light::before,
+.sc-part-theme-btn .txt-light::before {
+    background: #f4efe6 !important;
+    border: 1.5px solid #e6c373 !important;
+    box-shadow: 0 0 6px #e6c373 !important;
+}
+
+.sc-theme-btn .txt-dark::before,
+.sc-tech-theme .txt-dark::before,
+.sc-lex-theme .txt-dark::before,
+.sc-vb-theme .txt-dark::before,
+.sc-part-theme-btn .txt-dark::before {
+    background: #19191c !important;
+    border: 1.5px solid #B7890B !important;
+}
+
