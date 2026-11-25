@@ -9618,7 +9618,8 @@ color: #ffffff !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
-  font-size: 11px !important;
+  font-size: 0 !important;
+  width: fit-content !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.6px !important;
@@ -9637,6 +9638,10 @@ color: #ffffff !important;
 
 .sc-tech-theme-btn .txt-dark { display: none !important; }
 .sc-tech-theme-btn .txt-light { display: inline !important; }
+
+.sc-tech-theme-btn span {
+  font-size: 11px !important;
+}
 
 /* Système d'onglets sans JS */
 .sc-tech-nav {
