@@ -10203,9 +10203,9 @@ a.sc-part-mp-btn:hover {
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-staff-card,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-card {
-   background: #212126 !important;
-   color: #f4efe6 !important;
-   border-color: #3a3a42 !important;
+  background: #1f1f22 !important;
+  color: #e6e2d5 !important;
+  border-color: #3f3f44 !important;
 }
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-card h4,
 .sc-part-box:has(.sc-part-theme-btn input:checked) .sc-part-code-head {
