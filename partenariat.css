@@ -395,11 +395,11 @@
    CARTE DE RÉPONSE PARTENAIRE (.sc-part-reply) — VALIDATION / DEMANDE / PASSAGE
    ========================================================================== */
 .sc-part-reply {
-    all: initial;
     display: block !important;
     width: 100% !important;
     max-width: 660px !important;
     margin: 15px auto !important;
+    padding: 0 !important;
     background: #28282b !important;
     color: #e6e2d5 !important;
     border: 1.5px solid #454549 !important;
@@ -408,6 +408,7 @@
     overflow: hidden !important;
     font-family: 'Roboto', sans-serif !important;
     font-size: 0 !important;
+    line-height: 1.5 !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
     box-sizing: border-box !important;
     text-align: left !important;
