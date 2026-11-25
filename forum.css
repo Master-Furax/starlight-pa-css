@@ -9827,6 +9827,14 @@ color: #ffffff !important;
   color: #e6e2d5 !important;
 }
 
+/* Adoucit le jaune des titres et onglets en mode sombre */
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-card h4,
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-tab:has(input:checked),
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-kicker,
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-badge {
+  color: #d8b25a !important;
+}
+
 /* Empêche les &nbsp; de décaler les onglets et l'en-tête du Registre ArsTek */
 .sc-tech-box,
 .sc-tech-head,
