@@ -452,6 +452,11 @@
     border: 1px solid #2A915E !important;
 }
 
+.sc-part-reply.is-refused .sc-pr-status{
+    background:rgba(238,85,116,.18)!important;
+    color:#ff859d!important;
+    border-color:#ee5574!important}
+
 .sc-part-reply .sc-pr-body {
     display: flex !important;
     align-items: center !important;
@@ -460,8 +465,8 @@
 }
 
 .sc-part-reply .sc-pr-ava {
-    width: 86px !important;
-    height: 112px !important;
+    width: 120px !important;
+    height: 180px !important;
     object-fit: cover !important;
     border-radius: 12px 0 !important;
     border: 2px solid #e6c373 !important;
