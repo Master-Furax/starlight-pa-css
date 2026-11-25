@@ -9290,15 +9290,15 @@ color: #ffffff !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* Variantes de couleurs par groupe (identiques aux fiches persos) */
-.sc-pnj-card.grp-tiamat { --pnj-col: #b7890b; --pnj-bg: rgba(183, 137, 11, 0.16); }
-.sc-pnj-card.grp-umbra { --pnj-col: #9c6b19; --pnj-bg: rgba(156, 107, 25, 0.16); }
-.sc-pnj-card.grp-synchronyste { --pnj-col: #8b5cf6; --pnj-bg: rgba(139, 92, 246, 0.16); }
-.sc-pnj-card.grp-ancre { --pnj-col: #0ea5e9; --pnj-bg: rgba(14, 165, 233, 0.16); }
-.sc-pnj-card.grp-harmoniseur { --pnj-col: #10b981; --pnj-bg: rgba(16, 185, 129, 0.16); }
-.sc-pnj-card.grp-asynchrone { --pnj-col: #ef4444; --pnj-bg: rgba(239, 68, 68, 0.16); }
-.sc-pnj-card.grp-insulaire { --pnj-col: #f59e0b; --pnj-bg: rgba(245, 158, 11, 0.16); }
-.sc-pnj-card.grp-lesteur { --pnj-col: #ec4899; --pnj-bg: rgba(236, 72, 153, 0.16); }
+/* Variantes de couleurs officielles par groupe Starlight */
+.sc-pnj-card.grp-umbra { --pnj-col: #7C828D; --pnj-bg: rgba(124, 130, 141, 0.16); }
+.sc-pnj-card.grp-tiamat { --pnj-col: #B7890B; --pnj-bg: rgba(183, 137, 11, 0.16); }
+.sc-pnj-card.grp-synchronyste { --pnj-col: #8C3ACF; --pnj-bg: rgba(140, 58, 207, 0.16); }
+.sc-pnj-card.grp-ancre { --pnj-col: #D50156; --pnj-bg: rgba(213, 1, 86, 0.16); }
+.sc-pnj-card.grp-harmoniseur { --pnj-col: #D76609; --pnj-bg: rgba(215, 102, 9, 0.16); }
+.sc-pnj-card.grp-asynchrone { --pnj-col: #AB0707; --pnj-bg: rgba(171, 7, 7, 0.16); }
+.sc-pnj-card.grp-insulaire { --pnj-col: #2A915E; --pnj-bg: rgba(42, 145, 94, 0.16); }
+.sc-pnj-card.grp-lesteur { --pnj-col: #2D5D8F; --pnj-bg: rgba(45, 93, 143, 0.16); }
 
 /* Masque les sauts de ligne automatiques Forumactif entre les blocs */
 .sc-pnj-card > br,
@@ -9411,8 +9411,9 @@ color: #ffffff !important;
   text-overflow: ellipsis !important;
 }
 
+/* Pour que "Ethnie :", "Plan :", "Âge :", "Secteur :" suivent aussi la couleur du groupe */
 .sc-pnj-item strong {
-  color: #906b0c !important;
+  color: color-mix(in srgb, var(--pnj-col) 70%, #111111) !important;
   font-weight: 700 !important;
 }
 
