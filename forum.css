@@ -9423,6 +9423,7 @@ color: #ffffff !important;
   grid-template-columns: 1.3fr 1fr !important;
   gap: 14px !important;
   margin-top: 14px !important;
+  align-items: stretch !important;   
 }
 
 .sc-pnj-col {
@@ -9430,6 +9431,8 @@ color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
   border-radius: 10px 0 !important;
   padding: 14px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .sc-pnj-sub {
@@ -9455,6 +9458,38 @@ color: #ffffff !important;
   color: color-mix(in srgb, var(--pnj-col) 70%, #111111) !important;
   font-weight: 700 !important;
 }
+/* Hauteur uniforme et défilement interne pour les bulles PNJ */
+.sc-pnj-body {
+  align-items: stretch !important;
+}
+
+.sc-pnj-col {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.sc-pnj-txt {
+  height: 227px !important; /* Ajuste cette hauteur selon tes préférences */
+  max-height: 227px !important;
+  overflow-y: auto !important;
+  padding-right: 8px !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pnj-col) rgba(0, 0, 0, 0.12);
+}
+
+/* Barre de défilement personnalisée (Chrome / Edge / Safari) */
+.sc-pnj-txt::-webkit-scrollbar {
+  width: 5px;
+}
+.sc-pnj-txt::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.sc-pnj-txt::-webkit-scrollbar-thumb {
+  background: var(--pnj-col);
+  border-radius: 4px;
+}
+
 
 /* Annule la largeur des espaces &nbsp; générés par l'éditeur WYSIWYG */
 .sc-pnj-card,
@@ -9471,6 +9506,7 @@ color: #ffffff !important;
 .ucp-main fieldset dt span {
   color: #e6e2d5 !important;
 }
+
 
 /* =========================================
    ÉLARGISSEMENT DE LA ZONE DES SUJETS (ARTEMIS)
