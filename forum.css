@@ -9538,3 +9538,162 @@ color: #ffffff !important;
 .sc-pnj-card {
   max-width: 860px !important;
 }
+
+/* =========================================
+   CODEX TECHNOLOGIQUE : REGISTRE ARSTEK
+   ========================================= */
+.sc-tech-box {
+  width: 100% !important;
+  max-width: 860px !important;
+  margin: 15px auto !important;
+  background: #28282b !important;
+  color: #e6e2d5 !important;
+  border: 1.5px solid #454549 !important;
+  border-top: 4px solid #b7890b !important;
+  border-radius: 14px !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sc-tech-box br,
+.sc-tech-nav > br,
+.sc-tech-page > br,
+.sc-tech-grid > br {
+  display: none !important;
+}
+
+.sc-tech-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 18px !important;
+}
+
+.sc-tech-kicker {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.4px !important;
+  color: #ffb01f !important;
+}
+
+.sc-tech-title {
+  margin: 2px 0 0 0 !important;
+  font-family: 'Teko', sans-serif !important;
+  font-size: 34px !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+}
+
+.sc-tech-badge {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  color: #ffb01f !important;
+  background: rgba(255, 176, 31, 0.12) !important;
+  border: 1px solid rgba(255, 176, 31, 0.4) !important;
+}
+
+/* Système d'onglets sans JS */
+.sc-tech-nav {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.sc-tech-tab {
+  cursor: pointer !important;
+  padding: 7px 14px !important;
+  border-radius: 8px !important;
+  font-family: 'Teko', sans-serif !important;
+  font-size: 17px !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  background: #1c1c1f !important;
+  color: #a8a398 !important;
+  border: 1px solid #3c3c40 !important;
+  transition: all 0.2s ease !important;
+}
+
+.sc-tech-tab input {
+  display: none !important;
+}
+
+.sc-tech-tab:has(input:checked) {
+  background: #d8d2c7 !important;
+  color: #19191c !important;
+  border-color: #ffb01f !important;
+  font-weight: 700 !important;
+}
+
+.sc-tech-page {
+  display: none !important;
+}
+
+.sc-tech-box:has(#tech-t1:checked) .t-page-1,
+.sc-tech-box:has(#tech-t2:checked) .t-page-2,
+.sc-tech-box:has(#tech-t3:checked) .t-page-3,
+.sc-tech-box:has(#tech-t4:checked) .t-page-4 {
+  display: block !important;
+}
+
+/* Cartes internes crème sur fond anthracite */
+.sc-tech-card {
+  background: #d8d2c7 !important;
+  color: #19191c !important;
+  border-radius: 12px !important;
+  padding: 18px 20px !important;
+  margin-bottom: 14px !important;
+  border-left: 4px solid #b7890b !important;
+}
+
+.sc-tech-card h4 {
+  margin: 0 0 8px 0 !important;
+  font-family: 'Teko', sans-serif !important;
+  font-size: 22px !important;
+  text-transform: uppercase !important;
+  color: #7c4d00 !important;
+  border-bottom: 1px solid rgba(25, 25, 28, 0.15) !important;
+  padding-bottom: 4px !important;
+}
+
+.sc-tech-card p {
+  margin: 0 0 8px 0 !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  text-align: justify !important;
+  color: #19191c !important;
+}
+
+.sc-tech-card p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.sc-tech-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.sc-tech-alert {
+  background: rgba(171, 7, 7, 0.12) !important;
+  border: 1.5px solid #ab0707 !important;
+  border-left: 5px solid #ab0707 !important;
+  border-radius: 10px !important;
+  padding: 14px 18px !important;
+  color: #e6e2d5 !important;
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+}
+
+.sc-tech-alert strong {
+  color: #ff6b6b !important;
+}
