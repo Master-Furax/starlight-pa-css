@@ -10296,6 +10296,9 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
 
 .sc-welcome-mp .sc-wm-title {
     margin: 2px 0 0 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
     font-family: 'Teko', sans-serif !important;
     font-size: 29px !important;
     font-weight: 700 !important;
@@ -10330,7 +10333,7 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     bottom: 8px !important;
     width: 110px !important;
     height: 110px !important;
-    background: url("https://zupimages.net") no-repeat center / contain !important;
+    background: url("https://zupimages.net/up/26/47/50pd.png") no-repeat center / contain !important;
     opacity: 0.14 !important;
     pointer-events: none !important;
     z-index: 0 !important;
