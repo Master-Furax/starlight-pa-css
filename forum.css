@@ -9541,6 +9541,7 @@ color: #ffffff !important;
 
 /* =========================================
    CODEX TECHNOLOGIQUE : REGISTRE ARSTEK
+   (AVEC MODE SOMBRE ANTHRACITE / MODE CRÈME)
    ========================================= */
 .sc-tech-box {
   width: 100% !important;
@@ -9555,9 +9556,11 @@ color: #ffffff !important;
   box-sizing: border-box !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .sc-tech-box br,
+.sc-tech-head-right > br,
 .sc-tech-nav > br,
 .sc-tech-page > br,
 .sc-tech-grid > br {
@@ -9568,9 +9571,17 @@ color: #ffffff !important;
   display: flex !important;
   justify-content: space-between !important;
   align-items: flex-end !important;
+  gap: 12px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
   padding-bottom: 14px !important;
   margin-bottom: 18px !important;
+}
+
+.sc-tech-head-right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 8px !important;
 }
 
 .sc-tech-kicker {
@@ -9600,6 +9611,32 @@ color: #ffffff !important;
   background: rgba(255, 176, 31, 0.12) !important;
   border: 1px solid rgba(255, 176, 31, 0.4) !important;
 }
+
+/* Bouton bascule Mode Clair / Sombre */
+.sc-tech-theme-btn {
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  padding: 4px 11px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #e6e2d5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  user-select: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.sc-tech-theme-btn input {
+  display: none !important;
+}
+
+.sc-tech-theme-btn .txt-dark { display: none !important; }
+.sc-tech-theme-btn .txt-light { display: inline !important; }
 
 /* Système d'onglets sans JS */
 .sc-tech-nav {
@@ -9645,13 +9682,14 @@ color: #ffffff !important;
   display: block !important;
 }
 
-/* Cartes internes crème sur fond anthracite */
+/* Cartes internes (Mode Sombre : crème sur anthracite) */
 .sc-tech-card {
   background: #d8d2c7 !important;
   color: #19191c !important;
   border-radius: 12px !important;
   padding: 18px 20px !important;
   margin-bottom: 14px !important;
+  border: 1px solid rgba(25, 25, 28, 0.15) !important;
   border-left: 4px solid #b7890b !important;
 }
 
@@ -9684,16 +9722,92 @@ color: #ffffff !important;
 }
 
 .sc-tech-alert {
-  background: rgba(171, 7, 7, 0.12) !important;
+  background: rgba(171, 7, 7, 0.14) !important;
   border: 1.5px solid #ab0707 !important;
   border-left: 5px solid #ab0707 !important;
   border-radius: 10px !important;
-  padding: 14px 18px !important;
+  padding: 16px 18px !important;
   color: #e6e2d5 !important;
   font-size: 13.5px !important;
   line-height: 1.5 !important;
 }
 
-.sc-tech-alert strong {
+.sc-tech-alert h4 {
+  margin: 0 0 6px 0 !important;
+  font-family: 'Teko', sans-serif !important;
+  font-size: 22px !important;
+  text-transform: uppercase !important;
   color: #ff6b6b !important;
+}
+
+.sc-tech-alert strong {
+  color: #ff8585 !important;
+}
+
+/* =========================================
+   THÈME CLAIR (MODE CRÈME ACTIVÉ)
+   ========================================= */
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) {
+  background: #e6e1d6 !important;
+  color: #19191b !important;
+  border-color: #b7890b !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-head {
+  border-bottom-color: rgba(25, 25, 27, 0.15) !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-kicker {
+  color: #8a5a00 !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-title {
+  color: #19191b !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-badge {
+  color: #7c4d00 !important;
+  background: rgba(183, 137, 11, 0.14) !important;
+  border-color: rgba(183, 137, 11, 0.45) !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-theme-btn {
+  background: #28282b !important;
+  color: #e6e2d5 !important;
+  border-color: #454549 !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-theme-btn .txt-light {
+  display: none !important;
+}
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-theme-btn .txt-dark {
+  display: inline !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-tab {
+  background: #d5cfc2 !important;
+  color: #4a4740 !important;
+  border-color: #bab3a4 !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-tab:has(input:checked) {
+  background: #f5f2e6 !important;
+  color: #19191b !important;
+  border-color: #7c4d00 !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-card {
+  background: #f5f2e6 !important;
+  border-color: #cfc8b8 !important;
+  border-left-color: #8a5a00 !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-alert {
+  background: rgba(171, 7, 7, 0.08) !important;
+  color: #2b1414 !important;
+}
+
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-alert h4,
+.sc-tech-box:has(.sc-tech-theme-btn input:checked) .sc-tech-alert strong {
+  color: #9e0b0b !important;
 }
