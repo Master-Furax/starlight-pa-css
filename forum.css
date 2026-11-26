@@ -6873,6 +6873,7 @@ html body#modernbb #preview .sc-admin-box div:has(> img) {
 }
 
 
+
 /* Bannière 90px UNIQUEMENT sur la Chronologie (jamais sur les émojis ni les intrigues) */
 html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)),
 html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) {
@@ -11036,3 +11037,26 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     vertical-align: middle !important;
 }
 
+/* Correctif d'affichage du texte et des émojis dans les fiches .sc-tl-desc */
+html body#modernbb .message-contenu-arte .sc-admin-box .sc-tl-desc,
+html body#modernbb .postbody .sc-admin-box .sc-tl-desc {
+    display: block !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box .sc-tl-desc br,
+html body#modernbb .postbody .sc-admin-box .sc-tl-desc br {
+    display: inline !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box .sc-tl-desc img,
+html body#modernbb .postbody .sc-admin-box .sc-tl-desc img {
+    display: inline-block !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+    vertical-align: middle !important;
+    margin: 0 2px !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
