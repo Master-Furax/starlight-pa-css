@@ -9881,25 +9881,6 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
 }
 
 
-/* ==========================================================================
-   CORRECTIF REGISTRE ARSTEK & FICHE VALIDATION DE PERSONNAGE
-   ========================================================================== */
-.sc-tech-box .sc-tech-title {
-    text-align: left !important;
-    font-size: 32px !important;
-    line-height: 1.05 !important;
-}
-
-.sc-tech-box .sc-tech-nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 1px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-.sc-tech-box .sc-tech-nav br {
-    display: none !important;
-}
 
 /* ==========================================================================
    CARTE DE VALIDATION DE FICHE DE PERSONNAGE (.sc-valid-box) — CERCLE TIAMAT
@@ -10199,7 +10180,25 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     background: #19191c !important;
     border: 1.5px solid #B7890B !important;
 }
+/* ==========================================================================
+   CORRECTIF REGISTRE ARSTEK & FICHE VALIDATION DE PERSONNAGE
+   ========================================================================== */
+.sc-tech-box .sc-tech-title {
+    text-align: left !important;
+    font-size: 32px !important;
+    line-height: 1.05 !important;
+}
 
+.sc-tech-box .sc-tech-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.sc-tech-box .sc-tech-nav br {
+    display: none !important;
+}
 /* ==========================================================================
    MP AUTOMATIQUE D'INSCRIPTION (.sc-welcome-mp) — TRANSMISSION ATRIUM
    ========================================================================== */
