@@ -6873,10 +6873,17 @@ html body#modernbb #preview .sc-admin-box div:has(> img) {
 }
 
 
-/* Bannière pleine largeur 90px en haut de chaque bulle */
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > img,
-html body#modernbb .postbody .sc-admin-box div:has(> img) > img,
-html body#modernbb #preview .sc-admin-box div:has(> img) > img {
+/* Bannière 90px UNIQUEMENT sur la Chronologie (jamais sur les émojis ni les intrigues) */
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)),
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: left !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > img:not(.emojione),
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > img:not(.emojione) {
     float: none !important;
     display: block !important;
     width: 100% !important;
@@ -6891,13 +6898,10 @@ html body#modernbb #preview .sc-admin-box div:has(> img) > img {
     border-radius: 12px 0 !important;
 }
 
-/* Titre du cycle juste sous la bannière */
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h3,
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h4,
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h5,
-html body#modernbb .postbody .sc-admin-box div:has(> img) h3,
-html body#modernbb .postbody .sc-admin-box div:has(> img) h4,
-html body#modernbb .postbody .sc-admin-box div:has(> img) h5 {
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h3,
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h4,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h3,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h4 {
     display: block !important;
     width: 100% !important;
     float: none !important;
@@ -6910,11 +6914,10 @@ html body#modernbb .postbody .sc-admin-box div:has(> img) h5 {
     border-bottom: 1px solid rgba(25, 25, 28, 0.18) !important;
 }
 
-/* Résumé calibré à 140px de haut avec défilement discret */
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > p,
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > div:last-child,
-html body#modernbb .postbody .sc-admin-box div:has(> img) > p,
-html body#modernbb .postbody .sc-admin-box div:has(> img) > div:last-child {
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > p,
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > div:last-child,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > p,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > div:last-child {
     display: block !important;
     width: 100% !important;
     height: 140px !important;
@@ -6927,6 +6930,20 @@ html body#modernbb .postbody .sc-admin-box div:has(> img) > div:last-child {
     scrollbar-width: thin !important;
     scrollbar-color: #d89b3c rgba(0, 0, 0, 0.08) !important;
 }
+
+/* Remet les petits trous noirs de l'intrigue bien alignés sur une seule ligne */
+.sc-tab-wrap div:has(> img) {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+.sc-tab-wrap div:has(> img) > img {
+    width: auto !important;
+    height: 45px !important;
+    object-fit: contain !important;
+}
+
 
 
 /* --- 1. BOTTIN DES AVATARS (FOND SOMBRE UNIFIÉ + 75x75px) --- */
