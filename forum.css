@@ -6710,6 +6710,7 @@ html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
     margin: 0 0 22px 0 !important;
 }
 
+
 /* =========================================================
    BOUTON & MODE CLAIR POUR .sc-admin-box (Chronologie / Répertoires)
    ========================================================= */
@@ -6750,6 +6751,8 @@ html body#modernbb #preview .sc-admin-box .sc-admin-main-title {
 .sc-admin-toggle {
   display: none !important;
 }
+
+
 
 /* =========================================================
    BASCULE EN MODE CLAIR POUR .sc-admin-box (Priorité maximale)
@@ -6840,6 +6843,60 @@ html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter 
   border-color: rgba(142, 136, 125, 0.4) !important;
   border-left-color: var(--item-grp, #ee5574) !important;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+}
+/* Bannière 90px + Titre en dessous + Texte calibré 140px pour la Chronologie */
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img),
+html body#modernbb .postbody .sc-admin-box div:has(> img),
+html body#modernbb #preview .sc-admin-box div:has(> img) {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > img,
+html body#modernbb .postbody .sc-admin-box div:has(> img) > img,
+html body#modernbb #preview .sc-admin-box div:has(> img) > img {
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    height: 90px !important;
+    min-height: 90px !important;
+    max-height: 90px !important;
+    object-fit: cover !important;
+    margin: 0 0 10px 0 !important;
+    border-radius: 10px 0 !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h3,
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h4,
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h5,
+html body#modernbb .postbody .sc-admin-box div:has(> img) h3,
+html body#modernbb .postbody .sc-admin-box div:has(> img) h4,
+html body#modernbb .postbody .sc-admin-box div:has(> img) h5 {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+    text-align: left !important;
+    line-height: 1.15 !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 0 4px 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(25, 25, 28, 0.15) !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > p,
+html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > div:last-child,
+html body#modernbb .postbody .sc-admin-box div:has(> img) > p,
+html body#modernbb .postbody .sc-admin-box div:has(> img) > div:last-child {
+    height: 140px !important;
+    max-height: 140px !important;
+    overflow-y: auto !important;
+    padding-right: 6px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    line-height: 1.5 !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #B7890B rgba(0, 0, 0, 0.08) !important;
 }
 
 
