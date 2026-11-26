@@ -10629,7 +10629,7 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     background: #28282b !important;
     color: #e6e2d5 !important;
     border: 1.5px solid #454549 !important;
-    border-top: 4px solid #ae820d !important;
+    border-top: 4px solid #d89b3c !important;
     border-radius: 20px 0 !important;
     overflow: hidden !important;
     font-family: var(--textes, 'Roboto', sans-serif) !important;
@@ -10696,9 +10696,9 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     font-family: 'Teko', sans-serif !important;
     font-size: 15px !important;
     letter-spacing: 1px !important;
-    color: #ff859d !important;
-    background: rgba(238, 85, 116, 0.14) !important;
-    border: 1px solid rgba(238, 85, 116, 0.45) !important;
+   color: #e6c373 !important;
+    background: rgba(216, 155, 60, 0.15) !important;
+    border: 1px solid rgba(216, 155, 60, 0.5) !important;
     padding: 2px 12px !important;
     border-radius: 10px 0 !important;
 }
@@ -10708,7 +10708,7 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     width: 100% !important;
     height: 195px !important;
     overflow: hidden !important;
-    border-bottom: 3px solid #e6c373 !important;
+    border-bottom: 3px solid #d89b3c !important;
     background: #161619 !important;
 }
 
@@ -10741,7 +10741,9 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
 .sc-med-box .sc-med-title {
     margin: 2px 0 0 0 !important;
     padding: 0 !important;
-    background: none !important;
+    background: transparent !important;
+    background-image: none !important;
+    background-color: transparent !important;
     border: none !important;
     font-family: 'Teko', sans-serif !important;
     font-size: 32px !important;
@@ -10803,7 +10805,7 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     padding: 16px 20px !important;
     margin-bottom: 14px !important;
     border: 1px solid #8e887d !important;
-    border-left: 5px solid #ee5574 !important;
+    border-left: 5px solid #B7890B !important;
 }
 .sc-med-box .sc-med-card.is-gold { border-left-color: #B7890B !important; }
 .sc-med-box .sc-med-card:last-child { margin-bottom: 0 !important; }
@@ -10838,11 +10840,11 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
     text-transform: uppercase !important;
     background: #19191c !important;
     color: #e6c373 !important;
-    border: 1px solid #e6c373 !important;
+    border: 1px solid #d89b3c !important;
 }
 .sc-med-box .sc-med-tag.is-alert {
     color: #ff859d !important;
-    border-color: #ee5574 !important;
+    border-color: #B7890B !important;
 }
 
 /* Bascule Mode Anthracite */
@@ -10853,7 +10855,7 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
 .sc-med-box:has(.sc-med-theme input:checked) .sc-med-card {
     background: #212126 !important;
     color: #f4efe6 !important;
-    border-color: #3a3a42 !important;
+    border-color: #d89b3c !important;
 }
 .sc-med-box:has(.sc-med-theme input:checked) .sc-med-card h4 { color: #e6c373 !important; }
 .sc-med-box:has(.sc-med-theme input:checked) .sc-med-card p { color: #e8e2d7 !important; }
