@@ -6844,15 +6844,36 @@ html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter 
   border-left-color: var(--item-grp, #ee5574) !important;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
 }
-/* Bannière 90px + Titre en dessous + Texte calibré 140px pour la Chronologie */
+/* ==========================================================================
+   CHRONOLOGIE (.sc-admin-box) — BANNIÈRE 90PX + CALIBRAGE 140PX + ANTI-ESPACES FA
+   ========================================================================== */
+html body#modernbb .message-contenu-arte .sc-admin-box br,
+html body#modernbb .postbody .sc-admin-box br,
+html body#modernbb #preview .sc-admin-box br {
+    display: none !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box p br,
+html body#modernbb .postbody .sc-admin-box p br {
+    display: inline !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box *,
+html body#modernbb .postbody .sc-admin-box * {
+    text-indent: 0 !important;
+}
+
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img),
 html body#modernbb .postbody .sc-admin-box div:has(> img),
 html body#modernbb #preview .sc-admin-box div:has(> img) {
     display: flex !important;
     flex-direction: column !important;
+    align-items: stretch !important;
     text-align: left !important;
 }
 
+
+/* Bannière pleine largeur 90px en haut de chaque bulle */
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > img,
 html body#modernbb .postbody .sc-admin-box div:has(> img) > img,
 html body#modernbb #preview .sc-admin-box div:has(> img) > img {
@@ -6864,9 +6885,13 @@ html body#modernbb #preview .sc-admin-box div:has(> img) > img {
     max-height: 90px !important;
     object-fit: cover !important;
     margin: 0 0 10px 0 !important;
-    border-radius: 10px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-bottom: 2px solid #d89b3c !important;
+    border-radius: 12px 0 !important;
 }
 
+/* Titre du cycle juste sous la bannière */
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h3,
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h4,
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) h5,
@@ -6875,28 +6900,32 @@ html body#modernbb .postbody .sc-admin-box div:has(> img) h4,
 html body#modernbb .postbody .sc-admin-box div:has(> img) h5 {
     display: block !important;
     width: 100% !important;
+    float: none !important;
     clear: both !important;
     text-align: left !important;
     line-height: 1.15 !important;
     margin: 0 0 8px 0 !important;
     padding: 0 0 4px 0 !important;
     background: transparent !important;
-    border-bottom: 1px solid rgba(25, 25, 28, 0.15) !important;
+    border-bottom: 1px solid rgba(25, 25, 28, 0.18) !important;
 }
 
+/* Résumé calibré à 140px de haut avec défilement discret */
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > p,
 html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img) > div:last-child,
 html body#modernbb .postbody .sc-admin-box div:has(> img) > p,
 html body#modernbb .postbody .sc-admin-box div:has(> img) > div:last-child {
+    display: block !important;
+    width: 100% !important;
     height: 140px !important;
     max-height: 140px !important;
     overflow-y: auto !important;
-    padding-right: 6px !important;
+    padding: 0 6px 0 0 !important;
     margin: 0 !important;
     text-align: left !important;
-    line-height: 1.5 !important;
+    line-height: 1.48 !important;
     scrollbar-width: thin !important;
-    scrollbar-color: #B7890B rgba(0, 0, 0, 0.08) !important;
+    scrollbar-color: #d89b3c rgba(0, 0, 0, 0.08) !important;
 }
 
 
@@ -10915,3 +10944,78 @@ html body#modernbb .reponse-rapide-artemis .sceditor-container textarea {
 }
 .sc-med-box:has(.sc-med-theme input:checked) .sc-med-card h4 { color: #e6c373 !important; }
 .sc-med-box:has(.sc-med-theme input:checked) .sc-med-card p { color: #e8e2d7 !important; }
+
+
+/* ==========================================================================
+   ONGLETS D'INTRIGUES & MISSIONS (.sc-tab-wrap)
+   ========================================================================== */
+.sc-tab-wrap input[type="radio"] {
+    display: none !important;
+}
+
+.sc-tab-wrap .sc-tab-labels {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 15px !important;
+}
+
+.sc-tab-wrap .sc-tab-lbl {
+    flex: 1 1 180px !important;
+    text-align: center !important;
+    padding: 10px 12px !important;
+    cursor: pointer !important;
+    background: rgba(212, 155, 53, 0.15) !important;
+    border: 1px solid #d49b35 !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    font-size: 0.88em !important;
+    transition: 0.2s !important;
+    user-select: none !important;
+}
+
+.sc-tab-wrap .sc-tab-lbl:hover {
+    background: rgba(212, 155, 53, 0.3) !important;
+}
+
+.sc-tab-wrap #sc-tab-res:checked ~ .sc-tab-labels label[for="sc-tab-res"],
+.sc-tab-wrap #sc-tab-ins:checked ~ .sc-tab-labels label[for="sc-tab-ins"],
+.sc-tab-wrap #sc-tab-mis:checked ~ .sc-tab-labels label[for="sc-tab-mis"] {
+    background: #d49b35 !important;
+    color: #1f1d1a !important;
+}
+
+.sc-tab-wrap .sc-tab-panel {
+    display: none !important;
+}
+
+.sc-tab-wrap #sc-tab-res:checked ~ .sc-panel-res,
+.sc-tab-wrap #sc-tab-ins:checked ~ .sc-panel-ins,
+.sc-tab-wrap #sc-tab-mis:checked ~ .sc-panel-mis {
+    display: block !important;
+}
+
+.sc-tab-wrap .sc-mission-item {
+    padding: 12px 14px !important;
+    margin-bottom: 12px !important;
+    border-left: 3px solid #d49b35 !important;
+    background: rgba(128, 128, 128, 0.08) !important;
+    border-radius: 0 6px 6px 0 !important;
+}
+
+.sc-tab-wrap .sc-mission-item:last-child {
+    margin-bottom: 0 !important;
+}
+
+.sc-tab-wrap .sc-badge-open {
+    display: inline-block !important;
+    padding: 2px 7px !important;
+    font-size: 0.78em !important;
+    font-family: monospace !important;
+    background: #2e7d32 !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+}
+
