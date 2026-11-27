@@ -6844,91 +6844,6 @@ html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter 
   border-left-color: var(--item-grp, #ee5574) !important;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
 }
-/* ==========================================================================
-   CHRONOLOGIE (.sc-tl-card) — BANNIÈRE 90PX + CADRE TEXTE 140PX + ZÉRO &NBSP;
-   ========================================================================== */
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) br,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) br {
-    display: none !important;
-}
-
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc br,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc br {
-    display: inline !important;
-}
-
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-card,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-card {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    font-size: 0 !important;
-    line-height: 0 !important;
-    text-align: left !important;
-    box-sizing: border-box !important;
-}
-
-/* En-tête de bulle : Bannière 90px + Titre (sans double bordure) */
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100% !important;
-    font-size: 0 !important;
-    line-height: 0 !important;
-    border-bottom: none !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-}
-
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header img,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header img {
-    float: none !important;
-    display: block !important;
-    width: 100% !important;
-    height: 90px !important;
-    min-height: 90px !important;
-    max-height: 90px !important;
-    object-fit: cover !important;
-    margin: 0 0 10px 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    border-bottom: 2px solid #d89b3c !important;
-    border-radius: 12px 0 !important;
-}
-
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-date,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-date {
-    display: block !important;
-    width: 100% !important;
-    font-size: 20px !important;
-    line-height: 1.2 !important;
-    text-align: left !important;
-    margin: 0 !important;
-    padding: 0 0 6px 0 !important;
-    border-bottom: 1px solid rgba(25, 25, 28, 0.2) !important;
-}
-
-/* Cadre de texte calibré à 140px de hauteur */
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc {
-    display: block !important;
-    width: 100% !important;
-    height: 140px !important;
-    max-height: 140px !important;
-    overflow-y: auto !important;
-    font-size: 13px !important;
-    line-height: 1.48 !important;
-    padding: 0 6px 0 0 !important;
-    margin: 0 !important;
-    text-align: left !important;
-    text-indent: 0 !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: #d89b3c rgba(0, 0, 0, 0.08) !important;
-}
-
 
 
 /* --- 1. BOTTIN DES AVATARS (FOND SOMBRE UNIFIÉ + 75x75px) --- */
@@ -7030,13 +6945,24 @@ html body#modernbb #preview .sc-job-item strong {
     margin-right: 6px !important;
 }
 
-/* --- 3. CHRONOLOGIE ALTERNÉE GAUCHE / DROITE (IMAGE 100x50px) --- */
+/* --- 3. CHRONOLOGIE ALTERNÉE GAUCHE / DROITE (BANNIÈRE PLEINE LARGEUR) --- */
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) br,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) br {
+    display: none !important;
+}
+
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc br,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc br {
+    display: inline !important;
+}
+
 html body#modernbb .message-contenu-arte .sc-timeline,
 html body#modernbb .postbody .sc-timeline,
 html body#modernbb #preview .sc-timeline {
     position: relative !important;
     padding: 10px 0 !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-timeline::before,
 html body#modernbb .postbody .sc-timeline::before,
 html body#modernbb #preview .sc-timeline::before {
@@ -7049,6 +6975,7 @@ html body#modernbb #preview .sc-timeline::before {
     transform: translateX(-50%) !important;
     background: linear-gradient(180deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%) !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-row,
 html body#modernbb .postbody .sc-tl-row,
 html body#modernbb #preview .sc-tl-row {
@@ -7058,18 +6985,21 @@ html body#modernbb #preview .sc-tl-row {
     position: relative !important;
     box-sizing: border-box !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-row.left,
 html body#modernbb .postbody .sc-tl-row.left,
 html body#modernbb #preview .sc-tl-row.left {
     justify-content: flex-start !important;
     padding-right: calc(50% + 22px) !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-row.right,
 html body#modernbb .postbody .sc-tl-row.right,
 html body#modernbb #preview .sc-tl-row.right {
     justify-content: flex-end !important;
     padding-left: calc(50% + 22px) !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-row::after,
 html body#modernbb .postbody .sc-tl-row::after,
 html body#modernbb #preview .sc-tl-row::after {
@@ -7085,56 +7015,95 @@ html body#modernbb #preview .sc-tl-row::after {
     border-radius: 50% !important;
     box-shadow: 0 0 8px #ee5574 !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-card,
 html body#modernbb .postbody .sc-tl-card,
 html body#modernbb #preview .sc-tl-card {
+    display: flex !important;
+    flex-direction: column !important;
     width: 100% !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
     background: #212126 !important;
     color: #f4efe6 !important;
     border: 1px solid #3a3a42 !important;
-    border-top: 3px solid #ee5574 !important;
+    border-top: 3px solid #d49b35 !important;
     border-radius: 14px 0 !important;
     padding: 12px !important;
+    overflow: hidden !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-header,
 html body#modernbb .postbody .sc-tl-header,
 html body#modernbb #preview .sc-tl-header {
     display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    border-bottom: 1px solid #3a3a42 !important;
-    padding-bottom: 8px !important;
-    margin-bottom: 8px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    margin: 0 0 8px 0 !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-header img,
 html body#modernbb .postbody .sc-tl-header img,
 html body#modernbb #preview .sc-tl-header img {
-    width: 100px !important;
-    height: 50px !important;
-    min-width: 100px !important;
+    display: block !important;
+    width: calc(100% + 24px) !important;
+    min-width: calc(100% + 24px) !important;
+    max-width: none !important;
+    height: 95px !important;
     object-fit: cover !important;
-    border-radius: 8px 0 !important;
-    border: 1.5px solid #ffb01f !important;
-    flex-shrink: 0 !important;
+    margin: -12px -12px 10px -12px !important;
+    border: none !important;
+    border-bottom: 2px solid #d89b3c !important;
+    border-radius: 0 !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-date,
 html body#modernbb .postbody .sc-tl-date,
 html body#modernbb #preview .sc-tl-date {
+    display: block !important;
+    width: 100% !important;
     font-family: 'Teko', sans-serif !important;
     font-size: 20px !important;
-    line-height: 1.1 !important;
+    line-height: 1.15 !important;
     color: #ffb01f !important;
     text-transform: uppercase !important;
     font-weight: 500 !important;
+    text-align: left !important;
+    padding-bottom: 6px !important;
+    border-bottom: 1px solid rgba(142, 136, 125, 0.35) !important;
 }
+
 html body#modernbb .message-contenu-arte .sc-tl-desc,
 html body#modernbb .postbody .sc-tl-desc,
 html body#modernbb #preview .sc-tl-desc {
+    display: block !important;
+    width: 100% !important;
+    height: 140px !important;
+    max-height: 140px !important;
+    overflow-y: auto !important;
     font-size: 13px !important;
-    line-height: 1.55 !important;
+    line-height: 1.5 !important;
     color: #e8e2d7 !important;
+    text-align: left !important;
+    padding-right: 6px !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #d89b3c rgba(0, 0, 0, 0.08) !important;
 }
+
+/* Garde les fiches d'intrigue (.sc-tab-wrap) à hauteur libre */
+html body#modernbb .sc-admin-box:has(.sc-tab-wrap) .sc-tl-desc {
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+}
+
 
 
 /* =========================================================
@@ -11085,3 +11054,4 @@ html body#modernbb .message-contenu-arte .sc-admin-box .sc-admin-main-title,
 html body#modernbb .postbody .sc-admin-box .sc-admin-main-title {
     margin: 0 0 14px 0 !important;
 }
+
