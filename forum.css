@@ -6845,46 +6845,41 @@ html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter 
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
 }
 /* ==========================================================================
-   CHRONOLOGIE (.sc-admin-box) — BANNIÈRE 90PX + CALIBRAGE 140PX + ANTI-ESPACES FA
+   CHRONOLOGIE (.sc-tl-card) — BANNIÈRE 90PX + CADRE TEXTE CALIBRÉ 140PX
    ========================================================================== */
-html body#modernbb .message-contenu-arte .sc-admin-box br,
-html body#modernbb .postbody .sc-admin-box br,
-html body#modernbb #preview .sc-admin-box br {
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) br,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) br {
     display: none !important;
 }
 
-html body#modernbb .message-contenu-arte .sc-admin-box p br,
-html body#modernbb .postbody .sc-admin-box p br {
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc br,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc br {
     display: inline !important;
 }
 
-html body#modernbb .message-contenu-arte .sc-admin-box *,
-html body#modernbb .postbody .sc-admin-box * {
-    text-indent: 0 !important;
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-card,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
 }
 
-html body#modernbb .message-contenu-arte .sc-admin-box div:has(> img),
-html body#modernbb .postbody .sc-admin-box div:has(> img),
-html body#modernbb #preview .sc-admin-box div:has(> img) {
+/* En-tête de bulle : Bannière 90px + Titre juste en dessous */
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    text-align: left !important;
+    width: 100% !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
 }
 
-
-
-/* Bannière 90px UNIQUEMENT sur la Chronologie (jamais sur les émojis ni les intrigues) */
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)),
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    text-align: left !important;
-}
-
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > img:not(.emojione),
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > img:not(.emojione) {
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header img,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header img {
     float: none !important;
     display: block !important;
     width: 100% !important;
@@ -6899,26 +6894,20 @@ html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img
     border-radius: 12px 0 !important;
 }
 
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h3,
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h4,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h3,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) h4 {
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-date,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-date {
     display: block !important;
     width: 100% !important;
-    float: none !important;
-    clear: both !important;
     text-align: left !important;
-    line-height: 1.15 !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 0 4px 0 !important;
-    background: transparent !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 0 6px 0 !important;
     border-bottom: 1px solid rgba(25, 25, 28, 0.18) !important;
 }
 
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > p,
-html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > div:last-child,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > p,
-html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img:not(.emojione)) > div:last-child {
+/* Cadre de texte calibré à 140px de hauteur */
+html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc,
+html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc {
     display: block !important;
     width: 100% !important;
     height: 140px !important;
@@ -6927,22 +6916,10 @@ html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) div:has(> img
     padding: 0 6px 0 0 !important;
     margin: 0 !important;
     text-align: left !important;
+    text-indent: 0 !important;
     line-height: 1.48 !important;
     scrollbar-width: thin !important;
     scrollbar-color: #d89b3c rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Remet les petits trous noirs de l'intrigue bien alignés sur une seule ligne */
-.sc-tab-wrap div:has(> img) {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 8px !important;
-}
-.sc-tab-wrap div:has(> img) > img {
-    width: auto !important;
-    height: 45px !important;
-    object-fit: contain !important;
 }
 
 
