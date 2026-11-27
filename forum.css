@@ -6845,7 +6845,7 @@ html body#modernbb .sc-admin-box:has(.sc-admin-toggle:checked) .sc-empty-letter 
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
 }
 /* ==========================================================================
-   CHRONOLOGIE (.sc-tl-card) — BANNIÈRE 90PX + CADRE TEXTE CALIBRÉ 140PX
+   CHRONOLOGIE (.sc-tl-card) — BANNIÈRE 90PX + CADRE TEXTE 140PX + ZÉRO &NBSP;
    ========================================================================== */
 html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) br,
 html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) br {
@@ -6863,17 +6863,22 @@ html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-card {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
     text-align: left !important;
     box-sizing: border-box !important;
 }
 
-/* En-tête de bulle : Bannière 90px + Titre juste en dessous */
+/* En-tête de bulle : Bannière 90px + Titre (sans double bordure) */
 html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header,
 html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-header {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
     width: 100% !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    border-bottom: none !important;
     margin: 0 0 8px 0 !important;
     padding: 0 !important;
 }
@@ -6898,11 +6903,12 @@ html body#modernbb .message-contenu-arte .sc-admin-box:not(:has(.sc-tab-wrap)) .
 html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-date {
     display: block !important;
     width: 100% !important;
-    text-align: left !important;
+    font-size: 20px !important;
     line-height: 1.2 !important;
+    text-align: left !important;
     margin: 0 !important;
     padding: 0 0 6px 0 !important;
-    border-bottom: 1px solid rgba(25, 25, 28, 0.18) !important;
+    border-bottom: 1px solid rgba(25, 25, 28, 0.2) !important;
 }
 
 /* Cadre de texte calibré à 140px de hauteur */
@@ -6913,11 +6919,12 @@ html body#modernbb .postbody .sc-admin-box:not(:has(.sc-tab-wrap)) .sc-tl-desc {
     height: 140px !important;
     max-height: 140px !important;
     overflow-y: auto !important;
+    font-size: 13px !important;
+    line-height: 1.48 !important;
     padding: 0 6px 0 0 !important;
     margin: 0 !important;
     text-align: left !important;
     text-indent: 0 !important;
-    line-height: 1.48 !important;
     scrollbar-width: thin !important;
     scrollbar-color: #d89b3c rgba(0, 0, 0, 0.08) !important;
 }
