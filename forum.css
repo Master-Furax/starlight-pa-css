@@ -11060,3 +11060,26 @@ html body#modernbb .postbody .sc-admin-box .sc-tl-desc img {
     border: none !important;
     border-radius: 0 !important;
 }
+
+.sc-cx-mob-img {
+    width: 100% !important;
+    height: 230px !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+    display: block !important;
+}
+
+.sc-cx-mob-img a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.sc-cx-mob-img img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
